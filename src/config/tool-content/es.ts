@@ -1,7800 +1,4252 @@
-import { toolContentEn } from './en';
-/**
- * Spanish Tool Content / Contenido de Herramientas en Español
- * Requirements: 3.1 - Multi-language support
- * 
- * Contains detailed descriptions, how-to steps, use cases, and FAQs for all 67 tools
- */
+import { ToolContent } from '@/types/tool';
 
-import type { ToolContent } from '@/types/tool';
-
-/**
- * Spanish tool content map
- * Each tool has: title, metaDescription, keywords, description, howToUse (3+ steps), useCases (3+ scenarios), faq (3+ questions)
- */
 export const toolContentEs: Record<string, ToolContent> = {
-  "pdf-multi-tool": {
-    "title": "Herramienta Múltiple PDF",
-    "metaDescription": "Editor PDF todo en uno: combina, divide, organiza, elimina, rota y extrae páginas en una sola herramienta.",
-    "keywords": [
-      "herramienta múltiple pdf",
-      "editor pdf",
-      "combinar pdf",
-      "dividir pdf",
-      "organizar pdf"
-    ],
-    "description": "<p>La Herramienta Múltiple PDF es tu solución integral para todas las tareas de gestión de páginas PDF. Combina múltiples operaciones en una única interfaz intuitiva.</p><p>Todo el procesamiento ocurre en tu navegador, asegurando privacidad completa.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta tu archivo PDF o haz clic para seleccionar."
-      },
-      {
-        "step": 2,
-        "title": "Elige la Operación",
-        "description": "Selecciona entre combinar, dividir, organizar, eliminar, rotar o extraer páginas."
-      },
-      {
-        "step": 3,
-        "title": "Procesa y Descarga",
-        "description": "Haz clic en procesar y descarga tu PDF modificado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Preparación de Documentos",
-        "description": "Prepara documentos eliminando páginas innecesarias y reordenando contenido.",
-        "icon": "file-check"
-      },
-      {
-        "title": "Ensamblaje de Informes",
-        "description": "Combina secciones de informes en un único documento profesional.",
-        "icon": "book-open"
-      },
-      {
-        "title": "Gestión de Archivos",
-        "description": "Divide archivos grandes y extrae páginas relevantes.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuántos PDFs puedo procesar?",
-        "answer": "Puedes procesar hasta 10 archivos PDF simultáneamente, con un tamaño máximo de 500MB."
-      },
-      {
-        "question": "¿Se conservan los marcadores?",
-        "answer": "Sí, al combinar PDFs se conservan los marcadores existentes."
-      },
-      {
-        "question": "¿Hay límite de páginas?",
-        "answer": "No hay límite estricto. La herramienta maneja documentos con cientos de páginas."
-      }
-    ]
-  },
-  "merge-pdf": {
-    "title": "Combinar PDF",
-    "metaDescription": "Combina múltiples archivos PDF en un solo documento. Combinador de PDF gratuito con reordenamiento.",
-    "keywords": [
-      "combinar pdf",
-      "unir pdf",
-      "fusionar pdf",
-      "combinador pdf"
-    ],
-    "description": "<p>Combinar PDF te permite unir múltiples documentos PDF en un solo archivo. Sube tus archivos, ordénalos y combínalos en un documento cohesivo.</p><p>Todo ocurre localmente en tu navegador para máxima privacidad.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Archivos PDF",
-        "description": "Arrastra y suelta múltiples archivos PDF o haz clic para seleccionar."
-      },
-      {
-        "step": 2,
-        "title": "Ordena los Archivos",
-        "description": "Arrastra las miniaturas para ordenarlos como desees."
-      },
-      {
-        "step": 3,
-        "title": "Combina y Descarga",
-        "description": "Haz clic en Combinar y descarga tu PDF unificado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Combinar Informes",
-        "description": "Une informes mensuales en un documento anual.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Crear Portafolios",
-        "description": "Combina documentos de proyectos en un portafolio profesional.",
-        "icon": "briefcase"
-      },
-      {
-        "title": "Consolidar Facturas",
-        "description": "Une facturas para propósitos contables.",
-        "icon": "receipt"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuántos PDFs puedo combinar?",
-        "answer": "Hasta 100 archivos PDF con un tamaño total de 500MB."
-      },
-      {
-        "question": "¿Se mantiene la calidad?",
-        "answer": "Sí, se preserva la calidad original sin compresión."
-      },
-      {
-        "question": "¿Puedo combinar PDFs protegidos?",
-        "answer": "Necesitas descifrarlos primero con nuestra herramienta Descifrar PDF."
-      }
-    ]
-  },
-  "rotate-custom": {
-    "title": "Rotar por Grados Personalizados",
-    "metaDescription": "Rota páginas PDF en cualquier ángulo. Rotación precisa para enderezar documentos escaneados.",
-    "keywords": [
-      "rotar pdf ángulo personalizado",
-      "enderezar pdf",
-      "deskew pdf",
-      "rotación personalizada pdf"
-    ],
-    "description": "<p>Rotar por Grados Personalizados te da control preciso sobre la orientación de tus páginas PDF. A diferencia de las herramientas estándar que solo rotan en incrementos de 90 grados, esta herramienta te permite rotar páginas en cualquier ángulo específico.</p><p>Perfecto para enderezar documentos escaneados torcidos o ajustar diagramas. Puedes corregir páginas individuales o aplicar la misma rotación a todo el documento.</p><p>Todo el procesamiento ocurre localmente en tu navegador, asegurando privacidad total mientras logras una alineación perfecta.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Sube el archivo PDF con las páginas que necesitas rotar."
-      },
-      {
-        "step": 2,
-        "title": "Establece el Ángulo",
-        "description": "Ingresa el grado exacto de rotación para cada página, o un ángulo para todas."
-      },
-      {
-        "step": 3,
-        "title": "Vista Previa y Ajuste",
-        "description": "Usa la vista previa en tiempo real para asegurar una alineación perfecta."
-      },
-      {
-        "step": 4,
-        "title": "Aplica y Descarga",
-        "description": "Haz clic en Rotar para aplicar los cambios y descargar tu PDF enderezado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Escaneados",
-        "description": "Endereza páginas escaneadas que quedaron torcidas.",
-        "icon": "scan"
-      },
-      {
-        "title": "Dibujos Técnicos",
-        "description": "Ajusta la orientación de planos y diagramas con precisión.",
-        "icon": "ruler"
-      },
-      {
-        "title": "Diseños Creativos",
-        "description": "Crea diseños únicos rotando páginas en ángulos artísticos.",
-        "icon": "pen-tool"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo rotar con decimales?",
-        "answer": "Actualmente soporta grados enteros, pero estamos trabajando en precisión decimal."
-      },
-      {
-        "question": "¿Afecta el contenido?",
-        "answer": "El contenido se rota visualmente. El tamaño de página se ajusta automáticamente."
-      },
-      {
-        "question": "¿Puedo rotar solo una página?",
-        "answer": "Sí, puedes establecer un ángulo personalizado para cualquier página individual."
-      }
-    ]
-  },
-  "grid-combine": {
-    "title": "Combinar en Cuadrícula PDF",
-    "metaDescription": "Combinar múltiples archivos PDF en páginas individuales con un diseño de cuadrícula flexible. Organice 2, 4, 6, 9 o más PDF por página con bordes y espaciado.",
-    "keywords": [
-      "combinar cuadrícula",
-      "fusionar pdf cuadrícula",
-      "collage pdf",
-      "múltiples pdf una página",
-      "pdf n-up",
-      "cuadrícula pdf"
-    ],
-    "description": "\n      <p>La herramienta Combinar en Cuadrícula ofrece una forma única de fusionar múltiples archivos PDF separados en páginas individuales. A diferencia de la herramienta estándar \"Fusionar PDF\" que simplemente añade páginas, o la herramienta \"N-Up\" que reorganiza páginas de un solo documento, Combinar en Cuadrícula toma múltiples archivos de entrada y los organiza uno al lado del otro en un diseño de cuadrícula personalizable.</p>\n      <p>Puede elegir entre varias configuraciones de cuadrícula como 2x1, 2x2, 3x3, etc. Esto es perfecto para comparar múltiples documentos, crear folletos de diferentes fuentes o imprimir versiones compactas de varios archivos.</p>\n      <p>Personalice la salida controlando el tamaño de página, la orientación, los márgenes, el espaciado y los bordes. Todo el procesamiento ocurre localmente en su navegador para máxima privacidad.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir Archivos PDF",
-        "description": "Suba dos o más archivos PDF que desee combinar. Puede reorganizarlos en el orden deseado."
-      },
-      {
-        "step": 2,
-        "title": "Elegir Diseño de Cuadrícula",
-        "description": "Seleccione el diseño de cuadrícula deseado (ej: 2x2 para 4 archivos por página, 3x3 para 9 archivos por página)."
-      },
-      {
-        "step": 3,
-        "title": "Personalizar Apariencia",
-        "description": "Ajuste configuraciones como tamaño de página (A4, Carta), orientación, espaciado entre elementos y bordes."
-      },
-      {
-        "step": 4,
-        "title": "Combinar y Descargar",
-        "description": "Haga clic en \"Combinar PDFs\" para generar su nuevo documento con diseño de cuadrícula y descargue el resultado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Comparación Visual",
-        "description": "Coloque diferentes versiones de un diseño o documento una al lado de la otra en una sola página para una fácil comparación.",
-        "icon": "layout-grid"
-      },
-      {
-        "title": "Imprimir Folletos",
-        "description": "Combine múltiples documentos cortos o diapositivas en una sola hoja para ahorrar costos de impresión.",
-        "icon": "printer"
-      },
-      {
-        "title": "Creación de Portafolios",
-        "description": "Muestre múltiples archivos de proyecto en una vista general de cuadrícula limpia y organizada.",
-        "icon": "image"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿En qué se diferencia de N-Up?",
-        "answer": "N-Up toma páginas de UN PDF y las pone en una hoja. Combinar en Cuadrícula toma MÚLTIPLES ARCHIVOS PDF DIFERENTES y los pone en una hoja."
-      },
-      {
-        "question": "¿Cuántos archivos puedo combinar?",
-        "answer": "Puede combinar hasta 100 archivos dependiendo de la memoria de su navegador, pero los diseños como 4x4 acomodan hasta 16 archivos por página."
-      },
-      {
-        "question": "¿Puedo añadir bordes?",
-        "answer": "Sí, puede añadir bordes alrededor de cada archivo PDF y personalizar el color del borde."
-      }
-    ]
-  },
-  "split-pdf": {
-    "title": "Dividir PDF",
-    "metaDescription": "Divide archivos PDF en múltiples documentos. Extrae páginas específicas o divide por rangos.",
-    "keywords": [
-      "dividir pdf",
-      "separar pdf",
-      "extraer páginas",
-      "divisor pdf"
-    ],
-    "description": "<p>Dividir PDF te permite separar un documento PDF en múltiples archivos. Perfecto para extraer capítulos o crear archivos individuales.</p><p>Procesamiento local para máxima seguridad.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el archivo a dividir."
-      },
-      {
-        "step": 2,
-        "title": "Define los Rangos",
-        "description": "Ingresa los números de página o rangos (ej: 1-5, 8, 10-15)."
-      },
-      {
-        "step": 3,
-        "title": "Divide y Descarga",
-        "description": "Haz clic en Dividir y descarga los archivos resultantes."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Extraer Capítulos",
-        "description": "Divide libros en capítulos individuales.",
-        "icon": "book"
-      },
-      {
-        "title": "Separar Escaneos",
-        "description": "Divide documentos escaneados en archivos individuales.",
-        "icon": "copy"
-      },
-      {
-        "title": "Crear Material",
-        "description": "Extrae páginas específicas para material de apoyo.",
-        "icon": "presentation"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo dividir en páginas individuales?",
-        "answer": "Sí, selecciona \"Dividir cada página\" para crear archivos de una página."
-      },
-      {
-        "question": "¿Qué pasa con los marcadores?",
-        "answer": "Los marcadores dentro del rango extraído se conservan."
-      },
-      {
-        "question": "¿Puedo dividir PDFs protegidos?",
-        "answer": "Primero descifra el PDF con nuestra herramienta Descifrar PDF."
-      }
-    ]
-  },
-  "compress-pdf": {
-    "title": "Comprimir PDF",
-    "metaDescription": "Reduce el tamaño de archivos PDF manteniendo la calidad. Compresor de PDF gratuito.",
-    "keywords": [
-      "comprimir pdf",
-      "reducir tamaño pdf",
-      "compresor pdf",
-      "optimizar pdf"
-    ],
-    "description": "<p>Comprimir PDF reduce el tamaño de tus documentos manteniendo calidad aceptable. Ideal para correos electrónicos y almacenamiento.</p><p>Compresión local en tu navegador.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento a comprimir."
-      },
-      {
-        "step": 2,
-        "title": "Elige el Nivel",
-        "description": "Selecciona: Bajo (mejor calidad), Medio o Alto (menor tamaño)."
-      },
-      {
-        "step": 3,
-        "title": "Comprime y Descarga",
-        "description": "Haz clic en Comprimir y descarga el PDF optimizado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Adjuntos de Correo",
-        "description": "Reduce el tamaño para cumplir límites de correo.",
-        "icon": "mail"
-      },
-      {
-        "title": "Publicación Web",
-        "description": "Optimiza PDFs para descarga web rápida.",
-        "icon": "globe"
-      },
-      {
-        "title": "Ahorro de Espacio",
-        "description": "Comprime documentos archivados.",
-        "icon": "hard-drive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuánto puedo reducir?",
-        "answer": "PDFs con imágenes pueden reducirse 50-80%. Solo texto tiene menor reducción."
-      },
-      {
-        "question": "¿Afecta la calidad del texto?",
-        "answer": "No, el texto permanece nítido. Solo las imágenes se comprimen."
-      },
-      {
-        "question": "¿Puedo comprimir varios PDFs?",
-        "answer": "Sí, hasta 10 archivos simultáneamente."
-      }
-    ]
-  },
-  "edit-pdf": {
-    "title": "Editar PDF",
-    "metaDescription": "Edita archivos PDF en línea. Añade texto, imágenes, anotaciones y formas.",
-    "keywords": [
-      "editar pdf",
-      "editor pdf",
-      "anotar pdf",
-      "añadir texto pdf"
-    ],
-    "description": "<p>Editar PDF proporciona herramientas completas para modificar y anotar documentos. Añade texto, imágenes, formas y comentarios.</p><p>Edición local para privacidad total.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento a editar."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Herramienta",
-        "description": "Elige: texto, resaltado, formas, imágenes o comentarios."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Aplica los cambios y descarga el PDF editado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Revisión de Documentos",
-        "description": "Añade comentarios y marcas para revisión colaborativa.",
-        "icon": "message-square"
-      },
-      {
-        "title": "Completar Formularios",
-        "description": "Rellena campos y añade firmas sin imprimir.",
-        "icon": "edit-3"
-      },
-      {
-        "title": "Redacción",
-        "description": "Elimina información sensible antes de compartir.",
-        "icon": "eye-off"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo editar texto original?",
-        "answer": "Esta herramienta añade anotaciones. Para editar texto existente, usa el documento fuente."
-      },
-      {
-        "question": "¿Las ediciones son permanentes?",
-        "answer": "Puedes aplanarlas para hacerlas permanentes o mantenerlas editables."
-      },
-      {
-        "question": "¿Hay función deshacer?",
-        "answer": "Sí, soporta deshacer/rehacer y restablecer al original."
-      }
-    ]
-  },
-  "jpg-to-pdf": {
-    "title": "JPG a PDF",
-    "metaDescription": "Convierte imágenes JPG a PDF. Combina múltiples JPG en un documento PDF.",
-    "keywords": [
-      "jpg a pdf",
-      "jpeg a pdf",
-      "convertir jpg",
-      "imagen a pdf"
-    ],
-    "description": "<p>JPG a PDF convierte tus imágenes JPEG en documentos PDF. Combina múltiples imágenes en un único PDF profesional.</p><p>Conversión local para privacidad.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes",
-        "description": "Arrastra y suelta archivos JPG o haz clic para seleccionar."
-      },
-      {
-        "step": 2,
-        "title": "Ordena y Configura",
-        "description": "Reordena imágenes y selecciona tamaño de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Haz clic en Convertir y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Álbumes de Fotos",
-        "description": "Crea álbumes PDF de fotos para compartir.",
-        "icon": "image"
-      },
-      {
-        "title": "Escaneo de Documentos",
-        "description": "Convierte fotos de documentos en PDFs.",
-        "icon": "camera"
-      },
-      {
-        "title": "Portafolios",
-        "description": "Compila trabajos fotográficos en un portafolio.",
-        "icon": "folder"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuántas imágenes puedo convertir?",
-        "answer": "Hasta 100 imágenes JPG en un único PDF."
-      },
-      {
-        "question": "¿Se preserva la calidad?",
-        "answer": "Sí, las imágenes se incrustan en calidad original."
-      },
-      {
-        "question": "¿Puedo establecer diferentes tamaños?",
-        "answer": "Se aplica un tamaño uniforme. Las imágenes se escalan manteniendo proporción."
-      }
-    ]
-  },
-  "sign-pdf": {
-    "title": "Firmar PDF",
-    "metaDescription": "Añade firmas electrónicas a documentos PDF. Dibuja, escribe o sube tu firma.",
-    "keywords": [
-      "firmar pdf",
-      "firma electrónica",
-      "e-firma",
-      "firma digital"
-    ],
-    "description": "<p>Firmar PDF te permite añadir firmas electrónicas a tus documentos. Crea tu firma dibujando, escribiendo o subiendo una imagen.</p><p>Firma local para seguridad.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento a firmar."
-      },
-      {
-        "step": 2,
-        "title": "Crea tu Firma",
-        "description": "Dibuja, escribe o sube una imagen de firma."
-      },
-      {
-        "step": 3,
-        "title": "Coloca y Descarga",
-        "description": "Posiciona la firma y descarga el PDF firmado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Firma de Contratos",
-        "description": "Firma contratos electrónicamente sin imprimir.",
-        "icon": "file-signature"
-      },
-      {
-        "title": "Completar Formularios",
-        "description": "Añade firma a formularios y documentos oficiales.",
-        "icon": "clipboard"
-      },
-      {
-        "title": "Aprobaciones",
-        "description": "Firma documentos en procesos de aprobación.",
-        "icon": "check-circle"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Es legalmente vinculante?",
-        "answer": "Las firmas electrónicas son reconocidas en la mayoría de países. Consulta regulaciones locales."
-      },
-      {
-        "question": "¿Puedo guardar mi firma?",
-        "answer": "Sí, se guarda en el almacenamiento local del navegador."
-      },
-      {
-        "question": "¿Puedo añadir múltiples firmas?",
-        "answer": "Sí, añade tantas firmas como necesites en cualquier página."
-      }
-    ]
-  },
-  "crop-pdf": {
-    "title": "Recortar PDF",
-    "metaDescription": "Recorta páginas PDF para eliminar márgenes y áreas no deseadas.",
-    "keywords": [
-      "recortar pdf",
-      "cortar pdf",
-      "eliminar márgenes",
-      "redimensionar pdf"
-    ],
-    "description": "<p>Recortar PDF elimina márgenes y áreas no deseadas de tus páginas. Útil para eliminar espacios en blanco o estandarizar dimensiones.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento a recortar."
-      },
-      {
-        "step": 2,
-        "title": "Define el Área",
-        "description": "Arrastra los controles o ingresa medidas precisas."
-      },
-      {
-        "step": 3,
-        "title": "Recorta y Descarga",
-        "description": "Aplica el recorte y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Eliminar Márgenes",
-        "description": "Recorta márgenes excesivos de documentos escaneados.",
-        "icon": "maximize-2"
-      },
-      {
-        "title": "Enfocar Contenido",
-        "description": "Recorta para resaltar áreas específicas.",
-        "icon": "target"
-      },
-      {
-        "title": "Estandarizar Páginas",
-        "description": "Haz que todas las páginas tengan el mismo tamaño.",
-        "icon": "square"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿El recorte es permanente?",
-        "answer": "Sí, el contenido fuera del área se elimina. Guarda una copia de seguridad."
-      },
-      {
-        "question": "¿Puedo recortar páginas diferentes?",
-        "answer": "Sí, puedes aplicar diferentes configuraciones a cada página."
-      },
-      {
-        "question": "¿Afecta la calidad del texto?",
-        "answer": "No, el contenido restante mantiene su calidad original."
-      }
-    ]
-  },
-  "extract-pages": {
-    "title": "Extraer Páginas",
-    "metaDescription": "Extrae páginas específicas de archivos PDF. Guarda páginas individuales como nuevos documentos.",
-    "keywords": [
-      "extraer páginas pdf",
-      "guardar páginas",
-      "copiar páginas pdf"
-    ],
-    "description": "<p>Extraer Páginas te permite seleccionar y guardar páginas específicas de un PDF como nuevos archivos. Perfecto para crear extractos.</p><p>Extracción local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Páginas",
-        "description": "Haz clic en miniaturas o ingresa números de página."
-      },
-      {
-        "step": 3,
-        "title": "Extrae y Descarga",
-        "description": "Crea el nuevo PDF con las páginas seleccionadas."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Crear Extractos",
-        "description": "Extrae páginas relevantes para documentos de referencia.",
-        "icon": "file-minus"
-      },
-      {
-        "title": "Compartir Contenido",
-        "description": "Extrae páginas específicas para compartir.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Archivar",
-        "description": "Guarda páginas clave para archivo a largo plazo.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo extraer páginas no consecutivas?",
-        "answer": "Sí, selecciona cualquier combinación de páginas."
-      },
-      {
-        "question": "¿Se conservan los marcadores?",
-        "answer": "Los marcadores a páginas extraídas se conservan."
-      },
-      {
-        "question": "¿Puedo extraer de múltiples PDFs?",
-        "answer": "Esta herramienta trabaja con un PDF. Usa Combinar PDF para múltiples archivos."
-      }
-    ]
-  },
-  "organize-pdf": {
-    "title": "Organizar PDF",
-    "metaDescription": "Reordena, duplica y elimina páginas PDF. Arrastra y suelta para reorganizar.",
-    "keywords": [
-      "organizar pdf",
-      "reordenar páginas",
-      "reorganizar pdf"
-    ],
-    "description": "<p>Organizar PDF proporciona una interfaz de arrastrar y soltar para reorganizar páginas. Reordena, duplica o elimina páginas fácilmente.</p><p>Organización local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Reorganiza",
-        "description": "Arrastra miniaturas para reordenar, duplicar o eliminar."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Aplica los cambios y descarga el PDF reorganizado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Corregir Orden",
-        "description": "Corrige el orden de páginas escaneadas incorrectamente.",
-        "icon": "arrow-up-down"
-      },
-      {
-        "title": "Orden Personalizado",
-        "description": "Ordena páginas para presentaciones específicas.",
-        "icon": "list"
-      },
-      {
-        "title": "Eliminar Páginas",
-        "description": "Elimina páginas en blanco o irrelevantes.",
-        "icon": "trash-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo duplicar páginas?",
-        "answer": "Sí, duplica cualquier página y colócala donde quieras."
-      },
-      {
-        "question": "¿Hay función deshacer?",
-        "answer": "Sí, soporta deshacer/rehacer y restablecer al original."
-      },
-      {
-        "question": "¿Puedo organizar múltiples PDFs?",
-        "answer": "Trabaja con un PDF. Primero combínalos con Combinar PDF."
-      }
-    ]
-  },
-  "delete-pages": {
-    "title": "Eliminar Páginas",
-    "metaDescription": "Elimina páginas no deseadas de archivos PDF. Selecciona y elimina páginas específicas.",
-    "keywords": [
-      "eliminar páginas pdf",
-      "quitar páginas",
-      "borrar páginas pdf"
-    ],
-    "description": "<p>Eliminar Páginas te permite quitar páginas no deseadas de tus documentos PDF. Elimina páginas en blanco o contenido innecesario.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Páginas",
-        "description": "Haz clic en miniaturas o ingresa números de página."
-      },
-      {
-        "step": 3,
-        "title": "Elimina y Descarga",
-        "description": "Elimina las páginas seleccionadas y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Eliminar Páginas en Blanco",
-        "description": "Limpia documentos eliminando páginas vacías.",
-        "icon": "file-x"
-      },
-      {
-        "title": "Eliminar Contenido Sensible",
-        "description": "Elimina páginas confidenciales antes de compartir.",
-        "icon": "shield"
-      },
-      {
-        "title": "Optimizar Documentos",
-        "description": "Elimina páginas desactualizadas o irrelevantes.",
-        "icon": "filter"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo recuperar páginas eliminadas?",
-        "answer": "No, la eliminación es permanente. Guarda una copia de seguridad."
-      },
-      {
-        "question": "¿Puedo eliminar múltiples páginas?",
-        "answer": "Sí, selecciona y elimina múltiples páginas a la vez."
-      },
-      {
-        "question": "¿Afecta los marcadores?",
-        "answer": "Los marcadores a páginas eliminadas se remueven."
-      }
-    ]
-  },
-  "bookmark": {
-    "title": "Editar Marcadores",
-    "metaDescription": "Añade, edita y organiza marcadores en archivos PDF para navegación fácil.",
-    "keywords": [
-      "marcadores pdf",
-      "editar marcadores",
-      "índice pdf",
-      "navegación pdf"
-    ],
-    "description": "<p>Editar Marcadores te permite crear y gestionar marcadores en tus documentos PDF para facilitar la navegación.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Gestiona Marcadores",
-        "description": "Añade, edita, elimina o reorganiza marcadores."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Aplica los cambios y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Crear Índice",
-        "description": "Añade marcadores para crear un índice navegable.",
-        "icon": "bookmark"
-      },
-      {
-        "title": "Organizar Documentos",
-        "description": "Estructura documentos largos con marcadores.",
-        "icon": "list"
-      },
-      {
-        "title": "Mejorar Accesibilidad",
-        "description": "Facilita la navegación en documentos extensos.",
-        "icon": "navigation"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo crear marcadores anidados?",
-        "answer": "Sí, puedes crear jerarquías de marcadores."
-      },
-      {
-        "question": "¿Los marcadores funcionan en todos los lectores?",
-        "answer": "Sí, son compatibles con todos los lectores PDF estándar."
-      },
-      {
-        "question": "¿Puedo importar marcadores?",
-        "answer": "Puedes crear marcadores manualmente o desde el índice existente."
-      }
-    ]
-  },
-  "table-of-contents": {
-    "title": "Tabla de Contenidos",
-    "metaDescription": "Genera automáticamente una tabla de contenidos para documentos PDF.",
-    "keywords": [
-      "tabla de contenidos pdf",
-      "índice pdf",
-      "toc pdf",
-      "generar índice"
-    ],
-    "description": "<p>Tabla de Contenidos genera automáticamente un índice navegable para tus documentos PDF basado en encabezados.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona niveles de encabezado y estilo."
-      },
-      {
-        "step": 3,
-        "title": "Genera y Descarga",
-        "description": "Crea la tabla de contenidos y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Largos",
-        "description": "Añade navegación a manuales y libros.",
-        "icon": "book"
-      },
-      {
-        "title": "Informes",
-        "description": "Crea índices para informes profesionales.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Documentación",
-        "description": "Mejora la navegación en documentación técnica.",
-        "icon": "file-code"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo detecta los encabezados?",
-        "answer": "Analiza el formato del texto para identificar encabezados."
-      },
-      {
-        "question": "¿Puedo personalizar el estilo?",
-        "answer": "Sí, puedes ajustar fuente, tamaño y formato."
-      },
-      {
-        "question": "¿Dónde se inserta la tabla?",
-        "answer": "Puedes elegir insertarla al inicio o en una página específica."
-      }
-    ]
-  },
-  "page-numbers": {
-    "title": "Números de Página",
-    "metaDescription": "Añade números de página a documentos PDF con formato personalizable.",
-    "keywords": [
-      "números de página pdf",
-      "numerar páginas",
-      "paginación pdf"
-    ],
-    "description": "<p>Números de Página te permite añadir numeración a tus documentos PDF con posición y formato personalizables.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Formato",
-        "description": "Selecciona posición, fuente, tamaño y formato."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Añade los números y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Profesionales",
-        "description": "Añade numeración a informes y propuestas.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Libros y Manuales",
-        "description": "Numera páginas de publicaciones.",
-        "icon": "book"
-      },
-      {
-        "title": "Documentos Legales",
-        "description": "Añade numeración requerida para documentos oficiales.",
-        "icon": "scale"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo excluir páginas?",
-        "answer": "Sí, puedes excluir portadas u otras páginas específicas."
-      },
-      {
-        "question": "¿Qué formatos están disponibles?",
-        "answer": "Números arábigos, romanos, letras y formatos personalizados."
-      },
-      {
-        "question": "¿Puedo cambiar la posición?",
-        "answer": "Sí, elige entre 9 posiciones diferentes en la página."
-      }
-    ]
-  },
-  "add-watermark": {
-    "title": "Añadir Marca de Agua",
-    "metaDescription": "Añade marcas de agua de texto o imagen a documentos PDF.",
-    "keywords": [
-      "marca de agua pdf",
-      "watermark pdf",
-      "añadir marca",
-      "proteger pdf"
-    ],
-    "description": "<p>Añadir Marca de Agua te permite insertar marcas de agua de texto o imagen en tus documentos PDF para protección o branding.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Marca de Agua",
-        "description": "Ingresa texto o sube imagen, ajusta posición y opacidad."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Añade la marca de agua y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Proteger Documentos",
-        "description": "Marca documentos como confidenciales o borradores.",
-        "icon": "shield"
-      },
-      {
-        "title": "Branding",
-        "description": "Añade logo de empresa a documentos.",
-        "icon": "image"
-      },
-      {
-        "title": "Derechos de Autor",
-        "description": "Protege contenido con marcas de copyright.",
-        "icon": "copyright"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo usar imágenes?",
-        "answer": "Sí, soporta PNG, JPG y otros formatos de imagen."
-      },
-      {
-        "question": "¿Puedo ajustar la opacidad?",
-        "answer": "Sí, ajusta la transparencia de 0% a 100%."
-      },
-      {
-        "question": "¿Se aplica a todas las páginas?",
-        "answer": "Puedes aplicar a todas o seleccionar páginas específicas."
-      }
-    ]
-  },
-  "header-footer": {
-    "title": "Encabezado y Pie de Página",
-    "metaDescription": "Añade encabezados y pies de página personalizados a documentos PDF.",
-    "keywords": [
-      "encabezado pdf",
-      "pie de página pdf",
-      "header footer pdf"
-    ],
-    "description": "<p>Encabezado y Pie de Página te permite añadir texto personalizado en la parte superior e inferior de tus páginas PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Contenido",
-        "description": "Ingresa texto para encabezado y/o pie de página."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Añade el contenido y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Corporativos",
-        "description": "Añade nombre de empresa y fecha.",
-        "icon": "building"
-      },
-      {
-        "title": "Informes",
-        "description": "Incluye título del documento y números de página.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Documentos Legales",
-        "description": "Añade información de confidencialidad.",
-        "icon": "scale"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo usar variables?",
-        "answer": "Sí, incluye fecha, número de página y total de páginas."
-      },
-      {
-        "question": "¿Puedo personalizar la fuente?",
-        "answer": "Sí, ajusta fuente, tamaño, color y alineación."
-      },
-      {
-        "question": "¿Puedo tener diferentes encabezados?",
-        "answer": "Puedes configurar diferentes para páginas pares e impares."
-      }
-    ]
-  },
-  "invert-colors": {
-    "title": "Invertir Colores",
-    "metaDescription": "Invierte los colores de documentos PDF para modo oscuro o efectos especiales.",
-    "keywords": [
-      "invertir colores pdf",
-      "modo oscuro pdf",
-      "negativo pdf"
-    ],
-    "description": "<p>Invertir Colores cambia los colores de tu PDF a su negativo, útil para modo oscuro o efectos visuales.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona páginas y opciones de inversión."
-      },
-      {
-        "step": 3,
-        "title": "Invierte y Descarga",
-        "description": "Aplica la inversión y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Modo Oscuro",
-        "description": "Crea versiones de modo oscuro para lectura nocturna.",
-        "icon": "moon"
-      },
-      {
-        "title": "Accesibilidad",
-        "description": "Mejora la legibilidad para usuarios con sensibilidad a la luz.",
-        "icon": "eye"
-      },
-      {
-        "title": "Efectos Visuales",
-        "description": "Crea efectos de negativo para diseño.",
-        "icon": "palette"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Afecta las imágenes?",
-        "answer": "Sí, todos los elementos visuales se invierten."
-      },
-      {
-        "question": "¿Puedo invertir páginas específicas?",
-        "answer": "Sí, selecciona las páginas a invertir."
-      },
-      {
-        "question": "¿Es reversible?",
-        "answer": "Sí, invierte de nuevo para restaurar los colores originales."
-      }
-    ]
-  },
-  "background-color": {
-    "title": "Color de Fondo",
-    "metaDescription": "Cambia el color de fondo de páginas PDF.",
-    "keywords": [
-      "color de fondo pdf",
-      "fondo pdf",
-      "cambiar fondo"
-    ],
-    "description": "<p>Color de Fondo te permite cambiar el color de fondo de tus páginas PDF para mejorar la legibilidad o estética.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Color",
-        "description": "Elige el color de fondo deseado."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Cambia el fondo y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Lectura Cómoda",
-        "description": "Usa fondos crema o sepia para reducir fatiga visual.",
-        "icon": "eye"
-      },
-      {
-        "title": "Branding",
-        "description": "Aplica colores corporativos a documentos.",
-        "icon": "palette"
-      },
-      {
-        "title": "Impresión",
-        "description": "Prepara documentos con fondos específicos para impresión.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo usar cualquier color?",
-        "answer": "Sí, selecciona cualquier color del selector o ingresa código hex."
-      },
-      {
-        "question": "¿Afecta el contenido?",
-        "answer": "No, solo cambia el fondo. El contenido permanece intacto."
-      },
-      {
-        "question": "¿Puedo aplicar a páginas específicas?",
-        "answer": "Sí, selecciona las páginas a modificar."
-      }
-    ]
-  },
-  "text-color": {
-    "title": "Cambiar Color de Texto",
-    "metaDescription": "Cambia el color del texto en documentos PDF.",
-    "keywords": [
-      "color de texto pdf",
-      "cambiar texto pdf",
-      "modificar texto"
-    ],
-    "description": "<p>Cambiar Color de Texto te permite modificar el color del texto en tus documentos PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Colores",
-        "description": "Elige el color original y el nuevo color."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Cambia el color y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Accesibilidad",
-        "description": "Mejora el contraste para mejor legibilidad.",
-        "icon": "eye"
-      },
-      {
-        "title": "Branding",
-        "description": "Aplica colores corporativos al texto.",
-        "icon": "palette"
-      },
-      {
-        "title": "Impresión",
-        "description": "Prepara documentos para impresión en blanco y negro.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo cambiar colores específicos?",
-        "answer": "Sí, selecciona el color a reemplazar y el nuevo color."
-      },
-      {
-        "question": "¿Afecta las imágenes?",
-        "answer": "No, solo afecta el texto del documento."
-      },
-      {
-        "question": "¿Funciona con todos los PDFs?",
-        "answer": "Funciona mejor con PDFs que contienen texto real, no imágenes de texto."
-      }
-    ]
-  },
-  "add-stamps": {
-    "title": "Añadir Sellos",
-    "metaDescription": "Añade sellos predefinidos o personalizados a documentos PDF.",
-    "keywords": [
-      "sellos pdf",
-      "stamps pdf",
-      "añadir sello",
-      "marcar pdf"
-    ],
-    "description": "<p>Añadir Sellos te permite insertar sellos predefinidos como \"Aprobado\", \"Confidencial\" o sellos personalizados.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Sello",
-        "description": "Elige un sello predefinido o crea uno personalizado."
-      },
-      {
-        "step": 3,
-        "title": "Coloca y Descarga",
-        "description": "Posiciona el sello y descarga el PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Aprobación de Documentos",
-        "description": "Marca documentos como aprobados o rechazados.",
-        "icon": "check-circle"
-      },
-      {
-        "title": "Confidencialidad",
-        "description": "Añade sellos de confidencial o uso interno.",
-        "icon": "lock"
-      },
-      {
-        "title": "Estado de Documentos",
-        "description": "Marca como borrador, final o revisado.",
-        "icon": "tag"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué sellos predefinidos hay?",
-        "answer": "Incluye Aprobado, Rechazado, Confidencial, Borrador, Final y más."
-      },
-      {
-        "question": "¿Puedo crear sellos personalizados?",
-        "answer": "Sí, crea sellos con texto e imagen personalizados."
-      },
-      {
-        "question": "¿Puedo añadir múltiples sellos?",
-        "answer": "Sí, añade tantos sellos como necesites."
-      }
-    ]
-  },
-  "remove-annotations": {
-    "title": "Eliminar Anotaciones",
-    "metaDescription": "Elimina todas las anotaciones y comentarios de documentos PDF.",
-    "keywords": [
-      "eliminar anotaciones pdf",
-      "quitar comentarios",
-      "limpiar pdf"
-    ],
-    "description": "<p>Eliminar Anotaciones quita todos los comentarios, resaltados, notas y otras anotaciones de tus documentos PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Tipos",
-        "description": "Elige qué tipos de anotaciones eliminar."
-      },
-      {
-        "step": 3,
-        "title": "Elimina y Descarga",
-        "description": "Quita las anotaciones y descarga el PDF limpio."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Limpiar Documentos",
-        "description": "Elimina marcas de revisión antes de publicar.",
-        "icon": "eraser"
-      },
-      {
-        "title": "Privacidad",
-        "description": "Quita comentarios antes de compartir externamente.",
-        "icon": "shield"
-      },
-      {
-        "title": "Versión Final",
-        "description": "Crea versiones limpias de documentos revisados.",
-        "icon": "file-check"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué tipos de anotaciones se eliminan?",
-        "answer": "Comentarios, resaltados, notas adhesivas, dibujos y más."
-      },
-      {
-        "question": "¿Puedo eliminar selectivamente?",
-        "answer": "Sí, elige qué tipos de anotaciones eliminar."
-      },
-      {
-        "question": "¿Es reversible?",
-        "answer": "No, guarda una copia de seguridad antes de eliminar."
-      }
-    ]
-  },
-  "form-filler": {
-    "title": "Rellenar Formularios",
-    "metaDescription": "Rellena formularios PDF interactivos en línea.",
-    "keywords": [
-      "rellenar formularios pdf",
-      "completar pdf",
-      "formularios interactivos"
-    ],
-    "description": "<p>Rellenar Formularios te permite completar formularios PDF interactivos directamente en tu navegador.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el formulario."
-      },
-      {
-        "step": 2,
-        "title": "Completa Campos",
-        "description": "Rellena los campos del formulario."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Guarda el formulario completado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Formularios Oficiales",
-        "description": "Completa formularios gubernamentales o legales.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Solicitudes",
-        "description": "Rellena solicitudes de empleo o servicios.",
-        "icon": "clipboard"
-      },
-      {
-        "title": "Contratos",
-        "description": "Completa contratos y acuerdos.",
-        "icon": "file-signature"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Funciona con todos los formularios?",
-        "answer": "Funciona con formularios PDF interactivos estándar."
-      },
-      {
-        "question": "¿Puedo guardar y continuar después?",
-        "answer": "Sí, guarda el progreso y continúa más tarde."
-      },
-      {
-        "question": "¿Puedo añadir firma?",
-        "answer": "Sí, usa la herramienta Firmar PDF para añadir firmas."
-      }
-    ]
-  },
-  "form-creator": {
-    "title": "Crear Formularios",
-    "metaDescription": "Crea formularios PDF interactivos con campos rellenables.",
-    "keywords": [
-      "crear formularios pdf",
-      "formularios interactivos",
-      "campos pdf"
-    ],
-    "description": "<p>Crear Formularios te permite añadir campos interactivos a documentos PDF para crear formularios rellenables.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento base."
-      },
-      {
-        "step": 2,
-        "title": "Añade Campos",
-        "description": "Inserta campos de texto, casillas, botones de radio, etc."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Guarda el formulario interactivo."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Formularios de Empresa",
-        "description": "Crea formularios internos rellenables.",
-        "icon": "building"
-      },
-      {
-        "title": "Encuestas",
-        "description": "Diseña encuestas y cuestionarios.",
-        "icon": "clipboard-list"
-      },
-      {
-        "title": "Solicitudes",
-        "description": "Crea formularios de solicitud profesionales.",
-        "icon": "file-plus"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué tipos de campos puedo añadir?",
-        "answer": "Texto, casillas, botones de radio, listas desplegables, fechas y más."
-      },
-      {
-        "question": "¿Puedo hacer campos obligatorios?",
-        "answer": "Sí, configura validación y campos requeridos."
-      },
-      {
-        "question": "¿Los formularios funcionan en todos los lectores?",
-        "answer": "Sí, son compatibles con lectores PDF estándar."
-      }
-    ]
-  },
-  "remove-blank-pages": {
-    "title": "Eliminar Páginas en Blanco",
-    "metaDescription": "Detecta y elimina automáticamente páginas en blanco de documentos PDF.",
-    "keywords": [
-      "eliminar páginas en blanco",
-      "quitar páginas vacías",
-      "limpiar pdf"
-    ],
-    "description": "<p>Eliminar Páginas en Blanco detecta y elimina automáticamente las páginas vacías de tus documentos PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Sensibilidad",
-        "description": "Ajusta el umbral de detección de páginas en blanco."
-      },
-      {
-        "step": 3,
-        "title": "Elimina y Descarga",
-        "description": "Quita las páginas en blanco y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Limpiar Escaneos",
-        "description": "Elimina páginas en blanco de documentos escaneados.",
-        "icon": "file-minus"
-      },
-      {
-        "title": "Optimizar Documentos",
-        "description": "Reduce el tamaño eliminando páginas vacías.",
-        "icon": "zap"
-      },
-      {
-        "title": "Preparar para Impresión",
-        "description": "Elimina páginas innecesarias antes de imprimir.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo detecta páginas en blanco?",
-        "answer": "Analiza el contenido de cada página para detectar vacías."
-      },
-      {
-        "question": "¿Puedo revisar antes de eliminar?",
-        "answer": "Sí, muestra las páginas detectadas para confirmación."
-      },
-      {
-        "question": "¿Detecta páginas casi en blanco?",
-        "answer": "Sí, ajusta la sensibilidad para incluir páginas con poco contenido."
-      }
-    ]
-  },
-  "image-to-pdf": {
-    "title": "Imagen a PDF",
-    "metaDescription": "Convierte múltiples formatos de imagen a PDF. Soporta JPG, PNG, WebP, BMP, TIFF, SVG, HEIC.",
-    "keywords": [
-      "imagen a pdf",
-      "convertir imagen",
-      "foto a pdf",
-      "múltiples imágenes pdf"
-    ],
-    "description": "<p>Imagen a PDF convierte varios formatos de imagen en documentos PDF. Soporta JPG, PNG, WebP, BMP, TIFF, SVG y HEIC.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes",
-        "description": "Arrastra y suelta imágenes o haz clic para seleccionar."
-      },
-      {
-        "step": 2,
-        "title": "Ordena y Configura",
-        "description": "Reordena y selecciona opciones de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentación",
-        "description": "Convierte capturas de pantalla en documentación.",
-        "icon": "image"
-      },
-      {
-        "title": "Portafolios",
-        "description": "Crea portafolios de imágenes en PDF.",
-        "icon": "folder"
-      },
-      {
-        "title": "Archivos",
-        "description": "Archiva imágenes en formato PDF.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué formatos soporta?",
-        "answer": "JPG, PNG, WebP, BMP, TIFF, SVG y HEIC."
-      },
-      {
-        "question": "¿Se mantiene la calidad?",
-        "answer": "Sí, las imágenes se incrustan en calidad original."
-      },
-      {
-        "question": "¿Puedo combinar diferentes formatos?",
-        "answer": "Sí, mezcla cualquier formato de imagen soportado."
-      }
-    ]
-  },
-  "png-to-pdf": {
-    "title": "PNG a PDF",
-    "metaDescription": "Convierte imágenes PNG a documentos PDF con transparencia preservada.",
-    "keywords": [
-      "png a pdf",
-      "convertir png",
-      "imagen png pdf"
-    ],
-    "description": "<p>PNG a PDF convierte imágenes PNG en documentos PDF, preservando la transparencia cuando es posible.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes PNG",
-        "description": "Arrastra y suelta archivos PNG."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona tamaño de página y orientación."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Gráficos",
-        "description": "Convierte gráficos PNG con transparencia.",
-        "icon": "image"
-      },
-      {
-        "title": "Logos",
-        "description": "Crea PDFs de logos para impresión.",
-        "icon": "star"
-      },
-      {
-        "title": "Capturas",
-        "description": "Convierte capturas de pantalla en PDF.",
-        "icon": "monitor"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se preserva la transparencia?",
-        "answer": "La transparencia se preserva en el PDF resultante."
-      },
-      {
-        "question": "¿Puedo convertir múltiples PNGs?",
-        "answer": "Sí, combina múltiples PNGs en un PDF."
-      },
-      {
-        "question": "¿Qué calidad tiene el resultado?",
-        "answer": "Se mantiene la calidad original de las imágenes."
-      }
-    ]
-  },
-  "webp-to-pdf": {
-    "title": "WebP a PDF",
-    "metaDescription": "Convierte imágenes WebP a documentos PDF.",
-    "keywords": [
-      "webp a pdf",
-      "convertir webp",
-      "imagen webp pdf"
-    ],
-    "description": "<p>WebP a PDF convierte imágenes en formato WebP a documentos PDF.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes WebP",
-        "description": "Arrastra y suelta archivos WebP."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona tamaño de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Imágenes Web",
-        "description": "Convierte imágenes descargadas de la web.",
-        "icon": "globe"
-      },
-      {
-        "title": "Archivos",
-        "description": "Archiva imágenes WebP en formato PDF.",
-        "icon": "archive"
-      },
-      {
-        "title": "Documentación",
-        "description": "Incluye imágenes WebP en documentos.",
-        "icon": "file-text"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es WebP?",
-        "answer": "WebP es un formato de imagen moderno desarrollado por Google."
-      },
-      {
-        "question": "¿Se mantiene la calidad?",
-        "answer": "Sí, se preserva la calidad de la imagen original."
-      },
-      {
-        "question": "¿Soporta WebP animado?",
-        "answer": "Se convierte el primer fotograma de WebP animados."
-      }
-    ]
-  },
-  "svg-to-pdf": {
-    "title": "SVG a PDF",
-    "metaDescription": "Convierte gráficos vectoriales SVG a documentos PDF.",
-    "keywords": [
-      "svg a pdf",
-      "convertir svg",
-      "vector a pdf"
-    ],
-    "description": "<p>SVG a PDF convierte gráficos vectoriales SVG en documentos PDF, manteniendo la escalabilidad.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Archivos SVG",
-        "description": "Arrastra y suelta archivos SVG."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona tamaño de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Logos",
-        "description": "Convierte logos vectoriales para impresión.",
-        "icon": "star"
-      },
-      {
-        "title": "Ilustraciones",
-        "description": "Crea PDFs de ilustraciones vectoriales.",
-        "icon": "pen-tool"
-      },
-      {
-        "title": "Diagramas",
-        "description": "Convierte diagramas SVG a PDF.",
-        "icon": "git-branch"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se mantiene la calidad vectorial?",
-        "answer": "Sí, los gráficos permanecen escalables en el PDF."
-      },
-      {
-        "question": "¿Soporta SVG complejos?",
-        "answer": "Sí, soporta la mayoría de características SVG."
-      },
-      {
-        "question": "¿Puedo convertir múltiples SVGs?",
-        "answer": "Sí, combina múltiples SVGs en un PDF."
-      }
-    ]
-  },
-  "bmp-to-pdf": {
-    "title": "BMP a PDF",
-    "metaDescription": "Convierte imágenes BMP a documentos PDF.",
-    "keywords": [
-      "bmp a pdf",
-      "convertir bmp",
-      "bitmap a pdf"
-    ],
-    "description": "<p>BMP a PDF convierte imágenes en formato BMP (bitmap) a documentos PDF.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes BMP",
-        "description": "Arrastra y suelta archivos BMP."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona tamaño de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Imágenes Antiguas",
-        "description": "Convierte archivos BMP heredados.",
-        "icon": "image"
-      },
-      {
-        "title": "Capturas Windows",
-        "description": "Convierte capturas en formato BMP.",
-        "icon": "monitor"
-      },
-      {
-        "title": "Archivos",
-        "description": "Archiva imágenes BMP en PDF.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es BMP?",
-        "answer": "BMP es un formato de imagen sin compresión de Windows."
-      },
-      {
-        "question": "¿Se reduce el tamaño?",
-        "answer": "Sí, el PDF resultante suele ser más pequeño que el BMP original."
-      },
-      {
-        "question": "¿Se mantiene la calidad?",
-        "answer": "Sí, se preserva la calidad de la imagen."
-      }
-    ]
-  },
-  "heic-to-pdf": {
-    "title": "HEIC a PDF",
-    "metaDescription": "Convierte imágenes HEIC de iPhone a documentos PDF.",
-    "keywords": [
-      "heic a pdf",
-      "convertir heic",
-      "iphone foto pdf"
-    ],
-    "description": "<p>HEIC a PDF convierte imágenes HEIC (formato de iPhone) a documentos PDF.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes HEIC",
-        "description": "Arrastra y suelta archivos HEIC."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona tamaño de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Fotos de iPhone",
-        "description": "Convierte fotos de iPhone a PDF.",
-        "icon": "smartphone"
-      },
-      {
-        "title": "Álbumes",
-        "description": "Crea álbumes PDF de fotos HEIC.",
-        "icon": "image"
-      },
-      {
-        "title": "Compartir",
-        "description": "Convierte para compartir con usuarios sin soporte HEIC.",
-        "icon": "share-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es HEIC?",
-        "answer": "HEIC es el formato de imagen predeterminado de iPhone desde iOS 11."
-      },
-      {
-        "question": "¿Se mantiene la calidad?",
-        "answer": "Sí, se preserva la calidad de la imagen original."
-      },
-      {
-        "question": "¿Soporta Live Photos?",
-        "answer": "Se convierte la imagen estática de Live Photos."
-      }
-    ]
-  },
-  "tiff-to-pdf": {
-    "title": "TIFF a PDF",
-    "metaDescription": "Convierte imágenes TIFF a documentos PDF.",
-    "keywords": [
-      "tiff a pdf",
-      "convertir tiff",
-      "tif a pdf"
-    ],
-    "description": "<p>TIFF a PDF convierte imágenes TIFF de alta calidad a documentos PDF.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Imágenes TIFF",
-        "description": "Arrastra y suelta archivos TIFF."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona tamaño de página."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Escaneados",
-        "description": "Convierte escaneos TIFF a PDF.",
-        "icon": "scan"
-      },
-      {
-        "title": "Fotografía Profesional",
-        "description": "Crea PDFs de fotos de alta calidad.",
-        "icon": "camera"
-      },
-      {
-        "title": "Archivos",
-        "description": "Archiva imágenes TIFF en PDF.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Soporta TIFF multipágina?",
-        "answer": "Sí, cada página TIFF se convierte en una página PDF."
-      },
-      {
-        "question": "¿Se mantiene la calidad?",
-        "answer": "Sí, se preserva la calidad de la imagen."
-      },
-      {
-        "question": "¿Soporta TIFF con capas?",
-        "answer": "Se aplana el TIFF al convertir."
-      }
-    ]
-  },
-  "txt-to-pdf": {
-    "title": "Texto a PDF",
-    "metaDescription": "Convierte archivos de texto plano a documentos PDF.",
-    "keywords": [
-      "texto a pdf",
-      "txt a pdf",
-      "convertir texto"
-    ],
-    "description": "<p>Texto a PDF convierte archivos de texto plano (.txt) en documentos PDF con formato personalizable.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Archivo de Texto",
-        "description": "Arrastra y suelta o pega texto."
-      },
-      {
-        "step": 2,
-        "title": "Configura Formato",
-        "description": "Selecciona fuente, tamaño y márgenes."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentación",
-        "description": "Convierte archivos README y documentación.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Código",
-        "description": "Crea PDFs de código fuente.",
-        "icon": "code"
-      },
-      {
-        "title": "Notas",
-        "description": "Convierte notas de texto a PDF.",
-        "icon": "sticky-note"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo personalizar la fuente?",
-        "answer": "Sí, selecciona fuente, tamaño y color."
-      },
-      {
-        "question": "¿Soporta caracteres especiales?",
-        "answer": "Sí, soporta Unicode y caracteres especiales."
-      },
-      {
-        "question": "¿Puedo añadir encabezados?",
-        "answer": "Sí, configura encabezados y pies de página."
-      }
-    ]
-  },
-  "json-to-pdf": {
-    "title": "JSON a PDF",
-    "metaDescription": "Convierte datos JSON a documentos PDF formateados.",
-    "keywords": [
-      "json a pdf",
-      "convertir json",
-      "datos a pdf"
-    ],
-    "description": "<p>JSON a PDF convierte datos JSON en documentos PDF con formato legible.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Archivo JSON",
-        "description": "Arrastra y suelta o pega JSON."
-      },
-      {
-        "step": 2,
-        "title": "Configura Formato",
-        "description": "Selecciona estilo de presentación."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentación API",
-        "description": "Crea documentación de respuestas API.",
-        "icon": "code"
-      },
-      {
-        "title": "Informes de Datos",
-        "description": "Genera informes de datos JSON.",
-        "icon": "bar-chart"
-      },
-      {
-        "title": "Configuraciones",
-        "description": "Documenta archivos de configuración.",
-        "icon": "settings"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo se formatea el JSON?",
-        "answer": "Se presenta con indentación y resaltado de sintaxis."
-      },
-      {
-        "question": "¿Soporta JSON grandes?",
-        "answer": "Sí, maneja archivos JSON de cualquier tamaño."
-      },
-      {
-        "question": "¿Puedo personalizar colores?",
-        "answer": "Sí, configura el esquema de colores del resaltado."
-      }
-    ]
-  },
-  "pdf-to-jpg": {
-    "title": "PDF a JPG",
-    "metaDescription": "Convierte páginas PDF a imágenes JPG de alta calidad.",
-    "keywords": [
-      "pdf a jpg",
-      "pdf a jpeg",
-      "convertir pdf imagen"
-    ],
-    "description": "<p>PDF a JPG convierte las páginas de tu documento PDF en imágenes JPG de alta calidad.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona calidad y páginas a convertir."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Descarga las imágenes JPG."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compartir en Redes",
-        "description": "Convierte páginas para compartir en redes sociales.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Presentaciones",
-        "description": "Usa páginas PDF como imágenes en presentaciones.",
-        "icon": "presentation"
-      },
-      {
-        "title": "Web",
-        "description": "Convierte para usar en sitios web.",
-        "icon": "globe"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué calidad tienen las imágenes?",
-        "answer": "Configura la calidad de 1 a 100, con 100 siendo la máxima."
-      },
-      {
-        "question": "¿Puedo convertir páginas específicas?",
-        "answer": "Sí, selecciona las páginas a convertir."
-      },
-      {
-        "question": "¿Cómo descargo múltiples imágenes?",
-        "answer": "Se descargan como archivo ZIP."
-      }
-    ]
-  },
-  "pdf-to-png": {
-    "title": "PDF a PNG",
-    "metaDescription": "Convierte páginas PDF a imágenes PNG con transparencia.",
-    "keywords": [
-      "pdf a png",
-      "convertir pdf png",
-      "pdf imagen png"
-    ],
-    "description": "<p>PDF a PNG convierte las páginas de tu documento PDF en imágenes PNG de alta calidad.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona resolución y páginas."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Descarga las imágenes PNG."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Gráficos",
-        "description": "Extrae gráficos con transparencia.",
-        "icon": "image"
-      },
-      {
-        "title": "Diseño",
-        "description": "Usa páginas en proyectos de diseño.",
-        "icon": "palette"
-      },
-      {
-        "title": "Documentación",
-        "description": "Incluye páginas como imágenes en documentos.",
-        "icon": "file-text"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Soporta transparencia?",
-        "answer": "Sí, las áreas transparentes se preservan."
-      },
-      {
-        "question": "¿Qué resolución tienen?",
-        "answer": "Configura la resolución en DPI (72-600)."
-      },
-      {
-        "question": "¿Puedo convertir todas las páginas?",
-        "answer": "Sí, convierte todas o selecciona específicas."
-      }
-    ]
-  },
-  "pdf-to-webp": {
-    "title": "PDF a WebP",
-    "metaDescription": "Convierte páginas PDF a imágenes WebP optimizadas para web.",
-    "keywords": [
-      "pdf a webp",
-      "convertir pdf webp",
-      "pdf imagen web"
-    ],
-    "description": "<p>PDF a WebP convierte las páginas de tu documento PDF en imágenes WebP optimizadas para web.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona calidad y páginas."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Descarga las imágenes WebP."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Sitios Web",
-        "description": "Crea imágenes optimizadas para web.",
-        "icon": "globe"
-      },
-      {
-        "title": "Rendimiento",
-        "description": "Reduce el tamaño de imágenes para carga rápida.",
-        "icon": "zap"
-      },
-      {
-        "title": "Blogs",
-        "description": "Convierte páginas para artículos de blog.",
-        "icon": "edit"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Por qué WebP?",
-        "answer": "WebP ofrece mejor compresión que JPG y PNG."
-      },
-      {
-        "question": "¿Es compatible con todos los navegadores?",
-        "answer": "Sí, todos los navegadores modernos soportan WebP."
-      },
-      {
-        "question": "¿Puedo ajustar la compresión?",
-        "answer": "Sí, configura el nivel de calidad."
-      }
-    ]
-  },
-  "pdf-to-bmp": {
-    "title": "PDF a BMP",
-    "metaDescription": "Convierte páginas PDF a imágenes BMP sin compresión.",
-    "keywords": [
-      "pdf a bmp",
-      "convertir pdf bmp",
-      "pdf bitmap"
-    ],
-    "description": "<p>PDF a BMP convierte las páginas de tu documento PDF en imágenes BMP sin compresión.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona resolución y páginas."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Descarga las imágenes BMP."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compatibilidad",
-        "description": "Crea imágenes para software antiguo.",
-        "icon": "monitor"
-      },
-      {
-        "title": "Impresión",
-        "description": "Genera imágenes sin pérdida para impresión.",
-        "icon": "printer"
-      },
-      {
-        "title": "Edición",
-        "description": "Crea imágenes para edición sin pérdida.",
-        "icon": "edit"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Por qué BMP?",
-        "answer": "BMP no tiene compresión, ideal para máxima calidad."
-      },
-      {
-        "question": "¿Los archivos son grandes?",
-        "answer": "Sí, BMP produce archivos más grandes que otros formatos."
-      },
-      {
-        "question": "¿Puedo convertir múltiples páginas?",
-        "answer": "Sí, se descargan como archivo ZIP."
-      }
-    ]
-  },
-  "pdf-to-tiff": {
-    "title": "PDF a TIFF",
-    "metaDescription": "Convierte páginas PDF a imágenes TIFF de alta calidad.",
-    "keywords": [
-      "pdf a tiff",
-      "convertir pdf tiff",
-      "pdf tif"
-    ],
-    "description": "<p>PDF a TIFF convierte las páginas de tu documento PDF en imágenes TIFF de alta calidad.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona resolución y compresión."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Descarga las imágenes TIFF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Impresión Profesional",
-        "description": "Crea imágenes para impresión de alta calidad.",
-        "icon": "printer"
-      },
-      {
-        "title": "Archivos",
-        "description": "Archiva documentos en formato TIFF.",
-        "icon": "archive"
-      },
-      {
-        "title": "Escaneo",
-        "description": "Convierte para flujos de trabajo de escaneo.",
-        "icon": "scan"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Soporta TIFF multipágina?",
-        "answer": "Sí, puede crear un TIFF multipágina o archivos separados."
-      },
-      {
-        "question": "¿Qué compresión usa?",
-        "answer": "Soporta LZW, ZIP y sin compresión."
-      },
-      {
-        "question": "¿Qué resolución recomiendas?",
-        "answer": "300 DPI para impresión, 150 DPI para pantalla."
-      }
-    ]
-  },
-  "pdf-to-greyscale": {
-    "title": "PDF a Escala de Grises",
-    "metaDescription": "Convierte documentos PDF a color a escala de grises.",
-    "keywords": [
-      "pdf escala de grises",
-      "pdf blanco y negro",
-      "convertir pdf gris"
-    ],
-    "description": "<p>PDF a Escala de Grises convierte documentos PDF a color en versiones en escala de grises.</p><p>Conversión local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona páginas a convertir."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Descarga el PDF en escala de grises."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Ahorro de Tinta",
-        "description": "Prepara documentos para impresión económica.",
-        "icon": "printer"
-      },
-      {
-        "title": "Documentos Formales",
-        "description": "Crea versiones formales en blanco y negro.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Accesibilidad",
-        "description": "Mejora la legibilidad para algunos usuarios.",
-        "icon": "eye"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Es reversible?",
-        "answer": "No, guarda una copia del original a color."
-      },
-      {
-        "question": "¿Afecta las imágenes?",
-        "answer": "Sí, todas las imágenes se convierten a grises."
-      },
-      {
-        "question": "¿Reduce el tamaño del archivo?",
-        "answer": "Puede reducir ligeramente el tamaño."
-      }
-    ]
-  },
-  "pdf-to-json": {
-    "title": "PDF a JSON",
-    "metaDescription": "Extrae datos estructurados de documentos PDF a formato JSON.",
-    "keywords": [
-      "pdf a json",
-      "extraer datos pdf",
-      "pdf datos json"
-    ],
-    "description": "<p>PDF a JSON extrae el contenido y estructura de documentos PDF en formato JSON.</p><p>Extracción local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona qué datos extraer."
-      },
-      {
-        "step": 3,
-        "title": "Extrae y Descarga",
-        "description": "Descarga el archivo JSON."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Procesamiento de Datos",
-        "description": "Extrae datos para procesamiento automatizado.",
-        "icon": "database"
-      },
-      {
-        "title": "Integración",
-        "description": "Integra contenido PDF en aplicaciones.",
-        "icon": "plug"
-      },
-      {
-        "title": "Análisis",
-        "description": "Analiza estructura y contenido de PDFs.",
-        "icon": "bar-chart"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué datos se extraen?",
-        "answer": "Texto, metadatos, estructura de páginas y más."
-      },
-      {
-        "question": "¿Extrae tablas?",
-        "answer": "Intenta detectar y estructurar tablas."
-      },
-      {
-        "question": "¿Funciona con PDFs escaneados?",
-        "answer": "Para PDFs escaneados, usa primero OCR PDF."
-      }
-    ]
-  },
-  "ocr-pdf": {
-    "title": "OCR PDF",
-    "metaDescription": "Reconocimiento óptico de caracteres para hacer PDFs escaneados buscables.",
-    "keywords": [
-      "ocr pdf",
-      "reconocimiento texto",
-      "pdf buscable",
-      "escaneo a texto"
-    ],
-    "description": "<p>OCR PDF aplica reconocimiento óptico de caracteres a PDFs escaneados para hacerlos buscables y editables.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el PDF escaneado."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Idioma",
-        "description": "Elige el idioma del documento."
-      },
-      {
-        "step": 3,
-        "title": "Procesa y Descarga",
-        "description": "Aplica OCR y descarga el PDF buscable."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Escaneados",
-        "description": "Haz buscables documentos escaneados.",
-        "icon": "scan"
-      },
-      {
-        "title": "Archivos Históricos",
-        "description": "Digitaliza documentos antiguos.",
-        "icon": "archive"
-      },
-      {
-        "title": "Accesibilidad",
-        "description": "Permite lectores de pantalla en PDFs escaneados.",
-        "icon": "eye"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué idiomas soporta?",
-        "answer": "Soporta más de 100 idiomas incluyendo español, inglés, chino y más."
-      },
-      {
-        "question": "¿Qué precisión tiene?",
-        "answer": "La precisión depende de la calidad del escaneo, típicamente 95%+."
-      },
-      {
-        "question": "¿Modifica el aspecto del PDF?",
-        "answer": "No, añade una capa de texto invisible sobre la imagen."
-      }
-    ]
-  },
-  "alternate-merge": {
-    "title": "Combinación Alternada",
-    "metaDescription": "Combina dos PDFs alternando páginas de cada documento.",
-    "keywords": [
-      "combinar alternado",
-      "intercalar pdf",
-      "mezclar páginas"
-    ],
-    "description": "<p>Combinación Alternada combina dos PDFs alternando páginas de cada documento, útil para documentos de doble cara.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Dos PDFs",
-        "description": "Arrastra y suelta los dos documentos."
-      },
-      {
-        "step": 2,
-        "title": "Configura Orden",
-        "description": "Selecciona el orden de alternancia."
-      },
-      {
-        "step": 3,
-        "title": "Combina y Descarga",
-        "description": "Crea el PDF combinado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Escaneos Doble Cara",
-        "description": "Combina escaneos de anverso y reverso.",
-        "icon": "copy"
-      },
-      {
-        "title": "Documentos Bilingües",
-        "description": "Alterna páginas en dos idiomas.",
-        "icon": "languages"
-      },
-      {
-        "title": "Comparación",
-        "description": "Alterna versiones para comparación.",
-        "icon": "git-compare"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué pasa si tienen diferente número de páginas?",
-        "answer": "Las páginas extra se añaden al final."
-      },
-      {
-        "question": "¿Puedo invertir el orden de uno?",
-        "answer": "Sí, puedes invertir el orden de cualquier documento."
-      },
-      {
-        "question": "¿Puedo combinar más de dos PDFs?",
-        "answer": "Esta herramienta es para dos PDFs. Usa Combinar PDF para más."
-      }
-    ]
-  },
-  "add-attachments": {
-    "title": "Añadir Adjuntos",
-    "metaDescription": "Añade archivos adjuntos a documentos PDF.",
-    "keywords": [
-      "adjuntos pdf",
-      "añadir archivos pdf",
-      "incrustar archivos"
-    ],
-    "description": "<p>Añadir Adjuntos te permite incrustar archivos dentro de documentos PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Añade Archivos",
-        "description": "Selecciona los archivos a adjuntar."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Descarga el PDF con adjuntos."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentación",
-        "description": "Incluye archivos de soporte en documentos.",
-        "icon": "paperclip"
-      },
-      {
-        "title": "Informes",
-        "description": "Adjunta datos fuente a informes.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Contratos",
-        "description": "Incluye anexos en contratos.",
-        "icon": "file-signature"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué tipos de archivos puedo adjuntar?",
-        "answer": "Cualquier tipo de archivo: documentos, imágenes, hojas de cálculo, etc."
-      },
-      {
-        "question": "¿Hay límite de tamaño?",
-        "answer": "El tamaño total del PDF con adjuntos no debe exceder 500MB."
-      },
-      {
-        "question": "¿Cómo se accede a los adjuntos?",
-        "answer": "Los lectores PDF muestran los adjuntos en un panel lateral."
-      }
-    ]
-  },
-  "extract-attachments": {
-    "title": "Extraer Adjuntos",
-    "metaDescription": "Extrae archivos adjuntos de documentos PDF.",
-    "keywords": [
-      "extraer adjuntos pdf",
-      "descargar adjuntos",
-      "archivos incrustados"
-    ],
-    "description": "<p>Extraer Adjuntos te permite descargar los archivos incrustados en documentos PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Revisa Adjuntos",
-        "description": "Ve la lista de archivos adjuntos."
-      },
-      {
-        "step": 3,
-        "title": "Extrae y Descarga",
-        "description": "Descarga los adjuntos seleccionados."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Recuperar Archivos",
-        "description": "Extrae archivos de documentos recibidos.",
-        "icon": "download"
-      },
-      {
-        "title": "Organización",
-        "description": "Separa adjuntos para organización.",
-        "icon": "folder"
-      },
-      {
-        "title": "Análisis",
-        "description": "Extrae datos adjuntos para análisis.",
-        "icon": "bar-chart"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo sé si un PDF tiene adjuntos?",
-        "answer": "La herramienta muestra todos los adjuntos encontrados."
-      },
-      {
-        "question": "¿Puedo extraer adjuntos específicos?",
-        "answer": "Sí, selecciona los adjuntos a extraer."
-      },
-      {
-        "question": "¿Se modifica el PDF original?",
-        "answer": "No, solo se extraen copias de los adjuntos."
-      }
-    ]
-  },
-  "edit-attachments": {
-    "title": "Editar Adjuntos",
-    "metaDescription": "Gestiona los archivos adjuntos en documentos PDF.",
-    "keywords": [
-      "editar adjuntos pdf",
-      "gestionar adjuntos",
-      "modificar adjuntos"
-    ],
-    "description": "<p>Editar Adjuntos te permite añadir, eliminar y renombrar archivos adjuntos en documentos PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Gestiona Adjuntos",
-        "description": "Añade, elimina o renombra adjuntos."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Descarga el PDF modificado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Actualizar Adjuntos",
-        "description": "Reemplaza adjuntos desactualizados.",
-        "icon": "refresh-cw"
-      },
-      {
-        "title": "Limpiar PDFs",
-        "description": "Elimina adjuntos innecesarios.",
-        "icon": "trash-2"
-      },
-      {
-        "title": "Organizar",
-        "description": "Renombra adjuntos para mejor organización.",
-        "icon": "edit"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo reemplazar un adjunto?",
-        "answer": "Sí, elimina el existente y añade el nuevo."
-      },
-      {
-        "question": "¿Puedo cambiar el nombre?",
-        "answer": "Sí, renombra cualquier adjunto."
-      },
-      {
-        "question": "¿Afecta el contenido del PDF?",
-        "answer": "No, solo modifica los adjuntos."
-      }
-    ]
-  },
-  "divide-pages": {
-    "title": "Dividir Páginas",
-    "metaDescription": "Divide páginas PDF grandes en múltiples páginas más pequeñas.",
-    "keywords": [
-      "dividir páginas pdf",
-      "cortar páginas",
-      "separar páginas"
-    ],
-    "description": "<p>Dividir Páginas corta páginas PDF grandes en múltiples páginas más pequeñas.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura División",
-        "description": "Selecciona cómo dividir las páginas."
-      },
-      {
-        "step": 3,
-        "title": "Divide y Descarga",
-        "description": "Descarga el PDF con páginas divididas."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Posters",
-        "description": "Divide posters grandes para impresión en partes.",
-        "icon": "layout-grid"
-      },
-      {
-        "title": "Planos",
-        "description": "Divide planos grandes en secciones.",
-        "icon": "map"
-      },
-      {
-        "title": "Presentaciones",
-        "description": "Divide diapositivas anchas en páginas estándar.",
-        "icon": "presentation"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo se dividen las páginas?",
-        "answer": "Puedes dividir horizontal, vertical o en cuadrícula."
-      },
-      {
-        "question": "¿Puedo especificar el tamaño?",
-        "answer": "Sí, define el tamaño de las páginas resultantes."
-      },
-      {
-        "question": "¿Se pierde contenido?",
-        "answer": "No, todo el contenido se preserva en las páginas divididas."
-      }
-    ]
-  },
-  "add-blank-page": {
-    "title": "Añadir Página en Blanco",
-    "metaDescription": "Inserta páginas en blanco en documentos PDF.",
-    "keywords": [
-      "añadir página blanco",
-      "insertar página pdf",
-      "página vacía"
-    ],
-    "description": "<p>Añadir Página en Blanco te permite insertar páginas vacías en cualquier posición de tu documento PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Posición",
-        "description": "Elige dónde insertar la página en blanco."
-      },
-      {
-        "step": 3,
-        "title": "Añade y Descarga",
-        "description": "Inserta la página y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Separadores",
-        "description": "Añade páginas en blanco como separadores de sección.",
-        "icon": "file-plus"
-      },
-      {
-        "title": "Impresión",
-        "description": "Añade páginas para impresión a doble cara.",
-        "icon": "printer"
-      },
-      {
-        "title": "Notas",
-        "description": "Inserta páginas para notas manuscritas.",
-        "icon": "edit"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo añadir múltiples páginas?",
-        "answer": "Sí, añade tantas páginas en blanco como necesites."
-      },
-      {
-        "question": "¿Puedo elegir el tamaño?",
-        "answer": "Las páginas en blanco coinciden con el tamaño del documento."
-      },
-      {
-        "question": "¿Puedo añadir al inicio o final?",
-        "answer": "Sí, inserta en cualquier posición."
-      }
-    ]
-  },
-  "reverse-pages": {
-    "title": "Invertir Páginas",
-    "metaDescription": "Invierte el orden de las páginas en documentos PDF.",
-    "keywords": [
-      "invertir páginas pdf",
-      "orden inverso",
-      "voltear pdf"
-    ],
-    "description": "<p>Invertir Páginas cambia el orden de las páginas de tu PDF, poniendo la última primero.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Confirma",
-        "description": "Revisa la vista previa del orden invertido."
-      },
-      {
-        "step": 3,
-        "title": "Invierte y Descarga",
-        "description": "Aplica la inversión y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Corregir Escaneos",
-        "description": "Corrige documentos escaneados en orden inverso.",
-        "icon": "refresh-cw"
-      },
-      {
-        "title": "Presentaciones",
-        "description": "Invierte el orden para presentaciones inversas.",
-        "icon": "presentation"
-      },
-      {
-        "title": "Impresión",
-        "description": "Prepara documentos para ciertos tipos de impresión.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo invertir páginas específicas?",
-        "answer": "Esta herramienta invierte todas las páginas. Usa Organizar PDF para reordenar específicas."
-      },
-      {
-        "question": "¿Afecta el contenido de las páginas?",
-        "answer": "No, solo cambia el orden, no el contenido."
-      },
-      {
-        "question": "¿Es reversible?",
-        "answer": "Sí, invierte de nuevo para restaurar el orden original."
-      }
-    ]
-  },
-  "rotate-pdf": {
-    "title": "Rotar PDF",
-    "metaDescription": "Rota páginas PDF 90, 180 o 270 grados.",
-    "keywords": [
-      "rotar pdf",
-      "girar páginas",
-      "orientación pdf"
-    ],
-    "description": "<p>Rotar PDF te permite girar páginas de tu documento 90, 180 o 270 grados.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Rotación",
-        "description": "Elige el ángulo y las páginas a rotar."
-      },
-      {
-        "step": 3,
-        "title": "Rota y Descarga",
-        "description": "Aplica la rotación y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Corregir Orientación",
-        "description": "Corrige páginas escaneadas con orientación incorrecta.",
-        "icon": "rotate-cw"
-      },
-      {
-        "title": "Documentos Mixtos",
-        "description": "Unifica orientación en documentos con páginas mixtas.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Presentaciones",
-        "description": "Ajusta orientación para presentaciones.",
-        "icon": "presentation"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo rotar páginas específicas?",
-        "answer": "Sí, selecciona las páginas a rotar."
-      },
-      {
-        "question": "¿Qué ángulos están disponibles?",
-        "answer": "90° (derecha), 180° (invertir), 270° (izquierda)."
-      },
-      {
-        "question": "¿Afecta la calidad?",
-        "answer": "No, la rotación no afecta la calidad del contenido."
-      }
-    ]
-  },
-  "n-up-pdf": {
-    "title": "N-Up PDF",
-    "metaDescription": "Coloca múltiples páginas PDF en una sola página (2-up, 4-up, etc.).",
-    "keywords": [
-      "n-up pdf",
-      "múltiples páginas",
-      "2-up",
-      "4-up",
-      "imprimir múltiple"
-    ],
-    "description": "<p>N-Up PDF coloca múltiples páginas de tu documento en una sola página, útil para ahorrar papel al imprimir.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Diseño",
-        "description": "Elige 2-up, 4-up, 6-up o 9-up."
-      },
-      {
-        "step": 3,
-        "title": "Procesa y Descarga",
-        "description": "Crea el PDF N-up y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Ahorro de Papel",
-        "description": "Imprime múltiples páginas por hoja.",
-        "icon": "file-minus"
-      },
-      {
-        "title": "Resúmenes",
-        "description": "Crea resúmenes visuales de documentos.",
-        "icon": "layout-grid"
-      },
-      {
-        "title": "Revisión",
-        "description": "Revisa documentos con vista general.",
-        "icon": "eye"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué significa N-up?",
-        "answer": "N páginas por hoja: 2-up = 2 páginas, 4-up = 4 páginas, etc."
-      },
-      {
-        "question": "¿Puedo personalizar el orden?",
-        "answer": "Sí, elige el orden de lectura (izquierda-derecha, arriba-abajo)."
-      },
-      {
-        "question": "¿Se reduce la calidad?",
-        "answer": "Las páginas se escalan para ajustarse, pero mantienen legibilidad."
-      }
-    ]
-  },
-  "combine-single-page": {
-    "title": "Combinar en Página Única",
-    "metaDescription": "Combina todas las páginas PDF en una sola página larga.",
-    "keywords": [
-      "combinar página única",
-      "página continua",
-      "unir páginas"
-    ],
-    "description": "<p>Combinar en Página Única une todas las páginas de tu PDF en una sola página larga continua.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona orientación y espaciado."
-      },
-      {
-        "step": 3,
-        "title": "Combina y Descarga",
-        "description": "Crea la página única y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Infografías",
-        "description": "Crea documentos de desplazamiento continuo.",
-        "icon": "scroll"
-      },
-      {
-        "title": "Impresión de Banners",
-        "description": "Prepara documentos para impresión de banners.",
-        "icon": "printer"
-      },
-      {
-        "title": "Visualización",
-        "description": "Crea vistas panorámicas de documentos.",
-        "icon": "maximize"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Hay límite de páginas?",
-        "answer": "No hay límite, pero documentos muy largos pueden ser difíciles de manejar."
-      },
-      {
-        "question": "¿Puedo añadir espacio entre páginas?",
-        "answer": "Sí, configura el espaciado entre páginas originales."
-      },
-      {
-        "question": "¿Funciona con páginas de diferentes tamaños?",
-        "answer": "Sí, las páginas se ajustan al ancho máximo."
-      }
-    ]
-  },
-  "view-metadata": {
-    "title": "Ver Metadatos",
-    "metaDescription": "Visualiza los metadatos y propiedades de documentos PDF.",
-    "keywords": [
-      "ver metadatos pdf",
-      "propiedades pdf",
-      "información pdf"
-    ],
-    "description": "<p>Ver Metadatos muestra toda la información de propiedades de tu documento PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Revisa Metadatos",
-        "description": "Ve título, autor, fechas, palabras clave, etc."
-      },
-      {
-        "step": 3,
-        "title": "Exporta si Necesitas",
-        "description": "Exporta los metadatos a JSON."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Auditoría",
-        "description": "Revisa información de documentos recibidos.",
-        "icon": "search"
-      },
-      {
-        "title": "Verificación",
-        "description": "Verifica autor y fechas de documentos.",
-        "icon": "check-circle"
-      },
-      {
-        "title": "Catalogación",
-        "description": "Extrae información para catalogar documentos.",
-        "icon": "database"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué metadatos se muestran?",
-        "answer": "Título, autor, asunto, palabras clave, fechas de creación y modificación, productor, etc."
-      },
-      {
-        "question": "¿Puedo editar los metadatos?",
-        "answer": "Usa la herramienta Editar Metadatos para modificarlos."
-      },
-      {
-        "question": "¿Se modifica el PDF?",
-        "answer": "No, solo se visualiza la información."
-      }
-    ]
-  },
-  "edit-metadata": {
-    "title": "Editar Metadatos",
-    "metaDescription": "Edita los metadatos y propiedades de documentos PDF.",
-    "keywords": [
-      "editar metadatos pdf",
-      "modificar propiedades",
-      "cambiar autor pdf"
-    ],
-    "description": "<p>Editar Metadatos te permite modificar las propiedades de tu documento PDF como título, autor y palabras clave.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Edita Metadatos",
-        "description": "Modifica título, autor, asunto, palabras clave."
-      },
-      {
-        "step": 3,
-        "title": "Guarda y Descarga",
-        "description": "Aplica los cambios y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Branding",
-        "description": "Añade información de empresa a documentos.",
-        "icon": "building"
-      },
-      {
-        "title": "SEO",
-        "description": "Optimiza metadatos para búsqueda.",
-        "icon": "search"
-      },
-      {
-        "title": "Organización",
-        "description": "Añade palabras clave para catalogación.",
-        "icon": "tag"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué metadatos puedo editar?",
-        "answer": "Título, autor, asunto, palabras clave, productor y más."
-      },
-      {
-        "question": "¿Puedo eliminar metadatos?",
-        "answer": "Sí, deja campos vacíos o usa Eliminar Metadatos."
-      },
-      {
-        "question": "¿Afecta el contenido?",
-        "answer": "No, solo modifica las propiedades del documento."
-      }
-    ]
-  },
-  "pdf-to-zip": {
-    "title": "PDFs a ZIP",
-    "metaDescription": "Empaqueta múltiples archivos PDF en un archivo ZIP.",
-    "keywords": [
-      "pdf a zip",
-      "comprimir pdfs",
-      "empaquetar pdf"
-    ],
-    "description": "<p>PDFs a ZIP empaqueta múltiples archivos PDF en un único archivo ZIP comprimido.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube PDFs",
-        "description": "Arrastra y suelta múltiples archivos PDF."
-      },
-      {
-        "step": 2,
-        "title": "Configura Opciones",
-        "description": "Selecciona nivel de compresión."
-      },
-      {
-        "step": 3,
-        "title": "Crea y Descarga",
-        "description": "Genera el archivo ZIP y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Envío por Correo",
-        "description": "Empaqueta múltiples PDFs para enviar por email.",
-        "icon": "mail"
-      },
-      {
-        "title": "Archivos",
-        "description": "Comprime documentos para almacenamiento.",
-        "icon": "archive"
-      },
-      {
-        "title": "Distribución",
-        "description": "Prepara paquetes de documentos para distribución.",
-        "icon": "package"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cuántos PDFs puedo empaquetar?",
-        "answer": "Hasta 100 archivos PDF."
-      },
-      {
-        "question": "¿Se comprimen los PDFs?",
-        "answer": "El ZIP comprime el paquete, no los PDFs individuales."
-      },
-      {
-        "question": "¿Puedo añadir otros archivos?",
-        "answer": "Esta herramienta es específica para PDFs."
-      }
-    ]
-  },
-  "compare-pdfs": {
-    "title": "Comparar PDFs",
-    "metaDescription": "Compara dos documentos PDF lado a lado y resalta diferencias.",
-    "keywords": [
-      "comparar pdf",
-      "diferencias pdf",
-      "comparación documentos"
-    ],
-    "description": "<p>Comparar PDFs muestra dos documentos lado a lado y resalta las diferencias entre ellos.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube Dos PDFs",
-        "description": "Arrastra y suelta los dos documentos a comparar."
-      },
-      {
-        "step": 2,
-        "title": "Revisa Diferencias",
-        "description": "Ve las diferencias resaltadas."
-      },
-      {
-        "step": 3,
-        "title": "Exporta Resultados",
-        "description": "Descarga el informe de comparación."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Control de Versiones",
-        "description": "Compara diferentes versiones de documentos.",
-        "icon": "git-compare"
-      },
-      {
-        "title": "Revisión de Contratos",
-        "description": "Identifica cambios en contratos.",
-        "icon": "file-signature"
-      },
-      {
-        "title": "Auditoría",
-        "description": "Verifica cambios en documentos oficiales.",
-        "icon": "search"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué diferencias detecta?",
-        "answer": "Cambios en texto, imágenes, formato y estructura."
-      },
-      {
-        "question": "¿Funciona con PDFs escaneados?",
-        "answer": "Mejor con PDFs de texto. Para escaneados, usa OCR primero."
-      },
-      {
-        "question": "¿Puedo comparar más de dos PDFs?",
-        "answer": "Esta herramienta compara dos PDFs a la vez."
-      }
-    ]
-  },
-  "posterize-pdf": {
-    "title": "Posterizar PDF",
-    "metaDescription": "Divide páginas PDF grandes en múltiples páginas para impresión de posters.",
-    "keywords": [
-      "posterizar pdf",
-      "imprimir poster",
-      "dividir página grande"
-    ],
-    "description": "<p>Posterizar PDF divide páginas grandes en múltiples páginas más pequeñas para imprimir posters en impresoras estándar.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Cuadrícula",
-        "description": "Selecciona el número de filas y columnas."
-      },
-      {
-        "step": 3,
-        "title": "Posteriza y Descarga",
-        "description": "Crea las páginas divididas y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Posters",
-        "description": "Imprime posters grandes en hojas A4.",
-        "icon": "maximize"
-      },
-      {
-        "title": "Planos",
-        "description": "Divide planos para impresión en partes.",
-        "icon": "map"
-      },
-      {
-        "title": "Banners",
-        "description": "Crea banners imprimibles en secciones.",
-        "icon": "layout-grid"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo funciona?",
-        "answer": "Divide cada página en una cuadrícula de páginas más pequeñas."
-      },
-      {
-        "question": "¿Puedo añadir marcas de corte?",
-        "answer": "Sí, añade marcas de corte y superposición."
-      },
-      {
-        "question": "¿Qué tamaño de cuadrícula puedo usar?",
-        "answer": "Desde 2x2 hasta 10x10 o personalizado."
-      }
-    ]
-  },
-  "fix-page-size": {
-    "title": "Corregir Tamaño de Página",
-    "metaDescription": "Estandariza el tamaño de página de documentos PDF.",
-    "keywords": [
-      "corregir tamaño pdf",
-      "estandarizar páginas",
-      "tamaño página pdf"
-    ],
-    "description": "<p>Corregir Tamaño de Página estandariza todas las páginas de tu PDF a un tamaño uniforme.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Tamaño",
-        "description": "Elige el tamaño de página deseado (A4, Letter, etc.)."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Estandariza las páginas y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Impresión",
-        "description": "Prepara documentos para impresión uniforme.",
-        "icon": "printer"
-      },
-      {
-        "title": "Combinación",
-        "description": "Estandariza antes de combinar documentos.",
-        "icon": "combine"
-      },
-      {
-        "title": "Presentación",
-        "description": "Unifica tamaños para presentaciones profesionales.",
-        "icon": "presentation"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué tamaños están disponibles?",
-        "answer": "A4, Letter, Legal, A3, A5 y tamaños personalizados."
-      },
-      {
-        "question": "¿Se escala el contenido?",
-        "answer": "Puedes elegir escalar, recortar o añadir márgenes."
-      },
-      {
-        "question": "¿Afecta la calidad?",
-        "answer": "El contenido mantiene su calidad original."
-      }
-    ]
-  },
-  "linearize-pdf": {
-    "title": "Linearizar PDF",
-    "metaDescription": "Optimiza PDFs para visualización web rápida (Fast Web View).",
-    "keywords": [
-      "linearizar pdf",
-      "fast web view",
-      "optimizar pdf web"
-    ],
-    "description": "<p>Linearizar PDF optimiza documentos para visualización web rápida, permitiendo ver la primera página mientras se descarga el resto.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Confirma",
-        "description": "Revisa las opciones de linearización."
-      },
-      {
-        "step": 3,
-        "title": "Lineariza y Descarga",
-        "description": "Optimiza el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Publicación Web",
-        "description": "Optimiza PDFs para sitios web.",
-        "icon": "globe"
-      },
-      {
-        "title": "Documentos Grandes",
-        "description": "Mejora la experiencia con PDFs grandes.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Distribución",
-        "description": "Prepara documentos para distribución en línea.",
-        "icon": "share-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es linearización?",
-        "answer": "Reorganiza el PDF para que la primera página se muestre inmediatamente."
-      },
-      {
-        "question": "¿Reduce el tamaño?",
-        "answer": "No significativamente, pero mejora la velocidad de visualización."
-      },
-      {
-        "question": "¿Afecta la compatibilidad?",
-        "answer": "No, los PDFs linearizados son compatibles con todos los lectores."
-      }
-    ]
-  },
-  "page-dimensions": {
-    "title": "Dimensiones de Página",
-    "metaDescription": "Analiza y muestra las dimensiones de cada página en documentos PDF.",
-    "keywords": [
-      "dimensiones pdf",
-      "tamaño páginas",
-      "medidas pdf"
-    ],
-    "description": "<p>Dimensiones de Página analiza y muestra el tamaño de cada página en tu documento PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Revisa Dimensiones",
-        "description": "Ve el tamaño de cada página."
-      },
-      {
-        "step": 3,
-        "title": "Exporta si Necesitas",
-        "description": "Exporta el informe de dimensiones."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Verificación",
-        "description": "Verifica tamaños antes de imprimir.",
-        "icon": "ruler"
-      },
-      {
-        "title": "Análisis",
-        "description": "Analiza documentos con páginas mixtas.",
-        "icon": "search"
-      },
-      {
-        "title": "Preparación",
-        "description": "Identifica páginas que necesitan ajuste.",
-        "icon": "settings"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué unidades se muestran?",
-        "answer": "Milímetros, pulgadas y puntos."
-      },
-      {
-        "question": "¿Detecta orientación?",
-        "answer": "Sí, muestra si cada página es vertical u horizontal."
-      },
-      {
-        "question": "¿Puedo cambiar las dimensiones?",
-        "answer": "Usa Corregir Tamaño de Página para modificar dimensiones."
-      }
-    ]
-  },
-  "remove-restrictions": {
-    "title": "Eliminar Restricciones",
-    "metaDescription": "Elimina restricciones de seguridad de documentos PDF.",
-    "keywords": [
-      "eliminar restricciones pdf",
-      "desbloquear pdf",
-      "quitar seguridad"
-    ],
-    "description": "<p>Eliminar Restricciones quita las restricciones de seguridad de PDFs que impiden copiar, imprimir o editar.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento restringido."
-      },
-      {
-        "step": 2,
-        "title": "Ingresa Contraseña",
-        "description": "Si es necesario, ingresa la contraseña del propietario."
-      },
-      {
-        "step": 3,
-        "title": "Elimina y Descarga",
-        "description": "Quita las restricciones y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Imprimir Documentos",
-        "description": "Habilita impresión en PDFs restringidos.",
-        "icon": "printer"
-      },
-      {
-        "title": "Copiar Texto",
-        "description": "Permite copiar texto de documentos bloqueados.",
-        "icon": "copy"
-      },
-      {
-        "title": "Editar PDFs",
-        "description": "Habilita edición en documentos protegidos.",
-        "icon": "edit"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Necesito la contraseña?",
-        "answer": "Depende del tipo de protección. Algunas restricciones requieren contraseña."
-      },
-      {
-        "question": "¿Es legal?",
-        "answer": "Solo usa esta herramienta con documentos que tienes derecho a modificar."
-      },
-      {
-        "question": "¿Funciona con todos los PDFs?",
-        "answer": "Funciona con la mayoría de PDFs con restricciones estándar."
-      }
-    ]
-  },
-  "repair-pdf": {
-    "title": "Reparar PDF",
-    "metaDescription": "Repara archivos PDF dañados o corruptos.",
-    "keywords": [
-      "reparar pdf",
-      "arreglar pdf",
-      "pdf corrupto",
-      "recuperar pdf"
-    ],
-    "description": "<p>Reparar PDF intenta recuperar y reparar archivos PDF dañados o corruptos.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el archivo dañado."
-      },
-      {
-        "step": 2,
-        "title": "Inicia Reparación",
-        "description": "La herramienta analiza y repara el archivo."
-      },
-      {
-        "step": 3,
-        "title": "Descarga Reparado",
-        "description": "Descarga el PDF reparado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Archivos Corruptos",
-        "description": "Recupera PDFs que no se abren correctamente.",
-        "icon": "wrench"
-      },
-      {
-        "title": "Descargas Incompletas",
-        "description": "Repara PDFs de descargas interrumpidas.",
-        "icon": "download"
-      },
-      {
-        "title": "Archivos Antiguos",
-        "description": "Recupera documentos de archivos dañados.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué problemas puede reparar?",
-        "answer": "Estructura dañada, referencias rotas, objetos corruptos."
-      },
-      {
-        "question": "¿Siempre funciona?",
-        "answer": "Depende del nivel de daño. Archivos muy dañados pueden no ser recuperables."
-      },
-      {
-        "question": "¿Se pierde contenido?",
-        "answer": "La herramienta intenta preservar todo el contenido posible."
-      }
-    ]
-  },
-  "encrypt-pdf": {
-    "title": "Cifrar PDF",
-    "metaDescription": "Protege documentos PDF con contraseña y cifrado.",
-    "keywords": [
-      "cifrar pdf",
-      "proteger pdf",
-      "contraseña pdf",
-      "seguridad pdf"
-    ],
-    "description": "<p>Cifrar PDF protege tus documentos con contraseña y cifrado AES para máxima seguridad.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Seguridad",
-        "description": "Establece contraseña y permisos."
-      },
-      {
-        "step": 3,
-        "title": "Cifra y Descarga",
-        "description": "Aplica el cifrado y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Confidenciales",
-        "description": "Protege información sensible.",
-        "icon": "lock"
-      },
-      {
-        "title": "Envío Seguro",
-        "description": "Cifra documentos antes de enviar por email.",
-        "icon": "mail"
-      },
-      {
-        "title": "Cumplimiento",
-        "description": "Cumple con requisitos de seguridad de datos.",
-        "icon": "shield"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué cifrado se usa?",
-        "answer": "AES de 128 o 256 bits, el estándar de la industria."
-      },
-      {
-        "question": "¿Puedo establecer permisos?",
-        "answer": "Sí, controla impresión, copia, edición y más."
-      },
-      {
-        "question": "¿Qué pasa si olvido la contraseña?",
-        "answer": "No hay forma de recuperar PDFs cifrados sin la contraseña."
-      }
-    ]
-  },
-  "sanitize-pdf": {
-    "title": "Sanitizar PDF",
-    "metaDescription": "Elimina información oculta y metadatos de documentos PDF.",
-    "keywords": [
-      "sanitizar pdf",
-      "limpiar pdf",
-      "eliminar información oculta"
-    ],
-    "description": "<p>Sanitizar PDF elimina toda la información oculta, metadatos, scripts y datos sensibles de tus documentos.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Opciones",
-        "description": "Elige qué elementos eliminar."
-      },
-      {
-        "step": 3,
-        "title": "Sanitiza y Descarga",
-        "description": "Limpia el PDF y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Privacidad",
-        "description": "Elimina información personal antes de compartir.",
-        "icon": "shield"
-      },
-      {
-        "title": "Seguridad",
-        "description": "Quita scripts y elementos potencialmente peligrosos.",
-        "icon": "alert-triangle"
-      },
-      {
-        "title": "Publicación",
-        "description": "Prepara documentos para publicación pública.",
-        "icon": "globe"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué se elimina?",
-        "answer": "Metadatos, comentarios, adjuntos, scripts, capas ocultas y más."
-      },
-      {
-        "question": "¿Afecta el contenido visible?",
-        "answer": "No, solo elimina información oculta."
-      },
-      {
-        "question": "¿Es reversible?",
-        "answer": "No, guarda una copia del original."
-      }
-    ]
-  },
-  "decrypt-pdf": {
-    "title": "Descifrar PDF",
-    "metaDescription": "Elimina la protección con contraseña de documentos PDF.",
-    "keywords": [
-      "descifrar pdf",
-      "quitar contraseña",
-      "desbloquear pdf"
-    ],
-    "description": "<p>Descifrar PDF elimina la protección con contraseña de documentos PDF cifrados.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento cifrado."
-      },
-      {
-        "step": 2,
-        "title": "Ingresa Contraseña",
-        "description": "Ingresa la contraseña del documento."
-      },
-      {
-        "step": 3,
-        "title": "Descifra y Descarga",
-        "description": "Elimina el cifrado y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Acceso a Documentos",
-        "description": "Desbloquea PDFs para los que tienes la contraseña.",
-        "icon": "unlock"
-      },
-      {
-        "title": "Archivos",
-        "description": "Elimina cifrado de documentos archivados.",
-        "icon": "archive"
-      },
-      {
-        "title": "Procesamiento",
-        "description": "Prepara PDFs cifrados para otras operaciones.",
-        "icon": "settings"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Necesito la contraseña?",
-        "answer": "Sí, necesitas la contraseña correcta para descifrar."
-      },
-      {
-        "question": "¿Puedo descifrar sin contraseña?",
-        "answer": "No, esta herramienta requiere la contraseña legítima."
-      },
-      {
-        "question": "¿Se elimina toda la protección?",
-        "answer": "Sí, el PDF resultante no tiene cifrado ni restricciones."
-      }
-    ]
-  },
-  "flatten-pdf": {
-    "title": "Aplanar PDF",
-    "metaDescription": "Aplana formularios y anotaciones en documentos PDF.",
-    "keywords": [
-      "aplanar pdf",
-      "flatten pdf",
-      "formularios pdf"
-    ],
-    "description": "<p>Aplanar PDF convierte formularios interactivos y anotaciones en contenido estático no editable.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Selecciona Opciones",
-        "description": "Elige qué elementos aplanar."
-      },
-      {
-        "step": 3,
-        "title": "Aplana y Descarga",
-        "description": "Convierte a estático y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Formularios Completados",
-        "description": "Convierte formularios rellenados en documentos finales.",
-        "icon": "file-check"
-      },
-      {
-        "title": "Archivos",
-        "description": "Crea versiones permanentes de documentos anotados.",
-        "icon": "archive"
-      },
-      {
-        "title": "Distribución",
-        "description": "Prepara documentos para distribución sin edición.",
-        "icon": "share-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué se aplana?",
-        "answer": "Campos de formulario, anotaciones, comentarios y capas."
-      },
-      {
-        "question": "¿Es reversible?",
-        "answer": "No, guarda una copia del original con elementos editables."
-      },
-      {
-        "question": "¿Afecta la apariencia?",
-        "answer": "No, el documento se ve igual pero los elementos son estáticos."
-      }
-    ]
-  },
-  "remove-metadata": {
-    "title": "Eliminar Metadatos",
-    "metaDescription": "Elimina todos los metadatos de documentos PDF.",
-    "keywords": [
-      "eliminar metadatos pdf",
-      "quitar propiedades",
-      "limpiar metadatos"
-    ],
-    "description": "<p>Eliminar Metadatos quita toda la información de propiedades de tus documentos PDF para proteger la privacidad.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Confirma",
-        "description": "Revisa los metadatos a eliminar."
-      },
-      {
-        "step": 3,
-        "title": "Elimina y Descarga",
-        "description": "Quita los metadatos y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Privacidad",
-        "description": "Elimina información de autor y fechas.",
-        "icon": "shield"
-      },
-      {
-        "title": "Anonimización",
-        "description": "Prepara documentos para compartir anónimamente.",
-        "icon": "user-x"
-      },
-      {
-        "title": "Publicación",
-        "description": "Limpia metadatos antes de publicar.",
-        "icon": "globe"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué metadatos se eliminan?",
-        "answer": "Autor, título, asunto, palabras clave, fechas, productor, etc."
-      },
-      {
-        "question": "¿Afecta el contenido?",
-        "answer": "No, solo elimina las propiedades del documento."
-      },
-      {
-        "question": "¿Es reversible?",
-        "answer": "No, guarda una copia si necesitas los metadatos."
-      }
-    ]
-  },
-  "change-permissions": {
-    "title": "Cambiar Permisos",
-    "metaDescription": "Modifica los permisos de seguridad de documentos PDF.",
-    "keywords": [
-      "permisos pdf",
-      "cambiar permisos",
-      "seguridad pdf"
-    ],
-    "description": "<p>Cambiar Permisos te permite modificar qué acciones están permitidas en tu documento PDF.</p><p>Procesamiento local.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Permisos",
-        "description": "Selecciona qué acciones permitir o restringir."
-      },
-      {
-        "step": 3,
-        "title": "Aplica y Descarga",
-        "description": "Guarda los nuevos permisos y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Proteger Contenido",
-        "description": "Restringe copia y edición de documentos.",
-        "icon": "lock"
-      },
-      {
-        "title": "Control de Impresión",
-        "description": "Limita o permite impresión.",
-        "icon": "printer"
-      },
-      {
-        "title": "Distribución",
-        "description": "Configura permisos para distribución controlada.",
-        "icon": "share-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué permisos puedo cambiar?",
-        "answer": "Impresión, copia, edición, anotaciones, extracción de páginas."
-      },
-      {
-        "question": "¿Necesito contraseña?",
-        "answer": "Puedes establecer una contraseña de propietario para proteger los permisos."
-      },
-      {
-        "question": "¿Son los permisos seguros?",
-        "answer": "Los permisos pueden ser eludidos con herramientas especializadas."
-      }
-    ]
-  },
-  "pdf-to-pptx": {
-    "title": "PDF a PowerPoint",
-    "metaDescription": "Convierte PDF a presentación PowerPoint (PPTX). Cada página se convierte en una diapositiva.",
-    "keywords": [
-      "pdf a pptx",
-      "pdf a powerpoint",
-      "convertir pdf ppt",
-      "pdf diapositiva"
-    ],
-    "description": "\n      <p>PDF a PowerPoint convierte tus documentos PDF en presentaciones de PowerPoint (PPTX) editables. Cada página del PDF se transforma en una diapositiva de alta calidad, preservando el diseño visual.</p>\n      <p>Ideal para convertir informes o documentos en formato de presentación.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Arrastra y suelta o selecciona el documento."
-      },
-      {
-        "step": 2,
-        "title": "Configura Calidad",
-        "description": "Selecciona la calidad de imagen (DPI) de las diapositivas."
-      },
-      {
-        "step": 3,
-        "title": "Convierte y Descarga",
-        "description": "Crea tu presentación PPTX y descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Crear Presentaciones",
-        "description": "Convierte informes PDF en diapositivas para reuniones.",
-        "icon": "presentation"
-      },
-      {
-        "title": "Material de Formación",
-        "description": "Transforma manuales PDF en presentaciones interactivas.",
-        "icon": "book-open"
-      },
-      {
-        "title": "Reutilizar Contenido",
-        "description": "Usa contenido PDF existente en nuevas presentaciones.",
-        "icon": "refresh-cw"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Son editables las diapositivas?",
-        "answer": "Cada diapositiva contiene una imagen de la página. Puedes añadir elementos encima."
-      },
-      {
-        "question": "¿Qué DPI debo usar?",
-        "answer": "150 DPI para pantalla, 300 DPI para impresión."
-      },
-      {
-        "question": "¿Funciona con múltiples páginas?",
-        "answer": "Sí, cada página se convierte en una diapositiva separada."
-      }
-    ]
-  },
-  "pdf-to-excel": {
-    "title": "PDF a Excel",
-    "metaDescription": "Convierte PDF a hoja de cálculo Excel. Extrae tablas a formato XLSX.",
-    "keywords": [
-      "pdf a excel",
-      "pdf a xlsx",
-      "extraer tablas",
-      "datos pdf"
-    ],
-    "description": "\n      <p>PDF a Excel convierte tus documentos PDF en hojas de cálculo Microsoft Excel (XLSX) editables. La herramienta detecta automáticamente las tablas en tu PDF y las extrae en hojas separadas.</p>\n      <p>Ideal para analizar informes financieros, facturas o cualquier dato tabular.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Sube tu PDF",
-        "description": "Sube el archivo PDF con tablas."
-      },
-      {
-        "step": 2,
-        "title": "Procesar",
-        "description": "La herramienta identifica y extrae tablas automáticamente."
-      },
-      {
-        "step": 3,
-        "title": "Descarga Excel",
-        "description": "Descarga el archivo Excel con los datos extraídos."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Análisis Financiero",
-        "description": "Convierte estados de cuenta o facturas a Excel.",
-        "icon": "trending-up"
-      },
-      {
-        "title": "Extracción de Datos",
-        "description": "Saca tablas de informes de investigación.",
-        "icon": "database"
-      },
-      {
-        "title": "Gestión de Inventario",
-        "description": "Convierte listas de inventario de PDF a hoja de cálculo.",
-        "icon": "clipboard"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo maneja las tablas?",
-        "answer": "Las tablas detectadas se extraen a hojas correspondientes en el Excel."
-      },
-      {
-        "question": "¿Si no hay tablas?",
-        "answer": "Se crea una hoja de información indicando que no se encontraron tablas."
-      },
-      {
-        "question": "¿Se preserva el formato?",
-        "answer": "Los datos se preservan, pero el formato visual complejo puede simplificarse."
-      }
-    ]
-  },
-  "email-to-pdf": {
-    "title": "Email a PDF",
-    "metaDescription": "Convierte archivos de correo electrónico (.eml, .msg) a documentos PDF. Preserva formato, imágenes en línea, enlaces clicables y adjuntos.",
-    "keywords": [
-      "email a pdf",
-      "eml a pdf",
-      "msg a pdf",
-      "convertir email",
-      "outlook a pdf"
-    ],
-    "description": "\n      <p>Email a PDF convierte tus archivos de correo electrónico (formatos .eml y .msg) en documentos PDF bien formateados. La herramienta preserva la información del encabezado del correo, el contenido del cuerpo, imágenes en línea con reemplazo CID, enlaces clicables e incrusta adjuntos directamente en el PDF.</p>\n      <p>Personaliza las opciones de salida incluyendo tamaño de página (A4, Letter, Legal), formato de fecha con soporte de zona horaria, y si incluir campos CC/BCC e información de adjuntos.</p>\n      <p>Toda la conversión ocurre localmente en tu navegador, asegurando que tus correos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir Archivo de Email",
-        "description": "Sube tu archivo de correo .eml o .msg."
-      },
-      {
-        "step": 2,
-        "title": "Configurar Opciones",
-        "description": "Establece el tamaño de página, formato de fecha, zona horaria y elige qué campos incluir."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y Descargar",
-        "description": "Convierte a PDF con adjuntos incrustados y descarga el resultado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Registros Legales",
-        "description": "Archiva correos importantes como PDF con adjuntos incrustados para documentación legal.",
-        "icon": "scale"
-      },
-      {
-        "title": "Archivos Empresariales",
-        "description": "Convierte correspondencia empresarial a PDF para conservación a largo plazo.",
-        "icon": "briefcase"
-      },
-      {
-        "title": "Preservación de Evidencia",
-        "description": "Guarda evidencia de correos con imágenes en línea y adjuntos en formato PDF no editable.",
-        "icon": "shield"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué formatos de email son compatibles?",
-        "answer": "Tanto archivos .eml (RFC 822) como .msg (Microsoft Outlook) son totalmente compatibles."
-      },
-      {
-        "question": "¿Se incluyen los adjuntos?",
-        "answer": "¡Sí! Los adjuntos se incrustan directamente en el archivo PDF. Puedes extraerlos del PDF usando un lector PDF compatible."
-      },
-      {
-        "question": "¿Se muestran las imágenes en línea?",
-        "answer": "Sí, las imágenes en línea referenciadas vía CID (Content-ID) se convierten automáticamente a URIs de datos base64 y se muestran en el PDF."
-      },
-      {
-        "question": "¿Los enlaces son clicables?",
-        "answer": "Sí, todos los enlaces HTML (etiquetas <a>) y URLs en correos de texto plano se convierten en enlaces clicables en el PDF."
-      },
-      {
-        "question": "¿Se preserva el formato del email?",
-        "answer": "Sí, los correos HTML mantienen su formato lo más posible, incluyendo estilos, imágenes y enlaces."
-      }
-    ]
-  },
-  "djvu-to-pdf": {
-    "title": "DJVU a PDF",
-    "metaDescription": "Convierte archivos de documentos DJVU a PDF. Renderizado de alta calidad para documentos escaneados y libros.",
-    "keywords": [
-      "djvu a pdf",
-      "convertir djvu",
-      "convertidor djvu",
-      "djvu pdf",
-      "djv a pdf"
-    ],
-    "description": "\n      <p>DJVU a PDF convierte archivos de documentos DjVu en documentos PDF de alta calidad. DjVu es un formato de archivo informático diseñado principalmente para almacenar documentos escaneados, especialmente aquellos que contienen una combinación de texto, dibujos lineales y fotografías.</p>\n      <p>Esta herramienta renderiza cada página de tu archivo DJVU en el DPI elegido (puntos por pulgada) y los combina en un documento PDF buscable. Perfecto para convertir libros escaneados, manuales técnicos y documentos de archivo.</p>\n      <p>Toda la conversión ocurre localmente en tu navegador, asegurando que tus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir Archivo DJVU",
-        "description": "Arrastra y suelta tu archivo .djvu o .djv, o haz clic para seleccionar desde tu dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Configurar Opciones",
-        "description": "Elige el DPI de salida (72, 150 o 300) y la calidad de imagen para el PDF."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y Descargar",
-        "description": "Haz clic en Convertir a PDF y descarga tu documento convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos de Archivo",
-        "description": "Convierte archivos DJVU a formato PDF universal.",
-        "icon": "archive"
-      },
-      {
-        "title": "Compartir Libros Escaneados",
-        "description": "Comparte libros escaneados en formato PDF para mayor compatibilidad.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Imprimir Documentos",
-        "description": "Convierte DJVU a PDF de alta calidad para impresión.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es el formato DJVU?",
-        "answer": "DjVu es un formato de archivo diseñado para almacenar documentos escaneados, especialmente aquellos con texto, dibujos e imágenes. Ofrece mejor compresión que PDF para contenido escaneado."
-      },
-      {
-        "question": "¿Qué DPI debo elegir?",
-        "answer": "72 DPI es adecuado para visualización web, 150 DPI para documentos estándar y 300 DPI para impresión de alta calidad."
-      },
-      {
-        "question": "¿El texto será buscable?",
-        "answer": "El texto se renderizará como imágenes. Si necesitas texto buscable, considera usar nuestra herramienta OCR PDF después de la conversión."
-      }
-    ]
-  },
-  "fb2-to-pdf": {
-    "title": "FB2 a PDF",
-    "metaDescription": "Convierte libros electrónicos FictionBook (FB2) a PDF. Soporta múltiples archivos con renderizado de alta calidad.",
-    "keywords": [
-      "fb2 a pdf",
-      "convertir fb2",
-      "fictionbook a pdf",
-      "convertidor fb2",
-      "fb2.zip a pdf"
-    ],
-    "description": "\n      <p>FB2 a PDF convierte archivos de libros electrónicos FictionBook (FB2) en documentos PDF de alta calidad. FB2 es un formato de libro electrónico basado en XML muy popular ampliamente utilizado en Rusia y Europa del Este.</p>\n      <p>Esta herramienta soporta tanto archivos .fb2 como .fb2.zip, y puede procesar múltiples archivos a la vez. Preserva el formato de texto, imágenes y la estructura de capítulos de tus libros electrónicos.</p>\n      <p>Toda la conversión ocurre localmente en tu navegador usando tecnología de renderizado avanzada, asegurando que tus libros permanezcan privados y la conversión sea rápida.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir Archivos FB2",
-        "description": "Arrastra y suelta uno o más archivos .fb2 o .fb2.zip, o haz clic para seleccionar desde tu dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Seleccionar Calidad",
-        "description": "Elige la calidad de salida: Baja (72 DPI), Media (150 DPI) o Alta (300 DPI)."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y Descargar",
-        "description": "Haz clic en Convertir a PDF y descarga tu(s) documento(s) convertido(s)."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Imprimir Libros Electrónicos",
-        "description": "Convierte libros electrónicos FB2 a PDF para impresión física.",
-        "icon": "printer"
-      },
-      {
-        "title": "Conversión por Lotes",
-        "description": "Convierte múltiples archivos FB2 a PDF a la vez.",
-        "icon": "layers"
-      },
-      {
-        "title": "Formato Universal",
-        "description": "Comparte libros electrónicos en formato PDF que funciona en cualquier dispositivo.",
-        "icon": "share-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Puedo convertir múltiples archivos FB2 a la vez?",
-        "answer": "¡Sí! Esta herramienta soporta conversión por lotes de hasta 20 archivos FB2 simultáneamente."
-      },
-      {
-        "question": "¿Se soportan archivos .fb2.zip?",
-        "answer": "Sí, la herramienta extrae y convierte automáticamente archivos FB2 desde archivos .fb2.zip."
-      },
-      {
-        "question": "¿Se preserva el formato?",
-        "answer": "¡Sí! La herramienta usa renderizado nativo FB2, preservando el formato de texto, imágenes y estructura de capítulos con alta fidelidad."
-      }
-    ]
-  },
-  "deskew-pdf": {
-    "title": "Enderezar PDF",
-    "metaDescription": "Endereza automáticamente páginas PDF escaneadas o inclinadas. Corrige documentos sesgados con detección precisa de ángulos.",
-    "keywords": [
-      "enderezar pdf",
-      "corregir pdf inclinado",
-      "arreglar escaneo inclinado",
-      "rotar pdf automático",
-      "corregir ángulo pdf"
-    ],
-    "description": "\n      <p>Enderezar PDF detecta y corrige automáticamente páginas inclinadas o sesgadas en tus documentos PDF usando análisis avanzado de varianza de perfil de proyección. Esto es esencial para documentos escaneados que se alimentaron al escáner en un ángulo.</p>\n      <p>La herramienta analiza la alineación de texto y contenido en diferentes ángulos para encontrar la rotación óptima, luego aplica la corrección. Puedes ajustar el umbral de sensibilidad (1-30) y la configuración DPI (72-300) para obtener resultados óptimos.</p>\n      <p>Todo el procesamiento ocurre localmente en tu navegador usando tecnología WebAssembly, asegurando que tus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir tu PDF",
-        "description": "Arrastra y suelta tu archivo PDF escaneado o haz clic para seleccionar."
-      },
-      {
-        "step": 2,
-        "title": "Configurar Ajustes",
-        "description": "Ajusta la sensibilidad del umbral y DPI si es necesario para una mejor detección."
-      },
-      {
-        "step": 3,
-        "title": "Procesar y Descargar",
-        "description": "Haz clic en Enderezar para enderezar las páginas y descargar el PDF corregido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Escaneados",
-        "description": "Corrige páginas que se escanearon en un ángulo desde alimentadores de documentos.",
-        "icon": "scan"
-      },
-      {
-        "title": "Escaneos Móviles",
-        "description": "Corrige fotos inclinadas de documentos tomadas con smartphones.",
-        "icon": "smartphone"
-      },
-      {
-        "title": "Restauración de Archivos",
-        "description": "Endereza archivos escaneados antiguos para mejor legibilidad.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué tan precisa es la detección de ángulos?",
-        "answer": "La herramienta usa análisis de varianza de perfil de proyección para detectar ángulos de sesgo de hasta ±10 grados con alta precisión. Omite automáticamente páginas con ángulos menores a 0.3 grados."
-      },
-      {
-        "question": "¿Se verá afectada la calidad del texto?",
-        "answer": "Para rotaciones en múltiplos de 90 grados, no ocurre pérdida de calidad. Para otros ángulos, la herramienta redondea al grado más cercano y mantiene buena calidad."
-      },
-      {
-        "question": "¿Puedo enderezar solo páginas específicas?",
-        "answer": "La herramienta analiza todas las páginas pero solo corrige aquellas con sesgo detectado por encima del umbral de sensibilidad. Las páginas con sesgo mínimo se dejan sin cambios."
-      },
-      {
-        "question": "¿Qué es el umbral de sensibilidad?",
-        "answer": "Los valores 1-10 corrigen solo inclinaciones obvias, 11-20 detectan sesgo moderado, y 21-30 capturan ángulos sutiles. El predeterminado es 10 para detección equilibrada."
-      },
-      {
-        "question": "¿Cuánto tiempo toma el procesamiento?",
-        "answer": "El tiempo de procesamiento depende del tamaño del archivo y DPI. 150 DPI (predeterminado) proporciona un buen equilibrio entre velocidad y precisión. DPI más alto es más preciso pero más lento."
-      }
-    ]
-  },
-  "pdf-to-pdfa": {
-    "title": "PDF a PDF/A",
-    "metaDescription": "Convierte PDF a formato de archivo PDF/A. Asegura la preservación de documentos a largo plazo con estándares ISO.",
-    "keywords": [
-      "pdf a pdfa",
-      "convertidor pdfa",
-      "archivar pdf",
-      "archivo pdf",
-      "preservación a largo plazo"
-    ],
-    "description": "\n      <p>PDF a PDF/A convierte tus documentos PDF al formato PDF/A, el estándar ISO para archivo de documentos a largo plazo. PDF/A asegura que los documentos serán visibles y reproducibles durante décadas.</p>\n      <p>Elige entre PDF/A-1b (conformidad básica), PDF/A-2b (recomendado, soporta transparencia) o PDF/A-3b (permite archivos incrustados). La herramienta incrusta fuentes y aplana la transparencia según sea necesario.</p>\n      <p>Toda la conversión ocurre localmente en tu navegador, asegurando que tus documentos permanezcan privados.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir tu PDF",
-        "description": "Sube el PDF que deseas convertir a PDF/A."
-      },
-      {
-        "step": 2,
-        "title": "Seleccionar Nivel PDF/A",
-        "description": "Elige el nivel de conformidad PDF/A-1b, PDF/A-2b o PDF/A-3b."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y Descargar",
-        "description": "Convierte a PDF/A y descarga el documento de archivo."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Archivos Legales",
-        "description": "Convierte documentos legales a PDF/A para almacenamiento a largo plazo admisible en tribunales.",
-        "icon": "scale"
-      },
-      {
-        "title": "Registros Gubernamentales",
-        "description": "Cumple con los requisitos de archivo gubernamental usando PDF/A.",
-        "icon": "building"
-      },
-      {
-        "title": "Archivos Empresariales",
-        "description": "Preserva documentos empresariales importantes para accesibilidad futura.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué nivel de PDF/A debo usar?",
-        "answer": "PDF/A-2b es recomendado para la mayoría de usos. Usa 1b para máxima compatibilidad o 3b si necesitas archivos incrustados."
-      },
-      {
-        "question": "¿Qué hace diferente a PDF/A?",
-        "answer": "PDF/A incrusta fuentes, deshabilita el cifrado y asegura que todos los elementos sean autocontenidos para visualización futura."
-      },
-      {
-        "question": "¿Puedo convertir de vuelta desde PDF/A?",
-        "answer": "Los archivos PDF/A son PDFs estándar y se pueden abrir normalmente. Las características de archivo agregan restricciones, no limitaciones."
-      }
-    ]
-  },
-  "digital-sign-pdf": {
-    "title": "Firma Digital",
-    "metaDescription": "Añade firmas digitales X.509 a documentos PDF. Firma PDFs con certificados PFX, P12 o PEM para validez legal.",
-    "keywords": [
-      "firma digital pdf",
-      "certificado x509",
-      "firma pfx",
-      "firma p12",
-      "firma pem",
-      "firma electrónica"
-    ],
-    "description": "<p>La herramienta de Firma Digital te permite añadir firmas digitales X.509 criptográficas a documentos PDF.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir PDF",
-        "description": "Sube el documento PDF que deseas firmar digitalmente."
-      },
-      {
-        "step": 2,
-        "title": "Cargar Certificado",
-        "description": "Sube tu archivo de certificado X.509 (.pfx, .p12 o .pem) e ingresa la contraseña."
-      },
-      {
-        "step": 3,
-        "title": "Firmar y Descargar",
-        "description": "Haz clic en Firmar PDF para aplicar la firma digital y descarga el documento firmado."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentos Legales",
-        "description": "Firma contratos y documentos legales con firmas digitales legalmente vinculantes.",
-        "icon": "scale"
-      },
-      {
-        "title": "Aprobaciones Empresariales",
-        "description": "Firma digitalmente facturas y documentos de aprobación para pistas de auditoría.",
-        "icon": "briefcase"
-      },
-      {
-        "title": "Integridad del Documento",
-        "description": "Asegura que los documentos no han sido alterados después de firmar.",
-        "icon": "shield-check"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué formatos de certificado son compatibles?",
-        "answer": "Se admiten los formatos de certificado PFX (.pfx), PKCS#12 (.p12) y PEM (.pem)."
-      },
-      {
-        "question": "¿La firma es legalmente válida?",
-        "answer": "Sí, las firmas digitales X.509 con un certificado válido son legalmente reconocidas en la mayoría de jurisdicciones."
-      },
-      {
-        "question": "¿Puedo añadir una firma visible?",
-        "answer": "Sí, puedes añadir una firma visible con texto, imagen, posición y estilo personalizados."
-      }
-    ]
-  },
-  "validate-signature": {
-    "title": "Validar Firma",
-    "metaDescription": "Verifica firmas digitales en documentos PDF. Comprueba la validez del certificado, información del firmante e integridad del documento.",
-    "keywords": [
-      "validar firma pdf",
-      "verificar firma digital",
-      "comprobar certificado pdf",
-      "verificación de firma"
-    ],
-    "description": "<p>La herramienta Validar Firma te permite verificar firmas digitales en documentos PDF.</p>",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir PDF Firmado",
-        "description": "Sube un documento PDF que contenga firmas digitales."
-      },
-      {
-        "step": 2,
-        "title": "Ver Resultados",
-        "description": "Ve todas las firmas encontradas en el documento con su estado de validez."
-      },
-      {
-        "step": 3,
-        "title": "Exportar Informe",
-        "description": "Opcionalmente descarga un informe JSON de los resultados de validación."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Verificación de Documentos",
-        "description": "Verifica que los documentos firmados son auténticos y no han sido alterados.",
-        "icon": "shield-check"
-      },
-      {
-        "title": "Auditoría de Cumplimiento",
-        "description": "Comprueba la validez de las firmas para propósitos de cumplimiento y auditoría.",
-        "icon": "clipboard-check"
-      },
-      {
-        "title": "Revisión de Certificados",
-        "description": "Ve los detalles del certificado y fechas de expiración de documentos firmados.",
-        "icon": "award"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué significa \"válido\"?",
-        "answer": "Una firma válida significa que el documento no ha sido modificado desde la firma y la cadena de certificados está intacta."
-      },
-      {
-        "question": "¿Puedo validar múltiples PDFs?",
-        "answer": "Sí, puedes subir múltiples PDFs y validar todas las firmas en lote."
-      },
-      {
-        "question": "¿Por qué una firma podría ser inválida?",
-        "answer": "Las firmas pueden ser inválidas si el documento fue modificado, el certificado expiró o el certificado no es de confianza."
-      }
-    ]
-  },
-  "form-logic-designer": {
-    "title": "Lógica de Formularios",
-    "metaDescription": "Diseñe comportamientos dinámicos mediante un lienzo de nodos de glassmorphism e inyecte lógica interactiva AcroJS en formularios PDF.",
-    "keywords": [
-      "lógica de formulario PDF",
-      "inyección AcroJS",
-      "flujo de nodos",
-      "PDF interactivo",
-      "dependencias de campos"
-    ],
-    "description": "\n        <p>El Diseñador de Lógica de Formularios Interactivos es una herramienta pionera que llena un gran vacío en las capacidades de PDF: la creación de campos activos y adaptables en lugar de formularios planos y estáticos.</p>\n        <p>A través de nuestro lienzo visual con \"nodos de glassmorphism brillantes\" (basado en React Flow), los campos del formulario se representan como módulos conectados. Puede arrastrar enlaces para definir relaciones: por ejemplo, cuando se marca una casilla de verificación ➜ habilitar una entrada de texto ➜ autocalcular valores y actualizar un campo total.</p>\n        <p>Una vez diseñado, el motor AcroJS compila la lógica en Acrobat JavaScript oficial y la inyecta en los diccionarios '/AA' (Acciones Adicionales) del AcroForm. Los comportamientos interactivos se ejecutan de forma nativa en cualquier lector de PDF estándar.</p>\n      ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir PDF Interactivo",
-        "description": "Proporcione un archivo PDF que ya contenga campos de formulario activos (AcroForm)."
-      },
-      {
-        "step": 2,
-        "title": "Diseñar la Lógica en el Lienzo",
-        "description": "Conecte los campos como nodos. Vincule eventos de salida (cambio, pérdida de foco) con acciones de destino (mostrar, ocultar, calcular, deshabilitar)."
-      },
-      {
-        "step": 3,
-        "title": "Compilar e Inyectar",
-        "description": "Inyecte la lógica JavaScript compilada en el diccionario PDF y guarde el documento inteligente final."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Contratos Comerciales Inteligentes",
-        "description": "Muestre u oculte campos de entrada complementarios dinámicamente según los términos seleccionados por el cliente.",
-        "icon": "file-signature"
-      },
-      {
-        "title": "Formularios de Gastos Automatizados",
-        "description": "Sume múltiples líneas de gastos y calcule impuestos dinámicamente sin cálculos manuales.",
-        "icon": "calculator"
-      },
-      {
-        "title": "Cuestionarios Interactivos",
-        "description": "Omita preguntas irrelevantes según las respuestas anteriores, proporcionando una experiencia de llenado móvil más limpia.",
-        "icon": "form-input"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Necesito un PDF con campos preexistentes?",
-        "answer": "Sí. Esta herramienta está diseñada para vincular reglas lógicas a campos existentes. Si su PDF no tiene campos interactivos, use primero nuestra herramienta Creador de Formularios para agregar entradas y casillas de verificación."
-      },
-      {
-        "question": "¿Funcionará esta lógica en cualquier lector de PDF?",
-        "answer": "Funciona en todos los lectores de PDF que cumplan con los estándares de Adobe PDF y admitan Acrobat JavaScript (como Adobe Acrobat Reader, Foxit Reader y los principales navegadores web). Los lectores móviles minimalistas pueden admitir solo acciones básicas."
-      },
-      {
-        "question": "¿Afecta esto a la impresión física?",
-        "answer": "En absoluto. Los scripts inyectados solo se ejecutan en pantalla durante el llenado del formulario. Al imprimir, el estado actual de los campos se imprime de forma estática sin visualización de nodos."
-      }
-    ]
-  },
-  "global-invoice-parser": {
-    "title": "Traductor y Conversor de Facturas",
-    "metaDescription": "Extraiga totales de divisas de facturas multinacionales, realice cálculos e imprima registros de cambio interactivos con efecto de vidrio esmerilado.",
-    "keywords": [
-      "traducir factura",
-      "conversor de divisas de factura",
-      "calculadora de tipo de cambio pdf",
-      "sellar moneda local",
-      "herramienta de factura global"
-    ],
-    "description": "\n        <p>El Traductor de Facturas Globales brinda máxima claridad a los equipos financieros internacionales y compradores globales.</p>\n        <p>El manejo de facturas en múltiples divisas ($, €, ¥) a menudo implica tediosa aritmética manual. Esta herramienta permite la <strong>traducción de etiquetas en el lugar y la conversión de tipos de cambio en tiempo real</strong>.</p>\n        <p>Escanea el documento en busca de totales de precios, realiza cálculos basados en referencias de divisas e imprime físicamente un elegante registro de tipo de cambio de vidrio esmerilado semitransparente en el margen de la página. Se representa con un magnífico efecto visual numérico de máquina tragamonedas, aportando un control absoluto a la facturación global.</p>\n      ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir Factura en PDF",
-        "description": "Importe cualquier factura facturada en moneda extranjera (por ejemplo, USD, EUR, JPY)."
-      },
-      {
-        "step": 2,
-        "title": "Seleccionar Moneda Local",
-        "description": "Elija su moneda local (por ejemplo, CNY) y especifique un tipo de cambio personalizado o en tiempo real."
-      },
-      {
-        "step": 3,
-        "title": "Aplicar Sello de Registro",
-        "description": "Haga clic en ejecutar para superponer el registro de tipo de cambio listo para la contabilidad."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Reembolso de Viajes de Negocios",
-        "description": "Convierta facturas de viajes a la moneda local y selle los detalles de conversión, facilitando los flujos de trabajo contables.",
-        "icon": "plane"
-      },
-      {
-        "title": "Auditoría de Compras Transfronterizas",
-        "description": "Traduzca columnas de facturas e identifique el costo real de los bienes de comercio electrónico.",
-        "icon": "credit-card"
-      },
-      {
-        "title": "Contabilidad Comercial Internacional",
-        "description": "Selle registros de conversión consistentes en facturas corporativas para optimizar las auditorías de fin de año.",
-        "icon": "folder-open"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo detecta los importes de las facturas?",
-        "answer": "Busca flujos de caracteres en busca de símbolos de divisas y analiza encabezados semánticos como \"Total\" o \"Vencimiento\" para ubicar la suma final de la factura."
-      },
-      {
-        "question": "¿Los tipos de cambio se obtienen en tiempo real?",
-        "answer": "Sí. Por defecto, recupera tipos de cambio base de APIs financieras estándar. También puede especificar tipos de cambio personalizados para auditorías internas."
-      },
-      {
-        "question": "¿El sello cubrirá detalles importantes de la factura?",
-        "answer": "El motor escanea el margen de la página para encontrar el posicionamiento óptimo. El sello es semitransparente, alineándose de manera elegante con sus diseños."
-      }
-    ]
-  },
-  "pdf-to-cbz": {
-    "title": "PDF a CBZ",
-    "metaDescription": "Convierta archivos PDF a formato de cómic CBZ. Conserva el orden y la calidad de las imágenes.",
-    "keywords": [
-      "pdf a cbz",
-      "conversor comic",
-      "cbz pdf"
-    ],
-    "description": "\n      <p>PDF to CBZ is custom-engineered for comic enthusiasts and digital ebook archivists. It renders every page of your PDF volumes into high-fidelity rasterized graphics and compiles them into a standard Comic Book ZIP (.cbz) bundle.</p>\n      <p>To eliminate frustrating manual scraping in systems like Calibre, Komga, Kavita, or CDisplayEx, the processor automatically generates and injects both <strong>ComicInfo.xml</strong> and <strong>metadata.opf</strong> files internally, while simultaneously writing a standardized <strong>ComicBookInfo JSON</strong> payload directly into the ZIP file comment metadata.</p>\n      <p>Includes complete configuration sliders for image compression quality, page dimension scale, right-to-left layout reading toggles (Manga mode), and black-and-white grayscale color filtering.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload Comic PDF",
-        "description": "Drag and drop your primary comic, artbook, or manga PDF file."
-      },
-      {
-        "step": 2,
-        "title": "Input Comic Metadata",
-        "description": "Fill out Series, Volume, Title, Writer, and Publisher fields, and toggle layout or grayscale optimization."
-      },
-      {
-        "step": 3,
-        "title": "Compile and Download",
-        "description": "Click Convert to compile and retrieve your metadata-rich .cbz file instantly ready for Calibre."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Retrograde Comic Packaging",
-        "description": "Transform raw scanned PDF books into compact, standard-compliant CBZ comic files easily scrapable by comic library managers.",
-        "icon": "book"
-      },
-      {
-        "title": "Zero-Effort Calibre Integration",
-        "description": "The built-in metadata.opf schema allows Calibre to fetch and classify creators and volume issues without manual lookup.",
-        "icon": "database"
-      },
-      {
-        "title": "E-Ink Screen Enhancement",
-        "description": "Pre-filter graphic color channels into high-contrast grayscale on compile, boosting visual refresh and clarity on E-ink screens while saving storage.",
-        "icon": "eye"
-      }
-    ],
-    "faq": [
-      {
-        "question": "What is a .cbz file?",
-        "answer": "A CBZ file is a specialized archive container format for comic book series. It is internally formatted as a ZIP package containing sequentially numbered page images alongside structural metadata XML files."
-      },
-      {
-        "question": "How is metadata compatible?",
-        "answer": "We compile and embed ComicInfo.xml, metadata.opf, and ZIP File Comments in one pass. This guarantees absolute compliance across multiple comic and e-book ecosystems."
-      },
-      {
-        "question": "Why use Grayscale mode?",
-        "answer": "If you read on a grayscale E-ink reader (like Kindle or Kobo), compiling directly in Grayscale reduces artifact ghosting, delivers superior contrast levels, and shrinks the final CBZ file size."
-      }
-    ]
-  },
-  "overlay-pdf": {
-    "title": "Superponer PDF",
-    "metaDescription": "Superponga dos páginas PDF en una sola. Ideal para agregar sellos, fondos y marcas de agua.",
-    "keywords": [
-      "superponer pdf",
-      "pdf overlay",
-      "sellar pdf"
-    ],
-    "description": "\n      <p>Overlay PDF allows you to layer pages of one PDF document on top or underneath another PDF document. It is perfect for applying letterheads, adding background grids, stamping watermarks, or fusing layout drafts together.</p>\n      <p>Supports both Overlay mode (layer goes on top) and Underlay mode (layer goes underneath). Specify custom target page ranges or loop shorter overlay documents to cover the entire base file automatically.</p>\n      <p>All processing is executed entirely inside your web browser locally, guaranteeing total security and data privacy.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload Main PDF",
-        "description": "Drag and drop your primary base PDF document."
-      },
-      {
-        "step": 2,
-        "title": "Upload Layer PDF",
-        "description": "Provide the overlay/underlay document that acts as the layer."
-      },
-      {
-        "step": 3,
-        "title": "Configure Layering",
-        "description": "Choose overlay or underlay mode, specify page ranges, and enable page looping."
-      },
-      {
-        "step": 4,
-        "title": "Compile and Download",
-        "description": "Click Compile to process and download the layered result PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Corporate Letterheads",
-        "description": "Layer invoice contents on top of standard company letterhead templates.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Watermarks & Seals",
-        "description": "Overlay security stamps, signature seals, or backgrounds across documents.",
-        "icon": "shield"
-      },
-      {
-        "title": "Drawing Blueprints",
-        "description": "Combine draft architectures or layout grids underneath text blocks.",
-        "icon": "layout"
-      }
-    ],
-    "faq": [
-      {
-        "question": "What is the difference between Overlay and Underlay?",
-        "answer": "Overlay places the secondary layer on top of your main content. Underlay places it at the very bottom, acting as a background template."
-      },
-      {
-        "question": "Can I loop the overlay layer?",
-        "answer": "Yes, if the layer PDF is shorter than the base document, enabling Loop will cycle it (e.g. page 1, 2, 1, 2) to cover all base pages."
-      },
-      {
-        "question": "Is page range supported?",
-        "answer": "Yes, you can target specific pages using range syntax such as \"1-5\", \"odd\", \"even\", or comma-separated lists."
-      }
-    ]
-  },
-  "timestamp-pdf": {
-    "title": "Sello de Tiempo PDF",
-    "metaDescription": "Inyecte un sello de tiempo seguro RFC 3161 en documentos PDF para validar la fecha de creación.",
-    "keywords": [
-      "sello de tiempo pdf",
-      "rfc 3161",
-      "fecha digital pdf"
-    ],
-    "description": "\n      <p>Timestamp PDF adds RFC 3161 compliant trusted timestamps to your PDF documents using external Time Stamping Authorities (TSA). It provides legally-binding mathematical proof that a document existed in a specific, unaltered state at a precise instant in time.</p>\n      <p>Select from global trusted TSA servers such as DigiCert, Sectigo, SSL.com, FreeTSA, or MeSign. No personal signing certificates are required to secure your documents against future tampering.</p>\n      <p>Supports fully secure local hashing before handshake, guaranteeing absolute document contents remain 100% confidential.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF Document",
-        "description": "Select the target PDF file you want to timestamp."
-      },
-      {
-        "step": 2,
-        "title": "Select TSA Server",
-        "description": "Choose a trusted global Time Stamping Authority from the list."
-      },
-      {
-        "step": 3,
-        "title": "Apply and Timestamp",
-        "description": "Click Timestamp to fetch secure response from TSA and embed the token."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Intellectual Property",
-        "description": "Establish clear priority proof of patents, drafts, and ideas before public release.",
-        "icon": "lightbulb"
-      },
-      {
-        "title": "Financial Auditing",
-        "description": "Provide certified tamper-proof logging of ledger archives and balance reports.",
-        "icon": "activity"
-      },
-      {
-        "title": "Legal Contracts",
-        "description": "Lock legal agreements with a trusted time proof to avoid backdating arguments.",
-        "icon": "file-check"
-      }
-    ],
-    "faq": [
-      {
-        "question": "What is a trusted timestamp (RFC 3161)?",
-        "answer": "An RFC 3161 timestamp is a cryptographically signed token issued by a recognized third-party authority (TSA) that links a document hash to a specific, verified clock source."
-      },
-      {
-        "question": "Do I need a digital certificate?",
-        "answer": "No, the cryptographic signature is provided directly by the trusted TSA server, making the process effortless for document owners."
-      },
-      {
-        "question": "Does the TSA see my document contents?",
-        "answer": "Never. The tool only sends a secure SHA-256 hash of your document to the TSA server, keeping your actual document completely private."
-      }
-    ]
-  },
-  "add-page-labels": {
-    "title": "Agregar Etiquetas de Página",
-    "metaDescription": "Defina etiquetas de página personalizadas (p. ej., I, II para prefacios). Mejora la navegación.",
-    "keywords": [
-      "etiquetas de pagina",
-      "numerar paginas pdf",
-      "paginas logicas"
-    ],
-    "description": "\n      <p>Add Page Labels allows you to inject custom page labeling metadata (/PageLabels) into your PDF's root Catalog dictionary. This customizes the labels displayed in professional PDF reader navigation sidebars and top page number jump panels (e.g. using Roman numerals for front matter, decimal sequences for main body, or custom prefixes such as A-0, A-1 for technical subsections).</p>\n      <p>Supports combining multiple custom rules seamlessly. Crucially, we've built a highly optimized <strong>disjoint-range slicing algorithm</strong>: even if you declare complex alternating patterns (e.g., odd pages style A, even pages style B), the tool will elegantly dissect and compose boundaries to ensure proper standard-compliant display without leaking formats into unmapped pages.</p>\n      <p>All operations are processed entirely inside your local browser sandbox, securing absolute data privacy.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF Document",
-        "description": "Provide the target PDF document you wish to label."
-      },
-      {
-        "step": 2,
-        "title": "Configure Labeling Rules",
-        "description": "Add one or more rules specifying page ranges (e.g., \"1-5\", \"odd\", or comma-separated lists), prefix, style, and starting sequence."
-      },
-      {
-        "step": 3,
-        "title": "Preview and Download",
-        "description": "Review the live page label list preview below, then compile and download your updated PDF document."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Academic Thesis Formatting",
-        "description": "Set lowercase Roman numerals (i, ii, iii) for introductory front matter and transition to decimal for main chapters.",
-        "icon": "book"
-      },
-      {
-        "title": "Engineering Blueprint Prefixes",
-        "description": "Attach subsystem abbreviations (e.g., \"A-1\", \"M-5\") as page label prefixes, letting teams search and locate pages in seconds.",
-        "icon": "layout"
-      },
-      {
-        "title": "Custom Alternating Layouts",
-        "description": "Apply highly specific page range indexing to odd/even sequences or non-contiguous sections with maximum freedom.",
-        "icon": "shuffle"
-      }
-    ],
-    "faq": [
-      {
-        "question": "What are page labels vs page numbers?",
-        "answer": "Ordinary page numbers are visual text blocks rendered directly on the paper canvas (visible when printed). Page labels, however, are structural metadata injected into the PDF catalog. They control what is displayed underneath thumbnails and in the page lookup box inside software like Adobe Acrobat or Apple Preview."
-      },
-      {
-        "question": "What happens if I leave the Page Range empty?",
-        "answer": "Leaving the page range empty causes the rule to apply globally to all pages of the document."
-      },
-      {
-        "question": "How are overlapping rules handled?",
-        "answer": "Rules are evaluated sequentially in the order they are listed. If a page range of a later rule overlaps with an earlier one, the later rule takes priority and overrides the label for that page."
-      }
-    ]
-  },
-  "ai-pdf-reflower": {
-    "title": "Adaptación de Flujo PDF con IA",
-    "metaDescription": "Rediseñe documentos PDF para pantallas móviles. Exportación a Markdown y EPUB.",
-    "keywords": [
-      "flujo pdf",
-      "pdf adaptativo",
-      "pdf a markdown",
-      "exportar epub"
-    ],
-    "description": "\n      <p>AI PDF Layout Reflower is your ultimate companion for reading PDF documents on mobile devices. Traditional PDFs use a fixed layout, which often requires endless zooming and horizontal scrolling on smartphones or tablets, resulting in a tedious reading experience.</p>\n      <p>This tool intelligently parses the text flow, line spacing, and physical coordinates of the PDF pages, reconstructing the semantic paragraphs and heading hierarchies. For multi-column or dual-column documents, it intelligently merges column flows into a single responsive flow, ensuring smooth reading.</p>\n      <p>Additionally, it supports rendering mathematical formulas into LaTeX/MathJax and offers multiple reading themes (Sepia, Dark, Eye-protecting Green). You can export the reflowed layout as Markdown or a standard EPUB ebook with a single click.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF File",
-        "description": "Drag and drop your PDF file or click to browse and select it."
-      },
-      {
-        "step": 2,
-        "title": "Select Reading Theme",
-        "description": "Choose your preferred font size and theme colors in the 3D mobile simulator on the right."
-      },
-      {
-        "step": 3,
-        "title": "Export Document",
-        "description": "Once satisfied, use the physical pull-rope to export the document as Markdown or EPUB."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Mobile Literature Reading",
-        "description": "Read academic papers and research reports on your phone seamlessly without constant zooming.",
-        "icon": "smartphone"
-      },
-      {
-        "title": "Ebook Conversion",
-        "description": "Convert text-heavy PDFs into EPUB files and import them into Kindle or other ebook readers.",
-        "icon": "book"
-      },
-      {
-        "title": "Note Archive",
-        "description": "Directly convert structured PDF content into clean Markdown files for your personal knowledge base.",
-        "icon": "file-text"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Does it handle dual-column PDFs correctly?",
-        "answer": "Yes, the layout reflower detects the horizontal coordinates of text blocks and structures left and right columns sequentially, preventing line interleaving."
-      },
-      {
-        "question": "Will images and math formulas be lost?",
-        "answer": "Mathematical formulas are converted to LaTeX/MathJax syntax for clean web rendering, and images are preserved in their corresponding semantic positions."
-      },
-      {
-        "question": "Is the conversion done in the cloud?",
-        "answer": "No, all layout analysis and format packaging are performed locally in your browser to guarantee the absolute privacy of your documents."
-      }
-    ]
-  },
-  "citation-linker": {
-    "title": "Activador de Enlaces de Citas",
-    "metaDescription": "Escanee y active las marcas de cita en PDFs, convirtiéndolas en enlaces DOI interactivos o saltos de página.",
-    "keywords": [
-      "enlaces de citas",
-      "hipervinculo pdf",
-      "coincidencia doi",
-      "citas academicas"
-    ],
-    "description": "\n      <p>Citation Linker is designed specifically for academic researchers. In many PDF papers, citation markers (e.g., [1], [2]) are plain text, forcing readers to scroll back and forth to the reference list at the end of the document, interrupting their focus.</p>\n      <p>This tool reads PDF text locally, uses pattern recognition to match citation markers to their corresponding reference entries, and overlays clickable PDF link annotations using DOI lookups or page-jump coordinates.</p>\n      <p>It also generates an interactive citation relationship map to visually navigate the document's reference network.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload Academic PDF",
-        "description": "Upload a PDF paper or thesis containing a bibliography/reference section."
-      },
-      {
-        "step": 2,
-        "title": "Review Citations",
-        "description": "Inspect the citation pairs in the interactive map and manually edit or add DOI links if necessary."
-      },
-      {
-        "step": 3,
-        "title": "Inject Links",
-        "description": "Click the activate button to overlay hyperlinks onto the PDF and download the updated document."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Deep Literature Reading",
-        "description": "Click citation markers to immediately view reference details or navigate to external DOI pages.",
-        "icon": "link"
-      },
-      {
-        "title": "Pre-publication Preparation",
-        "description": "Ensure your written academic papers have fully active hyperlink navigations before final submission.",
-        "icon": "award"
-      },
-      {
-        "title": "Reference Map Analysis",
-        "description": "Understand literature hierarchies and connections via the interactive network topology map.",
-        "icon": "git-network"
-      }
-    ],
-    "faq": [
-      {
-        "question": "What if a reference has no DOI?",
-        "answer": "If a DOI cannot be found, the tool falls back to an internal \"GoTo Page\" action, allowing you to click the marker and jump directly to the reference page."
-      },
-      {
-        "question": "Which citation formats are supported?",
-        "answer": "It supports common numeric brackets (e.g., [1], [1-3]) and author-year citations (e.g., Author et al., 202X)."
-      },
-      {
-        "question": "Will it modify the appearance of my PDF?",
-        "answer": "No, it injects invisible Link annotations on top of the text, preserving the original layout, fonts, and styling of your document."
-      }
-    ]
-  },
-  "vector-extractor": {
-    "title": "Extractor de Vectores PDF",
-    "metaDescription": "Convierta PDF a SVG de alta fidelidad. Permite seleccionar y extraer gráficos vectoriales y logotipos sin pérdidas.",
-    "keywords": [
-      "extraer vectores pdf",
-      "exportar svg",
-      "extraer logotipos",
-      "graficos vectoriales"
-    ],
-    "description": "\n      <p>PDF Vector Extractor unlocks vector paths and artwork embedded inside PDF files. Easily extract vector charts, diagrams, or logos from documents for design work or printing.</p>\n      <p>Under the hood, it utilizes high-fidelity SVG rendering to deconstruct PDF vector paths into clean, standard SVG element trees without loss of precision.</p>\n      <p>The interface highlights hover elements with a Z-axis 3D layer explosion effect, complete with a color picker panel for designers to adjust and extract vector nodes.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF Document",
-        "description": "Upload a PDF containing vector assets, diagrams, charts, or logos."
-      },
-      {
-        "step": 2,
-        "title": "Select Elements",
-        "description": "Hover over the vector canvas to highlight elements, then click to select a node."
-      },
-      {
-        "step": 3,
-        "title": "Customize and Export",
-        "description": "Adjust path attributes in the panel, then download as SVG or copy SVG source code."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Design Asset Extraction",
-        "description": "Quickly extract company logos, icons, and illustrations from brand guidelines or brochures.",
-        "icon": "bezier"
-      },
-      {
-        "title": "Scientific Chart Export",
-        "description": "Extract vector charts from research papers to use in high-resolution printing or presentations.",
-        "icon": "presentation"
-      },
-      {
-        "title": "Vector Asset Recoloring",
-        "description": "Modify the stroke and fill colors of extracted assets before saving them for web projects.",
-        "icon": "crown"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Why can't I select certain images?",
-        "answer": "PDFs contain both raster images (like photos or scanned pages) and vector artwork (like shapes and curves). Only vector paths can be deconstructed into SVG paths."
-      },
-      {
-        "question": "Does the output SVG contain styles?",
-        "answer": "Yes, the exported SVG retains all original properties including fills, strokes, opacity, gradients, and coordinate transforms."
-      },
-      {
-        "question": "Will large files lag?",
-        "answer": "We use WebAssembly acceleration, but PDFs with extremely complex CAD drawings or thousands of vector paths may take a few seconds to render."
-      }
-    ]
-  },
-  "deep-sanitize": {
-    "title": "Desinfección Profunda de Metadatos",
-    "metaDescription": "Elimine por completo metadatos, historial de edición, capas ocultas y datos huérfanos de sus documentos PDF.",
-    "keywords": [
-      "desinfectar pdf",
-      "limpiar metadatos",
-      "privacidad pdf",
-      "seguridad pdf"
-    ],
-    "description": "\n      <p>Deep Metadata Sanitizer is your ultimate defense against metadata leaks and hidden tracking. Simply drawing black boxes over visible text in PDF files is not enough to protect commercial secrets.</p>\n      <p>This tool scans the PDF binary structure to completely erase author info, creator software, editing logs (XMP Metadata), proprietary PieceInfo caches, and OCG optional content groups (often used for invisible watermarks).</p>\n      <p>It also rewrites the cross-reference tables (xref) completely, discarding all incremental update blocks to ensure that deleted or modified historical data cannot be restored.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF",
-        "description": "Select the PDF file containing sensitive data or modification history."
-      },
-      {
-        "step": 2,
-        "title": "Run Scanner",
-        "description": "Trigger the 3D containment scanner to check the file for hidden metadata and layers."
-      },
-      {
-        "step": 3,
-        "title": "Deep Sanitize",
-        "description": "Click sanitize to wipe out tracking elements and download the fully clean PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Contract Sharing",
-        "description": "Remove drafting records, paths, and previous revisions before sharing business contracts with third parties.",
-        "icon": "file-signature"
-      },
-      {
-        "title": "Anonymized Publishing",
-        "description": "Wipe invisible annotations and watermarks to publish documents anonymously and securely.",
-        "icon": "eye-off"
-      },
-      {
-        "title": "PDF Optimization",
-        "description": "Remove orphaned objects and garbage data streams to make files load faster on the web.",
-        "icon": "zap"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How is this different from standard metadata removal?",
-        "answer": "Standard tools only clear basic fields like title or author. Deep Sanitizer reconstructs the entire PDF xref table, wiping PieceInfo, hidden watermarks, and historical incremental revisions."
-      },
-      {
-        "question": "Will this affect document layout or text?",
-        "answer": "No, it only strips hidden description streams and structure data. The visible layout, texts, and graphics remain unchanged."
-      },
-      {
-        "question": "Does this remove PDF passwords?",
-        "answer": "No, if a PDF is encrypted, you must unlock it first before performing a deep sanitization."
-      }
-    ]
-  },
-  "booklet-folding-simulator": {
-    "title": "Simulador 3D de Plegado e Imposición",
-    "metaDescription": "Realice la imposición de páginas PDF en pliegos y visualice el plegado físico y la encuadernación en un simulador 3D.",
-    "keywords": [
-      "imposicion 3d",
-      "simulador de plegado",
-      "encuadernacion grapada",
-      "diseño editorial"
-    ],
-    "description": "\n      <p>3D Booklet & Folding Simulator is an advanced tool designed for print designers and publishing professionals. Traditional book layout requires calculating complex page overlays and imposition pagination sequences. This tool visualizes and automates that entire process.</p>\n      <p>Under the hood, our custom imposition algorithm maps a sequential PDF page list into standard print sheet layouts (such as 4-page half-folds, 8-page saddle stitches, or accordion folds), merging pages onto the front and back of large physical sheets.</p>\n      <p>On the front-end, we utilize pure CSS 3D Matrix transforms and spring-mass physics curves to animate sheet folding horizontally and vertically, delivering a physical-like binding preview with a high WOW factor.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF File",
-        "description": "Drag and drop the PDF document you wish to layout for printing."
-      },
-      {
-        "step": 2,
-        "title": "Select Folding Layout",
-        "description": "Choose your preferred imposition scheme (e.g., 4-page fold, 8-page saddle stitch, 4-page accordion)."
-      },
-      {
-        "step": 3,
-        "title": "Interactive 3D Preview",
-        "description": "Drag the slider to watch the sheet fold in 3D and inspect the final page numbering layout."
-      },
-      {
-        "step": 4,
-        "title": "Generate Imposed PDF",
-        "description": "Click generate to download the rearranged and merged physical sheet PDF, ready for double-sided printing."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Brochure Prototyping",
-        "description": "Pre-visualize the folding sequence of tri-folds and pamphlets to prevent upsidedown pages after printing.",
-        "icon": "book-open"
-      },
-      {
-        "title": "Book Saddle-Stitching",
-        "description": "Generate imposed print sheets for multi-page magazines or booklets automatically.",
-        "icon": "layers"
-      },
-      {
-        "title": "Print Shop Visual Aids",
-        "description": "Help clients visualize how pages are physically distributed and folded on print sheets.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "What is \"Imposition\"?",
-        "answer": "Imposition is a fundamental step in prepress printing. Since commercial presses print on large sheets, pages are arranged out of order so that once printed, folded, and bound, the pages appear in the correct sequential order. This tool automatically calculates that layout."
-      },
-      {
-        "question": "Does the 3D preview alter my PDF content?",
-        "answer": "No, the original PDF content is merely rendered as texture mappings onto the 3D sheet. The generated PDF only adjusts page order and placement; text and graphic qualities are kept intact."
-      },
-      {
-        "question": "What if my PDF page count is not a multiple of 4 or 8?",
-        "answer": "The optimizer automatically appends blank pages at the end to satisfy the mathematical page-count requirements of the selected folding layout."
-      }
-    ]
-  },
-  "pdf-to-slide": {
-    "title": "PDF a Presentación",
-    "metaDescription": "Analice el esquema de un PDF y extraiga gráficos vectoriales para reconstruirlos en una presentación PPTX editable.",
-    "keywords": [
-      "pdf a ppt",
-      "crear diapositivas",
-      "convertidor pptx",
-      "extraer diagramas"
-    ],
-    "description": "\n      <p>AI PDF-to-Slide Reconstructor breathes new life into static PDF documents, transforming them into modern, highly-customizable PowerPoint slides (PPTX).</p>\n      <p>The tool uses an advanced layout outline extractor that automatically parses document heading levels, paragraph lines, and font weights to establish a logical slide framework. It also isolates vector charts and high-resolution tables, stripping background artifacts to embed them cleanly as independent editable assets.</p>\n      <p>All PPTX outputs are built using standard Office Open XML elements, meaning all text remains fully editable and vectors do not lose resolution. The front-end showcases a fluid \"starfield\" card transition animation that visualizes the reconstruction in an engaging manner.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload Academic/Business PDF",
-        "description": "Upload a PDF document that contains structured sections and diagrams."
-      },
-      {
-        "step": 2,
-        "title": "Analyze Slide Outlines",
-        "description": "Inspect the extracted slide structure, adjust titles, or delete unneeded card blocks."
-      },
-      {
-        "step": 3,
-        "title": "Reconstruct to PPTX",
-        "description": "Start the compilation engine to receive a standard, editable presentation file."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Research Paper Presentation",
-        "description": "Convert academic journal PDFs, text structures, and vector diagrams into slide decks ready for talks.",
-        "icon": "graduation-cap"
-      },
-      {
-        "title": "Business Report Summary",
-        "description": "Distill massive annual corporate reports into clean, bulleted presentation drafts instantly.",
-        "icon": "presentation"
-      },
-      {
-        "title": "Multi-Device Demos",
-        "description": "Avoid copying screenshots manually. Get a clean, fully-editable layout framework in seconds.",
-        "icon": "laptop"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Are the slides editable in Microsoft Office?",
-        "answer": "Yes. The files are generated natively in memory according to the official Office Open XML (OOXML) specification. Texts, tables, and placeholders are fully interactive in PowerPoint, Keynote, and WPS."
-      },
-      {
-        "question": "How are charts extracted?",
-        "answer": "The engine scans vector paths and raster layers in the PDF, detects bounded areas representing graphs, and clips them out as standalone SVG nodes or high-DPI images."
-      },
-      {
-        "question": "Does this work on scanned documents?",
-        "answer": "For scanned PDFs lacking actual text layers, we recommend running our OCR tool first before passing the file to the Slide Reconstructor."
-      }
-    ]
-  },
-  "eink-optimizer": {
-    "title": "Optimizador para Lectores e-Ink",
-    "metaDescription": "Optimice PDFs para pantallas de tinta electrónica: eliminación de ruido, binarización Otsu y engrosamiento de trazos.",
-    "keywords": [
-      "optimizar eink",
-      "binarizacion otsu",
-      "engrosar letra",
-      "lectores de tinta"
-    ],
-    "description": "\n      <p>e-Ink Reader Optimizer is a must-have tool custom-made for e-Reader enthusiasts using Kindle, Onyx Boox, Kobo, or other e-paper devices.</p>\n      <p>Many scanned PDF e-books suffer from faint lettering, muddy gray backgrounds, noise, or scan shadows when viewed on e-Ink screens. This tool analyzes gray-value histograms and applies Otsu's Binarization Thresholding to separate text from background, converting gray backdrops to clean white.</p>\n      <p>Additionally, it integrates morphological dilation to bold and thicken thin, faded characters, providing crisp, high-contrast typography. The inertia-damped contrast slider allows you to fine-tune the paper-like contrast in real-time.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload Scanned PDF",
-        "description": "Upload e-books or scanned documents with faint text or gray backgrounds."
-      },
-      {
-        "step": 2,
-        "title": "Adjust Contrast Slider",
-        "description": "Drag the damped slider to balance background removal and character bolding in real-time."
-      },
-      {
-        "step": 3,
-        "title": "Optimize and Download",
-        "description": "Process the entire PDF to generate a high-contrast, eye-friendly document tailored for e-Ink."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Ancient Manuscript Restoration",
-        "description": "Thicken faded text in scans of historical books or handwritten manuscripts to make them readable.",
-        "icon": "scroll"
-      },
-      {
-        "title": "Exam Sheet Clean-up",
-        "description": "Bleach background shadows from photocopied or photographed exams, returning clean black text on white paper.",
-        "icon": "file-text"
-      },
-      {
-        "title": "E-paper Device Tailoring",
-        "description": "Convert colored PDFs to optimized grayscale, preventing messy, dithering artifacts on monochrome screens.",
-        "icon": "tablet"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How does the \"character bolding\" work?",
-        "answer": "In image processing, this is called dilation. It uses a structuring matrix to expand character margins by a pixel, physically thickening faint strokes to make them legible."
-      },
-      {
-        "question": "Will this process bloat the file size?",
-        "answer": "Quite the opposite. By binarizing complex color/grayscale images to simple black-and-white layouts, standard compression (like CCITT Group 4) can shrink the PDF file size significantly."
-      },
-      {
-        "question": "Does this support native text PDFs?",
-        "answer": "Yes. Native vector PDFs are rasterized at high resolutions in the background, optimized, and compiled back, ensuring unified high-contrast reading."
-      }
-    ]
-  },
-  "cert-cryptor": {
-    "title": "Cifrar Certificado",
-    "metaDescription": "Cifre PDFs con certificados de clave pública y aplique una firma digital PKCS#7 junto a un sello de lacre físico en 3D.",
-    "keywords": [
-      "cifrado de certificados",
-      "sello de lacre 3d",
-      "firma digital",
-      "pkcs7"
-    ],
-    "description": "\n      <p>3D Wax-Seal & Certificate Cryptor provides military-grade security and premium physical-grade aesthetics for sensitive corporate files, degrees, or agreements.</p>\n      <p>Technically, it offers asymmetric public-key encryption: import a recipient's public key certificate (.cer/.crt) to lock the PDF stream; only the holder of the matching private key (.pfx) can decrypt it. It also generates standard PKCS#7 digital signatures to ensure document tamper-proof integrity.</p>\n      <p>Visually, we feature a 3D physical gold or red wax-seal stamp. When you sign, a beautifully rendered stamp descends with a satisfying mechanical sound, leaving a 3D wax seal with realistic normal-mapped height variations and wax run-offs on the page, surrounded by glowing cryptographic tracks.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload PDF and Cert",
-        "description": "Add your PDF and import your signing certificate (.pfx) or the recipient's public certificate (.cer)."
-      },
-      {
-        "step": 2,
-        "title": "Place the 3D Stamp",
-        "description": "Drag and locate the seal on the document preview, and pick a wax style (e.g., gold, crimson)."
-      },
-      {
-        "step": 3,
-        "title": "Press and Sign",
-        "description": "Click execute to watch the 3D wax-seal imprint ceremony, generating a physical-grade digital signature."
-      },
-      {
-        "step": 4,
-        "title": "Download Secured PDF",
-        "description": "Save the output document, now cryptographically locked and stamped."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Diplomas and Certificates",
-        "description": "Affix highly-valued 3D wax seal badges to digital diplomas and awards, backed by genuine digital signatures.",
-        "icon": "award"
-      },
-      {
-        "title": "Confidential Agreements",
-        "description": "Lock sensitive contracts using the client's public certificate so that only their secure physical keycard can unlock it.",
-        "icon": "shield-alert"
-      },
-      {
-        "title": "Official Press Releases",
-        "description": "Digitally sign public announcements to prevent malicious text edits or spoofing.",
-        "icon": "stamp"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Is the wax seal just an image or a real signature?",
-        "answer": "Both. The system renders an incredibly realistic 3D wax imprint with normal-mapped depth (visual layer) and encodes an authentic, tamper-proof PKCS#7 cryptographic signature inside the PDF (data layer)."
-      },
-      {
-        "question": "What is \"Certificate-based Encryption\"?",
-        "answer": "It is a passwordless encryption technique. You encrypt the file using the recipient's public key. The reader automatically searches for their local private certificate to decrypt the file seamlessly, ensuring robust security."
-      },
-      {
-        "question": "Can I customize the stamp design?",
-        "answer": "Yes. We provide multiple designs like the PDFCraft watermark or a Royal crest, and you can adjust the wax melting radius and normal-map indentation depth in the panel."
-      }
-    ]
-  },
-  "passport-id-composer": {
-    "title": "Copiar Identificación Doble Cara",
-    "metaDescription": "Combine el anverso y reverso de identificaciones o pasaportes en una página A4 con marcas de agua de seguridad.",
-    "keywords": [
-      "copia de identificacion",
-      "anverso reverso a4",
-      "copia de pasaporte",
-      "marca de agua"
-    ],
-    "description": "\n      <p>The Passport & ID Double-sided Composer is an incredibly useful productivity utility for standard business and personal operations.</p>\n      <p>When applying for bank accounts, onboarding, or signing agreements, we frequently need copies of both sides of ID cards. This tool accepts front/back images or PDF pages and precisely arranges them onto a single A4 page complying with national standard layout resolutions.</p>\n      <p>Furthermore, you can customize overlapping translucent anti-counterfeit watermarks (e.g. \"FOR ONBOARDING ONLY\") to prevent unauthorized document reuse. It even features a 3D glow laser sweep copier scanner door visual effect to deliver premium feedback.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload ID files",
-        "description": "Upload front and back photos/scans of your ID or passport (up to 2 files)."
-      },
-      {
-        "step": 2,
-        "title": "Configure secure watermark",
-        "description": "Input custom text overlay to restrict unauthorized document replication."
-      },
-      {
-        "step": 3,
-        "title": "Compose & download",
-        "description": "Click execute to generate a single-page print-ready A4 PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "HR onboarding submission",
-        "description": "Quickly align employee ID copies and apply protective watermarks.",
-        "icon": "user"
-      },
-      {
-        "title": "Government & banking service",
-        "description": "Prepare standardized ID prints that meet physical archive requirements.",
-        "icon": "landmark"
-      },
-      {
-        "title": "Travel backups",
-        "description": "Arrange passport pages and visa details onto a unified A4 paper.",
-        "icon": "plane"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Will watermarks block identity text details?",
-        "answer": "No. The watermark is rendered at a carefully tuned 15% opacity to block forgery without sacrificing the legibility of text or photo fields."
-      },
-      {
-        "question": "Is the composite card size accurate?",
-        "answer": "Yes. It renders the ID card at the standard physical dimension of 85.6mm × 54mm scaled perfectly on the A4 page."
-      },
-      {
-        "question": "Does it support driver licenses?",
-        "answer": "Yes, it works beautifully for any card-based identity scans."
-      }
-    ]
-  },
-  "annotation-exporter": {
-    "title": "Exportar Anotaciones",
-    "metaDescription": "Extraiga resaltados, notas y comentarios de PDFs en un documento Markdown organizado para su estudio.",
-    "keywords": [
-      "exportar anotaciones pdf",
-      "extraer resaltados",
-      "notas de estudio",
-      "markdown"
-    ],
-    "description": "\n      <p>The Smart Annotation Exporter is a powerful workspace that unlocks full value from your PDF annotations.</p>\n      <p>While conducting literature reviews or reading extensive ebooks, we make heavy use of highlights and sticky notes. This tool deserializes the low-level PDF <code>/Annots</code> dictionary and extracts all highlights, notes, underlines, and hand-drawn ink markers.</p>\n      <p>It automatically aligns the comments with their respective outline headers, generating a structured Markdown or JSON notebook with page reference anchors. Watch your highlights float beautifully into the frosted-glass notebook panel.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Import annotated PDF",
-        "description": "Upload any PDF essay or book containing your underlines, highlights, or comments."
-      },
-      {
-        "step": 2,
-        "title": "Configure filters & format",
-        "description": "Select the annotation types you want to extract and choose Markdown or JSON."
-      },
-      {
-        "step": 3,
-        "title": "Extract notebook",
-        "description": "Click execute to parse the comments stream and assemble your outline summary."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Scientific literature synthesis",
-        "description": "Extract reading notes across multiple papers into Markdown templates to compose lit reviews instantly.",
-        "icon": "graduation-cap"
-      },
-      {
-        "title": "Study journal compiling",
-        "description": "Collect beautiful insights and personal remarks from textbooks into Obsidian databases.",
-        "icon": "book"
-      },
-      {
-        "title": "Document collaborative audit",
-        "description": "Gather review corrections from different team members and establish actionable task lists.",
-        "icon": "users"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Can it extract tablet hand-drawn ink strokes?",
-        "answer": "Yes. As long as the hand-drawn marks are stored as standard PDF Ink annotations, the tool can perfectly isolate and structure their page positions."
-      },
-      {
-        "question": "Why are some highlighted extracts empty?",
-        "answer": "If the PDF is a non-searchable image scan lacking underlying text, highlights only store coordinates. Run OCR on the PDF first, then extract annotations."
-      },
-      {
-        "question": "Do the Markdown links jump back to the PDF?",
-        "answer": "The exported file lists precise page numbers and original outline headings to make cross-referencing seamless."
-      }
-    ]
-  },
-  "batch-watermark-remover": {
-    "title": "Quitar Marcas de Agua",
-    "metaDescription": "Analice el flujo de contenido de sus PDFs y elimine marcas de agua de texto e imagen (XObjects) sin alterar el formato.",
-    "keywords": [
-      "eliminar marca de agua pdf",
-      "quitar logos pdf",
-      "limpieza de pdf"
-    ],
-    "description": "\n      <p>The Batch Watermark Remover is a state-of-the-art PDF sanitizer that physically cleanses documents.</p>\n      <p>Generic watermark removers usually just overlay white blocks or distort document spacing. This tool utilizes a robust <strong>Content Stream Purge</strong> technique.</p>\n      <p>It parses the low-level rendering operators of each page, identifies specific watermark string commands (e.g. \"Confidential\", \"DRAFT\") or background image objects, and physically deletes or overwrites them. The watermarks disappear completely, preserving the original formatting and vector quality.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload watermarked file",
-        "description": "Provide the PDF document showing commercial logos or security labels."
-      },
-      {
-        "step": 2,
-        "title": "Define target watermark",
-        "description": "Input the exact string to delete, or toggle translucent XObject image cleanup."
-      },
-      {
-        "step": 3,
-        "title": "Run physical purge",
-        "description": "Click execute to scrub the content operators with high fidelity."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Archiving corporate assets",
-        "description": "Remove expired \"Confidential\" or \"Draft\" watermarks for general public distribution.",
-        "icon": "archive"
-      },
-      {
-        "title": "Clearing background clutter",
-        "description": "Scrub heavy background pictures that distract readers from scanning text.",
-        "icon": "eye"
-      },
-      {
-        "title": "Document reusing",
-        "description": "Cleanse old page footer branding elements to apply new corporate templates easily.",
-        "icon": "copy"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Can the purged watermarks be recovered?",
-        "answer": "No. Unlike visual masks, we rewrite the page binary stream to erase the operators, leaving no traces."
-      },
-      {
-        "question": "Does it support complex gradients?",
-        "answer": "If the watermark is stored as a separate text node or image XObject, the tool can isolate and physically wipe it."
-      },
-      {
-        "question": "Will it modify normal page text?",
-        "answer": "No. The scrubbing engine only target operators matching the specified watermark signature; regular text remains untouched."
-      }
-    ]
-  },
-  "smart-data-redactor": {
-    "title": "Redactar Datos Sensibles",
-    "metaDescription": "Detecte y censure de forma física e irreversible correos electrónicos, números de teléfono e identificaciones en PDFs.",
-    "keywords": [
-      "censurar pdf",
-      "ocultar datos sensibles",
-      "redaccion de documentos"
-    ],
-    "description": "\n      <p>The Smart Privacy Data Redactor is an automated tool designed to ensure robust document privacy compliance.</p>\n      <p>Simply overlaying black boxes in normal editors is unsafe because the underlying text can still be copied. This tool implements true <strong>NLP pattern matching and physical content stream sanitization</strong>.</p>\n      <p>It scans the document for emails, phone numbers, SSNs, or custom keywords, places a premium matte black mask over the coordinates, and permanently overwrites the character stream with <code>[REDACTED]</code>, blocking copy-paste leaks.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload target PDF",
-        "description": "Provide the contract or statement showing sensitive customer details."
-      },
-      {
-        "step": 2,
-        "title": "Select redaction rules",
-        "description": "Check target patterns (email, phone, ID) or define custom sensitive words."
-      },
-      {
-        "step": 3,
-        "title": "Auto redact & download",
-        "description": "Click execute to overlay secure masks and wipe the text streams."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Commercial agreements sharing",
-        "description": "Safely publish business documents by hiding personal salaries, phone numbers, or emails.",
-        "icon": "file-signature"
-      },
-      {
-        "title": "Resume database anonymization",
-        "description": "Strip applicant names, contact info, or addresses to comply with strict privacy regulations.",
-        "icon": "user-check"
-      },
-      {
-        "title": "Financial statement distribution",
-        "description": "Conceal specific ledger numbers or shareholder names before publishing reports.",
-        "icon": "pie-chart"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Are redacted details truly un-copyable?",
-        "answer": "Yes. We rewrite the page content stream to erase the characters. Copy-pasting from the redacted box will only extract the string \"[REDACTED]\"."
-      },
-      {
-        "question": "Does it work for scanned image PDFs?",
-        "answer": "This tool targets vector text streams. For scanned image files, use our OCR tool first or crop manually."
-      },
-      {
-        "question": "Is the red HUD target scope saved in the file?",
-        "answer": "No, that is a gorgeous frontend interactive loading effect. The output PDF displays standard clean black rectangles."
-      }
-    ]
-  },
-  "bookmarks-auto-generator": {
-    "title": "Generar Marcadores",
-    "metaDescription": "Analice los tamaños de fuente y jerarquías para inyectar automáticamente un esquema de marcadores anidados en el PDF.",
-    "keywords": [
-      "marcadores pdf",
-      "esquema de navegacion",
-      "crear marcadores automaticos"
-    ],
-    "description": "\n      <p>The Auto Bookmarks Generator brings absolute clarity to lengthy, unstructured PDF documents.</p>\n      <p>Scanning through books or booklets with no outline navigation is painful. This tool parses typographic hierarchies (such as font sizes and weights) along with regex rules (like \"Chapter 1\", \"Section 1.1\") to automatically deduce headings.</p>\n      <p>It then compiles and injects these headings directly into the PDF <code>/Outline</code> dictionary. Any standard viewer will then show a beautifully structured, multi-level navigation sidebar, backed by an interactive 3D outline tree preview.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Provide unstructured PDF",
-        "description": "Upload large brochures, academic papers, or ebooks lacking a catalog sidebar."
-      },
-      {
-        "step": 2,
-        "title": "Tune heading rules",
-        "description": "Configure strategies specifying minimum font size thresholds and match rules."
-      },
-      {
-        "step": 3,
-        "title": "Build and inject",
-        "description": "Click execute to render the outline nodes and physically write the outline bookmarks."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Technical manuals organizing",
-        "description": "Auto compile multi-level chapters for standard guidelines, saving hours of manual indexing.",
-        "icon": "tool"
-      },
-      {
-        "title": "Thesis preparation",
-        "description": "Inject clean nested bookmarks matching exact academic submission standards.",
-        "icon": "graduation-cap"
-      },
-      {
-        "title": "Ebook navigation optimization",
-        "description": "Structure scanned text publications into readable chapters for tablets or mobile readers.",
-        "icon": "tablet"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Can it match custom chapter formats?",
-        "answer": "Yes. You can add custom regex patterns in the sidebar panel (e.g., `^Part\\s+\\w+`) to target unique layouts."
-      },
-      {
-        "question": "Will this affect the visual page presentation?",
-        "answer": "No. The tool only adds an internal structural bookmark catalog. The text and visual assets of the pages remain untouched."
-      },
-      {
-        "question": "How many bookmark levels are supported?",
-        "answer": "The tool supports deeply nested bookmark structures, allowing chapter, section, and subsection layouts."
-      }
-    ]
-  },
-  "batch-barcode-injector": {
-    "title": "Insertar Códigos en Lote",
-    "metaDescription": "Inyecte códigos de barras (Code128) y códigos QR en coordenadas específicas de múltiples páginas PDF en lote.",
-    "keywords": [
-      "insertar qr pdf",
-      "códigos de barras en lote",
-      "etiquetado pdf"
-    ],
-    "description": "\n      <p>The Batch Barcode precision injector bridges digital asset tracking with physical document indexing.</p>\n      <p>In warehousing, contract review, or logistics, we often need to Stamp unique barcodes onto invoices or device cards. This tool makes it incredibly easy.</p>\n      <p>Generate highly readable QR codes or Code128 barcodes, and use our gorgeous aligning workspace with green laser guides to position them. A clean scan audio beep triggers on placement, providing highly premium feedback.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload document",
-        "description": "Drag and drop single or multi-page PDFs representing agreements or shipping lists."
-      },
-      {
-        "step": 2,
-        "title": "Position barcode coordinates",
-        "description": "Set code type, value, and drag the placement box to specify coordinates."
-      },
-      {
-        "step": 3,
-        "title": "Stamps and download",
-        "description": "Click execute to render the code layer onto the targeted page indices."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Contract validation tracing",
-        "description": "Apply a unique QR code showing anti-counterfeit details onto the header of contracts.",
-        "icon": "file-check"
-      },
-      {
-        "title": "Shipping lists coding",
-        "description": "Place Code128 barcodes at target spots for quick warehouse scanning gun validation.",
-        "icon": "truck"
-      },
-      {
-        "title": "Asset registration carding",
-        "description": "Add inventory QR codes displaying maintenance specs onto physical equipment sheets.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Are the generated barcodes highly scannable?",
-        "answer": "Yes. We embed lossless high-resolution PNG representations that remain sharp even when printed at very small dimensions."
-      },
-      {
-        "question": "Can I inject unique values on each page?",
-        "answer": "Currently, the batch run applies the same configured code onto all selected pages. Multi-valued excel import is planned in a future update."
-      },
-      {
-        "question": "What does the `pt` coordinate represent?",
-        "answer": "`pt` (Point) is the standard PDF physical unit (72 pt = 1 inch). A4 pages are represented as 595 × 842 pt."
-      }
-    ]
-  },
-  "signature-ink-optimizer": {
-    "title": "Extraer Firmas y Sellos",
-    "metaDescription": "Extraiga firmas y sellos de documentos escaneados, eliminando el fondo para generar PNGs transparentes de alta calidad.",
-    "keywords": [
-      "extraer firma pdf",
-      "digitalizar sellos",
-      "fondo transparente png"
-    ],
-    "description": "\n      <p>The Signature & Stamp Chroma Ink Optimizer functions as a professional high-fidelity ink purifier.</p>\n      <p>Signatures or corporate seals captured on phones often suffer from yellow paper tint, uneven shadows, and page wrinkles. Pasting them directly onto contract PDFs looks amateur.</p>\n      <p>This tool separates the Alpha channel based on luminance and color space. It completely bleaches paper backgrounds while sharpening stamp red (Chroma Ink) and handwriting black. The result is a premium, transparent PNG stamp carrying genuine ink textures.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload seal photo",
-        "description": "Provide a phone-captured photo of your signature or stamp seal."
-      },
-      {
-        "step": 2,
-        "title": "Adjust cleaning sliders",
-        "description": "Move contrast and luminance sliders to isolate the background noise in real-time."
-      },
-      {
-        "step": 3,
-        "title": "Download clean signature",
-        "description": "Export as transparent PNG ready to be stamped onto formal document agreements."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Professional e-signature prep",
-        "description": "Convert gray signature photos into beautiful, transparent layers to sign agreements.",
-        "icon": "file-signature"
-      },
-      {
-        "title": "Corporate seal sanitizing",
-        "description": "Clean physical stamp scans by discarding paper fiber noise, preparing crisp transparent stamp seals.",
-        "icon": "stamp"
-      },
-      {
-        "title": "Drawn line art extraction",
-        "description": "Isolate black strokes from drawing sketchbooks for easy Photoshop coloring workflows.",
-        "icon": "edit"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How does self-adaptive Alpha extraction differ from normal keying?",
-        "answer": "Standard chroma-keying often makes signature stroke details look blocky and pixelated. Our algorithm isolates only white/yellow background noise and smooths the ink borders."
-      },
-      {
-        "question": "Which image formats are supported?",
-        "answer": "We support JPG, JPEG, and PNG. For best results, capture your signature photo under bright, even lighting."
-      },
-      {
-        "question": "Will the handwriting detail be modified?",
-        "answer": "No. The pixel filtering acts on original coordinates, sharpening contrast while maintaining genuine stroke textures."
-      }
-    ]
-  },
-  "dead-link-debugger": {
-    "title": "Reparar Enlaces Rotos",
-    "metaDescription": "Escanee y diagnostique enlaces externos (/URI) en PDFs, permitiendo corregirlos o redirigirlos fácilmente.",
-    "keywords": [
-      "enlaces rotos pdf",
-      "corregir url pdf",
-      "depurar hipervinculos"
-    ],
-    "description": "\n      <p>The Dead Link Debugger is a deep structural editor that guarantees link interaction quality in published files.</p>\n      <p>Broken urls (404/500) inside manuals, whitepapers, or guides reduce branding authority. This tool lets you manage the hyperlinks database seamlessly.</p>\n      <p>It parses the low-level <code>/Link</code> dictionaries on each page, Probes them, and displays link status in an interactive grid (red for dead links, orange for redirects). Simply type the updated redirect URL, and the tool writes the new target directly back into the PDF binary stream.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Provide target document",
-        "description": "Upload the PDF manual or catalog containing links to debug."
-      },
-      {
-        "step": 2,
-        "title": "Scan and update",
-        "description": "Let the debugger extract all URL entities. Input new redirect URLs for broken items."
-      },
-      {
-        "step": 3,
-        "title": "Save redirect updates",
-        "description": "Click execute to rewrite /URI actions and download the corrected PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Flyer broken links hotfix",
-        "description": "Instantly correct wrong urls on published flyers without reopening original design editors.",
-        "icon": "refresh-cw"
-      },
-      {
-        "title": "Bibliography links verification",
-        "description": "Verify academic bibliography links in reports, updating references to maintain authority.",
-        "icon": "book"
-      },
-      {
-        "title": "Corporate rebranding updates",
-        "description": "Batch update old URLs across corporate PDFs when company domain names are changed.",
-        "icon": "globe"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Why isn't link reachability fully checked online?",
-        "answer": "Web browsers enforce strict CORS policies that block direct multi-origin link checking. Our tool lists the links clearly and lets you hot-fix them manually."
-      },
-      {
-        "question": "Will this modify the visual text representation on the page?",
-        "answer": "No. It only alters the underlying `/URI` navigation action. The visual link text remains unchanged."
-      },
-      {
-        "question": "Does it support modifying internal page bookmarks?",
-        "answer": "This tool handles external `/URI` hyperlinks. For internal layout navigation, use our interactive TOC tool."
-      }
-    ]
-  },
-  "interactive-toc-generator": {
-    "title": "Generar Índice Interactivo",
-    "metaDescription": "Inserte una página de índice interactivo con enlaces a cada sección y agregue botones de retorno (↩) en las páginas.",
-    "keywords": [
-      "indice interactivo pdf",
-      "tabla de contenido pdf",
-      "enlaces de navegacion"
-    ],
-    "description": "\n      <p>The Interactive TOC Builder introduces a revolutionary navigation experience to extensive PDFs.</p>\n      <p>Flipping through hundreds of pages in unstructured documents to locate target chapters is frustrating. This tool introduces <strong>Bidirectional TOC compilation</strong>.</p>\n      <p>It scans headers and generates an origami-inspired, premium Table of Contents page inserted right after the cover. In addition to creating clickable /GoTo links for each index row, it injects a tiny, elegant \"TOC ↩\" hovering anchor at the corner of each target chapter page. Readers can jump back and forth instantly, enjoying web-like navigation.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Provide PDF document",
-        "description": "Upload a report, eBook, or proposal that needs an interactive catalog."
-      },
-      {
-        "step": 2,
-        "title": "Set TOC title & index",
-        "description": "Customize the main title and choose the page index to insert the TOC page."
-      },
-      {
-        "step": 3,
-        "title": "Weave anchors & save",
-        "description": "Click execute to compile the pages and write the dual-link navigation."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Annual corporate report polishing",
-        "description": "Inject a beautiful index page after the cover sheet to allow shareholders to jump between financial charts.",
-        "icon": "file-bar"
-      },
-      {
-        "title": "Thesis indexing",
-        "description": "Fast compile standard indexes aligned with university formatting rules.",
-        "icon": "bookmark"
-      },
-      {
-        "title": "Operation manual navigation",
-        "description": "Help handbook readers quickly jump from troubleshooting sheets back to the main TOC.",
-        "icon": "check-circle"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How do the bidirectional anchors work?",
-        "answer": "We create standard Link annotations on the TOC page targeting the respective pages; then we embed a link back to the TOC page on all target chapter sheets."
-      },
-      {
-        "question": "Will inserting the TOC page break existing page numbers?",
-        "answer": "No. The compiler accounts for the offset of the newly inserted TOC page, ensuring all target destinations align."
-      },
-      {
-        "question": "Is the TOC page valid when printed physically?",
-        "answer": "Yes. The generated TOC lists clean physical page numbers to guide paper readers while enabling clickable links on screen."
-      }
-    ]
-  },
-  "pdf-deskew-aligner": {
-    "title": "Corrección de Escaneos Torcidos",
-    "metaDescription": "Detecte automáticamente ángulos de inclinación en PDFs escaneados y corríjalos físicamente para un diseño plano.",
-    "keywords": [
-      "corregir inclinacion pdf",
-      "alinear escaneo pdf",
-      "deskew automatico"
-    ],
-    "description": "\n      <p>The PDF Scan Aligner is a mandatory utility for sanitizing tilted digital assets and mobile snapshots.</p>\n      <p>Documents scanned via physical flatbeds or captured quickly with smartphones often carry subtle rotations. Tilted pages look highly unprofessional, hinder text readability, and cause margins to clip during printing.</p>\n      <p>This tool utilizes robust <strong>Radon Transform and Hough Line detection algorithms</strong> to scan gradients and text lines under 20ms. It precisely measures skew down to 0.01 degrees and performs pixel-level Canvas rotation, snapping your receipts, contracts, and booklets back into crisp geometric alignment.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Provide skew PDF",
-        "description": "Upload any PDF sheet carrying rotated or poorly aligned scanned documents."
-      },
-      {
-        "step": 2,
-        "title": "Analyze and tweak",
-        "description": "The engine auto-detects skew angle and draws aligning grids. Tweak angle manually if needed."
-      },
-      {
-        "step": 3,
-        "title": "Straighten & download",
-        "description": "Click execute to swing pages through a smooth gyroscope transition and download aligned PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Receipt & Contract Archiving",
-        "description": "Straighten quick hand-held mobile contract scans before saving them as formal digital PDF archives.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Academic Book Digitizing",
-        "description": "Sanitize microfilm book scans where text lines drift out of horizontal margins.",
-        "icon": "book"
-      },
-      {
-        "title": "Student Homework Grading",
-        "description": "Correct homework snapshots taken by student phones, relaxing the eyes of grading teachers.",
-        "icon": "edit-3"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How is document skew detected?",
-        "answer": "We run high-speed Hough Line projections on text lines. Since formal prints have clear horizontal spacing patterns, finding the angle with the maximum variance isolates the rotation."
-      },
-      {
-        "question": "Will this process crop away page edges?",
-        "answer": "No. The engine calculates the rotated boundary and extends the Canvas using auto-padding, ensuring all margin text remains intact without cropping."
-      },
-      {
-        "question": "Does it support documents filled with diagrams?",
-        "answer": "Yes, as long as there is an underlying structure of lines or general paragraphs, our algorithms can accurately lock onto the principal reading angle."
-      }
-    ]
-  },
-  "pdf-two-column-reflower": {
-    "title": "Reorganizar PDFs de Dos Columnas",
-    "metaDescription": "Divida documentos de doble columna copiando páginas y redefiniendo el CropBox para una lectura fluida en una sola columna.",
-    "keywords": [
-      "redistribuir columnas",
-      "pdf doble columna a una",
-      "ajustar cropbox"
-    ],
-    "description": "\n      <p>The Academic Two-Column Reflower solves the most significant pain point of digital research: reading papers on standard mobile screens.</p>\n      <p>Double-column layouts (used by IEEE, ACM, Nature, and major reports) are designed for A4 paper. Navigating them on phone screens or Kindle devices requires constant zooming, dragging right, scrolling down, and panning back up. It breaks reading comprehension completely.</p>\n      <p>Our processor implements a <strong>smart paragraph reflow and vertical partition barrier scan</strong>. It analyzes character coordinates to map double-column gutters, divides the layout, and weaves segments vertically (left column first, then right). Graphs, formulas, and headings are seamlessly rearranged into a single-column, flowable vertical scroll PDF.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload double-column PDF",
-        "description": "Provide the IEEE/ACM journal report or multi-column PDF sheet."
-      },
-      {
-        "step": 2,
-        "title": "Inspect partition gutter",
-        "description": "Verify the red vertical partition slice guides. Adjust margins to prevent overlapping elements."
-      },
-      {
-        "step": 3,
-        "title": "Reflow and save",
-        "description": "Click execute to compile the pages into flowable layouts and download instantly."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "e-Reader Book Import",
-        "description": "Convert dense double-column essays into comfortable single-column documents matching Kindle and Onyx screens.",
-        "icon": "tablet"
-      },
-      {
-        "title": "Subway Phone Reading",
-        "description": "Read research literature comfortably with single-hand vertical swipe gestures during transit.",
-        "icon": "smartphone"
-      },
-      {
-        "title": "Archival Journal Formatting",
-        "description": "Modernize old narrow-column newspapers into readable, single-column web formats.",
-        "icon": "book-open"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How are broad charts and equations handled?",
-        "answer": "Our engine applies \"span element detection.\" When an equation or diagram exceeds normal column widths, it is isolated as a full-width item, maintaining original proportions without clipping."
-      },
-      {
-        "question": "Will this modify the vector text resolution?",
-        "answer": "Not at all. We rewrite PDF text object transform matrices at the object tree level instead of rasterizing, meaning text remains 100% vector and fully selectable."
-      },
-      {
-        "question": "Does this work on scanned image documents?",
-        "answer": "For flat image-based PDFs, we highly recommend running our OCR tool first before executing the Reflow process."
-      }
-    ]
-  },
-  "pdf-page-resizer-uniform": {
-    "title": "Uniformar Tamaño de Páginas PDF",
-    "metaDescription": "Escale páginas PDF de diversos tamaños centrándolas y ajustándolas proporcionalmente a un tamaño uniforme de destino.",
-    "keywords": [
-      "dimensionar paginas pdf",
-      "uniformar pdf a a4",
-      "centrar contenido paginas"
-    ],
-    "description": "\n      <p>The Multi-Format PDF Resizer is the ultimate standardizer for cluttered, mismatched corporate documents.</p>\n      <p>Combining invoices, contracts, and supplementary charts often results in a PDF containing massive A3 ledger pages, standard A4 agreements, and Letter-sized envelopes. Flipping through them is highly distracting, and sending them to physical office printers often causes jam errors due to size mismatch.</p>\n      <p>This tool rewrites the low-level <code>/MediaBox</code> and <code>/CropBox</code> grids on each page. It maps existing widths and heights, scales original pages proportionally to match target presets (e.g. standard A4), and introduces elegant, consistent surrounding margins, making the entire file look incredibly polished.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Provide mixed-size PDF",
-        "description": "Upload a merged PDF document containing mismatched, messy page sizes."
-      },
-      {
-        "step": 2,
-        "title": "Choose target preset",
-        "description": "Select the target uniform size (e.g. A4, Letter, A3) and toggle scale modes."
-      },
-      {
-        "step": 3,
-        "title": "Align and download",
-        "description": "Click execute to trigger 3D sheet alignment, downloading a beautifully standardized PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Corporate RFP Proposals",
-        "description": "Standardize scanned qualification certificates and A4 bidding sheets before physical printing.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Financial Chart Integration",
-        "description": "Scale broad A3 financial cash flows into neat A4 pages, preserving printing standards.",
-        "icon": "layout"
-      },
-      {
-        "title": "Book Margin Standardization",
-        "description": "Force slightly varied scanned book pages into an absolutely uniform dimension for comfortable reading.",
-        "icon": "book"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Will this warp my content?",
-        "answer": "Never. We support both \"Contain\" (proportional scaling with white bars) and \"Cover\" (centered crop). The default Contain mode preserves aspect ratios, preventing distortion."
-      },
-      {
-        "question": "Will existing forms and annotations remain clickable?",
-        "answer": "Yes. The algorithm maps the scaling factors to the Annotation coordinate arrays, scaling link boxes, sign boundaries, and inputs to align perfectly after resizing."
-      },
-      {
-        "question": "Is there a limit on how many pages I can resize?",
-        "answer": "No. Since all operations run locally in your client sandbox using native JavaScript, you can process extensive PDFs containing hundreds of pages in seconds."
-      }
-    ]
-  },
-  "handwriting-ink-contrast-booster": {
-    "title": "Mejorar Contraste de Manuscritos",
-    "metaDescription": "Blanquee fondos manchados u oscuros y aumente el contraste de firmas a mano (azul/negro) y sellos rojos.",
-    "keywords": [
-      "resaltar escritura a mano",
-      "blanquear papel escaneado",
-      "contraste de firmas"
-    ],
-    "description": "\n      <p>The Handwriting Ink Contrast Booster is a savior for digitizing signed agreements and historical manuscript archives.</p>\n      <p>Scans of hand-signed documents often look dull due to grey scanner glass reflection, yellow paper tint, or faded ink. Re-printing or photocopying these files results in blurry, illegible signatures. Traditional contrast tools darken the entire background, worsening the layout.</p>\n      <p>This tool utilizes **Contrast Limited Adaptive Histogram Equalization (CLAHE) and hue-based color separation**. In a secure local Canvas process, it isolates handwriting strokes (both black and blue) from background parchment, bleaches shadow wrinkles completely, and infuses faded inks with deep, saturated contrast, leaving your documents looking incredibly crisp and clean.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Import hand-signed document",
-        "description": "Provide a PDF containing faded signatures, handwritten diaries, or sketches."
-      },
-      {
-        "step": 2,
-        "title": "Configure ink filter",
-        "description": "Select the color profile to isolate (e.g. blue ink, black ink, or both) and adjust sharpening."
-      },
-      {
-        "step": 3,
-        "title": "Sharpen and download",
-        "description": "Click execute to trace colors with a radar scanner effect and download purified PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Executed Contracts Repair",
-        "description": "Repair poorly scanned agreements, sharpening signatures and bleaching paper background to A4-pure white.",
-        "icon": "file-check"
-      },
-      {
-        "title": "Handwritten Manuscripts Archive",
-        "description": "Digitize written journals or diaries, extracting clear black strokes while erasing age-related stains.",
-        "icon": "book"
-      },
-      {
-        "title": "Historical Ledger Restoration",
-        "description": "Restore faint ink details on aged archival ledgers, rescuing valuable handwritten coordinates.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How does this differ from normal grayscale conversion?",
-        "answer": "Grayscale converts paper shadows into gray values. Our adaptive algorithm separates background luminance and isolates signature \"ink spectrums,\" purifying the backdrop to absolute white while leaving stroke edges sharp."
-      },
-      {
-        "question": "Will I lose handwriting stroke texture?",
-        "answer": "No. The CLAHE algorithm works on a sub-pixel level, preserving natural pen-stroke pressure, ink fading, and dynamic line weights."
-      },
-      {
-        "question": "Can I keep red corporate stamp marks?",
-        "answer": "Yes. By enabling \"Chroma Ink Preservation,\" the booster whitens paper background and darkens writing, while maintaining the bright colors of red seals and blue ink signatures."
-      }
-    ]
-  },
-  "pdf-spine-bookbinder": {
-    "title": "Calcular Ancho de Lomo",
-    "metaDescription": "Calcule el grosor del lomo en milímetros según las páginas y gramaje del papel, y genere una plantilla de portada con líneas de hendido.",
-    "keywords": [
-      "calcular lomo libro",
-      "grosor de lomo",
-      "plantilla de portada pdf"
-    ],
-    "description": "\n      <p>The PDF Spine Bookbinder is a pre-press savior for designers, self-publishing authors, and commercial bidding teams.</p>\n      <p>When compiling thick book catalogs, bidding proposals, or annual directories, perfect binding (glue binding) requires a cover with precise spine coordinates. If the spine width is off by even 1mm, the bound cover will warp, shift, or crease. Calculating page counts against paper weight is complex and error-prone.</p>\n      <p>This tool utilizes a <strong>physically modeled GSM paper-to-thickness library</strong>. Simply input your PDF page count and select paper stock (e.g. 80 GSM offset, 100 GSM glossy). The engine calculates spine width down to micrometers and compiles a print-ready, extra-wide cover PDF complete with standard front/back flaps and precise fold mark creases.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Set pages & stock type",
-        "description": "Input document page count and select the target paper stock specifications."
-      },
-      {
-        "step": 2,
-        "title": "Input spine text",
-        "description": "Enter book titles, author details, and customize spine/cover backgrounds."
-      },
-      {
-        "step": 3,
-        "title": "3D Preview & Export",
-        "description": "Spin and inspect your book cover in an interactive 3D binder. Export high-resolution vector PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Thick Bidding Proposals",
-        "description": "Design professional cover sheets with precise spine crease alignments for thick tender bids.",
-        "icon": "layers"
-      },
-      {
-        "title": "Thesis Hardcover Binding",
-        "description": "Map out perfect spine layout widths for university master/doctorate degree theses.",
-        "icon": "award"
-      },
-      {
-        "title": "Self-Publishing Novel Covers",
-        "description": "Calculate book spine width easily before submitting files to Print-on-Demand publishing services.",
-        "icon": "book-open"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How accurate is the GSM paper-thickness calculation?",
-        "answer": "Highly accurate. Our physics library matches industry averages (e.g. 70 GSM = 0.09mm, 80 GSM = 0.10mm, 150 GSM glossy = 0.125mm). We also include a \"Double-sided printing\" toggle to halve calculations automatically."
-      },
-      {
-        "question": "Are the exported covers ready for direct printing?",
-        "answer": "Yes. The files are vector-perfect PDFs carrying standard registration marks, color bars, and spine guides, fully compliant with offset and digital commercial presses."
-      },
-      {
-        "question": "Can I upload a background image spanning the spine?",
-        "answer": "Yes. You can upload custom layouts, and our compositor will wrap and align the graphics across the spine folds automatically."
-      }
-    ]
-  },
-  "pdf-signature-anchor-helper": {
-    "title": "Guía de Posición de Firma",
-    "metaDescription": "Inserte indicadores visuales de firma y enlaces de navegación rápida en las ubicaciones donde se requiere firmar.",
-    "keywords": [
-      "anclaje de firma",
-      "marcador de firma pdf",
-      "guiar firmante"
-    ],
-    "description": "\n      <p>The PDF Signature Guide Injector guarantees clean, error-free signing workflows for multi-page agreements.</p>\n      <p>When sending multi-page NDA agreements, financial statements, or commercial leases, clients often miss critical signing boxes, requiring endless back-and-forth email loops and delayed business transactions.</p>\n      <p>Our tool uses <strong>natural regex semantic mapping</strong>. It scans the PDF character map to locate terms like <code>Signature:</code>, <code>签字：</code>, <code>Witness:</code>, or <code>签署日期：</code>. It then leverages <code>pdf-lib</code> to inject standard PDF interactive Link annotations. When opened in any standard reader, clients see blinking, neon-bordered arrows that instantly guide them to the correct boxes, making signing foolproof.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Import business contract",
-        "description": "Upload the PDF contract or NDA that needs signature coordinates."
-      },
-      {
-        "step": 2,
-        "title": "Auto-scan signature slots",
-        "description": "Inspect the automatically located signing boxes, and manually add custom sign points if needed."
-      },
-      {
-        "step": 3,
-        "title": "Inject anchors & save",
-        "description": "Click execute to write the interactive pointer layers into the PDF structure."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Corporate NDA Agreements",
-        "description": "Inject clear, flashing guides next to sign blocks to prevent onboarding employees from missing clauses.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Commercial Lease Contracts",
-        "description": "Guide multiple co-signers through multi-page real estate documents with custom-colored tabs.",
-        "icon": "users"
-      },
-      {
-        "title": "Procurement PO Signatures",
-        "description": "Overlay interactive pointers on invoices and purchase orders to accelerate accounting approval loops.",
-        "icon": "briefcase"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Will these guides appear when I print the contract?",
-        "answer": "No. The anchors are injected with the standard PDF `Printable` flag set to false. They display beautifully on computer/tablet screens but remain completely invisible when printed."
-      },
-      {
-        "question": "Can clients jump between signature fields easily?",
-        "answer": "Yes. We weave bidirectional internal anchors. Clients can click the \"Sign Guide\" bookmark to automatically jump to the next empty signature slot instantly."
-      },
-      {
-        "question": "Does this work on scanned image documents?",
-        "answer": "Yes. Besides looking up text streams, our spatial layout parser estimates signature lines based on horizontal rules and bounding boxes on scanned sheets."
-      }
-    ]
-  },
-  "pdf-lossless-slicer": {
-    "title": "Recorte de Planos sin Pérdidas",
-    "metaDescription": "Recorte secciones de planos de gran tamaño modificando el CropBox a nivel vectorial, sin pérdida de resolución.",
-    "keywords": [
-      "recortar planos pdf",
-      "recorte vectorial pdf",
-      "modificar mediabox"
-    ],
-    "description": "\n      <p>The PDF Lossless Drawing Slicer is a high-precision, surgical tool built for architects, engineers, and map detailers.</p>\n      <p>When extracting a specific pump room or chip core from a massive CAD engineering blueprint or geographic map PDF, traditional screenshots result in pixelated, blurry text. Normal cropping tools simply place a mask over the sheet, meaning the massive 100MB file remains huge, and hidden content can still be extracted.</p>\n      <p>This tool edits the page <code>/MediaBox</code>, <code>/CropBox</code>, and <code>/BleedBox</code> matrices at the object tree level. It physically isolates vector nodes outside the selected region, keeping the target area 100% vector-perfect (allowing infinite zoom magnification) while purging redundant off-screen paths and images to shrink the file size by 95%!</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Import large blueprint",
-        "description": "Upload the vector-rich CAD, GIS map, or high-resolution catalog PDF."
-      },
-      {
-        "step": 2,
-        "title": "Draw cutting box",
-        "description": "Drag and scale the green laser-line crop box to target the local region you want to slice."
-      },
-      {
-        "step": 3,
-        "title": "Trigger laser crop",
-        "description": "Click execute to trigger our low-level object slicer and download the tiny, lossless PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "CAD Blueprint Isolation",
-        "description": "Slice out a \"cooling system\" detail from a massive 100MB floor plan blueprint to share with sub-contractors.",
-        "icon": "crop"
-      },
-      {
-        "title": "GIS Map Snipping",
-        "description": "Extract a lossless, vector-clear block of a city street map for a presentation slide without resolution loss.",
-        "icon": "map"
-      },
-      {
-        "title": "Manual Illustration Tracing",
-        "description": "Lossless isolate scientific book figures to embed into high-quality academic papers.",
-        "icon": "image"
-      }
-    ],
-    "faq": [
-      {
-        "question": "How is this different from standard cropping?",
-        "answer": "Standard cropping merely adjusts visual bounds; the hidden vectors remain in the file. Our slicer trims overlapping vector paths and purges out-of-bounds XObject images, ensuring complete data isolation and maximum file compression."
-      },
-      {
-        "question": "Will text layers remain searchable?",
-        "answer": "Yes. Any text characters that fall inside the sliced boundary remain fully vector-clear, searchable, and selectable."
-      },
-      {
-        "question": "Can I export sliced regions to SVG?",
-        "answer": "The output is a standardized vector PDF. You can pass the resulting file to our PDF-to-SVG tool to convert it to a web-scalable vector graphics format."
-      }
-    ]
-  },
-  "pdf-scratchpad-canvas": {
-    "title": "Lienzo de Notas Cuadriculado",
-    "metaDescription": "Amplíe el lienzo de las páginas PDF agregando un margen de notas con patrón de cuadrícula o líneas para escribir.",
-    "keywords": [
-      "margen para notas pdf",
-      "papel cuadriculado pdf",
-      "lienzo de escritura"
-    ],
-    "description": "\n      <p>The PDF Scratchpad Margin Extender is an essential study companion tailored for students, researchers, and professional exam candidates.</p>\n      <p>When solving practice test papers, reviewing slides, or reading academic textbooks on digital tablets, page margins are incredibly tight. Opening a separate notes app forces you to toggle screens constantly, breaking focus. Adding flat blank sheets prevents you from viewing the problem and your calculation side-by-side.</p>\n      <p>This tool rewrites page width or height dimensions in the low-level PDF structure, expanding <code>/MediaBox</code> margins by 200~250 pt on the right or bottom. It then overlays clean grid lines, college-ruled notebook lines, or Cornell layouts in the new margins, giving you dedicated, adjacent draft boards next to every single slide or question!</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Upload lecture slides",
-        "description": "Provide the PDF textbook, slides, or study papers."
-      },
-      {
-        "step": 2,
-        "title": "Choose margin & grid style",
-        "description": "Pick margin expansion direction (e.g. right side for tablets) and select the grid template."
-      },
-      {
-        "step": 3,
-        "title": "Stitch canvas & download",
-        "description": "Click execute to generate expanded pages complete with beautiful draft grids."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "STEM Exam Preparation",
-        "description": "Stitch grid margins next to math and physics exam questions, solving derivations right next to the question.",
-        "icon": "edit-3"
-      },
-      {
-        "title": "Language Reading Analysis",
-        "description": "Add ruled notebook margins next to foreign language essays for vocabulary analysis and paragraph translation.",
-        "icon": "book"
-      },
-      {
-        "title": "Architectural Blueprint Audit",
-        "description": "Add empty margin spaces on the side of blueprints for engineering calculations and client review comments.",
-        "icon": "columns"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Will this squish my original PDF text?",
-        "answer": "Not at all. The algorithm expands the paper dimension outwards. The original content retains its layout, fonts, and resolution; we simply stretch the white space on the borders and draw grids on them."
-      },
-      {
-        "question": "Can standard hand-writing pens write in the scratchpad?",
-        "answer": "Yes. The new PDF pages are compiled natively. Popular tablet note-taking applications like Goodnotes, Notability, Xodo, and Acrobat can write, highlight, and doodle directly in the new grid space."
-      },
-      {
-        "question": "Are grid lines dark and distracting?",
-        "answer": "We curated three subtle, eye-friendly colors (soft blue-gray, warm brown, and glowing green). The lines are thin and gentle, serving as guides without distracting you from the original page content."
-      }
-    ]
-  },
-  "photo-tiling-prepress": {
-    "title": "Imprimir Fotos de Identificación",
-    "metaDescription": "Organice una foto de identificación en un plano de impresión de 5\" o 6\" en formato de matriz, con guías de corte.",
-    "keywords": [
-      "imprimir fotos carnet",
-      "papel fotográfico matriz",
-      "guias de corte"
-    ],
-    "description": "\n      <p>The Prepress Photo Tiling tool is a cost-effective, high-precision layout compiler built for personal registration cards and photography studios.</p>\n      <p>Printing passport photos, ID photos, or driver licenses at home often results in incorrect physical dimensions (often printed too large or too small), wasted photo paper, and uneven alignments. Going to professional print shops to get layouts made is time-consuming.</p>\n      <p>Our tool integrates a <strong>precision prepress matrix engine</strong>. It accepts portrait photographs or ID card scans, crops them to standard dimensions (e.g. 1\" or 2\" passport specs), calculates optimal tile counts for standard photo papers (e.g. 5\" or 6\" sheets), and injects crisp, micro-pixel crop lines for easy physical cutting, generating a perfect printable PDF.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Import passport photo",
-        "description": "Upload the camera portrait snapshot or double-sided ID card images."
-      },
-      {
-        "step": 2,
-        "title": "Configure paper & layout",
-        "description": "Select the target print paper size (e.g. 6\") and choose the grid layouts (e.g. 8 copies of 1\" photos)."
-      },
-      {
-        "step": 3,
-        "title": "Tile and export",
-        "description": "Inspect photo tiles on our grid, and export the high-DPI printable PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Self-Service Passport Photos",
-        "description": "Arrange your mobile-shot passport portraits onto a single 6\" photo paper grid, and print 8 copies for a fraction of standard studio costs.",
-        "icon": "user"
-      },
-      {
-        "title": "ID Card Double-sided Copy",
-        "description": "Format front and back scans of national ID cards neatly on standard Letter/A4 sheets for official submissions.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Batch Photo Thumbnail Sheets",
-        "description": "Tile multiple family memories or design snapshots onto a grid paper to print thumbnail contact sheets efficiently.",
-        "icon": "grid"
-      }
-    ],
-    "faq": [
-      {
-        "question": "Will the printed dimensions match official 1\" or 2\" specs?",
-        "answer": "Yes. The grid engine measures using standard PDF points (72 pt = 1 inch), rendering 1\" photos exactly at 25x35mm, and 2\" photos at 35x49mm. Ensure you print at \"Actual Size / 100% Scale\" in your printer settings."
-      },
-      {
-        "question": "Can I combine 1\" and 2\" photos on a single sheet?",
-        "answer": "Yes. We provide curated hybrid layout presets (e.g. \"4 copies of 1\" + 4 copies of 2\"\"), allowing you to maximize photo paper space."
-      },
-      {
-        "question": "Does the template include border bleeds?",
-        "answer": "Yes. The prepress layouts reserve a standard 4mm print-safe margin on the paper borders, preventing physical printer rollers from cropping the photos."
-      }
-    ]
-  },
-  "psd-to-pdf": {
-    "title": "PSD a PDF",
-    "metaDescription": "Convierte archivos de Adobe Photoshop (PSD) al formato PDF. Admite múltiples archivos y conserva la calidad de la imagen.",
-    "keywords": [
-      "psd a pdf",
-      "convertir psd",
-      "photoshop a pdf",
-      "conversor psd",
-      "adobe psd a pdf"
-    ],
-    "description": "\n      <p>PSD a PDF convierte archivos de Adobe Photoshop (PSD) en documentos PDF. Esta herramienta le permite visualizar y compartir diseños PSD sin necesidad de tener instalado Photoshop.</p>\n      <p>Puede convertir múltiples archivos PSD a la vez y combinarlos en un único documento PDF. La herramienta procesa cada archivo PSD renderizando las capas visibles en páginas PDF de alta calidad.</p>\n      <p>Toda la conversión se realiza localmente en su navegador, garantizando que sus diseños permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivos PSD",
-        "description": "Arrastre y suelte sus archivos PSD o PSB, o haga clic para seleccionarlos desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Organizar el orden",
-        "description": "Arrastre y suelte las miniaturas de los archivos para ordenarlos como desee."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y descargar",
-        "description": "Haga clic en Convertir para renderizar los PSD y descargar su documento PDF."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compartir diseños",
-        "description": "Comparta diseños de Photoshop con clientes o colegas que no tengan instalado Photoshop.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Creación de portafolios",
-        "description": "Compile sus trabajos de diseño en un portafolio profesional en PDF.",
-        "icon": "layout"
-      },
-      {
-        "title": "Preparación para impresión",
-        "description": "Convierta diseños a PDF listos para fines de impresión.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Necesito tener instalado Photoshop?",
-        "answer": "No, esta herramienta funciona completamente en su navegador sin requerir Adobe Photoshop."
-      },
-      {
-        "question": "¿Se conservan las capas?",
-        "answer": "La herramienta renderiza el estado visible del PSD (imagen compuesta). Las capas individuales se acoplan en el PDF."
-      },
-      {
-        "question": "¿Cuál es el tamaño máximo de archivo?",
-        "answer": "Puede subir archivos de hasta 100 MB cada uno. Los archivos PSD grandes pueden tardar un momento en procesarse."
-      }
-    ]
-  },
-  "word-to-pdf": {
-    "title": "Word a PDF",
-    "metaDescription": "Convierte documentos de Word (DOCX) a PDF. Preserva el formato y la distribución en los documentos convertidos.",
-    "keywords": [
-      "word a pdf",
-      "docx a pdf",
-      "convertir word",
-      "conversor de word",
-      "microsoft word a pdf"
-    ],
-    "description": "\n      <p>Word a PDF convierte documentos de Microsoft Word al formato PDF mientras preserva el formato original, la distribución de la página y la estructura del contenido.</p>\n      <p>Suba sus archivos DOCX y obtenga un PDF de alta calidad ideal para compartir, imprimir o archivar. La conversión mantiene el formato del texto, los estilos de párrafo y la estructura básica del documento.</p>\n      <p>Toda la conversión se realiza de forma local en su navegador, garantizando la privacidad y seguridad de sus documentos.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir documento de Word",
-        "description": "Arrastre y suelte su archivo .docx o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar el procesamiento",
-        "description": "La herramienta cargará el documento y lo preparará para la conversión."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compartir documentos",
-        "description": "Convierta documentos de Word a PDF para compartirlos y visualizarlos de forma universal.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Preparación para impresión",
-        "description": "Cree archivos PDF listos para imprimir a partir de documentos de Word.",
-        "icon": "printer"
-      },
-      {
-        "title": "Archivo de documentos",
-        "description": "Archive documentos de Word en un formato PDF estable para su almacenamiento a largo plazo.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se admite el formato .doc?",
-        "answer": "Actualmente solo se admite el formato .docx. Convierta primero sus archivos .doc a .docx usando Microsoft Word o LibreOffice."
-      },
-      {
-        "question": "¿Se conservan las imágenes?",
-        "answer": "Se conservan el contenido de texto y el formato básico. Los diseños complejos con muchas imágenes pueden presentar una renderización simplificada."
-      },
-      {
-        "question": "¿Es segura la conversión?",
-        "answer": "Sí, todo el procesamiento se realiza en su navegador. Sus documentos nunca salen de su dispositivo."
-      }
-    ]
-  },
-  "excel-to-pdf": {
-    "title": "Excel a PDF",
-    "metaDescription": "Convierte hojas de cálculo de Excel (XLSX) a PDF. Preserva las tablas y los datos en los documentos convertidos.",
-    "keywords": [
-      "excel a pdf",
-      "xlsx a pdf",
-      "convertir excel",
-      "hoja de calculo a pdf",
-      "microsoft excel a pdf"
-    ],
-    "description": "\n      <p>Excel a PDF convierte hojas de cálculo de Microsoft Excel al formato PDF preservando la estructura de las tablas y la organización de los datos.</p>\n      <p>Suba sus archivos XLSX y obtenga un documento PDF limpio con tablas correctamente formateadas. Cada hoja de su libro de trabajo se convierte en una sección separada del PDF.</p>\n      <p>Toda la conversión se realiza de forma local en su navegador, garantizando que sus datos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo de Excel",
-        "description": "Arrastre y suelte su archivo .xlsx o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar el procesamiento",
-        "description": "La herramienta cargará la hoja de cálculo y convertirá todas las hojas."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compartir informes",
-        "description": "Convierta informes de Excel a PDF para distribuirlos a las partes interesadas.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Archivo de datos",
-        "description": "Archive datos de hojas de cálculo en un formato PDF estable.",
-        "icon": "archive"
-      },
-      {
-        "title": "Preparación para impresión",
-        "description": "Cree archivos PDF listos para imprimir a partir de hojas de cálculo de Excel.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se admiten múltiples hojas?",
-        "answer": "Sí, todas las hojas de trabajo del libro de Excel se convierten e incluyen en el PDF."
-      },
-      {
-        "question": "¿Se admite el formato .xls?",
-        "answer": "Actualmente solo se admite el formato .xlsx. Guarde primero los archivos .xls como .xlsx."
-      },
-      {
-        "question": "¿Se conservan las fórmulas?",
-        "answer": "El PDF muestra los valores calculados. Las fórmulas no son ejecutables dentro del formato PDF."
-      }
-    ]
-  },
-  "pptx-to-pdf": {
-    "title": "PowerPoint a PDF",
-    "metaDescription": "Convierte presentaciones de PowerPoint (PPTX) a PDF. Preserva las diapositivas y el contenido para compartirlos fácilmente.",
-    "keywords": [
-      "powerpoint a pdf",
-      "pptx a pdf",
-      "convertir pptx",
-      "presentacion a pdf",
-      "diapositivas a pdf"
-    ],
-    "description": "\n      <p>PowerPoint a PDF convierte presentaciones de Microsoft PowerPoint al formato PDF, preservando el contenido de las diapositivas y el texto para compartirlos y visualizarlos fácilmente.</p>\n      <p>Cada diapositiva se convierte en una página del PDF, manteniendo el flujo de la presentación. Es ideal para compartir presentaciones con personas que no tienen instalado PowerPoint.</p>\n      <p>Toda la conversión se realiza de forma local en su navegador, asegurando la privacidad y seguridad de sus presentaciones.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo de PowerPoint",
-        "description": "Arrastre y suelte su archivo .pptx o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar el procesamiento",
-        "description": "La herramienta extraerá el contenido de las diapositivas y creará el PDF."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compartir presentaciones",
-        "description": "Comparta presentaciones con cualquier persona sin necesidad de PowerPoint.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Creación de folletos",
-        "description": "Cree folletos en PDF a partir de las diapositivas de su presentación.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Archivar presentaciones",
-        "description": "Archive presentaciones en un formato PDF estable.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se conservan las animaciones?",
-        "answer": "El PDF es un formato estático, por lo que las animaciones y transiciones no se conservan. Cada diapositiva se convierte en una página estática."
-      },
-      {
-        "question": "¿Se admite el formato .ppt?",
-        "answer": "Actualmente solo se admite el formato .pptx. Convierta primero sus archivos .ppt a .pptx."
-      },
-      {
-        "question": "¿Se incluyen las notas del orador?",
-        "answer": "Actualmente, las notas del orador no se incluyen en el documento PDF de salida."
-      }
-    ]
-  },
-  "xps-to-pdf": {
-    "title": "XPS a PDF",
-    "metaDescription": "Convierte documentos XPS al formato PDF. Conversión de alta fidelidad que preserva el diseño y los gráficos.",
-    "keywords": [
-      "xps a pdf",
-      "convertir xps",
-      "conversor xps",
-      "microsoft xps a pdf",
-      "oxps a pdf"
-    ],
-    "description": "\n      <p>XPS a PDF convierte documentos XPS (XML Paper Specification) de Microsoft al formato PDF, preservando el diseño, texto y gráficos vectoriales originales.</p>\n      <p>XPS es un formato de documento fijo similar al PDF. Esta herramienta proporciona una conversión de alta fidelidad mediante un procesamiento nativo de XPS, asegurando una reproducción exacta de sus documentos.</p>\n      <p>Toda la conversión se realiza localmente en su navegador, garantizando que sus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo XPS",
-        "description": "Arrastre y suelte su archivo .xps o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar el procesamiento",
-        "description": "La herramienta analizará y convertirá el documento XPS."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Conversión de formato",
-        "description": "Convierta documentos XPS al formato PDF, que cuenta con una compatibilidad mucho más amplia.",
-        "icon": "file"
-      },
-      {
-        "title": "Compartir documentos",
-        "description": "Comparta documentos XPS con usuarios que no disponen de visores de XPS.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Migración de archivos",
-        "description": "Migre archivos históricos XPS al formato PDF para una mejor compatibilidad a futuro.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es el formato XPS?",
-        "answer": "XPS (XML Paper Specification) es el formato de documento fijo de Microsoft, similar al PDF. Se utiliza comúnmente en el sistema de impresión de Windows."
-      },
-      {
-        "question": "¿La conversión es sin pérdidas?",
-        "answer": "Sí, la conversión preserva el texto, los gráficos y el diseño con alta fidelidad."
-      },
-      {
-        "question": "¿Se admiten archivos XPS de varias páginas?",
-        "answer": "Sí, todas las páginas del documento XPS original se convierten e integran en el archivo PDF."
-      }
-    ]
-  },
-  "rtf-to-pdf": {
-    "title": "RTF a PDF",
-    "metaDescription": "Convierte archivos RTF (formato de texto enriquecido) a PDF. Preserva el formato del texto en sus documentos.",
-    "keywords": [
-      "rtf a pdf",
-      "convertir rtf",
-      "texto enriquecido a pdf",
-      "conversor rtf"
-    ],
-    "description": "\n      <p>RTF a PDF convierte archivos de Formato de Texto Enriquecido (RTF) en documentos PDF. RTF es un formato de texto ampliamente compatible que incluye formato básico como fuentes, colores y estilos.</p>\n      <p>Suba sus archivos RTF y obtenga un documento PDF limpio mientras conserva el contenido del texto y su formato esencial. Perfecto para actualizar documentos antiguos a un formato PDF moderno.</p>\n      <p>Toda la conversión se realiza localmente en su navegador, garantizando la privacidad y seguridad de sus documentos.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo RTF",
-        "description": "Arrastre y suelte su archivo .rtf o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar el procesamiento",
-        "description": "La herramienta analizará y convertirá el contenido RTF."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Conversión de documentos heredados",
-        "description": "Convierta documentos RTF antiguos al formato PDF moderno.",
-        "icon": "history"
-      },
-      {
-        "title": "Compartir documentos",
-        "description": "Comparta documentos RTF en un formato PDF visible universalmente.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Archivar documentos",
-        "description": "Archive archivos RTF en un formato PDF estable para almacenamiento a largo plazo.",
-        "icon": "archive"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué formato se conserva?",
-        "answer": "Se convierte el formato de texto básico, incluyendo fuentes, párrafos y estilos. Las características complejas de RTF podrían verse simplificadas."
-      },
-      {
-        "question": "¿Puedo convertir múltiples archivos RTF?",
-        "answer": "Actualmente se convierte un archivo a la vez. Utilice la herramienta Fusionar PDF para combinar múltiples archivos convertidos."
-      },
-      {
-        "question": "¿Se admiten imágenes incrustadas?",
-        "answer": "El foco principal es el contenido de texto. Los objetos incrustados podrían no renderizarse."
-      }
-    ]
-  },
-  "epub-to-pdf": {
-    "title": "EPUB a PDF",
-    "metaDescription": "Convierte libros electrónicos EPUB a PDF. Preserva el formato, las imágenes y la estructura de capítulos.",
-    "keywords": [
-      "epub a pdf",
-      "convertir epub",
-      "libro electronico a pdf",
-      "conversor epub"
-    ],
-    "description": "\n      <p>EPUB a PDF convierte archivos de libros electrónicos en documentos PDF de alta calidad. EPUB es el formato de libro electrónico más popular, utilizado por la mayoría de los lectores digitales y bibliotecas virtuales.</p>\n      <p>Esta herramienta conserva el formato del texto, las imágenes y la estructura de capítulos de sus libros electrónicos. Es ideal para imprimir, archivar o compartir e-books en un formato universalmente legible.</p>\n      <p>Toda la conversión se realiza de forma local en su navegador utilizando tecnología de renderizado avanzada, garantizando la privacidad de sus libros y un procesamiento rápido.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo EPUB",
-        "description": "Arrastre y suelte su archivo .epub o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar la conversión",
-        "description": "La herramienta renderizará y convertirá todas las páginas de su libro electrónico."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Imprimir libros electrónicos",
-        "description": "Convierta libros electrónicos a PDF para realizar una impresión física.",
-        "icon": "printer"
-      },
-      {
-        "title": "Archivar libros",
-        "description": "Almacene e-books en un formato PDF estable a largo plazo.",
-        "icon": "archive"
-      },
-      {
-        "title": "Compartir documentos",
-        "description": "Comparta libros electrónicos con cualquier persona, incluso si no dispone de un lector de e-books.",
-        "icon": "share-2"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se conserva el formato?",
-        "answer": "¡Sí! Esta herramienta utiliza renderizado nativo de EPUB, preservando el formato de texto, imágenes y diseño con alta fidelidad."
-      },
-      {
-        "question": "¿Se admiten archivos EPUB protegidos por DRM?",
-        "answer": "No, los libros electrónicos protegidos por DRM no se pueden convertir. Solo se admiten archivos EPUB libres de DRM."
-      },
-      {
-        "question": "¿Cómo se determina el tamaño de la página?",
-        "answer": "El contenido de EPUB se renderiza al tamaño de página estándar A4 para una lectura óptima."
-      }
-    ]
-  },
-  "mobi-to-pdf": {
-    "title": "MOBI a PDF",
-    "metaDescription": "Convierte libros electrónicos MOBI a PDF. Soporte para el formato Kindle con renderizado de alta calidad.",
-    "keywords": [
-      "mobi a pdf",
-      "convertir mobi",
-      "kindle a pdf",
-      "azw a pdf",
-      "conversor mobi"
-    ],
-    "description": "\n      <p>MOBI a PDF convierte archivos de libros electrónicos Kindle de Amazon en documentos PDF de alta calidad. El formato MOBI (incluyendo AZW y AZW3) es el formato patentado de Amazon utilizado en dispositivos Kindle.</p>\n      <p>Esta herramienta conserva el formato del texto, las imágenes y la estructura de sus libros Kindle. Es ideal para imprimir, archivar o leer en dispositivos que no son compatibles con el formato MOBI.</p>\n      <p>Toda la conversión se realiza de forma local en su navegador utilizando tecnología de renderizado avanzada, garantizando la privacidad de sus libros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo MOBI",
-        "description": "Arrastre y suelte su archivo .mobi, .azw o .azw3, o haga clic para seleccionarlo desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Esperar la conversión",
-        "description": "La herramienta renderizará y convertirá todas las páginas de su libro electrónico."
-      },
-      {
-        "step": 3,
-        "title": "Descargar PDF",
-        "description": "Haga clic en Descargar para guardar su documento PDF convertido."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Imprimir libros Kindle",
-        "description": "Convierta libros electrónicos Kindle a PDF para impresión física.",
-        "icon": "printer"
-      },
-      {
-        "title": "Archivar libros",
-        "description": "Guarde libros Kindle en el formato universal PDF.",
-        "icon": "archive"
-      },
-      {
-        "title": "Lectura multiplataforma",
-        "description": "Lea libros de Kindle en dispositivos que solo admiten el formato PDF.",
-        "icon": "tablet-smartphone"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué formatos MOBI son compatibles?",
-        "answer": "Esta herramienta admite archivos .mobi, .azw y .azw3 (versiones sin DRM)."
-      },
-      {
-        "question": "¿Se admiten libros Kindle protegidos por DRM?",
-        "answer": "No, los libros electrónicos protegidos por DRM no se pueden convertir. Solo se admiten archivos libres de DRM."
-      },
-      {
-        "question": "¿Se conservará el formato de mi documento?",
-        "answer": "¡Sí! La herramienta utiliza un renderizado nativo de MOBI para conservar el texto, las imágenes y el diseño original."
-      }
-    ]
-  },
-  "pdf-to-svg": {
-    "title": "PDF a SVG",
-    "metaDescription": "Convierte páginas de PDF a gráficos vectoriales SVG. Escalabilidad perfecta a cualquier tamaño con exportación de páginas individuales.",
-    "keywords": [
-      "pdf a svg",
-      "convertir pdf a svg",
-      "graficos vectoriales",
-      "pdf escalable",
-      "conversor svg"
-    ],
-    "description": "\n      <p>PDF a SVG convierte cada página de su documento PDF en un gráfico vectorial escalable (SVG). El formato SVG es un formato vectorial que mantiene una calidad perfecta en cualquier nivel de zoom o tamaño de impresión.</p>\n      <p>A diferencia de los formatos rasterizados (JPG, PNG), los gráficos SVG nunca se pixelan al escalarse. Esto los hace ideales para logotipos, diagramas, dibujos técnicos y cualquier contenido que necesite mostrarse a diferentes tamaños.</p>\n      <p>Previsualice cada página convertida y descárguelas de manera individual o todas juntas en un archivo ZIP. Todo el procesamiento se realiza localmente en su navegador, garantizando una privacidad absoluta para sus documentos.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Arrastre y suelte su archivo PDF o haga clic para buscar y seleccionar."
-      },
-      {
-        "step": 2,
-        "title": "Configurar opciones",
-        "description": "Establezca la resolución de calidad y, opcionalmente, especifique los rangos de páginas."
-      },
-      {
-        "step": 3,
-        "title": "Previsualizar y convertir",
-        "description": "Haga clic en Convertir para procesar. Previsualice cada página haciendo clic en las miniaturas."
-      },
-      {
-        "step": 4,
-        "title": "Descargar",
-        "description": "Descargue archivos SVG individuales o todas las páginas en un archivo comprimido ZIP."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Logotipos y gráficos",
-        "description": "Extraiga logotipos y gráficos vectoriales de archivos PDF para su uso en software de diseño.",
-        "icon": "pen-tool"
-      },
-      {
-        "title": "Diagramas técnicos",
-        "description": "Convierta planos y diagramas técnicos al formato vectorial escalable SVG.",
-        "icon": "ruler"
-      },
-      {
-        "title": "Desarrollo web",
-        "description": "Cree archivos SVG optimizados para la web a partir del contenido de un PDF para sitios web adaptables.",
-        "icon": "globe"
-      },
-      {
-        "title": "Impresión a cualquier tamaño",
-        "description": "Genere gráficos vectoriales que se imprimen perfectamente a cualquier escala sin perder definición.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es el formato SVG?",
-        "answer": "SVG (Scalable Vector Graphics) es un formato de imagen vectorial que puede escalarse a cualquier tamaño sin perder calidad. Se utiliza ampliamente para logotipos, iconos y gráficos web."
-      },
-      {
-        "question": "¿El archivo SVG será realmente vectorial?",
-        "answer": "El SVG contendrá una renderización de alta resolución de la página del PDF. Para los PDF con contenido vectorial original, obtendrá una salida vectorizada nítida en cualquier escala."
-      },
-      {
-        "question": "¿Puedo previsualizar antes de descargar?",
-        "answer": "¡Sí! Haga clic en cualquier miniatura para ver una vista previa a tamaño completo del SVG. Puede descargar páginas individuales o todas a la vez."
-      },
-      {
-        "question": "¿Qué resolución debo elegir?",
-        "answer": "Una resolución más alta (216 o 288 DPI) produce archivos SVG más detallados pero de mayor tamaño. Use configuraciones más bajas para un procesamiento más rápido y archivos más ligeros."
-      }
-    ]
-  },
-  "extract-images": {
-    "title": "Extraer imágenes de PDF",
-    "metaDescription": "Extrae todas las imágenes incrustadas de archivos PDF. Descárgalas individualmente o en un archivo ZIP. Filtra imágenes pequeñas automáticamente.",
-    "keywords": [
-      "extraer imagenes de pdf",
-      "extraccion de imagenes pdf",
-      "obtener imagenes de pdf",
-      "descargar imagenes pdf",
-      "pdf a imagenes"
-    ],
-    "description": "\n      <p>Extraer imágenes de PDF recupera todas las imágenes integradas en sus documentos PDF. Descargue imágenes de alta calidad de forma individual o en un cómodo archivo ZIP.</p>\n      <p>La herramienta filtra automáticamente imágenes pequeñas como iconos y elementos decorativos basándose en umbrales de tamaño personalizables. Procese múltiples PDF a la vez para una extracción por lotes eficiente.</p>\n      <p>Toda la extracción ocurre en su navegador, garantizando que sus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir sus archivos PDF",
-        "description": "Arrastre y suelte uno o más archivos PDF, o haga clic para seleccionarlos desde su dispositivo."
-      },
-      {
-        "step": 2,
-        "title": "Configurar opciones de filtrado",
-        "description": "Ajuste el ancho, alto y tamaño mínimo de archivo para filtrar las imágenes pequeñas no deseadas."
-      },
-      {
-        "step": 3,
-        "title": "Extraer imágenes",
-        "description": "Haga clic en Extraer para encontrar todas las imágenes incrustadas en sus PDF."
-      },
-      {
-        "step": 4,
-        "title": "Descargar",
-        "description": "Descargue imágenes individuales o todas ellas en un archivo comprimido ZIP."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Recuperación de fotos",
-        "description": "Extraiga fotos e imágenes incrustadas en documentos PDF para su reutilización o archivado.",
-        "icon": "image"
-      },
-      {
-        "title": "Recopilación de recursos gráficos",
-        "description": "Reúna todos los gráficos e imágenes de informes, presentaciones o folletos en PDF.",
-        "icon": "folder"
-      },
-      {
-        "title": "Reutilización de contenido",
-        "description": "Extraiga imágenes de PDF para utilizarlas en otros documentos, sitios web o presentaciones.",
-        "icon": "refresh-cw"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿En qué formatos se extraen las imágenes?",
-        "answer": "Las imágenes se extraen en su formato nativo (JPEG, PNG, etc.) cuando es posible, o se convierten a PNG si se trata de datos de imagen sin procesar."
-      },
-      {
-        "question": "¿Por qué faltan algunas imágenes?",
-        "answer": "Las imágenes pequeñas por debajo del umbral de tamaño se filtran automáticamente. Ajuste la configuración del filtro para extraer imágenes más pequeñas."
-      },
-      {
-        "question": "¿Puedo extraer imágenes de PDF escaneados?",
-        "answer": "Los PDF escaneados suelen contener el escaneo como una sola imagen grande por página. Utilice la herramienta PDF a Imagen en su lugar para la conversión página por página."
-      }
-    ]
-  },
-  "find-and-redact": {
-    "title": "Buscar y censurar",
-    "metaDescription": "Busca y censura texto en todas las páginas de un PDF. Realice censura por lotes de información confidencial como números de cuenta, nombres y más.",
-    "keywords": [
-      "censurar pdf",
-      "buscar y censurar",
-      "censurar por lotes",
-      "eliminar texto de pdf",
-      "ofuscar pdf",
-      "ocultar datos confidenciales"
-    ],
-    "description": "\n      <p>Buscar y censurar le permite buscar texto, números o patrones específicos en todas las páginas de su PDF y ofuscar todas las coincidencias a la vez. Es perfecto para eliminar información confidencial como números de cuenta, nombres, direcciones o cualquier dato confidencial.</p>\n      <p>Previsualice todas las coincidencias antes de aplicar la censura y elija selectivamente qué elementos desea ocultar. Admite búsqueda con distinción de mayúsculas y minúsculas, coincidencia de palabras completas y expresiones regulares para patrones de búsqueda avanzados.</p>\n      <p>Todo el procesamiento se realiza en su navegador, garantizando que sus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Arrastre y suelte su archivo PDF o haga clic para seleccionarlo."
-      },
-      {
-        "step": 2,
-        "title": "Buscar texto",
-        "description": "Introduzca el texto, número o patrón de expresión regular que desea buscar y censurar."
-      },
-      {
-        "step": 3,
-        "title": "Revisar y seleccionar",
-        "description": "Previsualice todas las coincidencias encontradas y seleccione cuáles desea censurar."
-      },
-      {
-        "step": 4,
-        "title": "Aplicar censura",
-        "description": "Personalice la apariencia del bloque de censura y aplíquelo a las coincidencias seleccionadas."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Cumplimiento de privacidad",
-        "description": "Censure información personal para cumplir con normativas como RGPD, HIPAA u otras regulaciones.",
-        "icon": "shield"
-      },
-      {
-        "title": "Documentos legales",
-        "description": "Elimine datos confidenciales de documentos legales antes de compartirlos públicamente.",
-        "icon": "scale"
-      },
-      {
-        "title": "Registros financieros",
-        "description": "Oculte números de cuenta, números de seguridad social o datos financieros en extractos bancarios.",
-        "icon": "credit-card"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿La censura es permanente?",
-        "answer": "Sí, la censura elimina de forma permanente el texto subyacente. El contenido original no se puede recuperar. Mantenga siempre una copia de seguridad del archivo original."
-      },
-      {
-        "question": "¿Puedo censurar imágenes o texto escaneado?",
-        "answer": "Esta herramienta funciona con archivos PDF basados en texto digital. Para documentos escaneados, necesitará utilizar la censura manual basada en áreas."
-      },
-      {
-        "question": "¿Puedo personalizar la apariencia de la censura?",
-        "answer": "Sí, puede establecer el color de la censura (usualmente negro), añadir bordes y, opcionalmente, incluir un texto de reemplazo como \"[CENSURADO]\"."
-      },
-      {
-        "question": "¿Cómo funciona la búsqueda por expresiones regulares (regex)?",
-        "answer": "Active la opción \"Usar expresión regular\" para buscar utilizando patrones de regex. Por ejemplo, \\d{4}-\\d{4}-\\d{4}-\\d{4} para encontrar números de tarjetas de crédito."
-      }
-    ]
-  },
-  "pdf-to-docx": {
-    "title": "PDF a Word",
-    "metaDescription": "Convierte PDF a documentos de Word (DOCX) editables. Preserva el formato y el diseño original.",
-    "keywords": [
-      "pdf a word",
-      "convertir pdf a docx",
-      "pdf a doc",
-      "pdf editable",
-      "conversor de pdf a word"
-    ],
-    "description": "\n      <p>PDF a Word convierte sus documentos PDF en archivos editables de Microsoft Word (DOCX). La herramienta preserva al máximo la distribución, el formato, las imágenes y el flujo de texto originales.</p>\n      <p>Edite fácilmente el contenido de sus PDF en Word sin tener que volver a escribir nada. Perfecto para contratos, informes y currículums.</p>\n      <p>Toda la conversión se realiza localmente en su navegador mediante tecnología WebAssembly, garantizando que sus documentos nunca salgan de su dispositivo.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Arrastre y suelte su archivo PDF o haga clic para seleccionarlo."
-      },
-      {
-        "step": 2,
-        "title": "Convertir",
-        "description": "Espere a que se complete el proceso de conversión de su documento."
-      },
-      {
-        "step": 3,
-        "title": "Descargar documento de Word",
-        "description": "Descargue su archivo DOCX completamente editable."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Editar contratos",
-        "description": "Convierta contratos PDF a Word para realizar modificaciones y revisiones de texto.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Actualización de currículum",
-        "description": "Actualice currículums antiguos en PDF convirtiéndolos a Word para cambiar datos rápidamente.",
-        "icon": "user"
-      },
-      {
-        "title": "Reutilización de contenido",
-        "description": "Extraiga contenido e información de informes en PDF para utilizarlos en otros documentos.",
-        "icon": "copy"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se preserva el formato?",
-        "answer": "Sí, la herramienta tiene como objetivo conservar el diseño, las fuentes y las imágenes de la forma más fiel posible al documento original."
-      },
-      {
-        "question": "¿Puedo convertir PDF escaneados?",
-        "answer": "Los PDF escaneados se convertirán como imágenes dentro de Word a menos que aplique un proceso de OCR (reconocimiento óptico de caracteres) primero."
-      },
-      {
-        "question": "¿Es compatible con programas de oficina?",
-        "answer": "Sí, el archivo de salida es un documento estándar .docx compatible con Microsoft Word, WPS Office, Google Docs y LibreOffice."
-      }
-    ]
-  },
-  "pdf-to-markdown": {
-    "title": "PDF a Markdown",
-    "metaDescription": "Convierte PDF al formato Markdown. Extrae texto y preserva la estructura como encabezados y listas.",
-    "keywords": [
-      "pdf a markdown",
-      "convertir pdf a md",
-      "extraccion de texto pdf",
-      "conversor markdown",
-      "pdf a texto"
-    ],
-    "description": "\n      <p>PDF a Markdown convierte sus documentos PDF en archivos Markdown limpios y bien estructurados. La herramienta extrae el contenido de texto de manera inteligente e intenta conservar elementos de formato como encabezados, listas y párrafos.</p>\n      <p>Es perfecto para convertir documentos PDF a formatos editables destinados a documentación, toma de notas o sistemas de gestión de contenido (CMS) que admiten Markdown.</p>\n      <p>Toda la conversión se realiza localmente en su navegador, garantizando que sus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Arrastre y suelte su archivo PDF o haga clic para seleccionarlo."
-      },
-      {
-        "step": 2,
-        "title": "Configurar opciones",
-        "description": "Establezca el rango de páginas, elija si desea incluir números de página y ajuste la configuración de saltos de línea."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y descargar",
-        "description": "Haga clic en Convertir para generar su archivo Markdown y descargarlo."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentación",
-        "description": "Convierta manuales y guías en PDF a Markdown para integrarlos en documentación con control de versiones.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Toma de notas",
-        "description": "Extraiga contenido de libros y artículos en PDF para incorporarlo a su sistema personal de toma de notas.",
-        "icon": "edit-3"
-      },
-      {
-        "title": "Migración de contenido",
-        "description": "Migre contenidos de documentos PDF a plataformas de CMS que admitan Markdown.",
-        "icon": "copy"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se conserva el formato?",
-        "answer": "La herramienta intenta detectar los encabezados basándose en el tamaño de fuente, así como las listas numeradas o con viñetas. Las distribuciones complejas pueden requerir ajustes manuales."
-      },
-      {
-        "question": "¿Puedo convertir páginas específicas?",
-        "answer": "Sí, puede especificar un rango de páginas como \"1-3, 5, 7\" para convertir únicamente dichas páginas."
-      },
-      {
-        "question": "¿Funciona con PDF escaneados?",
-        "answer": "Los PDF escaneados contienen imágenes de páginas en lugar de texto digital. Utilice primero nuestra herramienta OCR para extraer el texto antes de convertir a Markdown."
-      }
-    ]
-  },
-  "pdf-booklet": {
-    "title": "Creador de folletos PDF",
-    "metaDescription": "Crea diseños de folletos en PDF para imprimir. Organiza las páginas para encuadernación de tipo revistilla (saddle-stitch) con múltiples opciones de cuadrícula.",
-    "keywords": [
-      "folleto pdf",
-      "creador de folletos",
-      "imprimir folleto",
-      "encuadernacion grapada",
-      "imposicion de paginas"
-    ],
-    "description": "\n      <p>Creador de folletos PDF organiza las páginas de su documento PDF en diseños de folletos listos para impresión y plegado. Es ideal para crear folletos publicitarios, fanzines y publicaciones con encuadernación grapada o plegada.</p>\n      <p>Elija entre varios modos de cuadrícula (1x2, 2x2, 2x4, 4x4), tamaños de papel y opciones de orientación. La herramienta gestiona automáticamente la imposición de páginas para una secuencia de plegado correcta.</p>\n      <p>Todo el procesamiento se realiza localmente en su navegador, garantizando que sus documentos permanezcan privados.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Suba el documento PDF que desea convertir en un folleto."
-      },
-      {
-        "step": 2,
-        "title": "Elegir diseño",
-        "description": "Seleccione el modo de cuadrícula, el tamaño del papel, la orientación y las opciones de rotación."
-      },
-      {
-        "step": 3,
-        "title": "Crear y descargar",
-        "description": "Genere la plantilla de folleto resultante y descárguela para proceder a su impresión."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Folletos",
-        "description": "Cree folletos listos para plegar a partir de documentos PDF estándar.",
-        "icon": "book-open"
-      },
-      {
-        "title": "Fanzines",
-        "description": "Produzca fanzines autoeditados con una imposición de páginas correcta para su grapado.",
-        "icon": "book"
-      },
-      {
-        "title": "Programas de eventos",
-        "description": "Cree folletos profesionales de programas e información para sus eventos.",
-        "icon": "calendar"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es la encuadernación a caballete o grapada (saddle-stitch)?",
-        "answer": "Es un método de encuadernación donde los pliegos doblados se anidan unos dentro de otros y se grapan a lo largo del pliegue central."
-      },
-      {
-        "question": "¿Qué modo de cuadrícula debo utilizar?",
-        "answer": "El formato 1x2 es el estándar para folletos comunes. Utilice 2x2 o superior para imprimir varios pliegos en una sola hoja y ahorrar papel."
-      },
-      {
-        "question": "¿Puedo previsualizar el diseño?",
-        "answer": "Sí, la herramienta proporciona una vista previa visual interactiva antes de generar el folleto final."
-      }
-    ]
-  },
-  "rasterize-pdf": {
-    "title": "Rasterizar PDF",
-    "metaDescription": "Convierte páginas de PDF en imágenes de alta calidad. Exporta a PNG, JPEG o WebP con ajustes personalizados de DPI.",
-    "keywords": [
-      "rasterizar pdf",
-      "pdf a imagen",
-      "pdf a png",
-      "pdf a jpeg",
-      "convertir paginas pdf"
-    ],
-    "description": "\n      <p>Rasterizar PDF convierte las páginas de su documento PDF en imágenes rasterizadas de alta resolución. Elija entre los formatos de salida PNG, JPEG o WebP con control total sobre la configuración de calidad y DPI (puntos por pulgada).</p>\n      <p>Es perfecto para crear miniaturas de previsualización, gráficos para redes sociales o para archivar contenidos de PDF en formato de imagen protegida. Admite la selección de rangos de páginas y el procesamiento por lotes.</p>\n      <p>Todo el procesamiento se realiza localmente en su navegador, garantizando que sus documentos permanezcan privados.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Arrastre y suelte su archivo PDF o haga clic para seleccionarlo."
-      },
-      {
-        "step": 2,
-        "title": "Configurar salida",
-        "description": "Seleccione los DPI, el formato de salida (PNG/JPEG/WebP), la calidad y el rango de páginas."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y descargar",
-        "description": "Procese las páginas y descargue las imágenes de forma individual o en un archivo ZIP."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Redes sociales",
-        "description": "Convierta diapositivas o páginas de PDF en imágenes optimizadas para publicarlas en redes sociales.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Miniaturas",
-        "description": "Genere imágenes de vista previa en miniatura para catalogar documentos PDF.",
-        "icon": "image"
-      },
-      {
-        "title": "Publicación web",
-        "description": "Convierta contenidos de archivos PDF a formatos de imagen optimizados para la web.",
-        "icon": "globe"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué resolución de DPI debo usar?",
-        "answer": "Se recomienda 72 DPI para pantallas, 150 DPI para uso general y 300 DPI o superior para calidad de impresión física."
-      },
-      {
-        "question": "¿Qué formato de imagen es mejor?",
-        "answer": "PNG es ideal para conservar calidad y transparencia; JPEG es óptimo para archivos de tamaño reducido; WebP es idóneo para el uso moderno en la web."
-      },
-      {
-        "question": "¿Puedo convertir páginas específicas?",
-        "answer": "Sí, puede especificar rangos de páginas como \"1-5, 8, 10-15\" para rasterizar únicamente dichas páginas."
-      }
-    ]
-  },
-  "markdown-to-pdf": {
-    "title": "Markdown a PDF",
-    "metaDescription": "Convierte archivos Markdown en documentos PDF con un formato elegante. Soporte para GitHub Flavored Markdown y resaltado de sintaxis.",
-    "keywords": [
-      "markdown a pdf",
-      "md a pdf",
-      "convertir markdown",
-      "gfm a pdf",
-      "conversor markdown"
-    ],
-    "description": "\n      <p>Markdown a PDF convierte sus archivos Markdown en documentos PDF con estilos profesionales. Es compatible con las especificaciones CommonMark y GitHub Flavored Markdown (GFM), incluyendo tablas, listas de tareas y bloques de código.</p>\n      <p>Elija entre múltiples temas visuales (claro, oscuro, GitHub) y configure el tamaño de página y los márgenes de impresión. Los bloques de código se colorean mediante resaltado de sintaxis para una mejor legibilidad.</p>\n      <p>Toda la conversión se realiza localmente en su navegador, garantizando que su contenido permanezcan privado.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo Markdown",
-        "description": "Suba su archivo con extensión .md o .markdown."
-      },
-      {
-        "step": 2,
-        "title": "Elegir tema",
-        "description": "Seleccione un tema visual y configure los parámetros de página."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y descargar",
-        "description": "Genere el documento PDF con estilo y descárguelo."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Documentación técnica",
-        "description": "Convierta archivos README y documentación en PDF fáciles de compartir.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Exportar notas",
-        "description": "Exporte sus notas de Markdown a PDF para imprimirlas o compartirlas con terceros.",
-        "icon": "edit-3"
-      },
-      {
-        "title": "Informes profesionales",
-        "description": "Cree informes estructurados a partir de Markdown con un diseño visual impecable.",
-        "icon": "bar-chart"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Se admite la variante GitHub Flavored Markdown?",
-        "answer": "Sí, las tablas, listas de tareas, textos tachados y otras características específicas de GFM son totalmente compatibles."
-      },
-      {
-        "question": "¿Puedo personalizar el diseño visual?",
-        "answer": "Puede elegir entre varios temas preestablecidos o añadir su propio código CSS personalizado para un control total."
-      },
-      {
-        "question": "¿Se resaltan los bloques de código?",
-        "answer": "Sí, los bloques de código incluyen resaltado de sintaxis automático para los lenguajes de programación más comunes."
-      }
-    ]
-  },
-  "cbz-to-pdf": {
-    "title": "CBZ a PDF",
-    "metaDescription": "Convierte archivos de cómic archivados (CBZ) a PDF. Preserva el orden de las imágenes y la calidad para cómics digitales.",
-    "keywords": [
-      "cbz a pdf",
-      "comic a pdf",
-      "convertir cbz",
-      "conversor de comics",
-      "conversor cbz"
-    ],
-    "description": "\n      <p>CBZ a PDF convierte archivos de archivo de cómic (Comic Book Archive) en documentos PDF. La herramienta extrae todas las imágenes del archivo CBZ y las compila en un PDF manteniendo el orden de lectura correcto.</p>\n      <p>Elija entre varias opciones de tamaño de página, incluyendo las dimensiones originales de las imágenes o tamaños estandarizados de cómics. Es ideal para leer cómics en dispositivos que admiten PDF pero no el formato CBZ.</p>\n      <p>Toda la conversión se realiza localmente en su navegador, garantizando que sus cómics permanezcan privados.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir archivo CBZ",
-        "description": "Suba su archivo de cómic digital con extensión .cbz."
-      },
-      {
-        "step": 2,
-        "title": "Seleccionar opciones",
-        "description": "Configure las preferencias de tamaño de página y calidad de la imagen."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y descargar",
-        "description": "Realice la conversión a PDF y descargue su cómic digital."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Compatibilidad con lectores electrónicos",
-        "description": "Convierta archivos CBZ a PDF para poder leerlos en dispositivos de e-reading que solo admiten PDF.",
-        "icon": "book"
-      },
-      {
-        "title": "Archivo de cómics",
-        "description": "Cree archivos PDF estables de su colección digital de cómics.",
-        "icon": "archive"
-      },
-      {
-        "title": "Preparación para impresión",
-        "description": "Convierta cómics digitales a PDF listos para imprimir físicamente.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué es el formato CBZ?",
-        "answer": "CBZ es un archivo comprimido en formato ZIP que contiene las páginas del cómic como archivos de imagen individuales, renombrado con la extensión .cbz."
-      },
-      {
-        "question": "¿Se conserva la calidad de las imágenes?",
-        "answer": "Sí, las imágenes se integran en el documento PDF conservando su resolución y calidad originales."
-      },
-      {
-        "question": "¿Se admiten carpetas anidadas?",
-        "answer": "Sí, la herramienta extrae y ordena de forma secuencial las imágenes contenidas en cualquier subcarpeta dentro del archivo."
-      }
-    ]
-  },
-  "font-to-outline": {
-    "title": "Trazar fuentes de PDF",
-    "metaDescription": "Elimina las dependencias de fuentes de los documentos PDF convirtiendo las páginas a imágenes de alta calidad. Garantiza la compatibilidad en todos los sistemas.",
-    "keywords": [
-      "trazar fuentes pdf",
-      "convertir fuentes a contorno",
-      "vectorizar fuentes pdf",
-      "eliminar fuentes pdf",
-      "acoplar fuentes pdf",
-      "compatibilidad de fuentes pdf"
-    ],
-    "description": "\n      <p>Trazar fuentes de PDF elimina todas las dependencias de fuentes de su archivo PDF mediante la conversión de cada página en un contenido rasterizado de alta calidad. Esto garantiza que su documento se visualice exactamente igual en cualquier sistema, incluso si las fuentes originales no están instaladas.</p>\n      <p>La herramienta procesa cada página a los DPI seleccionados (de 150 a 600), eliminando las fuentes incrustadas mientras conserva el aspecto visual exacto. Opcionalmente, puede añadir una capa de texto invisible para mantener la capacidad de búsqueda.</p>\n      <p>Este proceso es indispensable para la preparación de archivos para imprenta, garantizar la compatibilidad multiplataforma y evitar problemas de licencias de fuentes al compartir documentos. Todo el procesamiento se realiza en su navegador de forma local.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Suba el archivo PDF que contiene las fuentes que desea eliminar o trazar."
-      },
-      {
-        "step": 2,
-        "title": "Configurar calidad",
-        "description": "Elija los DPI (se recomiendan 300 para impresión, 150 para pantalla). Active la opción de texto buscable si la requiere."
-      },
-      {
-        "step": 3,
-        "title": "Convertir y descargar",
-        "description": "Procese el archivo y descargue el PDF resultante libre de dependencias de fuentes."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Preparación para imprenta",
-        "description": "Evite errores de visualización o sustitución de tipografías en imprentas comerciales al eliminar la dependencia de fuentes.",
-        "icon": "printer"
-      },
-      {
-        "title": "Compartido multiplataforma",
-        "description": "Comparta documentos con la total seguridad de que se verán idénticos en cualquier dispositivo, sin importar las fuentes instaladas.",
-        "icon": "share-2"
-      },
-      {
-        "title": "Licencias de fuentes",
-        "description": "Elimine las fuentes incrustadas para evitar infracciones de derechos de autor y licencias al distribuir documentos.",
-        "icon": "shield"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Cómo funciona este proceso?",
-        "answer": "La herramienta renderiza cada página a alta resolución (según los DPI que elija) y vuelve a ensamblar el PDF a partir de estas imágenes, descartando los archivos de fuentes originales pero preservando la apariencia visual exacta."
-      },
-      {
-        "question": "¿Podré seguir seleccionando texto después de la conversión?",
-        "answer": "Por defecto, no, ya que el texto pasa a formar parte de una imagen. Sin embargo, puede activar la opción \"Preservar texto buscable\" para añadir una capa invisible que mantenga las funciones de búsqueda y copia de texto."
-      },
-      {
-        "question": "¿Qué cantidad de DPI debo elegir?",
-        "answer": "Se recomiendan 300 DPI para obtener una calidad apta para impresión física. 150 DPI es suficiente para visualización en pantalla y reduce el tamaño del archivo. 600 DPI ofrece la máxima calidad pero genera archivos muy grandes."
-      },
-      {
-        "question": "¿Aumentará el tamaño del archivo?",
-        "answer": "Depende de los DPI y el contenido. 150 DPI suele reducir el tamaño del archivo; 300 DPI puede incrementarlo y 600 DPI aumentará el peso de manera muy notable. Se aplica compresión automáticamente para optimizar el resultado."
-      },
-      {
-        "question": "¿Este proceso es reversible?",
-        "answer": "No, los datos tipográficos originales se eliminan permanentemente. Mantenga siempre una copia de seguridad del documento original si necesita volver a editar el texto con las fuentes originales."
-      },
-      {
-        "question": "¿Qué ocurre con los gráficos vectoriales?",
-        "answer": "Los gráficos vectoriales (formas, líneas) presentes en el PDF original se rasterizarán junto con el texto. La calidad visual se preserva de acuerdo con la resolución de DPI seleccionada."
-      }
-    ]
-  },
-  "extract-tables": {
-    "title": "Extraer tablas de PDF",
-    "metaDescription": "Detecta y extrae tablas de documentos PDF. Exporta los datos resultantes a formatos JSON, Markdown o CSV.",
-    "keywords": [
-      "extraer tablas pdf",
-      "extraccion de tablas de pdf",
-      "pdf a csv",
-      "pdf a excel",
-      "deteccion de tablas"
-    ],
-    "description": "\n      <p>Extraer tablas de PDF detecta datos organizados en tablas dentro de sus documentos PDF y los exporta en formatos estructurados. Elija JSON para integraciones de desarrollo, Markdown para documentación de texto o CSV para editar en hojas de cálculo.</p>\n      <p>La herramienta utiliza algoritmos de detección inteligentes para identificar estructuras tabulares incluso en documentos con diseños complejos. Defina rangos de páginas y ajuste los parámetros de detección para obtener resultados óptimos.</p>\n      <p>Todo el procesamiento se realiza localmente en su navegador, garantizando la privacidad absoluta de sus documentos.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Suba el documento PDF que contiene las tablas que desea extraer."
-      },
-      {
-        "step": 2,
-        "title": "Configurar la detección",
-        "description": "Establezca el rango de páginas y configure los umbrales mínimos de filas y columnas."
-      },
-      {
-        "step": 3,
-        "title": "Exportar y descargar",
-        "description": "Seleccione el formato de salida deseado (JSON/Markdown/CSV) y realice la descarga."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Análisis de datos",
-        "description": "Extraiga datos tabulares para su análisis en herramientas de hojas de cálculo o bases de datos.",
-        "icon": "bar-chart"
-      },
-      {
-        "title": "Procesamiento de informes",
-        "description": "Extraiga tablas de informes y balances en PDF para utilizarlas en flujos de trabajo adicionales.",
-        "icon": "file-text"
-      },
-      {
-        "title": "Documentación",
-        "description": "Convierta las tablas de sus PDF a formato Markdown para incluirlas en documentación técnica.",
-        "icon": "book"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Es capaz de detectar tablas complejas?",
-        "answer": "La herramienta funciona de forma óptima con tablas de cuadrícula simple. Aquellas celdas complejas que estén combinadas pueden requerir ciertos ajustes manuales posteriores."
-      },
-      {
-        "question": "¿Qué ocurre si no se encuentra ninguna tabla?",
-        "answer": "Intente reducir el umbral de columnas o filas mínimas, o compruebe si el documento PDF contiene estructuras de tablas reales y no solo texto suelto."
-      },
-      {
-        "question": "¿Puedo realizar la extracción en páginas específicas?",
-        "answer": "Sí, puede especificar un rango de páginas para delimitar el análisis únicamente a las zonas que contienen las tablas."
-      }
-    ]
-  },
-  "ocg-manager": {
-    "title": "Gestor de capas PDF (OCG)",
-    "metaDescription": "Administra las capas de un PDF (Grupos de Contenido Opcional). Visualice, active, añada, elimine y renombre capas en sus documentos.",
-    "keywords": [
-      "capas pdf",
-      "gestor ocg pdf",
-      "grupos de contenido opcional",
-      "visibilidad de capas pdf",
-      "administrar capas pdf"
-    ],
-    "description": "\n      <p>El Gestor de capas PDF le permite visualizar y administrar los Grupos de Contenido Opcional (OCG) presentes en sus documentos PDF. Las capas OCG se utilizan habitualmente en planos técnicos, mapas y documentos complejos para organizar el contenido en niveles activables y desactivables.</p>\n      <p>Visualice todas las capas de su PDF, alterne su visibilidad de pantalla o impresión, añada nuevas capas, elimine las innecesarias o renombre las existentes. Esta herramienta es esencial para profesionales que trabajan con PDF estructurados por capas, como planos arquitectónicos, exportaciones de CAD y documentos listos para imprenta.</p>\n      <p>Todo el procesamiento se realiza localmente en su navegador, garantizando que sus documentos permanezcan privados y seguros.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Subir su PDF",
-        "description": "Suba un archivo PDF que contenga capas (OCG) o uno al cual desee añadir nuevas capas."
-      },
-      {
-        "step": 2,
-        "title": "Visualizar capas",
-        "description": "La herramienta listará automáticamente todas las capas encontradas en el documento junto con su estado de visibilidad."
-      },
-      {
-        "step": 3,
-        "title": "Administrar capas",
-        "description": "Active o desactive la visibilidad de las capas, renombre capas existentes, añada niveles nuevos o elimine las capas innecesarias."
-      },
-      {
-        "step": 4,
-        "title": "Guardar y descargar",
-        "description": "Descargue su archivo PDF modificado con todos los cambios de capas aplicados."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Planos técnicos",
-        "description": "Gestione las capas de exportaciones de CAD para mostrar u ocultar cotas, anotaciones o vistas específicas.",
-        "icon": "ruler"
-      },
-      {
-        "title": "Edición de mapas",
-        "description": "Alterne diferentes capas de mapas como topografía, carreteras y etiquetas para impresiones personalizadas.",
-        "icon": "map"
-      },
-      {
-        "title": "Preparación para impresión",
-        "description": "Prepare PDF por capas para impresión desactivando los elementos que correspondan a diferentes versiones del trabajo.",
-        "icon": "printer"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Qué son las capas PDF (OCG)?",
-        "answer": "Los Grupos de Contenido Opcional (OCG, por sus siglas en inglés) son capas dentro de un PDF que pueden mostrarse u ocultarse. Se utilizan comúnmente en planos de ingeniería, mapas y diseños complejos."
-      },
-      {
-        "question": "¿Por qué mi PDF no muestra ninguna capa?",
-        "answer": "No todos los archivos PDF contienen capas. Las capas se añaden habitualmente al generar el PDF desde aplicaciones de diseño profesional o herramientas CAD."
-      },
-      {
-        "question": "¿Los cambios en las capas alteran el contenido original?",
-        "answer": "Modificar la visibilidad de las capas solo altera lo que se muestra en pantalla o se imprime. El contenido real permanece intacto dentro del documento."
-      }
-    ]
-  },
-  "pdf-reader": {
-    "title": "Lector de PDF",
-    "metaDescription": "Lector de PDF en línea gratuito. Visualice, navegue, amplíe, rote e imprima documentos PDF directamente en su navegador.",
-    "keywords": [
-      "lector pdf",
-      "visor pdf",
-      "ver pdf online",
-      "leer pdf",
-      "visor pdf navegador"
-    ],
-    "description": "\n      <p>Lector de PDF es un visor de PDF completo que le permite leer y navegar por sus documentos directamente en su navegador. No requiere instalación de software: simplemente suba su archivo PDF y comience a leer.</p>\n      <p>Navegue de forma cómoda entre páginas, aplique zoom de ampliación o reducción, rote la orientación de la vista y utilice el modo de pantalla completa para una lectura sin distracciones. También puede imprimir los documentos o descargarlos para su acceso sin conexión.</p>\n      <p>Toda la visualización se ejecuta de manera local en su navegador. Sus documentos nunca se suben a ningún servidor, garantizando una privacidad absoluta.</p>\n    ",
-    "howToUse": [
-      {
-        "step": 1,
-        "title": "Abrir su PDF",
-        "description": "Haga clic para subir o arrastre y suelte un archivo PDF para abrirlo inmediatamente en el lector."
-      },
-      {
-        "step": 2,
-        "title": "Navegar por las páginas",
-        "description": "Utilice los controles de página para avanzar a la siguiente, retroceder a la anterior o ir directamente a un número de página específico."
-      },
-      {
-        "step": 3,
-        "title": "Ajustar la vista",
-        "description": "Ajuste el zoom de ampliación o reducción, rote la visualización o entre en el modo de pantalla completa para una lectura confortable."
-      },
-      {
-        "step": 4,
-        "title": "Imprimir o descargar",
-        "description": "Imprima el documento directamente o descárguelo para guardarlo en su almacenamiento local y consultarlo sin conexión."
-      }
-    ],
-    "useCases": [
-      {
-        "title": "Revisión de documentos",
-        "description": "Revise de forma rápida y sencilla documentos PDF sin necesidad de instalar visores externos.",
-        "icon": "book-open"
-      },
-      {
-        "title": "Lectura en dispositivos móviles",
-        "description": "Lea libros y documentos PDF de forma cómoda desde cualquier teléfono o tableta con navegador web.",
-        "icon": "smartphone"
-      },
-      {
-        "title": "Vista previa rápida",
-        "description": "Previsualice el contenido de sus PDF antes de decidir descargarlos o imprimirlos.",
-        "icon": "eye"
-      }
-    ],
-    "faq": [
-      {
-        "question": "¿Es seguro mi documento?",
-        "answer": "Sí, el documento se procesa en la memoria local de su navegador y nunca se envía a ningún servidor externo."
-      },
-      {
-        "question": "¿Puedo realizar anotaciones o editar el PDF?",
-        "answer": "Esta herramienta está destinada exclusivamente a la visualización. Utilice nuestras herramientas Firmar PDF o Anotar PDF para realizar ediciones."
-      },
-      {
-        "question": "¿Funciona en dispositivos móviles?",
-        "answer": "Sí, el Lector de PDF es compatible y funciona en cualquier smartphone o tableta con un navegador web moderno."
-      }
-    ]
-  }
+  'pdf-multi-tool': {
+    title: 'Herramienta Múltiple PDF',
+    metaDescription: `Pdf Multi Tool gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'pdf multi tool free online',
+      'pdf multi tool no registration',
+      'pdf multi tool no sign up',
+      'pdf multi tool no watermark',
+      'pdf multi tool browser based',
+      'pdf multi tool for work',
+      'pdf multi tool for students',
+      'best pdf multi tool tool',
+      'how to pdf multi tool',
+      'pdf multi tool online free',
+      'pdf multi tool without software',
+      'pdf multi tool privacy focused',
+      'pdf multi tool secure',
+      'pdf multi tool fast',
+      'free pdf multi tool tool',
+      'online pdf multi tool free',
+      'pdf multi tool tool online',
+      'pdf multi tool for free',
+      'pdf multi tool no download',
+      'pdf multi tool web based',
+      'pdf multi tool open source',
+      'pdf multi tool wasm',
+      'pdf multi tool client side',
+      'pdf multi tool no upload',
+      'pdf multi tool instant',
+      'pdf multi tool high quality',
+      'pdf multi tool no limit',
+      'pdf multi tool 2025',
+      'pdf multi tool guide',
+      'pdf multi tool tutorial',
+    ],
+    description: `
+      <p>Pdf Multi Tool free online with our powerful browser-based tool. Whether you need to pdf multi tool for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf multi tool no registration required, with no watermarks added. How to pdf multi tool for free? Use our online tool—no software needed.</p>
+            <p>Pdf Multi Tool has never been easier. Get started now with the best free pdf multi tool tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf multi tool no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf multi tool tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf multi tool for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf multi tool for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf multi tool for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf multi tool online?', answer: 'Yes, our pdf multi tool tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf multi tool as many times as you need.' },
+      { question: 'Is it safe to pdf multi tool online?', answer: 'Absolutely. All pdf multi tool processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf multi tool?', answer: 'No software installation is required. Our pdf multi tool tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'merge-pdf': {
+    title: 'Combinar PDF',
+    metaDescription: `Fusionar PDF gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'merge pdf free online',
+      'merge pdf no registration',
+      'merge pdf no sign up',
+      'merge pdf no watermark',
+      'merge pdf browser based',
+      'merge pdf for work',
+      'merge pdf for students',
+      'best merge pdf tool',
+      'how to merge pdf',
+      'merge pdf online free',
+      'merge pdf without software',
+      'merge pdf privacy focused',
+      'merge pdf secure',
+      'merge pdf fast',
+      'free merge pdf tool',
+      'online merge pdf free',
+      'merge pdf tool online',
+      'merge pdf for free',
+      'merge pdf no download',
+      'merge pdf web based',
+      'merge pdf open source',
+      'merge pdf wasm',
+      'merge pdf client side',
+      'merge pdf no upload',
+      'merge pdf instant',
+      'merge pdf high quality',
+      'merge pdf no limit',
+      'merge pdf 2025',
+      'merge pdf guide',
+      'merge pdf tutorial',
+    ],
+    description: `
+      <p>Merge Pdf free online with our powerful PDF merger tool. Combine multiple PDF documents into a single file quickly and securely. Perfect for office workers, students, and anyone who needs to merge PDF files.</p>
+            <p>Simply upload your PDF files, arrange them in your desired order using our intuitive drag-and-drop interface, and merge them into one professional document. You can merge PDF files no registration required.</p>
+            <p>All processing happens locally in your browser using WebAssembly technology, ensuring complete privacy. No files are uploaded to any server. How to merge PDF files for free? Simply use our online PDF merger.</p>
+            <p>Try our free merge PDF online tool now. Whether you need to merge PDF for work or study, our tool delivers high-quality results every time.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can merge pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free merge pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to merge pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to merge pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to merge pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to merge pdf online?', answer: 'Yes, our merge pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can merge pdf as many times as you need.' },
+      { question: 'Is it safe to merge pdf online?', answer: 'Absolutely. All merge pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to merge pdf?', answer: 'No software installation is required. Our merge pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'split-pdf': {
+    title: 'Dividir PDF',
+    metaDescription: `Dividir PDF gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'split pdf free online',
+      'split pdf no registration',
+      'split pdf no sign up',
+      'split pdf no watermark',
+      'split pdf browser based',
+      'split pdf for work',
+      'split pdf for students',
+      'best split pdf tool',
+      'how to split pdf',
+      'split pdf online free',
+      'split pdf without software',
+      'split pdf privacy focused',
+      'split pdf secure',
+      'split pdf fast',
+      'free split pdf tool',
+      'online split pdf free',
+      'split pdf tool online',
+      'split pdf for free',
+      'split pdf no download',
+      'split pdf web based',
+      'split pdf open source',
+      'split pdf wasm',
+      'split pdf client side',
+      'split pdf no upload',
+      'split pdf instant',
+      'split pdf high quality',
+      'split pdf no limit',
+      'split pdf 2025',
+      'split pdf guide',
+      'split pdf tutorial',
+    ],
+    description: `
+      <p>Split Pdf free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
+            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
+            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
+            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can split pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free split pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to split pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to split pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to split pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to split pdf online?', answer: 'Yes, our split pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can split pdf as many times as you need.' },
+      { question: 'Is it safe to split pdf online?', answer: 'Absolutely. All split pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to split pdf?', answer: 'No software installation is required. Our split pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'compress-pdf': {
+    title: 'Comprimir PDF',
+    metaDescription: `Comprima PDF gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'compress pdf free online',
+      'compress pdf no registration',
+      'compress pdf no sign up',
+      'compress pdf no watermark',
+      'compress pdf browser based',
+      'compress pdf for work',
+      'compress pdf for students',
+      'best compress pdf tool',
+      'how to compress pdf',
+      'compress pdf online free',
+      'compress pdf without software',
+      'compress pdf privacy focused',
+      'compress pdf secure',
+      'compress pdf fast',
+      'free compress pdf tool',
+      'online compress pdf free',
+      'compress pdf tool online',
+      'compress pdf for free',
+      'compress pdf no download',
+      'compress pdf web based',
+      'compress pdf open source',
+      'compress pdf wasm',
+      'compress pdf client side',
+      'compress pdf no upload',
+      'compress pdf instant',
+      'compress pdf high quality',
+      'compress pdf no limit',
+      'compress pdf 2025',
+      'compress pdf guide',
+      'compress pdf tutorial',
+    ],
+    description: `
+      <p>Compress Pdf free online with our advanced PDF compression tool. Reduce file size without significant quality loss. Perfect for email attachments and web optimization.</p>
+            <p>Upload your PDF file and choose compression level. You can compress PDF no registration required. The compressed PDF maintains original formatting.</p>
+            <p>All compression happens locally in your browser. How to compress PDF for free? Use our online PDF compressor.</p>
+            <p>Try our free compress PDF online tool now. The fastest and most secure way to reduce PDF file size online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can compress pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free compress pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to compress pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to compress pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to compress pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to compress pdf online?', answer: 'Yes, our compress pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can compress pdf as many times as you need.' },
+      { question: 'Is it safe to compress pdf online?', answer: 'Absolutely. All compress pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to compress pdf?', answer: 'No software installation is required. Our compress pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-word': {
+    title: 'Pdf To Word',
+    metaDescription: `Pdf To Word gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'pdf to word free online',
+      'pdf to word no registration',
+      'pdf to word no sign up',
+      'pdf to word no watermark',
+      'pdf to word browser based',
+      'pdf to word for work',
+      'pdf to word for students',
+      'best pdf to word tool',
+      'how to pdf to word',
+      'pdf to word online free',
+      'pdf to word without software',
+      'pdf to word privacy focused',
+      'pdf to word secure',
+      'pdf to word fast',
+      'free pdf to word tool',
+      'online pdf to word free',
+      'pdf to word tool online',
+      'pdf to word for free',
+      'pdf to word no download',
+      'pdf to word web based',
+      'pdf to word open source',
+      'pdf to word wasm',
+      'pdf to word client side',
+      'pdf to word no upload',
+      'pdf to word instant',
+      'pdf to word high quality',
+      'pdf to word no limit',
+      'pdf to word 2025',
+      'pdf to word guide',
+      'pdf to word tutorial',
+    ],
+    description: `
+      <p>Pdf To Word free online with our powerful browser-based tool. Whether you need to pdf to word for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to word no registration required, with no watermarks added. How to pdf to word for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Word has never been easier. Get started now with the best free pdf to word tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to word no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to word tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to word for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to word for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to word for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to word online?', answer: 'Yes, our pdf to word tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to word as many times as you need.' },
+      { question: 'Is it safe to pdf to word online?', answer: 'Absolutely. All pdf to word processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to word?', answer: 'No software installation is required. Our pdf to word tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-jpg': {
+    title: 'PDF a JPG',
+    metaDescription: `Pdf To Jpg gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'pdf to jpg free online',
+      'pdf to jpg no registration',
+      'pdf to jpg no sign up',
+      'pdf to jpg no watermark',
+      'pdf to jpg browser based',
+      'pdf to jpg for work',
+      'pdf to jpg for students',
+      'best pdf to jpg tool',
+      'how to pdf to jpg',
+      'pdf to jpg online free',
+      'pdf to jpg without software',
+      'pdf to jpg privacy focused',
+      'pdf to jpg secure',
+      'pdf to jpg fast',
+      'free pdf to jpg tool',
+      'online pdf to jpg free',
+      'pdf to jpg tool online',
+      'pdf to jpg for free',
+      'pdf to jpg no download',
+      'pdf to jpg web based',
+      'pdf to jpg open source',
+      'pdf to jpg wasm',
+      'pdf to jpg client side',
+      'pdf to jpg no upload',
+      'pdf to jpg instant',
+      'pdf to jpg high quality',
+      'pdf to jpg no limit',
+      'pdf to jpg 2025',
+      'pdf to jpg guide',
+      'pdf to jpg tutorial',
+    ],
+    description: `
+      <p>Pdf To Jpg free online with our powerful browser-based tool. Whether you need to pdf to jpg for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to jpg no registration required, with no watermarks added. How to pdf to jpg for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Jpg has never been easier. Get started now with the best free pdf to jpg tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to jpg no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to jpg tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to jpg for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to jpg for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to jpg for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to jpg online?', answer: 'Yes, our pdf to jpg tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to jpg as many times as you need.' },
+      { question: 'Is it safe to pdf to jpg online?', answer: 'Absolutely. All pdf to jpg processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to jpg?', answer: 'No software installation is required. Our pdf to jpg tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-excel': {
+    title: 'PDF a Excel',
+    metaDescription: `Pdf To Excel gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'pdf to excel free online',
+      'pdf to excel no registration',
+      'pdf to excel no sign up',
+      'pdf to excel no watermark',
+      'pdf to excel browser based',
+      'pdf to excel for work',
+      'pdf to excel for students',
+      'best pdf to excel tool',
+      'how to pdf to excel',
+      'pdf to excel online free',
+      'pdf to excel without software',
+      'pdf to excel privacy focused',
+      'pdf to excel secure',
+      'pdf to excel fast',
+      'free pdf to excel tool',
+      'online pdf to excel free',
+      'pdf to excel tool online',
+      'pdf to excel for free',
+      'pdf to excel no download',
+      'pdf to excel web based',
+      'pdf to excel open source',
+      'pdf to excel wasm',
+      'pdf to excel client side',
+      'pdf to excel no upload',
+      'pdf to excel instant',
+      'pdf to excel high quality',
+      'pdf to excel no limit',
+      'pdf to excel 2025',
+      'pdf to excel guide',
+      'pdf to excel tutorial',
+    ],
+    description: `
+      <p>Pdf To Excel free online with our powerful browser-based tool. Whether you need to pdf to excel for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to excel no registration required, with no watermarks added. How to pdf to excel for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Excel has never been easier. Get started now with the best free pdf to excel tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to excel no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to excel tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to excel for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to excel for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to excel for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to excel online?', answer: 'Yes, our pdf to excel tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to excel as many times as you need.' },
+      { question: 'Is it safe to pdf to excel online?', answer: 'Absolutely. All pdf to excel processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to excel?', answer: 'No software installation is required. Our pdf to excel tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-powerpoint': {
+    title: 'Pdf To Powerpoint',
+    metaDescription: `Pdf To Powerpoint gratis en línea: sin registro ni registro. `,
+    keywords: [
+      'pdf to powerpoint free online',
+      'pdf to powerpoint no registration',
+      'pdf to powerpoint no sign up',
+      'pdf to powerpoint no watermark',
+      'pdf to powerpoint browser based',
+      'pdf to powerpoint for work',
+      'pdf to powerpoint for students',
+      'best pdf to powerpoint tool',
+      'how to pdf to powerpoint',
+      'pdf to powerpoint online free',
+      'pdf to powerpoint without software',
+      'pdf to powerpoint privacy focused',
+      'pdf to powerpoint secure',
+      'pdf to powerpoint fast',
+      'free pdf to powerpoint tool',
+      'online pdf to powerpoint free',
+      'pdf to powerpoint tool online',
+      'pdf to powerpoint for free',
+      'pdf to powerpoint no download',
+      'pdf to powerpoint web based',
+      'pdf to powerpoint open source',
+      'pdf to powerpoint wasm',
+      'pdf to powerpoint client side',
+      'pdf to powerpoint no upload',
+      'pdf to powerpoint instant',
+      'pdf to powerpoint high quality',
+      'pdf to powerpoint no limit',
+      'pdf to powerpoint 2025',
+      'pdf to powerpoint guide',
+      'pdf to powerpoint tutorial',
+    ],
+    description: `
+      <p>Pdf To Powerpoint free online with our powerful browser-based tool. Whether you need to pdf to powerpoint for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to powerpoint no registration required, with no watermarks added. How to pdf to powerpoint for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Powerpoint has never been easier. Get started now with the best free pdf to powerpoint tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to powerpoint no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to powerpoint tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to powerpoint for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to powerpoint for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to powerpoint for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to powerpoint online?', answer: 'Yes, our pdf to powerpoint tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to powerpoint as many times as you need.' },
+      { question: 'Is it safe to pdf to powerpoint online?', answer: 'Absolutely. All pdf to powerpoint processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to powerpoint?', answer: 'No software installation is required. Our pdf to powerpoint tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-text': {
+    title: 'Pdf To Text',
+    metaDescription: 'Pdf To Text gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to text free online',
+      'pdf to text no registration',
+      'pdf to text no sign up',
+      'pdf to text no watermark',
+      'pdf to text browser based',
+      'pdf to text for work',
+      'pdf to text for students',
+      'best pdf to text tool',
+      'how to pdf to text',
+      'pdf to text online free',
+      'pdf to text without software',
+      'pdf to text privacy focused',
+      'pdf to text secure',
+      'pdf to text fast',
+      'free pdf to text tool',
+      'online pdf to text free',
+      'pdf to text tool online',
+      'pdf to text for free',
+      'pdf to text no download',
+      'pdf to text web based',
+      'pdf to text open source',
+      'pdf to text wasm',
+      'pdf to text client side',
+      'pdf to text no upload',
+      'pdf to text instant',
+      'pdf to text high quality',
+      'pdf to text no limit',
+      'pdf to text 2025',
+      'pdf to text guide',
+      'pdf to text tutorial',
+    ],
+    description: `
+      <p>Pdf To Text free online with our powerful browser-based tool. Whether you need to pdf to text for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to text no registration required, with no watermarks added. How to pdf to text for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Text has never been easier. Get started now with the best free pdf to text tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to text no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to text tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to text for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to text for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to text for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to text online?', answer: 'Yes, our pdf to text tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to text as many times as you need.' },
+      { question: 'Is it safe to pdf to text online?', answer: 'Absolutely. All pdf to text processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to text?', answer: 'No software installation is required. Our pdf to text tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'word-to-pdf': {
+    title: 'Word To Pdf',
+    metaDescription: 'Word To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'word to pdf free online',
+      'word to pdf no registration',
+      'word to pdf no sign up',
+      'word to pdf no watermark',
+      'word to pdf browser based',
+      'word to pdf for work',
+      'word to pdf for students',
+      'best word to pdf tool',
+      'how to word to pdf',
+      'word to pdf online free',
+      'word to pdf without software',
+      'word to pdf privacy focused',
+      'word to pdf secure',
+      'word to pdf fast',
+      'free word to pdf tool',
+      'online word to pdf free',
+      'word to pdf tool online',
+      'word to pdf for free',
+      'word to pdf no download',
+      'word to pdf web based',
+      'word to pdf open source',
+      'word to pdf wasm',
+      'word to pdf client side',
+      'word to pdf no upload',
+      'word to pdf instant',
+      'word to pdf high quality',
+      'word to pdf no limit',
+      'word to pdf 2025',
+      'word to pdf guide',
+      'word to pdf tutorial',
+    ],
+    description: `
+      <p>Word To Pdf free online with our powerful browser-based tool. Whether you need to word to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can word to pdf no registration required, with no watermarks added. How to word to pdf for free? Use our online tool—no software needed.</p>
+            <p>Word To Pdf has never been easier. Get started now with the best free word to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can word to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free word to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to word to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to word to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to word to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to word to pdf online?', answer: 'Yes, our word to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can word to pdf as many times as you need.' },
+      { question: 'Is it safe to word to pdf online?', answer: 'Absolutely. All word to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to word to pdf?', answer: 'No software installation is required. Our word to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'jpg-to-pdf': {
+    title: 'JPG a PDF',
+    metaDescription: 'Jpg To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'jpg to pdf free online',
+      'jpg to pdf no registration',
+      'jpg to pdf no sign up',
+      'jpg to pdf no watermark',
+      'jpg to pdf browser based',
+      'jpg to pdf for work',
+      'jpg to pdf for students',
+      'best jpg to pdf tool',
+      'how to jpg to pdf',
+      'jpg to pdf online free',
+      'jpg to pdf without software',
+      'jpg to pdf privacy focused',
+      'jpg to pdf secure',
+      'jpg to pdf fast',
+      'free jpg to pdf tool',
+      'online jpg to pdf free',
+      'jpg to pdf tool online',
+      'jpg to pdf for free',
+      'jpg to pdf no download',
+      'jpg to pdf web based',
+      'jpg to pdf open source',
+      'jpg to pdf wasm',
+      'jpg to pdf client side',
+      'jpg to pdf no upload',
+      'jpg to pdf instant',
+      'jpg to pdf high quality',
+      'jpg to pdf no limit',
+      'jpg to pdf 2025',
+      'jpg to pdf guide',
+      'jpg to pdf tutorial',
+    ],
+    description: `
+      <p>Jpg To Pdf free online with our powerful browser-based tool. Whether you need to jpg to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can jpg to pdf no registration required, with no watermarks added. How to jpg to pdf for free? Use our online tool—no software needed.</p>
+            <p>Jpg To Pdf has never been easier. Get started now with the best free jpg to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can jpg to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free jpg to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to jpg to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to jpg to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to jpg to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to jpg to pdf online?', answer: 'Yes, our jpg to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can jpg to pdf as many times as you need.' },
+      { question: 'Is it safe to jpg to pdf online?', answer: 'Absolutely. All jpg to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to jpg to pdf?', answer: 'No software installation is required. Our jpg to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'excel-to-pdf': {
+    title: 'Excel To Pdf',
+    metaDescription: 'Excel To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'excel to pdf free online',
+      'excel to pdf no registration',
+      'excel to pdf no sign up',
+      'excel to pdf no watermark',
+      'excel to pdf browser based',
+      'excel to pdf for work',
+      'excel to pdf for students',
+      'best excel to pdf tool',
+      'how to excel to pdf',
+      'excel to pdf online free',
+      'excel to pdf without software',
+      'excel to pdf privacy focused',
+      'excel to pdf secure',
+      'excel to pdf fast',
+      'free excel to pdf tool',
+      'online excel to pdf free',
+      'excel to pdf tool online',
+      'excel to pdf for free',
+      'excel to pdf no download',
+      'excel to pdf web based',
+      'excel to pdf open source',
+      'excel to pdf wasm',
+      'excel to pdf client side',
+      'excel to pdf no upload',
+      'excel to pdf instant',
+      'excel to pdf high quality',
+      'excel to pdf no limit',
+      'excel to pdf 2025',
+      'excel to pdf guide',
+      'excel to pdf tutorial',
+    ],
+    description: `
+      <p>Excel To Pdf free online with our powerful browser-based tool. Whether you need to excel to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can excel to pdf no registration required, with no watermarks added. How to excel to pdf for free? Use our online tool—no software needed.</p>
+            <p>Excel To Pdf has never been easier. Get started now with the best free excel to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can excel to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free excel to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to excel to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to excel to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to excel to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to excel to pdf online?', answer: 'Yes, our excel to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can excel to pdf as many times as you need.' },
+      { question: 'Is it safe to excel to pdf online?', answer: 'Absolutely. All excel to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to excel to pdf?', answer: 'No software installation is required. Our excel to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'powerpoint-to-pdf': {
+    title: 'Powerpoint To Pdf',
+    metaDescription: 'Powerpoint To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'powerpoint to pdf free online',
+      'powerpoint to pdf no registration',
+      'powerpoint to pdf no sign up',
+      'powerpoint to pdf no watermark',
+      'powerpoint to pdf browser based',
+      'powerpoint to pdf for work',
+      'powerpoint to pdf for students',
+      'best powerpoint to pdf tool',
+      'how to powerpoint to pdf',
+      'powerpoint to pdf online free',
+      'powerpoint to pdf without software',
+      'powerpoint to pdf privacy focused',
+      'powerpoint to pdf secure',
+      'powerpoint to pdf fast',
+      'free powerpoint to pdf tool',
+      'online powerpoint to pdf free',
+      'powerpoint to pdf tool online',
+      'powerpoint to pdf for free',
+      'powerpoint to pdf no download',
+      'powerpoint to pdf web based',
+      'powerpoint to pdf open source',
+      'powerpoint to pdf wasm',
+      'powerpoint to pdf client side',
+      'powerpoint to pdf no upload',
+      'powerpoint to pdf instant',
+      'powerpoint to pdf high quality',
+      'powerpoint to pdf no limit',
+      'powerpoint to pdf 2025',
+      'powerpoint to pdf guide',
+      'powerpoint to pdf tutorial',
+    ],
+    description: `
+      <p>Powerpoint To Pdf free online with our powerful browser-based tool. Whether you need to powerpoint to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can powerpoint to pdf no registration required, with no watermarks added. How to powerpoint to pdf for free? Use our online tool—no software needed.</p>
+            <p>Powerpoint To Pdf has never been easier. Get started now with the best free powerpoint to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can powerpoint to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free powerpoint to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to powerpoint to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to powerpoint to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to powerpoint to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to powerpoint to pdf online?', answer: 'Yes, our powerpoint to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can powerpoint to pdf as many times as you need.' },
+      { question: 'Is it safe to powerpoint to pdf online?', answer: 'Absolutely. All powerpoint to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to powerpoint to pdf?', answer: 'No software installation is required. Our powerpoint to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'text-to-pdf': {
+    title: 'Text To Pdf',
+    metaDescription: 'Text To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'text to pdf free online',
+      'text to pdf no registration',
+      'text to pdf no sign up',
+      'text to pdf no watermark',
+      'text to pdf browser based',
+      'text to pdf for work',
+      'text to pdf for students',
+      'best text to pdf tool',
+      'how to text to pdf',
+      'text to pdf online free',
+      'text to pdf without software',
+      'text to pdf privacy focused',
+      'text to pdf secure',
+      'text to pdf fast',
+      'free text to pdf tool',
+      'online text to pdf free',
+      'text to pdf tool online',
+      'text to pdf for free',
+      'text to pdf no download',
+      'text to pdf web based',
+      'text to pdf open source',
+      'text to pdf wasm',
+      'text to pdf client side',
+      'text to pdf no upload',
+      'text to pdf instant',
+      'text to pdf high quality',
+      'text to pdf no limit',
+      'text to pdf 2025',
+      'text to pdf guide',
+      'text to pdf tutorial',
+    ],
+    description: `
+      <p>Text To Pdf free online with our powerful browser-based tool. Whether you need to text to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can text to pdf no registration required, with no watermarks added. How to text to pdf for free? Use our online tool—no software needed.</p>
+            <p>Text To Pdf has never been easier. Get started now with the best free text to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can text to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free text to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to text to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to text to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to text to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to text to pdf online?', answer: 'Yes, our text to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can text to pdf as many times as you need.' },
+      { question: 'Is it safe to text to pdf online?', answer: 'Absolutely. All text to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to text to pdf?', answer: 'No software installation is required. Our text to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'html-to-pdf': {
+    title: 'Html To Pdf',
+    metaDescription: 'Html To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'html to pdf free online',
+      'html to pdf no registration',
+      'html to pdf no sign up',
+      'html to pdf no watermark',
+      'html to pdf browser based',
+      'html to pdf for work',
+      'html to pdf for students',
+      'best html to pdf tool',
+      'how to html to pdf',
+      'html to pdf online free',
+      'html to pdf without software',
+      'html to pdf privacy focused',
+      'html to pdf secure',
+      'html to pdf fast',
+      'free html to pdf tool',
+      'online html to pdf free',
+      'html to pdf tool online',
+      'html to pdf for free',
+      'html to pdf no download',
+      'html to pdf web based',
+      'html to pdf open source',
+      'html to pdf wasm',
+      'html to pdf client side',
+      'html to pdf no upload',
+      'html to pdf instant',
+      'html to pdf high quality',
+      'html to pdf no limit',
+      'html to pdf 2025',
+      'html to pdf guide',
+      'html to pdf tutorial',
+    ],
+    description: `
+      <p>Html To Pdf free online with our powerful browser-based tool. Whether you need to html to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can html to pdf no registration required, with no watermarks added. How to html to pdf for free? Use our online tool—no software needed.</p>
+            <p>Html To Pdf has never been easier. Get started now with the best free html to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can html to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free html to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to html to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to html to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to html to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to html to pdf online?', answer: 'Yes, our html to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can html to pdf as many times as you need.' },
+      { question: 'Is it safe to html to pdf online?', answer: 'Absolutely. All html to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to html to pdf?', answer: 'No software installation is required. Our html to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'rotate-pdf': {
+    title: 'Rotar PDF',
+    metaDescription: 'Rotate Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'rotate pdf free online',
+      'rotate pdf no registration',
+      'rotate pdf no sign up',
+      'rotate pdf no watermark',
+      'rotate pdf browser based',
+      'rotate pdf for work',
+      'rotate pdf for students',
+      'best rotate pdf tool',
+      'how to rotate pdf',
+      'rotate pdf online free',
+      'rotate pdf without software',
+      'rotate pdf privacy focused',
+      'rotate pdf secure',
+      'rotate pdf fast',
+      'free rotate pdf tool',
+      'online rotate pdf free',
+      'rotate pdf tool online',
+      'rotate pdf for free',
+      'rotate pdf no download',
+      'rotate pdf web based',
+      'rotate pdf open source',
+      'rotate pdf wasm',
+      'rotate pdf client side',
+      'rotate pdf no upload',
+      'rotate pdf instant',
+      'rotate pdf high quality',
+      'rotate pdf no limit',
+      'rotate pdf 2025',
+      'rotate pdf guide',
+      'rotate pdf tutorial',
+    ],
+    description: `
+      <p>Rotate Pdf free online with our powerful browser-based tool. Whether you need to rotate pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can rotate pdf no registration required, with no watermarks added. How to rotate pdf for free? Use our online tool—no software needed.</p>
+            <p>Rotate Pdf has never been easier. Get started now with the best free rotate pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can rotate pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free rotate pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to rotate pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to rotate pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to rotate pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to rotate pdf online?', answer: 'Yes, our rotate pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can rotate pdf as many times as you need.' },
+      { question: 'Is it safe to rotate pdf online?', answer: 'Absolutely. All rotate pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to rotate pdf?', answer: 'No software installation is required. Our rotate pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'unlock-pdf': {
+    title: 'Unlock Pdf',
+    metaDescription: 'Unlock Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'unlock pdf free online',
+      'unlock pdf no registration',
+      'unlock pdf no sign up',
+      'unlock pdf no watermark',
+      'unlock pdf browser based',
+      'unlock pdf for work',
+      'unlock pdf for students',
+      'best unlock pdf tool',
+      'how to unlock pdf',
+      'unlock pdf online free',
+      'unlock pdf without software',
+      'unlock pdf privacy focused',
+      'unlock pdf secure',
+      'unlock pdf fast',
+      'free unlock pdf tool',
+      'online unlock pdf free',
+      'unlock pdf tool online',
+      'unlock pdf for free',
+      'unlock pdf no download',
+      'unlock pdf web based',
+      'unlock pdf open source',
+      'unlock pdf wasm',
+      'unlock pdf client side',
+      'unlock pdf no upload',
+      'unlock pdf instant',
+      'unlock pdf high quality',
+      'unlock pdf no limit',
+      'unlock pdf 2025',
+      'unlock pdf guide',
+      'unlock pdf tutorial',
+    ],
+    description: `
+      <p>Unlock Pdf free online with our powerful browser-based tool. Whether you need to unlock pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can unlock pdf no registration required, with no watermarks added. How to unlock pdf for free? Use our online tool—no software needed.</p>
+            <p>Unlock Pdf has never been easier. Get started now with the best free unlock pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can unlock pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free unlock pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to unlock pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to unlock pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to unlock pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to unlock pdf online?', answer: 'Yes, our unlock pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can unlock pdf as many times as you need.' },
+      { question: 'Is it safe to unlock pdf online?', answer: 'Absolutely. All unlock pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to unlock pdf?', answer: 'No software installation is required. Our unlock pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'protect-pdf': {
+    title: 'Protect Pdf',
+    metaDescription: 'Protect Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'protect pdf free online',
+      'protect pdf no registration',
+      'protect pdf no sign up',
+      'protect pdf no watermark',
+      'protect pdf browser based',
+      'protect pdf for work',
+      'protect pdf for students',
+      'best protect pdf tool',
+      'how to protect pdf',
+      'protect pdf online free',
+      'protect pdf without software',
+      'protect pdf privacy focused',
+      'protect pdf secure',
+      'protect pdf fast',
+      'free protect pdf tool',
+      'online protect pdf free',
+      'protect pdf tool online',
+      'protect pdf for free',
+      'protect pdf no download',
+      'protect pdf web based',
+      'protect pdf open source',
+      'protect pdf wasm',
+      'protect pdf client side',
+      'protect pdf no upload',
+      'protect pdf instant',
+      'protect pdf high quality',
+      'protect pdf no limit',
+      'protect pdf 2025',
+      'protect pdf guide',
+      'protect pdf tutorial',
+    ],
+    description: `
+      <p>Protect Pdf free online with our powerful browser-based tool. Whether you need to protect pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can protect pdf no registration required, with no watermarks added. How to protect pdf for free? Use our online tool—no software needed.</p>
+            <p>Protect Pdf has never been easier. Get started now with the best free protect pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can protect pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free protect pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to protect pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to protect pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to protect pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to protect pdf online?', answer: 'Yes, our protect pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can protect pdf as many times as you need.' },
+      { question: 'Is it safe to protect pdf online?', answer: 'Absolutely. All protect pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to protect pdf?', answer: 'No software installation is required. Our protect pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'add-watermark': {
+    title: 'Añadir Marca de Agua',
+    metaDescription: 'Add Watermark gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'add watermark free online',
+      'add watermark no registration',
+      'add watermark no sign up',
+      'add watermark no watermark',
+      'add watermark browser based',
+      'add watermark for work',
+      'add watermark for students',
+      'best add watermark tool',
+      'how to add watermark',
+      'add watermark online free',
+      'add watermark without software',
+      'add watermark privacy focused',
+      'add watermark secure',
+      'add watermark fast',
+      'free add watermark tool',
+      'online add watermark free',
+      'add watermark tool online',
+      'add watermark for free',
+      'add watermark no download',
+      'add watermark web based',
+      'add watermark open source',
+      'add watermark wasm',
+      'add watermark client side',
+      'add watermark no upload',
+      'add watermark instant',
+      'add watermark high quality',
+      'add watermark no limit',
+      'add watermark 2025',
+      'add watermark guide',
+      'add watermark tutorial',
+    ],
+    description: `
+      <p>Add Watermark free online with our powerful browser-based tool. Whether you need to add watermark for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can add watermark no registration required, with no watermarks added. How to add watermark for free? Use our online tool—no software needed.</p>
+            <p>Add Watermark has never been easier. Get started now with the best free add watermark tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can add watermark no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free add watermark tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to add watermark for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to add watermark for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to add watermark for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to add watermark online?', answer: 'Yes, our add watermark tool is completely free to use. No registration, no sign-up, no credit card required. You can add watermark as many times as you need.' },
+      { question: 'Is it safe to add watermark online?', answer: 'Absolutely. All add watermark processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to add watermark?', answer: 'No software installation is required. Our add watermark tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'remove-watermark': {
+    title: 'Remove Watermark',
+    metaDescription: 'Remove Watermark gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'remove watermark free online',
+      'remove watermark no registration',
+      'remove watermark no sign up',
+      'remove watermark no watermark',
+      'remove watermark browser based',
+      'remove watermark for work',
+      'remove watermark for students',
+      'best remove watermark tool',
+      'how to remove watermark',
+      'remove watermark online free',
+      'remove watermark without software',
+      'remove watermark privacy focused',
+      'remove watermark secure',
+      'remove watermark fast',
+      'free remove watermark tool',
+      'online remove watermark free',
+      'remove watermark tool online',
+      'remove watermark for free',
+      'remove watermark no download',
+      'remove watermark web based',
+      'remove watermark open source',
+      'remove watermark wasm',
+      'remove watermark client side',
+      'remove watermark no upload',
+      'remove watermark instant',
+      'remove watermark high quality',
+      'remove watermark no limit',
+      'remove watermark 2025',
+      'remove watermark guide',
+      'remove watermark tutorial',
+    ],
+    description: `
+      <p>Remove Watermark free online with our powerful browser-based tool. Whether you need to remove watermark for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can remove watermark no registration required, with no watermarks added. How to remove watermark for free? Use our online tool—no software needed.</p>
+            <p>Remove Watermark has never been easier. Get started now with the best free remove watermark tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can remove watermark no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free remove watermark tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to remove watermark for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to remove watermark for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to remove watermark for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to remove watermark online?', answer: 'Yes, our remove watermark tool is completely free to use. No registration, no sign-up, no credit card required. You can remove watermark as many times as you need.' },
+      { question: 'Is it safe to remove watermark online?', answer: 'Absolutely. All remove watermark processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to remove watermark?', answer: 'No software installation is required. Our remove watermark tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'add-page-numbers': {
+    title: 'Add Page Numbers',
+    metaDescription: 'Add Page Numbers gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'add page numbers free online',
+      'add page numbers no registration',
+      'add page numbers no sign up',
+      'add page numbers no watermark',
+      'add page numbers browser based',
+      'add page numbers for work',
+      'add page numbers for students',
+      'best add page numbers tool',
+      'how to add page numbers',
+      'add page numbers online free',
+      'add page numbers without software',
+      'add page numbers privacy focused',
+      'add page numbers secure',
+      'add page numbers fast',
+      'free add page numbers tool',
+      'online add page numbers free',
+      'add page numbers tool online',
+      'add page numbers for free',
+      'add page numbers no download',
+      'add page numbers web based',
+      'add page numbers open source',
+      'add page numbers wasm',
+      'add page numbers client side',
+      'add page numbers no upload',
+      'add page numbers instant',
+      'add page numbers high quality',
+      'add page numbers no limit',
+      'add page numbers 2025',
+      'add page numbers guide',
+      'add page numbers tutorial',
+    ],
+    description: `
+      <p>Add Page Numbers free online with our powerful browser-based tool. Whether you need to add page numbers for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can add page numbers no registration required, with no watermarks added. How to add page numbers for free? Use our online tool—no software needed.</p>
+            <p>Add Page Numbers has never been easier. Get started now with the best free add page numbers tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can add page numbers no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free add page numbers tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to add page numbers for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to add page numbers for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to add page numbers for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to add page numbers online?', answer: 'Yes, our add page numbers tool is completely free to use. No registration, no sign-up, no credit card required. You can add page numbers as many times as you need.' },
+      { question: 'Is it safe to add page numbers online?', answer: 'Absolutely. All add page numbers processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to add page numbers?', answer: 'No software installation is required. Our add page numbers tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'remove-pages': {
+    title: 'Remove Pages',
+    metaDescription: 'Remove Pages gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'remove pages free online',
+      'remove pages no registration',
+      'remove pages no sign up',
+      'remove pages no watermark',
+      'remove pages browser based',
+      'remove pages for work',
+      'remove pages for students',
+      'best remove pages tool',
+      'how to remove pages',
+      'remove pages online free',
+      'remove pages without software',
+      'remove pages privacy focused',
+      'remove pages secure',
+      'remove pages fast',
+      'free remove pages tool',
+      'online remove pages free',
+      'remove pages tool online',
+      'remove pages for free',
+      'remove pages no download',
+      'remove pages web based',
+      'remove pages open source',
+      'remove pages wasm',
+      'remove pages client side',
+      'remove pages no upload',
+      'remove pages instant',
+      'remove pages high quality',
+      'remove pages no limit',
+      'remove pages 2025',
+      'remove pages guide',
+      'remove pages tutorial',
+    ],
+    description: `
+      <p>Remove Pages free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
+            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
+            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
+            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can remove pages no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free remove pages tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to remove pages for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to remove pages for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to remove pages for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to remove pages online?', answer: 'Yes, our remove pages tool is completely free to use. No registration, no sign-up, no credit card required. You can remove pages as many times as you need.' },
+      { question: 'Is it safe to remove pages online?', answer: 'Absolutely. All remove pages processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to remove pages?', answer: 'No software installation is required. Our remove pages tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'extract-pages': {
+    title: 'Extraer Páginas',
+    metaDescription: 'Extract Pages gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'extract pages free online',
+      'extract pages no registration',
+      'extract pages no sign up',
+      'extract pages no watermark',
+      'extract pages browser based',
+      'extract pages for work',
+      'extract pages for students',
+      'best extract pages tool',
+      'how to extract pages',
+      'extract pages online free',
+      'extract pages without software',
+      'extract pages privacy focused',
+      'extract pages secure',
+      'extract pages fast',
+      'free extract pages tool',
+      'online extract pages free',
+      'extract pages tool online',
+      'extract pages for free',
+      'extract pages no download',
+      'extract pages web based',
+      'extract pages open source',
+      'extract pages wasm',
+      'extract pages client side',
+      'extract pages no upload',
+      'extract pages instant',
+      'extract pages high quality',
+      'extract pages no limit',
+      'extract pages 2025',
+      'extract pages guide',
+      'extract pages tutorial',
+    ],
+    description: `
+      <p>Extract Pages free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
+            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
+            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
+            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can extract pages no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free extract pages tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to extract pages for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to extract pages for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to extract pages for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to extract pages online?', answer: 'Yes, our extract pages tool is completely free to use. No registration, no sign-up, no credit card required. You can extract pages as many times as you need.' },
+      { question: 'Is it safe to extract pages online?', answer: 'Absolutely. All extract pages processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to extract pages?', answer: 'No software installation is required. Our extract pages tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'reorganize-pdf': {
+    title: 'Reorganize Pdf',
+    metaDescription: 'Reorganize Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'reorganize pdf free online',
+      'reorganize pdf no registration',
+      'reorganize pdf no sign up',
+      'reorganize pdf no watermark',
+      'reorganize pdf browser based',
+      'reorganize pdf for work',
+      'reorganize pdf for students',
+      'best reorganize pdf tool',
+      'how to reorganize pdf',
+      'reorganize pdf online free',
+      'reorganize pdf without software',
+      'reorganize pdf privacy focused',
+      'reorganize pdf secure',
+      'reorganize pdf fast',
+      'free reorganize pdf tool',
+      'online reorganize pdf free',
+      'reorganize pdf tool online',
+      'reorganize pdf for free',
+      'reorganize pdf no download',
+      'reorganize pdf web based',
+      'reorganize pdf open source',
+      'reorganize pdf wasm',
+      'reorganize pdf client side',
+      'reorganize pdf no upload',
+      'reorganize pdf instant',
+      'reorganize pdf high quality',
+      'reorganize pdf no limit',
+      'reorganize pdf 2025',
+      'reorganize pdf guide',
+      'reorganize pdf tutorial',
+    ],
+    description: `
+      <p>Reorganize Pdf free online with our powerful browser-based tool. Whether you need to reorganize pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can reorganize pdf no registration required, with no watermarks added. How to reorganize pdf for free? Use our online tool—no software needed.</p>
+            <p>Reorganize Pdf has never been easier. Get started now with the best free reorganize pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can reorganize pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free reorganize pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to reorganize pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to reorganize pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to reorganize pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to reorganize pdf online?', answer: 'Yes, our reorganize pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can reorganize pdf as many times as you need.' },
+      { question: 'Is it safe to reorganize pdf online?', answer: 'Absolutely. All reorganize pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to reorganize pdf?', answer: 'No software installation is required. Our reorganize pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'insert-pdf': {
+    title: 'Insert Pdf',
+    metaDescription: 'Insert Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'insert pdf free online',
+      'insert pdf no registration',
+      'insert pdf no sign up',
+      'insert pdf no watermark',
+      'insert pdf browser based',
+      'insert pdf for work',
+      'insert pdf for students',
+      'best insert pdf tool',
+      'how to insert pdf',
+      'insert pdf online free',
+      'insert pdf without software',
+      'insert pdf privacy focused',
+      'insert pdf secure',
+      'insert pdf fast',
+      'free insert pdf tool',
+      'online insert pdf free',
+      'insert pdf tool online',
+      'insert pdf for free',
+      'insert pdf no download',
+      'insert pdf web based',
+      'insert pdf open source',
+      'insert pdf wasm',
+      'insert pdf client side',
+      'insert pdf no upload',
+      'insert pdf instant',
+      'insert pdf high quality',
+      'insert pdf no limit',
+      'insert pdf 2025',
+      'insert pdf guide',
+      'insert pdf tutorial',
+    ],
+    description: `
+      <p>Insert Pdf free online with our powerful browser-based tool. Whether you need to insert pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can insert pdf no registration required, with no watermarks added. How to insert pdf for free? Use our online tool—no software needed.</p>
+            <p>Insert Pdf has never been easier. Get started now with the best free insert pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can insert pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free insert pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to insert pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to insert pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to insert pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to insert pdf online?', answer: 'Yes, our insert pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can insert pdf as many times as you need.' },
+      { question: 'Is it safe to insert pdf online?', answer: 'Absolutely. All insert pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to insert pdf?', answer: 'No software installation is required. Our insert pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'replace-pdf': {
+    title: 'Replace Pdf',
+    metaDescription: 'Replace Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'replace pdf free online',
+      'replace pdf no registration',
+      'replace pdf no sign up',
+      'replace pdf no watermark',
+      'replace pdf browser based',
+      'replace pdf for work',
+      'replace pdf for students',
+      'best replace pdf tool',
+      'how to replace pdf',
+      'replace pdf online free',
+      'replace pdf without software',
+      'replace pdf privacy focused',
+      'replace pdf secure',
+      'replace pdf fast',
+      'free replace pdf tool',
+      'online replace pdf free',
+      'replace pdf tool online',
+      'replace pdf for free',
+      'replace pdf no download',
+      'replace pdf web based',
+      'replace pdf open source',
+      'replace pdf wasm',
+      'replace pdf client side',
+      'replace pdf no upload',
+      'replace pdf instant',
+      'replace pdf high quality',
+      'replace pdf no limit',
+      'replace pdf 2025',
+      'replace pdf guide',
+      'replace pdf tutorial',
+    ],
+    description: `
+      <p>Replace Pdf free online with our powerful browser-based tool. Whether you need to replace pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can replace pdf no registration required, with no watermarks added. How to replace pdf for free? Use our online tool—no software needed.</p>
+            <p>Replace Pdf has never been easier. Get started now with the best free replace pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can replace pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free replace pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to replace pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to replace pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to replace pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to replace pdf online?', answer: 'Yes, our replace pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can replace pdf as many times as you need.' },
+      { question: 'Is it safe to replace pdf online?', answer: 'Absolutely. All replace pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to replace pdf?', answer: 'No software installation is required. Our replace pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'crop-pdf': {
+    title: 'Recortar PDF',
+    metaDescription: 'Crop Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'crop pdf free online',
+      'crop pdf no registration',
+      'crop pdf no sign up',
+      'crop pdf no watermark',
+      'crop pdf browser based',
+      'crop pdf for work',
+      'crop pdf for students',
+      'best crop pdf tool',
+      'how to crop pdf',
+      'crop pdf online free',
+      'crop pdf without software',
+      'crop pdf privacy focused',
+      'crop pdf secure',
+      'crop pdf fast',
+      'free crop pdf tool',
+      'online crop pdf free',
+      'crop pdf tool online',
+      'crop pdf for free',
+      'crop pdf no download',
+      'crop pdf web based',
+      'crop pdf open source',
+      'crop pdf wasm',
+      'crop pdf client side',
+      'crop pdf no upload',
+      'crop pdf instant',
+      'crop pdf high quality',
+      'crop pdf no limit',
+      'crop pdf 2025',
+      'crop pdf guide',
+      'crop pdf tutorial',
+    ],
+    description: `
+      <p>Crop Pdf free online with our powerful browser-based tool. Whether you need to crop pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can crop pdf no registration required, with no watermarks added. How to crop pdf for free? Use our online tool—no software needed.</p>
+            <p>Crop Pdf has never been easier. Get started now with the best free crop pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can crop pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free crop pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to crop pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to crop pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to crop pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to crop pdf online?', answer: 'Yes, our crop pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can crop pdf as many times as you need.' },
+      { question: 'Is it safe to crop pdf online?', answer: 'Absolutely. All crop pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to crop pdf?', answer: 'No software installation is required. Our crop pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'resize-pdf': {
+    title: 'Resize Pdf',
+    metaDescription: 'Resize Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'resize pdf free online',
+      'resize pdf no registration',
+      'resize pdf no sign up',
+      'resize pdf no watermark',
+      'resize pdf browser based',
+      'resize pdf for work',
+      'resize pdf for students',
+      'best resize pdf tool',
+      'how to resize pdf',
+      'resize pdf online free',
+      'resize pdf without software',
+      'resize pdf privacy focused',
+      'resize pdf secure',
+      'resize pdf fast',
+      'free resize pdf tool',
+      'online resize pdf free',
+      'resize pdf tool online',
+      'resize pdf for free',
+      'resize pdf no download',
+      'resize pdf web based',
+      'resize pdf open source',
+      'resize pdf wasm',
+      'resize pdf client side',
+      'resize pdf no upload',
+      'resize pdf instant',
+      'resize pdf high quality',
+      'resize pdf no limit',
+      'resize pdf 2025',
+      'resize pdf guide',
+      'resize pdf tutorial',
+    ],
+    description: `
+      <p>Resize Pdf free online with our powerful browser-based tool. Whether you need to resize pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can resize pdf no registration required, with no watermarks added. How to resize pdf for free? Use our online tool—no software needed.</p>
+            <p>Resize Pdf has never been easier. Get started now with the best free resize pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can resize pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free resize pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to resize pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to resize pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to resize pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to resize pdf online?', answer: 'Yes, our resize pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can resize pdf as many times as you need.' },
+      { question: 'Is it safe to resize pdf online?', answer: 'Absolutely. All resize pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to resize pdf?', answer: 'No software installation is required. Our resize pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-svg': {
+    title: 'Pdf To Svg',
+    metaDescription: 'Pdf To Svg gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to svg free online',
+      'pdf to svg no registration',
+      'pdf to svg no sign up',
+      'pdf to svg no watermark',
+      'pdf to svg browser based',
+      'pdf to svg for work',
+      'pdf to svg for students',
+      'best pdf to svg tool',
+      'how to pdf to svg',
+      'pdf to svg online free',
+      'pdf to svg without software',
+      'pdf to svg privacy focused',
+      'pdf to svg secure',
+      'pdf to svg fast',
+      'free pdf to svg tool',
+      'online pdf to svg free',
+      'pdf to svg tool online',
+      'pdf to svg for free',
+      'pdf to svg no download',
+      'pdf to svg web based',
+      'pdf to svg open source',
+      'pdf to svg wasm',
+      'pdf to svg client side',
+      'pdf to svg no upload',
+      'pdf to svg instant',
+      'pdf to svg high quality',
+      'pdf to svg no limit',
+      'pdf to svg 2025',
+      'pdf to svg guide',
+      'pdf to svg tutorial',
+    ],
+    description: `
+      <p>Pdf To Svg free online with our powerful browser-based tool. Whether you need to pdf to svg for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to svg no registration required, with no watermarks added. How to pdf to svg for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Svg has never been easier. Get started now with the best free pdf to svg tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to svg no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to svg tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to svg for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to svg for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to svg for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to svg online?', answer: 'Yes, our pdf to svg tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to svg as many times as you need.' },
+      { question: 'Is it safe to pdf to svg online?', answer: 'Absolutely. All pdf to svg processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to svg?', answer: 'No software installation is required. Our pdf to svg tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-png': {
+    title: 'PDF a PNG',
+    metaDescription: 'Pdf To Png gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to png free online',
+      'pdf to png no registration',
+      'pdf to png no sign up',
+      'pdf to png no watermark',
+      'pdf to png browser based',
+      'pdf to png for work',
+      'pdf to png for students',
+      'best pdf to png tool',
+      'how to pdf to png',
+      'pdf to png online free',
+      'pdf to png without software',
+      'pdf to png privacy focused',
+      'pdf to png secure',
+      'pdf to png fast',
+      'free pdf to png tool',
+      'online pdf to png free',
+      'pdf to png tool online',
+      'pdf to png for free',
+      'pdf to png no download',
+      'pdf to png web based',
+      'pdf to png open source',
+      'pdf to png wasm',
+      'pdf to png client side',
+      'pdf to png no upload',
+      'pdf to png instant',
+      'pdf to png high quality',
+      'pdf to png no limit',
+      'pdf to png 2025',
+      'pdf to png guide',
+      'pdf to png tutorial',
+    ],
+    description: `
+      <p>Pdf To Png free online with our powerful browser-based tool. Whether you need to pdf to png for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to png no registration required, with no watermarks added. How to pdf to png for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Png has never been easier. Get started now with the best free pdf to png tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to png no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to png tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to png for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to png for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to png for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to png online?', answer: 'Yes, our pdf to png tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to png as many times as you need.' },
+      { question: 'Is it safe to pdf to png online?', answer: 'Absolutely. All pdf to png processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to png?', answer: 'No software installation is required. Our pdf to png tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-webp': {
+    title: 'PDF a WebP',
+    metaDescription: 'Pdf To Webp gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to webp free online',
+      'pdf to webp no registration',
+      'pdf to webp no sign up',
+      'pdf to webp no watermark',
+      'pdf to webp browser based',
+      'pdf to webp for work',
+      'pdf to webp for students',
+      'best pdf to webp tool',
+      'how to pdf to webp',
+      'pdf to webp online free',
+      'pdf to webp without software',
+      'pdf to webp privacy focused',
+      'pdf to webp secure',
+      'pdf to webp fast',
+      'free pdf to webp tool',
+      'online pdf to webp free',
+      'pdf to webp tool online',
+      'pdf to webp for free',
+      'pdf to webp no download',
+      'pdf to webp web based',
+      'pdf to webp open source',
+      'pdf to webp wasm',
+      'pdf to webp client side',
+      'pdf to webp no upload',
+      'pdf to webp instant',
+      'pdf to webp high quality',
+      'pdf to webp no limit',
+      'pdf to webp 2025',
+      'pdf to webp guide',
+      'pdf to webp tutorial',
+    ],
+    description: `
+      <p>Pdf To Webp free online with our powerful browser-based tool. Whether you need to pdf to webp for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to webp no registration required, with no watermarks added. How to pdf to webp for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Webp has never been easier. Get started now with the best free pdf to webp tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to webp no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to webp tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to webp for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to webp for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to webp for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to webp online?', answer: 'Yes, our pdf to webp tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to webp as many times as you need.' },
+      { question: 'Is it safe to pdf to webp online?', answer: 'Absolutely. All pdf to webp processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to webp?', answer: 'No software installation is required. Our pdf to webp tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'heic-to-pdf': {
+    title: 'HEIC a PDF',
+    metaDescription: 'Heic To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'heic to pdf free online',
+      'heic to pdf no registration',
+      'heic to pdf no sign up',
+      'heic to pdf no watermark',
+      'heic to pdf browser based',
+      'heic to pdf for work',
+      'heic to pdf for students',
+      'best heic to pdf tool',
+      'how to heic to pdf',
+      'heic to pdf online free',
+      'heic to pdf without software',
+      'heic to pdf privacy focused',
+      'heic to pdf secure',
+      'heic to pdf fast',
+      'free heic to pdf tool',
+      'online heic to pdf free',
+      'heic to pdf tool online',
+      'heic to pdf for free',
+      'heic to pdf no download',
+      'heic to pdf web based',
+      'heic to pdf open source',
+      'heic to pdf wasm',
+      'heic to pdf client side',
+      'heic to pdf no upload',
+      'heic to pdf instant',
+      'heic to pdf high quality',
+      'heic to pdf no limit',
+      'heic to pdf 2025',
+      'heic to pdf guide',
+      'heic to pdf tutorial',
+    ],
+    description: `
+      <p>Heic To Pdf free online with our powerful browser-based tool. Whether you need to heic to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can heic to pdf no registration required, with no watermarks added. How to heic to pdf for free? Use our online tool—no software needed.</p>
+            <p>Heic To Pdf has never been easier. Get started now with the best free heic to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can heic to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free heic to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to heic to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to heic to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to heic to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to heic to pdf online?', answer: 'Yes, our heic to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can heic to pdf as many times as you need.' },
+      { question: 'Is it safe to heic to pdf online?', answer: 'Absolutely. All heic to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to heic to pdf?', answer: 'No software installation is required. Our heic to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'raw-to-pdf': {
+    title: 'Raw To Pdf',
+    metaDescription: 'Raw To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'raw to pdf free online',
+      'raw to pdf no registration',
+      'raw to pdf no sign up',
+      'raw to pdf no watermark',
+      'raw to pdf browser based',
+      'raw to pdf for work',
+      'raw to pdf for students',
+      'best raw to pdf tool',
+      'how to raw to pdf',
+      'raw to pdf online free',
+      'raw to pdf without software',
+      'raw to pdf privacy focused',
+      'raw to pdf secure',
+      'raw to pdf fast',
+      'free raw to pdf tool',
+      'online raw to pdf free',
+      'raw to pdf tool online',
+      'raw to pdf for free',
+      'raw to pdf no download',
+      'raw to pdf web based',
+      'raw to pdf open source',
+      'raw to pdf wasm',
+      'raw to pdf client side',
+      'raw to pdf no upload',
+      'raw to pdf instant',
+      'raw to pdf high quality',
+      'raw to pdf no limit',
+      'raw to pdf 2025',
+      'raw to pdf guide',
+      'raw to pdf tutorial',
+    ],
+    description: `
+      <p>Raw To Pdf free online with our powerful browser-based tool. Whether you need to raw to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can raw to pdf no registration required, with no watermarks added. How to raw to pdf for free? Use our online tool—no software needed.</p>
+            <p>Raw To Pdf has never been easier. Get started now with the best free raw to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can raw to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free raw to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to raw to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to raw to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to raw to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to raw to pdf online?', answer: 'Yes, our raw to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can raw to pdf as many times as you need.' },
+      { question: 'Is it safe to raw to pdf online?', answer: 'Absolutely. All raw to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to raw to pdf?', answer: 'No software installation is required. Our raw to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'tiff-to-pdf': {
+    title: 'TIFF a PDF',
+    metaDescription: 'Tiff To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'tiff to pdf free online',
+      'tiff to pdf no registration',
+      'tiff to pdf no sign up',
+      'tiff to pdf no watermark',
+      'tiff to pdf browser based',
+      'tiff to pdf for work',
+      'tiff to pdf for students',
+      'best tiff to pdf tool',
+      'how to tiff to pdf',
+      'tiff to pdf online free',
+      'tiff to pdf without software',
+      'tiff to pdf privacy focused',
+      'tiff to pdf secure',
+      'tiff to pdf fast',
+      'free tiff to pdf tool',
+      'online tiff to pdf free',
+      'tiff to pdf tool online',
+      'tiff to pdf for free',
+      'tiff to pdf no download',
+      'tiff to pdf web based',
+      'tiff to pdf open source',
+      'tiff to pdf wasm',
+      'tiff to pdf client side',
+      'tiff to pdf no upload',
+      'tiff to pdf instant',
+      'tiff to pdf high quality',
+      'tiff to pdf no limit',
+      'tiff to pdf 2025',
+      'tiff to pdf guide',
+      'tiff to pdf tutorial',
+    ],
+    description: `
+      <p>Tiff To Pdf free online with our powerful browser-based tool. Whether you need to tiff to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can tiff to pdf no registration required, with no watermarks added. How to tiff to pdf for free? Use our online tool—no software needed.</p>
+            <p>Tiff To Pdf has never been easier. Get started now with the best free tiff to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can tiff to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free tiff to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to tiff to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to tiff to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to tiff to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to tiff to pdf online?', answer: 'Yes, our tiff to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can tiff to pdf as many times as you need.' },
+      { question: 'Is it safe to tiff to pdf online?', answer: 'Absolutely. All tiff to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to tiff to pdf?', answer: 'No software installation is required. Our tiff to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'svg-to-pdf': {
+    title: 'SVG a PDF',
+    metaDescription: 'Svg To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'svg to pdf free online',
+      'svg to pdf no registration',
+      'svg to pdf no sign up',
+      'svg to pdf no watermark',
+      'svg to pdf browser based',
+      'svg to pdf for work',
+      'svg to pdf for students',
+      'best svg to pdf tool',
+      'how to svg to pdf',
+      'svg to pdf online free',
+      'svg to pdf without software',
+      'svg to pdf privacy focused',
+      'svg to pdf secure',
+      'svg to pdf fast',
+      'free svg to pdf tool',
+      'online svg to pdf free',
+      'svg to pdf tool online',
+      'svg to pdf for free',
+      'svg to pdf no download',
+      'svg to pdf web based',
+      'svg to pdf open source',
+      'svg to pdf wasm',
+      'svg to pdf client side',
+      'svg to pdf no upload',
+      'svg to pdf instant',
+      'svg to pdf high quality',
+      'svg to pdf no limit',
+      'svg to pdf 2025',
+      'svg to pdf guide',
+      'svg to pdf tutorial',
+    ],
+    description: `
+      <p>Svg To Pdf free online with our powerful browser-based tool. Whether you need to svg to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can svg to pdf no registration required, with no watermarks added. How to svg to pdf for free? Use our online tool—no software needed.</p>
+            <p>Svg To Pdf has never been easier. Get started now with the best free svg to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can svg to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free svg to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to svg to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to svg to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to svg to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to svg to pdf online?', answer: 'Yes, our svg to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can svg to pdf as many times as you need.' },
+      { question: 'Is it safe to svg to pdf online?', answer: 'Absolutely. All svg to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to svg to pdf?', answer: 'No software installation is required. Our svg to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'png-to-pdf': {
+    title: 'PNG a PDF',
+    metaDescription: 'Png To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'png to pdf free online',
+      'png to pdf no registration',
+      'png to pdf no sign up',
+      'png to pdf no watermark',
+      'png to pdf browser based',
+      'png to pdf for work',
+      'png to pdf for students',
+      'best png to pdf tool',
+      'how to png to pdf',
+      'png to pdf online free',
+      'png to pdf without software',
+      'png to pdf privacy focused',
+      'png to pdf secure',
+      'png to pdf fast',
+      'free png to pdf tool',
+      'online png to pdf free',
+      'png to pdf tool online',
+      'png to pdf for free',
+      'png to pdf no download',
+      'png to pdf web based',
+      'png to pdf open source',
+      'png to pdf wasm',
+      'png to pdf client side',
+      'png to pdf no upload',
+      'png to pdf instant',
+      'png to pdf high quality',
+      'png to pdf no limit',
+      'png to pdf 2025',
+      'png to pdf guide',
+      'png to pdf tutorial',
+    ],
+    description: `
+      <p>Png To Pdf free online with our powerful browser-based tool. Whether you need to png to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can png to pdf no registration required, with no watermarks added. How to png to pdf for free? Use our online tool—no software needed.</p>
+            <p>Png To Pdf has never been easier. Get started now with the best free png to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can png to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free png to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to png to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to png to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to png to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to png to pdf online?', answer: 'Yes, our png to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can png to pdf as many times as you need.' },
+      { question: 'Is it safe to png to pdf online?', answer: 'Absolutely. All png to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to png to pdf?', answer: 'No software installation is required. Our png to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'webp-to-pdf': {
+    title: 'WebP a PDF',
+    metaDescription: 'Webp To Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'webp to pdf free online',
+      'webp to pdf no registration',
+      'webp to pdf no sign up',
+      'webp to pdf no watermark',
+      'webp to pdf browser based',
+      'webp to pdf for work',
+      'webp to pdf for students',
+      'best webp to pdf tool',
+      'how to webp to pdf',
+      'webp to pdf online free',
+      'webp to pdf without software',
+      'webp to pdf privacy focused',
+      'webp to pdf secure',
+      'webp to pdf fast',
+      'free webp to pdf tool',
+      'online webp to pdf free',
+      'webp to pdf tool online',
+      'webp to pdf for free',
+      'webp to pdf no download',
+      'webp to pdf web based',
+      'webp to pdf open source',
+      'webp to pdf wasm',
+      'webp to pdf client side',
+      'webp to pdf no upload',
+      'webp to pdf instant',
+      'webp to pdf high quality',
+      'webp to pdf no limit',
+      'webp to pdf 2025',
+      'webp to pdf guide',
+      'webp to pdf tutorial',
+    ],
+    description: `
+      <p>Webp To Pdf free online with our powerful browser-based tool. Whether you need to webp to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can webp to pdf no registration required, with no watermarks added. How to webp to pdf for free? Use our online tool—no software needed.</p>
+            <p>Webp To Pdf has never been easier. Get started now with the best free webp to pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can webp to pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free webp to pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to webp to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to webp to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to webp to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to webp to pdf online?', answer: 'Yes, our webp to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can webp to pdf as many times as you need.' },
+      { question: 'Is it safe to webp to pdf online?', answer: 'Absolutely. All webp to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to webp to pdf?', answer: 'No software installation is required. Our webp to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'repair-pdf': {
+    title: 'Reparar PDF',
+    metaDescription: 'Repair Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'repair pdf free online',
+      'repair pdf no registration',
+      'repair pdf no sign up',
+      'repair pdf no watermark',
+      'repair pdf browser based',
+      'repair pdf for work',
+      'repair pdf for students',
+      'best repair pdf tool',
+      'how to repair pdf',
+      'repair pdf online free',
+      'repair pdf without software',
+      'repair pdf privacy focused',
+      'repair pdf secure',
+      'repair pdf fast',
+      'free repair pdf tool',
+      'online repair pdf free',
+      'repair pdf tool online',
+      'repair pdf for free',
+      'repair pdf no download',
+      'repair pdf web based',
+      'repair pdf open source',
+      'repair pdf wasm',
+      'repair pdf client side',
+      'repair pdf no upload',
+      'repair pdf instant',
+      'repair pdf high quality',
+      'repair pdf no limit',
+      'repair pdf 2025',
+      'repair pdf guide',
+      'repair pdf tutorial',
+    ],
+    description: `
+      <p>Repair Pdf free online with our powerful browser-based tool. Whether you need to repair pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can repair pdf no registration required, with no watermarks added. How to repair pdf for free? Use our online tool—no software needed.</p>
+            <p>Repair Pdf has never been easier. Get started now with the best free repair pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can repair pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free repair pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to repair pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to repair pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to repair pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to repair pdf online?', answer: 'Yes, our repair pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can repair pdf as many times as you need.' },
+      { question: 'Is it safe to repair pdf online?', answer: 'Absolutely. All repair pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to repair pdf?', answer: 'No software installation is required. Our repair pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'ocr-pdf': {
+    title: 'OCR PDF',
+    metaDescription: 'Ocr Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'ocr pdf free online',
+      'ocr pdf no registration',
+      'ocr pdf no sign up',
+      'ocr pdf no watermark',
+      'ocr pdf browser based',
+      'ocr pdf for work',
+      'ocr pdf for students',
+      'best ocr pdf tool',
+      'how to ocr pdf',
+      'ocr pdf online free',
+      'ocr pdf without software',
+      'ocr pdf privacy focused',
+      'ocr pdf secure',
+      'ocr pdf fast',
+      'free ocr pdf tool',
+      'online ocr pdf free',
+      'ocr pdf tool online',
+      'ocr pdf for free',
+      'ocr pdf no download',
+      'ocr pdf web based',
+      'ocr pdf open source',
+      'ocr pdf wasm',
+      'ocr pdf client side',
+      'ocr pdf no upload',
+      'ocr pdf instant',
+      'ocr pdf high quality',
+      'ocr pdf no limit',
+      'ocr pdf 2025',
+      'ocr pdf guide',
+      'ocr pdf tutorial',
+    ],
+    description: `
+      <p>Ocr Pdf free online with our powerful browser-based tool. Whether you need to ocr pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can ocr pdf no registration required, with no watermarks added. How to ocr pdf for free? Use our online tool—no software needed.</p>
+            <p>Ocr Pdf has never been easier. Get started now with the best free ocr pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can ocr pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free ocr pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to ocr pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to ocr pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to ocr pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to ocr pdf online?', answer: 'Yes, our ocr pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can ocr pdf as many times as you need.' },
+      { question: 'Is it safe to ocr pdf online?', answer: 'Absolutely. All ocr pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to ocr pdf?', answer: 'No software installation is required. Our ocr pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'flaten-pdf': {
+    title: 'Flaten Pdf',
+    metaDescription: 'Flaten Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'flaten pdf free online',
+      'flaten pdf no registration',
+      'flaten pdf no sign up',
+      'flaten pdf no watermark',
+      'flaten pdf browser based',
+      'flaten pdf for work',
+      'flaten pdf for students',
+      'best flaten pdf tool',
+      'how to flaten pdf',
+      'flaten pdf online free',
+      'flaten pdf without software',
+      'flaten pdf privacy focused',
+      'flaten pdf secure',
+      'flaten pdf fast',
+      'free flaten pdf tool',
+      'online flaten pdf free',
+      'flaten pdf tool online',
+      'flaten pdf for free',
+      'flaten pdf no download',
+      'flaten pdf web based',
+      'flaten pdf open source',
+      'flaten pdf wasm',
+      'flaten pdf client side',
+      'flaten pdf no upload',
+      'flaten pdf instant',
+      'flaten pdf high quality',
+      'flaten pdf no limit',
+      'flaten pdf 2025',
+      'flaten pdf guide',
+      'flaten pdf tutorial',
+    ],
+    description: `
+      <p>Flaten Pdf free online with our powerful browser-based tool. Whether you need to flaten pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can flaten pdf no registration required, with no watermarks added. How to flaten pdf for free? Use our online tool—no software needed.</p>
+            <p>Flaten Pdf has never been easier. Get started now with the best free flaten pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can flaten pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free flaten pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to flaten pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to flaten pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to flaten pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to flaten pdf online?', answer: 'Yes, our flaten pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can flaten pdf as many times as you need.' },
+      { question: 'Is it safe to flaten pdf online?', answer: 'Absolutely. All flaten pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to flaten pdf?', answer: 'No software installation is required. Our flaten pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-pdfa': {
+    title: 'PDF a PDF/A',
+    metaDescription: 'Pdf To Pdfa gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to pdfa free online',
+      'pdf to pdfa no registration',
+      'pdf to pdfa no sign up',
+      'pdf to pdfa no watermark',
+      'pdf to pdfa browser based',
+      'pdf to pdfa for work',
+      'pdf to pdfa for students',
+      'best pdf to pdfa tool',
+      'how to pdf to pdfa',
+      'pdf to pdfa online free',
+      'pdf to pdfa without software',
+      'pdf to pdfa privacy focused',
+      'pdf to pdfa secure',
+      'pdf to pdfa fast',
+      'free pdf to pdfa tool',
+      'online pdf to pdfa free',
+      'pdf to pdfa tool online',
+      'pdf to pdfa for free',
+      'pdf to pdfa no download',
+      'pdf to pdfa web based',
+      'pdf to pdfa open source',
+      'pdf to pdfa wasm',
+      'pdf to pdfa client side',
+      'pdf to pdfa no upload',
+      'pdf to pdfa instant',
+      'pdf to pdfa high quality',
+      'pdf to pdfa no limit',
+      'pdf to pdfa 2025',
+      'pdf to pdfa guide',
+      'pdf to pdfa tutorial',
+    ],
+    description: `
+      <p>Pdf To Pdfa free online with our powerful browser-based tool. Whether you need to pdf to pdfa for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to pdfa no registration required, with no watermarks added. How to pdf to pdfa for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Pdfa has never been easier. Get started now with the best free pdf to pdfa tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to pdfa no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to pdfa tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to pdfa for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to pdfa for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to pdfa for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to pdfa online?', answer: 'Yes, our pdf to pdfa tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to pdfa as many times as you need.' },
+      { question: 'Is it safe to pdf to pdfa online?', answer: 'Absolutely. All pdf to pdfa processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to pdfa?', answer: 'No software installation is required. Our pdf to pdfa tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'sign-pdf': {
+    title: 'Firmar PDF',
+    metaDescription: 'Sign Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'sign pdf free online',
+      'sign pdf no registration',
+      'sign pdf no sign up',
+      'sign pdf no watermark',
+      'sign pdf browser based',
+      'sign pdf for work',
+      'sign pdf for students',
+      'best sign pdf tool',
+      'how to sign pdf',
+      'sign pdf online free',
+      'sign pdf without software',
+      'sign pdf privacy focused',
+      'sign pdf secure',
+      'sign pdf fast',
+      'free sign pdf tool',
+      'online sign pdf free',
+      'sign pdf tool online',
+      'sign pdf for free',
+      'sign pdf no download',
+      'sign pdf web based',
+      'sign pdf open source',
+      'sign pdf wasm',
+      'sign pdf client side',
+      'sign pdf no upload',
+      'sign pdf instant',
+      'sign pdf high quality',
+      'sign pdf no limit',
+      'sign pdf 2025',
+      'sign pdf guide',
+      'sign pdf tutorial',
+    ],
+    description: `
+      <p>Sign Pdf free online with our powerful browser-based tool. Whether you need to sign pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can sign pdf no registration required, with no watermarks added. How to sign pdf for free? Use our online tool—no software needed.</p>
+            <p>Sign Pdf has never been easier. Get started now with the best free sign pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can sign pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free sign pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to sign pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to sign pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to sign pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to sign pdf online?', answer: 'Yes, our sign pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can sign pdf as many times as you need.' },
+      { question: 'Is it safe to sign pdf online?', answer: 'Absolutely. All sign pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to sign pdf?', answer: 'No software installation is required. Our sign pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'annotate-pdf': {
+    title: 'Annotate Pdf',
+    metaDescription: 'Annotate Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'annotate pdf free online',
+      'annotate pdf no registration',
+      'annotate pdf no sign up',
+      'annotate pdf no watermark',
+      'annotate pdf browser based',
+      'annotate pdf for work',
+      'annotate pdf for students',
+      'best annotate pdf tool',
+      'how to annotate pdf',
+      'annotate pdf online free',
+      'annotate pdf without software',
+      'annotate pdf privacy focused',
+      'annotate pdf secure',
+      'annotate pdf fast',
+      'free annotate pdf tool',
+      'online annotate pdf free',
+      'annotate pdf tool online',
+      'annotate pdf for free',
+      'annotate pdf no download',
+      'annotate pdf web based',
+      'annotate pdf open source',
+      'annotate pdf wasm',
+      'annotate pdf client side',
+      'annotate pdf no upload',
+      'annotate pdf instant',
+      'annotate pdf high quality',
+      'annotate pdf no limit',
+      'annotate pdf 2025',
+      'annotate pdf guide',
+      'annotate pdf tutorial',
+    ],
+    description: `
+      <p>Annotate Pdf free online with our powerful browser-based tool. Whether you need to annotate pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can annotate pdf no registration required, with no watermarks added. How to annotate pdf for free? Use our online tool—no software needed.</p>
+            <p>Annotate Pdf has never been easier. Get started now with the best free annotate pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can annotate pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free annotate pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to annotate pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to annotate pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to annotate pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to annotate pdf online?', answer: 'Yes, our annotate pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can annotate pdf as many times as you need.' },
+      { question: 'Is it safe to annotate pdf online?', answer: 'Absolutely. All annotate pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to annotate pdf?', answer: 'No software installation is required. Our annotate pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'redact-pdf': {
+    title: 'Redact Pdf',
+    metaDescription: 'Redact Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'redact pdf free online',
+      'redact pdf no registration',
+      'redact pdf no sign up',
+      'redact pdf no watermark',
+      'redact pdf browser based',
+      'redact pdf for work',
+      'redact pdf for students',
+      'best redact pdf tool',
+      'how to redact pdf',
+      'redact pdf online free',
+      'redact pdf without software',
+      'redact pdf privacy focused',
+      'redact pdf secure',
+      'redact pdf fast',
+      'free redact pdf tool',
+      'online redact pdf free',
+      'redact pdf tool online',
+      'redact pdf for free',
+      'redact pdf no download',
+      'redact pdf web based',
+      'redact pdf open source',
+      'redact pdf wasm',
+      'redact pdf client side',
+      'redact pdf no upload',
+      'redact pdf instant',
+      'redact pdf high quality',
+      'redact pdf no limit',
+      'redact pdf 2025',
+      'redact pdf guide',
+      'redact pdf tutorial',
+    ],
+    description: `
+      <p>Redact Pdf free online with our powerful browser-based tool. Whether you need to redact pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can redact pdf no registration required, with no watermarks added. How to redact pdf for free? Use our online tool—no software needed.</p>
+            <p>Redact Pdf has never been easier. Get started now with the best free redact pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can redact pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free redact pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to redact pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to redact pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to redact pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to redact pdf online?', answer: 'Yes, our redact pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can redact pdf as many times as you need.' },
+      { question: 'Is it safe to redact pdf online?', answer: 'Absolutely. All redact pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to redact pdf?', answer: 'No software installation is required. Our redact pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'compare-pdf': {
+    title: 'Compare Pdf',
+    metaDescription: 'Compare Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'compare pdf free online',
+      'compare pdf no registration',
+      'compare pdf no sign up',
+      'compare pdf no watermark',
+      'compare pdf browser based',
+      'compare pdf for work',
+      'compare pdf for students',
+      'best compare pdf tool',
+      'how to compare pdf',
+      'compare pdf online free',
+      'compare pdf without software',
+      'compare pdf privacy focused',
+      'compare pdf secure',
+      'compare pdf fast',
+      'free compare pdf tool',
+      'online compare pdf free',
+      'compare pdf tool online',
+      'compare pdf for free',
+      'compare pdf no download',
+      'compare pdf web based',
+      'compare pdf open source',
+      'compare pdf wasm',
+      'compare pdf client side',
+      'compare pdf no upload',
+      'compare pdf instant',
+      'compare pdf high quality',
+      'compare pdf no limit',
+      'compare pdf 2025',
+      'compare pdf guide',
+      'compare pdf tutorial',
+    ],
+    description: `
+      <p>Compare Pdf free online with our powerful browser-based tool. Whether you need to compare pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can compare pdf no registration required, with no watermarks added. How to compare pdf for free? Use our online tool—no software needed.</p>
+            <p>Compare Pdf has never been easier. Get started now with the best free compare pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can compare pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free compare pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to compare pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to compare pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to compare pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to compare pdf online?', answer: 'Yes, our compare pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can compare pdf as many times as you need.' },
+      { question: 'Is it safe to compare pdf online?', answer: 'Absolutely. All compare pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to compare pdf?', answer: 'No software installation is required. Our compare pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'bookmark-pdf': {
+    title: 'Bookmark Pdf',
+    metaDescription: 'Bookmark Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'bookmark pdf free online',
+      'bookmark pdf no registration',
+      'bookmark pdf no sign up',
+      'bookmark pdf no watermark',
+      'bookmark pdf browser based',
+      'bookmark pdf for work',
+      'bookmark pdf for students',
+      'best bookmark pdf tool',
+      'how to bookmark pdf',
+      'bookmark pdf online free',
+      'bookmark pdf without software',
+      'bookmark pdf privacy focused',
+      'bookmark pdf secure',
+      'bookmark pdf fast',
+      'free bookmark pdf tool',
+      'online bookmark pdf free',
+      'bookmark pdf tool online',
+      'bookmark pdf for free',
+      'bookmark pdf no download',
+      'bookmark pdf web based',
+      'bookmark pdf open source',
+      'bookmark pdf wasm',
+      'bookmark pdf client side',
+      'bookmark pdf no upload',
+      'bookmark pdf instant',
+      'bookmark pdf high quality',
+      'bookmark pdf no limit',
+      'bookmark pdf 2025',
+      'bookmark pdf guide',
+      'bookmark pdf tutorial',
+    ],
+    description: `
+      <p>Bookmark Pdf free online with our powerful browser-based tool. Whether you need to bookmark pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can bookmark pdf no registration required, with no watermarks added. How to bookmark pdf for free? Use our online tool—no software needed.</p>
+            <p>Bookmark Pdf has never been easier. Get started now with the best free bookmark pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can bookmark pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free bookmark pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to bookmark pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to bookmark pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to bookmark pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to bookmark pdf online?', answer: 'Yes, our bookmark pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can bookmark pdf as many times as you need.' },
+      { question: 'Is it safe to bookmark pdf online?', answer: 'Absolutely. All bookmark pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to bookmark pdf?', answer: 'No software installation is required. Our bookmark pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'header-footer-pdf': {
+    title: 'Header Footer Pdf',
+    metaDescription: 'Header Footer Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'header footer pdf free online',
+      'header footer pdf no registration',
+      'header footer pdf no sign up',
+      'header footer pdf no watermark',
+      'header footer pdf browser based',
+      'header footer pdf for work',
+      'header footer pdf for students',
+      'best header footer pdf tool',
+      'how to header footer pdf',
+      'header footer pdf online free',
+      'header footer pdf without software',
+      'header footer pdf privacy focused',
+      'header footer pdf secure',
+      'header footer pdf fast',
+      'free header footer pdf tool',
+      'online header footer pdf free',
+      'header footer pdf tool online',
+      'header footer pdf for free',
+      'header footer pdf no download',
+      'header footer pdf web based',
+      'header footer pdf open source',
+      'header footer pdf wasm',
+      'header footer pdf client side',
+      'header footer pdf no upload',
+      'header footer pdf instant',
+      'header footer pdf high quality',
+      'header footer pdf no limit',
+      'header footer pdf 2025',
+      'header footer pdf guide',
+      'header footer pdf tutorial',
+    ],
+    description: `
+      <p>Header Footer Pdf free online with our powerful browser-based tool. Whether you need to header footer pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can header footer pdf no registration required, with no watermarks added. How to header footer pdf for free? Use our online tool—no software needed.</p>
+            <p>Header Footer Pdf has never been easier. Get started now with the best free header footer pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can header footer pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free header footer pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to header footer pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to header footer pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to header footer pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to header footer pdf online?', answer: 'Yes, our header footer pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can header footer pdf as many times as you need.' },
+      { question: 'Is it safe to header footer pdf online?', answer: 'Absolutely. All header footer pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to header footer pdf?', answer: 'No software installation is required. Our header footer pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'background-pdf': {
+    title: 'Background Pdf',
+    metaDescription: 'Background Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'background pdf free online',
+      'background pdf no registration',
+      'background pdf no sign up',
+      'background pdf no watermark',
+      'background pdf browser based',
+      'background pdf for work',
+      'background pdf for students',
+      'best background pdf tool',
+      'how to background pdf',
+      'background pdf online free',
+      'background pdf without software',
+      'background pdf privacy focused',
+      'background pdf secure',
+      'background pdf fast',
+      'free background pdf tool',
+      'online background pdf free',
+      'background pdf tool online',
+      'background pdf for free',
+      'background pdf no download',
+      'background pdf web based',
+      'background pdf open source',
+      'background pdf wasm',
+      'background pdf client side',
+      'background pdf no upload',
+      'background pdf instant',
+      'background pdf high quality',
+      'background pdf no limit',
+      'background pdf 2025',
+      'background pdf guide',
+      'background pdf tutorial',
+    ],
+    description: `
+      <p>Background Pdf free online with our powerful browser-based tool. Whether you need to background pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can background pdf no registration required, with no watermarks added. How to background pdf for free? Use our online tool—no software needed.</p>
+            <p>Background Pdf has never been easier. Get started now with the best free background pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can background pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free background pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to background pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to background pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to background pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to background pdf online?', answer: 'Yes, our background pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can background pdf as many times as you need.' },
+      { question: 'Is it safe to background pdf online?', answer: 'Absolutely. All background pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to background pdf?', answer: 'No software installation is required. Our background pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'bates-numbering': {
+    title: 'Bates Numbering',
+    metaDescription: 'Bates Numbering gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'bates numbering free online',
+      'bates numbering no registration',
+      'bates numbering no sign up',
+      'bates numbering no watermark',
+      'bates numbering browser based',
+      'bates numbering for work',
+      'bates numbering for students',
+      'best bates numbering tool',
+      'how to bates numbering',
+      'bates numbering online free',
+      'bates numbering without software',
+      'bates numbering privacy focused',
+      'bates numbering secure',
+      'bates numbering fast',
+      'free bates numbering tool',
+      'online bates numbering free',
+      'bates numbering tool online',
+      'bates numbering for free',
+      'bates numbering no download',
+      'bates numbering web based',
+      'bates numbering open source',
+      'bates numbering wasm',
+      'bates numbering client side',
+      'bates numbering no upload',
+      'bates numbering instant',
+      'bates numbering high quality',
+      'bates numbering no limit',
+      'bates numbering 2025',
+      'bates numbering guide',
+      'bates numbering tutorial',
+    ],
+    description: `
+      <p>Bates Numbering free online with our powerful browser-based tool. Whether you need to bates numbering for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can bates numbering no registration required, with no watermarks added. How to bates numbering for free? Use our online tool—no software needed.</p>
+            <p>Bates Numbering has never been easier. Get started now with the best free bates numbering tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can bates numbering no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free bates numbering tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to bates numbering for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to bates numbering for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to bates numbering for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to bates numbering online?', answer: 'Yes, our bates numbering tool is completely free to use. No registration, no sign-up, no credit card required. You can bates numbering as many times as you need.' },
+      { question: 'Is it safe to bates numbering online?', answer: 'Absolutely. All bates numbering processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to bates numbering?', answer: 'No software installation is required. Our bates numbering tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-grayscale': {
+    title: 'Pdf To Grayscale',
+    metaDescription: 'Pdf To Grayscale gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to grayscale free online',
+      'pdf to grayscale no registration',
+      'pdf to grayscale no sign up',
+      'pdf to grayscale no watermark',
+      'pdf to grayscale browser based',
+      'pdf to grayscale for work',
+      'pdf to grayscale for students',
+      'best pdf to grayscale tool',
+      'how to pdf to grayscale',
+      'pdf to grayscale online free',
+      'pdf to grayscale without software',
+      'pdf to grayscale privacy focused',
+      'pdf to grayscale secure',
+      'pdf to grayscale fast',
+      'free pdf to grayscale tool',
+      'online pdf to grayscale free',
+      'pdf to grayscale tool online',
+      'pdf to grayscale for free',
+      'pdf to grayscale no download',
+      'pdf to grayscale web based',
+      'pdf to grayscale open source',
+      'pdf to grayscale wasm',
+      'pdf to grayscale client side',
+      'pdf to grayscale no upload',
+      'pdf to grayscale instant',
+      'pdf to grayscale high quality',
+      'pdf to grayscale no limit',
+      'pdf to grayscale 2025',
+      'pdf to grayscale guide',
+      'pdf to grayscale tutorial',
+    ],
+    description: `
+      <p>Pdf To Grayscale free online with our powerful browser-based tool. Whether you need to pdf to grayscale for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to grayscale no registration required, with no watermarks added. How to pdf to grayscale for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Grayscale has never been easier. Get started now with the best free pdf to grayscale tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to grayscale no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to grayscale tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to grayscale for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to grayscale for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to grayscale for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to grayscale online?', answer: 'Yes, our pdf to grayscale tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to grayscale as many times as you need.' },
+      { question: 'Is it safe to pdf to grayscale online?', answer: 'Absolutely. All pdf to grayscale processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to grayscale?', answer: 'No software installation is required. Our pdf to grayscale tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'optimize-pdf': {
+    title: 'Optimize Pdf',
+    metaDescription: 'Optimize Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'optimize pdf free online',
+      'optimize pdf no registration',
+      'optimize pdf no sign up',
+      'optimize pdf no watermark',
+      'optimize pdf browser based',
+      'optimize pdf for work',
+      'optimize pdf for students',
+      'best optimize pdf tool',
+      'how to optimize pdf',
+      'optimize pdf online free',
+      'optimize pdf without software',
+      'optimize pdf privacy focused',
+      'optimize pdf secure',
+      'optimize pdf fast',
+      'free optimize pdf tool',
+      'online optimize pdf free',
+      'optimize pdf tool online',
+      'optimize pdf for free',
+      'optimize pdf no download',
+      'optimize pdf web based',
+      'optimize pdf open source',
+      'optimize pdf wasm',
+      'optimize pdf client side',
+      'optimize pdf no upload',
+      'optimize pdf instant',
+      'optimize pdf high quality',
+      'optimize pdf no limit',
+      'optimize pdf 2025',
+      'optimize pdf guide',
+      'optimize pdf tutorial',
+    ],
+    description: `
+      <p>Optimize Pdf free online with our advanced PDF compression tool. Reduce file size without significant quality loss. Perfect for email attachments and web optimization.</p>
+            <p>Upload your PDF file and choose compression level. You can compress PDF no registration required. The compressed PDF maintains original formatting.</p>
+            <p>All compression happens locally in your browser. How to compress PDF for free? Use our online PDF compressor.</p>
+            <p>Try our free compress PDF online tool now. The fastest and most secure way to reduce PDF file size online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can optimize pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free optimize pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to optimize pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to optimize pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to optimize pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to optimize pdf online?', answer: 'Yes, our optimize pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can optimize pdf as many times as you need.' },
+      { question: 'Is it safe to optimize pdf online?', answer: 'Absolutely. All optimize pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to optimize pdf?', answer: 'No software installation is required. Our optimize pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'form-filler': {
+    title: 'Rellenar Formularios',
+    metaDescription: 'Form Filler gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'form filler free online',
+      'form filler no registration',
+      'form filler no sign up',
+      'form filler no watermark',
+      'form filler browser based',
+      'form filler for work',
+      'form filler for students',
+      'best form filler tool',
+      'how to form filler',
+      'form filler online free',
+      'form filler without software',
+      'form filler privacy focused',
+      'form filler secure',
+      'form filler fast',
+      'free form filler tool',
+      'online form filler free',
+      'form filler tool online',
+      'form filler for free',
+      'form filler no download',
+      'form filler web based',
+      'form filler open source',
+      'form filler wasm',
+      'form filler client side',
+      'form filler no upload',
+      'form filler instant',
+      'form filler high quality',
+      'form filler no limit',
+      'form filler 2025',
+      'form filler guide',
+      'form filler tutorial',
+    ],
+    description: `
+      <p>Form Filler free online with our powerful browser-based tool. Whether you need to form filler for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can form filler no registration required, with no watermarks added. How to form filler for free? Use our online tool—no software needed.</p>
+            <p>Form Filler has never been easier. Get started now with the best free form filler tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can form filler no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free form filler tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to form filler for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to form filler for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to form filler for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to form filler online?', answer: 'Yes, our form filler tool is completely free to use. No registration, no sign-up, no credit card required. You can form filler as many times as you need.' },
+      { question: 'Is it safe to form filler online?', answer: 'Absolutely. All form filler processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to form filler?', answer: 'No software installation is required. Our form filler tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'create-pdf': {
+    title: 'Create Pdf',
+    metaDescription: 'Create Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'create pdf free online',
+      'create pdf no registration',
+      'create pdf no sign up',
+      'create pdf no watermark',
+      'create pdf browser based',
+      'create pdf for work',
+      'create pdf for students',
+      'best create pdf tool',
+      'how to create pdf',
+      'create pdf online free',
+      'create pdf without software',
+      'create pdf privacy focused',
+      'create pdf secure',
+      'create pdf fast',
+      'free create pdf tool',
+      'online create pdf free',
+      'create pdf tool online',
+      'create pdf for free',
+      'create pdf no download',
+      'create pdf web based',
+      'create pdf open source',
+      'create pdf wasm',
+      'create pdf client side',
+      'create pdf no upload',
+      'create pdf instant',
+      'create pdf high quality',
+      'create pdf no limit',
+      'create pdf 2025',
+      'create pdf guide',
+      'create pdf tutorial',
+    ],
+    description: `
+      <p>Create Pdf free online with our powerful browser-based tool. Whether you need to create pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can create pdf no registration required, with no watermarks added. How to create pdf for free? Use our online tool—no software needed.</p>
+            <p>Create Pdf has never been easier. Get started now with the best free create pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can create pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free create pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to create pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to create pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to create pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to create pdf online?', answer: 'Yes, our create pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can create pdf as many times as you need.' },
+      { question: 'Is it safe to create pdf online?', answer: 'Absolutely. All create pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to create pdf?', answer: 'No software installation is required. Our create pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'merge-pdf-template': {
+    title: 'Merge Pdf Template',
+    metaDescription: 'Merge Pdf Template gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'merge pdf template free online',
+      'merge pdf template no registration',
+      'merge pdf template no sign up',
+      'merge pdf template no watermark',
+      'merge pdf template browser based',
+      'merge pdf template for work',
+      'merge pdf template for students',
+      'best merge pdf template tool',
+      'how to merge pdf template',
+      'merge pdf template online free',
+      'merge pdf template without software',
+      'merge pdf template privacy focused',
+      'merge pdf template secure',
+      'merge pdf template fast',
+      'free merge pdf template tool',
+      'online merge pdf template free',
+      'merge pdf template tool online',
+      'merge pdf template for free',
+      'merge pdf template no download',
+      'merge pdf template web based',
+      'merge pdf template open source',
+      'merge pdf template wasm',
+      'merge pdf template client side',
+      'merge pdf template no upload',
+      'merge pdf template instant',
+      'merge pdf template high quality',
+      'merge pdf template no limit',
+      'merge pdf template 2025',
+      'merge pdf template guide',
+      'merge pdf template tutorial',
+    ],
+    description: `
+      <p>Merge Pdf Template free online with our powerful PDF merger tool. Combine multiple PDF documents into a single file quickly and securely. Perfect for office workers, students, and anyone who needs to merge PDF files.</p>
+            <p>Simply upload your PDF files, arrange them in your desired order using our intuitive drag-and-drop interface, and merge them into one professional document. You can merge PDF files no registration required.</p>
+            <p>All processing happens locally in your browser using WebAssembly technology, ensuring complete privacy. No files are uploaded to any server. How to merge PDF files for free? Simply use our online PDF merger.</p>
+            <p>Try our free merge PDF online tool now. Whether you need to merge PDF for work or study, our tool delivers high-quality results every time.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can merge pdf template no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free merge pdf template tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to merge pdf template for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to merge pdf template for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to merge pdf template for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to merge pdf template online?', answer: 'Yes, our merge pdf template tool is completely free to use. No registration, no sign-up, no credit card required. You can merge pdf template as many times as you need.' },
+      { question: 'Is it safe to merge pdf template online?', answer: 'Absolutely. All merge pdf template processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to merge pdf template?', answer: 'No software installation is required. Our merge pdf template tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'split-pdf-template': {
+    title: 'Split Pdf Template',
+    metaDescription: 'Split Pdf Template gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'split pdf template free online',
+      'split pdf template no registration',
+      'split pdf template no sign up',
+      'split pdf template no watermark',
+      'split pdf template browser based',
+      'split pdf template for work',
+      'split pdf template for students',
+      'best split pdf template tool',
+      'how to split pdf template',
+      'split pdf template online free',
+      'split pdf template without software',
+      'split pdf template privacy focused',
+      'split pdf template secure',
+      'split pdf template fast',
+      'free split pdf template tool',
+      'online split pdf template free',
+      'split pdf template tool online',
+      'split pdf template for free',
+      'split pdf template no download',
+      'split pdf template web based',
+      'split pdf template open source',
+      'split pdf template wasm',
+      'split pdf template client side',
+      'split pdf template no upload',
+      'split pdf template instant',
+      'split pdf template high quality',
+      'split pdf template no limit',
+      'split pdf template 2025',
+      'split pdf template guide',
+      'split pdf template tutorial',
+    ],
+    description: `
+      <p>Split Pdf Template free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
+            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
+            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
+            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can split pdf template no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free split pdf template tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to split pdf template for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to split pdf template for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to split pdf template for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to split pdf template online?', answer: 'Yes, our split pdf template tool is completely free to use. No registration, no sign-up, no credit card required. You can split pdf template as many times as you need.' },
+      { question: 'Is it safe to split pdf template online?', answer: 'Absolutely. All split pdf template processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to split pdf template?', answer: 'No software installation is required. Our split pdf template tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'encrypt-pdf': {
+    title: 'Cifrar PDF',
+    metaDescription: 'Encrypt Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'encrypt pdf free online',
+      'encrypt pdf no registration',
+      'encrypt pdf no sign up',
+      'encrypt pdf no watermark',
+      'encrypt pdf browser based',
+      'encrypt pdf for work',
+      'encrypt pdf for students',
+      'best encrypt pdf tool',
+      'how to encrypt pdf',
+      'encrypt pdf online free',
+      'encrypt pdf without software',
+      'encrypt pdf privacy focused',
+      'encrypt pdf secure',
+      'encrypt pdf fast',
+      'free encrypt pdf tool',
+      'online encrypt pdf free',
+      'encrypt pdf tool online',
+      'encrypt pdf for free',
+      'encrypt pdf no download',
+      'encrypt pdf web based',
+      'encrypt pdf open source',
+      'encrypt pdf wasm',
+      'encrypt pdf client side',
+      'encrypt pdf no upload',
+      'encrypt pdf instant',
+      'encrypt pdf high quality',
+      'encrypt pdf no limit',
+      'encrypt pdf 2025',
+      'encrypt pdf guide',
+      'encrypt pdf tutorial',
+    ],
+    description: `
+      <p>Encrypt Pdf free online with our powerful browser-based tool. Whether you need to encrypt pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can encrypt pdf no registration required, with no watermarks added. How to encrypt pdf for free? Use our online tool—no software needed.</p>
+            <p>Encrypt Pdf has never been easier. Get started now with the best free encrypt pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can encrypt pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free encrypt pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to encrypt pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to encrypt pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to encrypt pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to encrypt pdf online?', answer: 'Yes, our encrypt pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can encrypt pdf as many times as you need.' },
+      { question: 'Is it safe to encrypt pdf online?', answer: 'Absolutely. All encrypt pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to encrypt pdf?', answer: 'No software installation is required. Our encrypt pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'decrypt-pdf': {
+    title: 'Descifrar PDF',
+    metaDescription: 'Decrypt Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'decrypt pdf free online',
+      'decrypt pdf no registration',
+      'decrypt pdf no sign up',
+      'decrypt pdf no watermark',
+      'decrypt pdf browser based',
+      'decrypt pdf for work',
+      'decrypt pdf for students',
+      'best decrypt pdf tool',
+      'how to decrypt pdf',
+      'decrypt pdf online free',
+      'decrypt pdf without software',
+      'decrypt pdf privacy focused',
+      'decrypt pdf secure',
+      'decrypt pdf fast',
+      'free decrypt pdf tool',
+      'online decrypt pdf free',
+      'decrypt pdf tool online',
+      'decrypt pdf for free',
+      'decrypt pdf no download',
+      'decrypt pdf web based',
+      'decrypt pdf open source',
+      'decrypt pdf wasm',
+      'decrypt pdf client side',
+      'decrypt pdf no upload',
+      'decrypt pdf instant',
+      'decrypt pdf high quality',
+      'decrypt pdf no limit',
+      'decrypt pdf 2025',
+      'decrypt pdf guide',
+      'decrypt pdf tutorial',
+    ],
+    description: `
+      <p>Decrypt Pdf free online with our powerful browser-based tool. Whether you need to decrypt pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can decrypt pdf no registration required, with no watermarks added. How to decrypt pdf for free? Use our online tool—no software needed.</p>
+            <p>Decrypt Pdf has never been easier. Get started now with the best free decrypt pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can decrypt pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free decrypt pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to decrypt pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to decrypt pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to decrypt pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to decrypt pdf online?', answer: 'Yes, our decrypt pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can decrypt pdf as many times as you need.' },
+      { question: 'Is it safe to decrypt pdf online?', answer: 'Absolutely. All decrypt pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to decrypt pdf?', answer: 'No software installation is required. Our decrypt pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'metadata-pdf': {
+    title: 'Metadata Pdf',
+    metaDescription: 'Metadata Pdf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'metadata pdf free online',
+      'metadata pdf no registration',
+      'metadata pdf no sign up',
+      'metadata pdf no watermark',
+      'metadata pdf browser based',
+      'metadata pdf for work',
+      'metadata pdf for students',
+      'best metadata pdf tool',
+      'how to metadata pdf',
+      'metadata pdf online free',
+      'metadata pdf without software',
+      'metadata pdf privacy focused',
+      'metadata pdf secure',
+      'metadata pdf fast',
+      'free metadata pdf tool',
+      'online metadata pdf free',
+      'metadata pdf tool online',
+      'metadata pdf for free',
+      'metadata pdf no download',
+      'metadata pdf web based',
+      'metadata pdf open source',
+      'metadata pdf wasm',
+      'metadata pdf client side',
+      'metadata pdf no upload',
+      'metadata pdf instant',
+      'metadata pdf high quality',
+      'metadata pdf no limit',
+      'metadata pdf 2025',
+      'metadata pdf guide',
+      'metadata pdf tutorial',
+    ],
+    description: `
+      <p>Metadata Pdf free online with our powerful browser-based tool. Whether you need to metadata pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can metadata pdf no registration required, with no watermarks added. How to metadata pdf for free? Use our online tool—no software needed.</p>
+            <p>Metadata Pdf has never been easier. Get started now with the best free metadata pdf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can metadata pdf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free metadata pdf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to metadata pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to metadata pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to metadata pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to metadata pdf online?', answer: 'Yes, our metadata pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can metadata pdf as many times as you need.' },
+      { question: 'Is it safe to metadata pdf online?', answer: 'Absolutely. All metadata pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to metadata pdf?', answer: 'No software installation is required. Our metadata pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-viewer': {
+    title: 'Pdf Viewer',
+    metaDescription: 'Pdf Viewer gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf viewer free online',
+      'pdf viewer no registration',
+      'pdf viewer no sign up',
+      'pdf viewer no watermark',
+      'pdf viewer browser based',
+      'pdf viewer for work',
+      'pdf viewer for students',
+      'best pdf viewer tool',
+      'how to pdf viewer',
+      'pdf viewer online free',
+      'pdf viewer without software',
+      'pdf viewer privacy focused',
+      'pdf viewer secure',
+      'pdf viewer fast',
+      'free pdf viewer tool',
+      'online pdf viewer free',
+      'pdf viewer tool online',
+      'pdf viewer for free',
+      'pdf viewer no download',
+      'pdf viewer web based',
+      'pdf viewer open source',
+      'pdf viewer wasm',
+      'pdf viewer client side',
+      'pdf viewer no upload',
+      'pdf viewer instant',
+      'pdf viewer high quality',
+      'pdf viewer no limit',
+      'pdf viewer 2025',
+      'pdf viewer guide',
+      'pdf viewer tutorial',
+    ],
+    description: `
+      <p>Pdf Viewer free online with our powerful browser-based tool. Whether you need to pdf viewer for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf viewer no registration required, with no watermarks added. How to pdf viewer for free? Use our online tool—no software needed.</p>
+            <p>Pdf Viewer has never been easier. Get started now with the best free pdf viewer tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf viewer no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf viewer tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf viewer for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf viewer for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf viewer for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf viewer online?', answer: 'Yes, our pdf viewer tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf viewer as many times as you need.' },
+      { question: 'Is it safe to pdf viewer online?', answer: 'Absolutely. All pdf viewer processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf viewer?', answer: 'No software installation is required. Our pdf viewer tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-html': {
+    title: 'Pdf To Html',
+    metaDescription: 'Pdf To Html gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to html free online',
+      'pdf to html no registration',
+      'pdf to html no sign up',
+      'pdf to html no watermark',
+      'pdf to html browser based',
+      'pdf to html for work',
+      'pdf to html for students',
+      'best pdf to html tool',
+      'how to pdf to html',
+      'pdf to html online free',
+      'pdf to html without software',
+      'pdf to html privacy focused',
+      'pdf to html secure',
+      'pdf to html fast',
+      'free pdf to html tool',
+      'online pdf to html free',
+      'pdf to html tool online',
+      'pdf to html for free',
+      'pdf to html no download',
+      'pdf to html web based',
+      'pdf to html open source',
+      'pdf to html wasm',
+      'pdf to html client side',
+      'pdf to html no upload',
+      'pdf to html instant',
+      'pdf to html high quality',
+      'pdf to html no limit',
+      'pdf to html 2025',
+      'pdf to html guide',
+      'pdf to html tutorial',
+    ],
+    description: `
+      <p>Pdf To Html free online with our powerful browser-based tool. Whether you need to pdf to html for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to html no registration required, with no watermarks added. How to pdf to html for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Html has never been easier. Get started now with the best free pdf to html tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to html no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to html tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to html for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to html for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to html for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to html online?', answer: 'Yes, our pdf to html tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to html as many times as you need.' },
+      { question: 'Is it safe to pdf to html online?', answer: 'Absolutely. All pdf to html processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to html?', answer: 'No software installation is required. Our pdf to html tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-xml': {
+    title: 'Pdf To Xml',
+    metaDescription: 'Pdf To Xml gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to xml free online',
+      'pdf to xml no registration',
+      'pdf to xml no sign up',
+      'pdf to xml no watermark',
+      'pdf to xml browser based',
+      'pdf to xml for work',
+      'pdf to xml for students',
+      'best pdf to xml tool',
+      'how to pdf to xml',
+      'pdf to xml online free',
+      'pdf to xml without software',
+      'pdf to xml privacy focused',
+      'pdf to xml secure',
+      'pdf to xml fast',
+      'free pdf to xml tool',
+      'online pdf to xml free',
+      'pdf to xml tool online',
+      'pdf to xml for free',
+      'pdf to xml no download',
+      'pdf to xml web based',
+      'pdf to xml open source',
+      'pdf to xml wasm',
+      'pdf to xml client side',
+      'pdf to xml no upload',
+      'pdf to xml instant',
+      'pdf to xml high quality',
+      'pdf to xml no limit',
+      'pdf to xml 2025',
+      'pdf to xml guide',
+      'pdf to xml tutorial',
+    ],
+    description: `
+      <p>Pdf To Xml free online with our powerful browser-based tool. Whether you need to pdf to xml for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to xml no registration required, with no watermarks added. How to pdf to xml for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Xml has never been easier. Get started now with the best free pdf to xml tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to xml no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to xml tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to xml for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to xml for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to xml for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to xml online?', answer: 'Yes, our pdf to xml tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to xml as many times as you need.' },
+      { question: 'Is it safe to pdf to xml online?', answer: 'Absolutely. All pdf to xml processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to xml?', answer: 'No software installation is required. Our pdf to xml tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-csv': {
+    title: 'Pdf To Csv',
+    metaDescription: 'Pdf To Csv gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to csv free online',
+      'pdf to csv no registration',
+      'pdf to csv no sign up',
+      'pdf to csv no watermark',
+      'pdf to csv browser based',
+      'pdf to csv for work',
+      'pdf to csv for students',
+      'best pdf to csv tool',
+      'how to pdf to csv',
+      'pdf to csv online free',
+      'pdf to csv without software',
+      'pdf to csv privacy focused',
+      'pdf to csv secure',
+      'pdf to csv fast',
+      'free pdf to csv tool',
+      'online pdf to csv free',
+      'pdf to csv tool online',
+      'pdf to csv for free',
+      'pdf to csv no download',
+      'pdf to csv web based',
+      'pdf to csv open source',
+      'pdf to csv wasm',
+      'pdf to csv client side',
+      'pdf to csv no upload',
+      'pdf to csv instant',
+      'pdf to csv high quality',
+      'pdf to csv no limit',
+      'pdf to csv 2025',
+      'pdf to csv guide',
+      'pdf to csv tutorial',
+    ],
+    description: `
+      <p>Pdf To Csv free online with our powerful browser-based tool. Whether you need to pdf to csv for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to csv no registration required, with no watermarks added. How to pdf to csv for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Csv has never been easier. Get started now with the best free pdf to csv tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to csv no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to csv tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to csv for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to csv for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to csv for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to csv online?', answer: 'Yes, our pdf to csv tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to csv as many times as you need.' },
+      { question: 'Is it safe to pdf to csv online?', answer: 'Absolutely. All pdf to csv processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to csv?', answer: 'No software installation is required. Our pdf to csv tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-rtf': {
+    title: 'Pdf To Rtf',
+    metaDescription: 'Pdf To Rtf gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to rtf free online',
+      'pdf to rtf no registration',
+      'pdf to rtf no sign up',
+      'pdf to rtf no watermark',
+      'pdf to rtf browser based',
+      'pdf to rtf for work',
+      'pdf to rtf for students',
+      'best pdf to rtf tool',
+      'how to pdf to rtf',
+      'pdf to rtf online free',
+      'pdf to rtf without software',
+      'pdf to rtf privacy focused',
+      'pdf to rtf secure',
+      'pdf to rtf fast',
+      'free pdf to rtf tool',
+      'online pdf to rtf free',
+      'pdf to rtf tool online',
+      'pdf to rtf for free',
+      'pdf to rtf no download',
+      'pdf to rtf web based',
+      'pdf to rtf open source',
+      'pdf to rtf wasm',
+      'pdf to rtf client side',
+      'pdf to rtf no upload',
+      'pdf to rtf instant',
+      'pdf to rtf high quality',
+      'pdf to rtf no limit',
+      'pdf to rtf 2025',
+      'pdf to rtf guide',
+      'pdf to rtf tutorial',
+    ],
+    description: `
+      <p>Pdf To Rtf free online with our powerful browser-based tool. Whether you need to pdf to rtf for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to rtf no registration required, with no watermarks added. How to pdf to rtf for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Rtf has never been easier. Get started now with the best free pdf to rtf tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to rtf no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to rtf tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to rtf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to rtf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to rtf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to rtf online?', answer: 'Yes, our pdf to rtf tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to rtf as many times as you need.' },
+      { question: 'Is it safe to pdf to rtf online?', answer: 'Absolutely. All pdf to rtf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to rtf?', answer: 'No software installation is required. Our pdf to rtf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-epub': {
+    title: 'Pdf To Epub',
+    metaDescription: 'Pdf To Epub gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to epub free online',
+      'pdf to epub no registration',
+      'pdf to epub no sign up',
+      'pdf to epub no watermark',
+      'pdf to epub browser based',
+      'pdf to epub for work',
+      'pdf to epub for students',
+      'best pdf to epub tool',
+      'how to pdf to epub',
+      'pdf to epub online free',
+      'pdf to epub without software',
+      'pdf to epub privacy focused',
+      'pdf to epub secure',
+      'pdf to epub fast',
+      'free pdf to epub tool',
+      'online pdf to epub free',
+      'pdf to epub tool online',
+      'pdf to epub for free',
+      'pdf to epub no download',
+      'pdf to epub web based',
+      'pdf to epub open source',
+      'pdf to epub wasm',
+      'pdf to epub client side',
+      'pdf to epub no upload',
+      'pdf to epub instant',
+      'pdf to epub high quality',
+      'pdf to epub no limit',
+      'pdf to epub 2025',
+      'pdf to epub guide',
+      'pdf to epub tutorial',
+    ],
+    description: `
+      <p>Pdf To Epub free online with our powerful browser-based tool. Whether you need to pdf to epub for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to epub no registration required, with no watermarks added. How to pdf to epub for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Epub has never been easier. Get started now with the best free pdf to epub tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to epub no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to epub tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to epub for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to epub for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to epub for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to epub online?', answer: 'Yes, our pdf to epub tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to epub as many times as you need.' },
+      { question: 'Is it safe to pdf to epub online?', answer: 'Absolutely. All pdf to epub processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to epub?', answer: 'No software installation is required. Our pdf to epub tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-compare-text': {
+    title: 'Pdf Compare Text',
+    metaDescription: 'Pdf Compare Text gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf compare text free online',
+      'pdf compare text no registration',
+      'pdf compare text no sign up',
+      'pdf compare text no watermark',
+      'pdf compare text browser based',
+      'pdf compare text for work',
+      'pdf compare text for students',
+      'best pdf compare text tool',
+      'how to pdf compare text',
+      'pdf compare text online free',
+      'pdf compare text without software',
+      'pdf compare text privacy focused',
+      'pdf compare text secure',
+      'pdf compare text fast',
+      'free pdf compare text tool',
+      'online pdf compare text free',
+      'pdf compare text tool online',
+      'pdf compare text for free',
+      'pdf compare text no download',
+      'pdf compare text web based',
+      'pdf compare text open source',
+      'pdf compare text wasm',
+      'pdf compare text client side',
+      'pdf compare text no upload',
+      'pdf compare text instant',
+      'pdf compare text high quality',
+      'pdf compare text no limit',
+      'pdf compare text 2025',
+      'pdf compare text guide',
+      'pdf compare text tutorial',
+    ],
+    description: `
+      <p>Pdf Compare Text free online with our powerful browser-based tool. Whether you need to pdf compare text for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf compare text no registration required, with no watermarks added. How to pdf compare text for free? Use our online tool—no software needed.</p>
+            <p>Pdf Compare Text has never been easier. Get started now with the best free pdf compare text tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf compare text no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf compare text tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf compare text for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf compare text for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf compare text for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf compare text online?', answer: 'Yes, our pdf compare text tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf compare text as many times as you need.' },
+      { question: 'Is it safe to pdf compare text online?', answer: 'Absolutely. All pdf compare text processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf compare text?', answer: 'No software installation is required. Our pdf compare text tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-redact-all': {
+    title: 'Pdf Redact All',
+    metaDescription: 'Pdf Redact All gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf redact all free online',
+      'pdf redact all no registration',
+      'pdf redact all no sign up',
+      'pdf redact all no watermark',
+      'pdf redact all browser based',
+      'pdf redact all for work',
+      'pdf redact all for students',
+      'best pdf redact all tool',
+      'how to pdf redact all',
+      'pdf redact all online free',
+      'pdf redact all without software',
+      'pdf redact all privacy focused',
+      'pdf redact all secure',
+      'pdf redact all fast',
+      'free pdf redact all tool',
+      'online pdf redact all free',
+      'pdf redact all tool online',
+      'pdf redact all for free',
+      'pdf redact all no download',
+      'pdf redact all web based',
+      'pdf redact all open source',
+      'pdf redact all wasm',
+      'pdf redact all client side',
+      'pdf redact all no upload',
+      'pdf redact all instant',
+      'pdf redact all high quality',
+      'pdf redact all no limit',
+      'pdf redact all 2025',
+      'pdf redact all guide',
+      'pdf redact all tutorial',
+    ],
+    description: `
+      <p>Pdf Redact All free online with our powerful browser-based tool. Whether you need to pdf redact all for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf redact all no registration required, with no watermarks added. How to pdf redact all for free? Use our online tool—no software needed.</p>
+            <p>Pdf Redact All has never been easier. Get started now with the best free pdf redact all tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf redact all no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf redact all tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf redact all for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf redact all for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf redact all for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf redact all online?', answer: 'Yes, our pdf redact all tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf redact all as many times as you need.' },
+      { question: 'Is it safe to pdf redact all online?', answer: 'Absolutely. All pdf redact all processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf redact all?', answer: 'No software installation is required. Our pdf redact all tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-find-replace': {
+    title: 'Pdf Find Replace',
+    metaDescription: 'Pdf Find Replace gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf find replace free online',
+      'pdf find replace no registration',
+      'pdf find replace no sign up',
+      'pdf find replace no watermark',
+      'pdf find replace browser based',
+      'pdf find replace for work',
+      'pdf find replace for students',
+      'best pdf find replace tool',
+      'how to pdf find replace',
+      'pdf find replace online free',
+      'pdf find replace without software',
+      'pdf find replace privacy focused',
+      'pdf find replace secure',
+      'pdf find replace fast',
+      'free pdf find replace tool',
+      'online pdf find replace free',
+      'pdf find replace tool online',
+      'pdf find replace for free',
+      'pdf find replace no download',
+      'pdf find replace web based',
+      'pdf find replace open source',
+      'pdf find replace wasm',
+      'pdf find replace client side',
+      'pdf find replace no upload',
+      'pdf find replace instant',
+      'pdf find replace high quality',
+      'pdf find replace no limit',
+      'pdf find replace 2025',
+      'pdf find replace guide',
+      'pdf find replace tutorial',
+    ],
+    description: `
+      <p>Pdf Find Replace free online with our powerful browser-based tool. Whether you need to pdf find replace for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf find replace no registration required, with no watermarks added. How to pdf find replace for free? Use our online tool—no software needed.</p>
+            <p>Pdf Find Replace has never been easier. Get started now with the best free pdf find replace tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf find replace no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf find replace tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf find replace for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf find replace for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf find replace for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf find replace online?', answer: 'Yes, our pdf find replace tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf find replace as many times as you need.' },
+      { question: 'Is it safe to pdf find replace online?', answer: 'Absolutely. All pdf find replace processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf find replace?', answer: 'No software installation is required. Our pdf find replace tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'pdf-to-images': {
+    title: 'Pdf To Images',
+    metaDescription: 'Pdf To Images gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'pdf to images free online',
+      'pdf to images no registration',
+      'pdf to images no sign up',
+      'pdf to images no watermark',
+      'pdf to images browser based',
+      'pdf to images for work',
+      'pdf to images for students',
+      'best pdf to images tool',
+      'how to pdf to images',
+      'pdf to images online free',
+      'pdf to images without software',
+      'pdf to images privacy focused',
+      'pdf to images secure',
+      'pdf to images fast',
+      'free pdf to images tool',
+      'online pdf to images free',
+      'pdf to images tool online',
+      'pdf to images for free',
+      'pdf to images no download',
+      'pdf to images web based',
+      'pdf to images open source',
+      'pdf to images wasm',
+      'pdf to images client side',
+      'pdf to images no upload',
+      'pdf to images instant',
+      'pdf to images high quality',
+      'pdf to images no limit',
+      'pdf to images 2025',
+      'pdf to images guide',
+      'pdf to images tutorial',
+    ],
+    description: `
+      <p>Pdf To Images free online with our powerful browser-based tool. Whether you need to pdf to images for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can pdf to images no registration required, with no watermarks added. How to pdf to images for free? Use our online tool—no software needed.</p>
+            <p>Pdf To Images has never been easier. Get started now with the best free pdf to images tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to images no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to images tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to pdf to images for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to pdf to images for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to images for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to pdf to images online?', answer: 'Yes, our pdf to images tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to images as many times as you need.' },
+      { question: 'Is it safe to pdf to images online?', answer: 'Absolutely. All pdf to images processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to pdf to images?', answer: 'No software installation is required. Our pdf to images tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'extract-images': {
+    title: 'Extract Images',
+    metaDescription: 'Extract Images gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'extract images free online',
+      'extract images no registration',
+      'extract images no sign up',
+      'extract images no watermark',
+      'extract images browser based',
+      'extract images for work',
+      'extract images for students',
+      'best extract images tool',
+      'how to extract images',
+      'extract images online free',
+      'extract images without software',
+      'extract images privacy focused',
+      'extract images secure',
+      'extract images fast',
+      'free extract images tool',
+      'online extract images free',
+      'extract images tool online',
+      'extract images for free',
+      'extract images no download',
+      'extract images web based',
+      'extract images open source',
+      'extract images wasm',
+      'extract images client side',
+      'extract images no upload',
+      'extract images instant',
+      'extract images high quality',
+      'extract images no limit',
+      'extract images 2025',
+      'extract images guide',
+      'extract images tutorial',
+    ],
+    description: `
+      <p>Extract Images free online with our powerful browser-based tool. Whether you need to extract images for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can extract images no registration required, with no watermarks added. How to extract images for free? Use our online tool—no software needed.</p>
+            <p>Extract Images has never been easier. Get started now with the best free extract images tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can extract images no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free extract images tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to extract images for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to extract images for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to extract images for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to extract images online?', answer: 'Yes, our extract images tool is completely free to use. No registration, no sign-up, no credit card required. You can extract images as many times as you need.' },
+      { question: 'Is it safe to extract images online?', answer: 'Absolutely. All extract images processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to extract images?', answer: 'No software installation is required. Our extract images tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'compress-images': {
+    title: 'Compress Images',
+    metaDescription: 'Compress Images gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'compress images free online',
+      'compress images no registration',
+      'compress images no sign up',
+      'compress images no watermark',
+      'compress images browser based',
+      'compress images for work',
+      'compress images for students',
+      'best compress images tool',
+      'how to compress images',
+      'compress images online free',
+      'compress images without software',
+      'compress images privacy focused',
+      'compress images secure',
+      'compress images fast',
+      'free compress images tool',
+      'online compress images free',
+      'compress images tool online',
+      'compress images for free',
+      'compress images no download',
+      'compress images web based',
+      'compress images open source',
+      'compress images wasm',
+      'compress images client side',
+      'compress images no upload',
+      'compress images instant',
+      'compress images high quality',
+      'compress images no limit',
+      'compress images 2025',
+      'compress images guide',
+      'compress images tutorial',
+    ],
+    description: `
+      <p>Compress Images free online with our advanced PDF compression tool. Reduce file size without significant quality loss. Perfect for email attachments and web optimization.</p>
+            <p>Upload your PDF file and choose compression level. You can compress PDF no registration required. The compressed PDF maintains original formatting.</p>
+            <p>All compression happens locally in your browser. How to compress PDF for free? Use our online PDF compressor.</p>
+            <p>Try our free compress PDF online tool now. The fastest and most secure way to reduce PDF file size online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can compress images no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free compress images tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to compress images for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to compress images for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to compress images for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to compress images online?', answer: 'Yes, our compress images tool is completely free to use. No registration, no sign-up, no credit card required. You can compress images as many times as you need.' },
+      { question: 'Is it safe to compress images online?', answer: 'Absolutely. All compress images processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to compress images?', answer: 'No software installation is required. Our compress images tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'remove-blank-pages': {
+    title: 'Eliminar Páginas en Blanco',
+    metaDescription: 'Remove Blank Pages gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'remove blank pages free online',
+      'remove blank pages no registration',
+      'remove blank pages no sign up',
+      'remove blank pages no watermark',
+      'remove blank pages browser based',
+      'remove blank pages for work',
+      'remove blank pages for students',
+      'best remove blank pages tool',
+      'how to remove blank pages',
+      'remove blank pages online free',
+      'remove blank pages without software',
+      'remove blank pages privacy focused',
+      'remove blank pages secure',
+      'remove blank pages fast',
+      'free remove blank pages tool',
+      'online remove blank pages free',
+      'remove blank pages tool online',
+      'remove blank pages for free',
+      'remove blank pages no download',
+      'remove blank pages web based',
+      'remove blank pages open source',
+      'remove blank pages wasm',
+      'remove blank pages client side',
+      'remove blank pages no upload',
+      'remove blank pages instant',
+      'remove blank pages high quality',
+      'remove blank pages no limit',
+      'remove blank pages 2025',
+      'remove blank pages guide',
+      'remove blank pages tutorial',
+    ],
+    description: `
+      <p>Remove Blank Pages free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
+            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
+            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
+            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can remove blank pages no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free remove blank pages tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to remove blank pages for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to remove blank pages for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to remove blank pages for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to remove blank pages online?', answer: 'Yes, our remove blank pages tool is completely free to use. No registration, no sign-up, no credit card required. You can remove blank pages as many times as you need.' },
+      { question: 'Is it safe to remove blank pages online?', answer: 'Absolutely. All remove blank pages processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to remove blank pages?', answer: 'No software installation is required. Our remove blank pages tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
+  'detect-pdf-scanners': {
+    title: 'Detect Pdf Scanners',
+    metaDescription: 'Detect Pdf Scanners gratis en línea - sin registro, sin registrarse。Procese sus archivos PDF de forma segura en su navegador。',
+    keywords: [
+      'detect pdf scanners free online',
+      'detect pdf scanners no registration',
+      'detect pdf scanners no sign up',
+      'detect pdf scanners no watermark',
+      'detect pdf scanners browser based',
+      'detect pdf scanners for work',
+      'detect pdf scanners for students',
+      'best detect pdf scanners tool',
+      'how to detect pdf scanners',
+      'detect pdf scanners online free',
+      'detect pdf scanners without software',
+      'detect pdf scanners privacy focused',
+      'detect pdf scanners secure',
+      'detect pdf scanners fast',
+      'free detect pdf scanners tool',
+      'online detect pdf scanners free',
+      'detect pdf scanners tool online',
+      'detect pdf scanners for free',
+      'detect pdf scanners no download',
+      'detect pdf scanners web based',
+      'detect pdf scanners open source',
+      'detect pdf scanners wasm',
+      'detect pdf scanners client side',
+      'detect pdf scanners no upload',
+      'detect pdf scanners instant',
+      'detect pdf scanners high quality',
+      'detect pdf scanners no limit',
+      'detect pdf scanners 2025',
+      'detect pdf scanners guide',
+      'detect pdf scanners tutorial',
+    ],
+    description: `
+      <p>Detect Pdf Scanners free online with our powerful browser-based tool. Whether you need to detect pdf scanners for personal or professional use, our free online tool provides a fast, secure solution.</p>
+            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
+            <p>You can detect pdf scanners no registration required, with no watermarks added. How to detect pdf scanners for free? Use our online tool—no software needed.</p>
+            <p>Detect Pdf Scanners has never been easier. Get started now with the best free detect pdf scanners tool online.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can detect pdf scanners no registration, no sign-up needed.' },
+      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free detect pdf scanners tool gives you full control.' },
+      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+    ],
+    useCases: [
+      { title: 'For Office Work', description: 'Professionals use our tool to detect pdf scanners for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
+      { title: 'For Students', description: 'Students frequently need to detect pdf scanners for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
+      { title: 'For Personal Use', description: 'Anyone can use our tool to detect pdf scanners for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+    ],
+    faq: [
+      { question: 'Is it really free to detect pdf scanners online?', answer: 'Yes, our detect pdf scanners tool is completely free to use. No registration, no sign-up, no credit card required. You can detect pdf scanners as many times as you need.' },
+      { question: 'Is it safe to detect pdf scanners online?', answer: 'Absolutely. All detect pdf scanners processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
+      { question: 'Do I need to install software to detect pdf scanners?', answer: 'No software installation is required. Our detect pdf scanners tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
+      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
+      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+    ],
+  },
 };
