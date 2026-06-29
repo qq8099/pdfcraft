@@ -202,6 +202,45 @@ export function ToolSidebar({
         };
     };
 
+    /**
+     * Double-click adds the tool to the canvas center.
+     * Dispatches the same event used by pointer-based fallback drops so that
+     * WorkflowEditor places the node at the resolved screen coordinates.
+     */
+    const handleDoubleClick = (tool: typeof tools[0]) => {
+        // Cancel any in-flight pointer drag intent so it does not race with the dblclick.
+        pointerDragRef.current = null;
+
+        const flowEl =
+            (typeof document !== 'undefined'
+                ? (document.querySelector('.react-flow') as HTMLElement | null)
+                : null);
+
+        let clientX: number;
+        let clientY: number;
+        if (flowEl) {
+            const rect = flowEl.getBoundingClientRect();
+            // Add a small random offset so consecutive double-clicks do not
+            // perfectly stack the new nodes on top of each other.
+            const jitter = () => (Math.random() - 0.5) * 80;
+            clientX = rect.left + rect.width / 2 + jitter();
+            clientY = rect.top + rect.height / 2 + jitter();
+        } else if (typeof window !== 'undefined') {
+            clientX = window.innerWidth / 2;
+            clientY = window.innerHeight / 2;
+        } else {
+            return;
+        }
+
+        window.dispatchEvent(new CustomEvent(WORKFLOW_TOOL_DROP_EVENT, {
+            detail: {
+                nodeData: createNodeData(tool),
+                clientX,
+                clientY,
+            },
+        }));
+    };
+
     useEffect(() => {
         const handlePointerMove = (event: PointerEvent) => {
             const dragState = pointerDragRef.current;
@@ -300,7 +339,7 @@ export function ToolSidebar({
                         {tWorkflow('toolbox') || 'Tool Box'}
                     </h2>
                     <p className="text-xs text-[hsl(var(--color-muted-foreground))] mt-1">
-                        {tWorkflow('dragToAdd') || 'Drag tools to add to workflow'}
+                        {tWorkflow('dragToAdd') || 'Drag or double-click a tool to add it to the workflow'}
                     </p>
                 </div>
                 <button
@@ -359,6 +398,9 @@ export function ToolSidebar({
                                     {category.tools.map(tool => {
                                         const ToolIcon = getIcon(tool.icon);
 
+                                        const toolName = getToolName(tool.id);
+                                        const hint = tWorkflow('addToWorkflowHint')
+                                            || 'Drag or double-click to add to workflow';
                                         return (
                                             <div
                                                 key={tool.id}
@@ -366,12 +408,14 @@ export function ToolSidebar({
                                                 onDragStart={(e) => handleDragStart(e, tool)}
                                                 onDragEnd={onDragEnd}
                                                 onPointerDown={(e) => handlePointerDown(e, tool)}
-                                                className="flex items-center gap-2 px-4 py-2 mx-2 rounded-md cursor-grab hover:bg-[hsl(var(--color-muted))] active:cursor-grabbing transition-colors group"
+                                                onDoubleClick={() => handleDoubleClick(tool)}
+                                                title={`${toolName} \u2014 ${hint}`}
+                                                className="flex items-center gap-2 px-4 py-2 mx-2 rounded-md cursor-grab hover:bg-[hsl(var(--color-muted))] active:cursor-grabbing transition-colors group select-none"
                                             >
                                                 <GripVertical className="w-3 h-3 text-[hsl(var(--color-muted-foreground))] opacity-0 group-hover:opacity-100 transition-opacity" />
                                                 <ToolIcon className="w-4 h-4 text-[hsl(var(--color-muted-foreground))]" />
                                                 <span className="text-sm text-[hsl(var(--color-foreground))] truncate flex-1">
-                                                    {getToolName(tool.id)}
+                                                    {toolName}
                                                 </span>
                                             </div>
                                         );

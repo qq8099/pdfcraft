@@ -631,7 +631,10 @@
       "fillColorLabel": "Enable Fill Color:",
       "defaultAuthor": "Annotation (Guest User)",
       "undoBtn": "Undo",
-      "redoBtn": "Redo"
+      "redoBtn": "Redo",
+      "unnamedUser": "Guest User",
+      "undo": "Undo",
+      "redo": "Redo"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Otsu Offset)",
@@ -1233,7 +1236,8 @@
     "metaTitle": "PDF Workflow Builder - PDFCraft",
     "metaDescription": "Create custom PDF processing pipelines by visually connecting tools. Build, save, and reuse your workflows.",
     "toolbox": "Tool Box",
-    "dragToAdd": "Drag tools to add to workflow",
+    "dragToAdd": "Drag or double-click a tool to add it to the workflow",
+    "addToWorkflowHint": "Drag or double-click to add to workflow",
     "searchTools": "Search tools...",
     "toolsAvailable": "tools available",
     "templates": "Templates",

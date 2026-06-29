@@ -631,7 +631,10 @@
       "fillColorLabel": "启用填充色:",
       "defaultAuthor": "标注 (不具名用户)",
       "undoBtn": "撤销",
-      "redoBtn": "重做"
+      "redoBtn": "重做",
+      "unnamedUser": "不具名用户",
+      "undo": "撤销",
+      "redo": "重做"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (大津偏置)",
@@ -1233,7 +1236,8 @@
     "metaTitle": "PDF 工作流编辑器 - PDFCraft",
     "metaDescription": "通过可视化连接工具创建自定义 PDF 处理管道。构建、保存和重用您的工作流。",
     "toolbox": "工具箱",
-    "dragToAdd": "拖拽工具添加到工作流",
+    "dragToAdd": "拖拽或双击工具以添加到工作流",
+    "addToWorkflowHint": "拖拽或双击添加到工作流",
     "searchTools": "搜索工具...",
     "toolsAvailable": "个可用工具",
     "templates": "模板",

@@ -16,12 +16,27 @@ jobs:
         platform: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
 
+    # Mitigate intermittent crates.io download failures (schannel close_notify, etc.)
+    env:
+      CARGO_TERM_COLOR: always
+      CARGO_NET_RETRY: 10
+      CARGO_NET_GIT_FETCH_WITH_CLI: true
+      CARGO_HTTP_MULTIPLEXING: false
+      CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+      RUSTUP_MAX_RETRIES: 10
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri -> target
+          cache-on-failure: true
 
       - name: Install Node 22
         uses: actions/setup-node@v4
@@ -39,9 +54,15 @@ jobs:
         run: npm ci
 
       - name: Build Tauri app
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 60
+          max_attempts: 3
+          retry_on: error
+          shell: bash
+          command: npx tauri build
         env:
           TAURI_ENV: "true"
-        run: npx tauri build
 
       - name: Validate Tauri action wiring
         uses: tauri-apps/tauri-action@v0

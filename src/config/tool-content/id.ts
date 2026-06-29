@@ -1,4252 +1,3038 @@
-import { ToolContent } from '@/types/tool';
+/**
+ * Konten alat berbahasa Indonesia untuk SEO
+ * Berisi deskripsi mendetail, langkah penggunaan, contoh penggunaan, dan FAQ untuk semua 67 alat
+ * Requirements: 4.2-4.5 - Tool page content (description, how-to, use cases, FAQ)
+ */
 
+import { ToolContent } from '@/types/tool';
+import { toolContentEn } from './en';
+
+/**
+ * Peta konten alat bahasa Indonesia
+ * Setiap alat memiliki: title, metaDescription, keywords, description, howToUse (3+ langkah), useCases (3+ skenario), faq (3+ pertanyaan)
+ */
 export const toolContentId: Record<string, ToolContent> = {
+  // ==================== ALAT POPULER ====================
   'pdf-multi-tool': {
     title: 'Alat PDF Multi-Fungsi',
-    metaDescription: 'Pdf Multi Tool gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami ',
-    keywords: [
-      'pdf multi tool free online',
-      'pdf multi tool no registration',
-      'pdf multi tool no sign up',
-      'pdf multi tool no watermark',
-      'pdf multi tool browser based',
-      'pdf multi tool for work',
-      'pdf multi tool for students',
-      'best pdf multi tool tool',
-      'how to pdf multi tool',
-      'pdf multi tool online free',
-      'pdf multi tool without software',
-      'pdf multi tool privacy focused',
-      'pdf multi tool secure',
-      'pdf multi tool fast',
-      'free pdf multi tool tool',
-      'online pdf multi tool free',
-      'pdf multi tool tool online',
-      'pdf multi tool for free',
-      'pdf multi tool no download',
-      'pdf multi tool web based',
-      'pdf multi tool open source',
-      'pdf multi tool wasm',
-      'pdf multi tool client side',
-      'pdf multi tool no upload',
-      'pdf multi tool instant',
-      'pdf multi tool high quality',
-      'pdf multi tool no limit',
-      'pdf multi tool 2025',
-      'pdf multi tool guide',
-      'pdf multi tool tutorial',
-    ],
+    metaDescription: 'Editor PDF serbaguna: gabungkan, pisahkan, atur, hapus, putar, dan ekstrak halaman dalam satu alat yang tangguh.',
+    keywords: ['alat pdf multi', 'editor pdf', 'gabung pdf', 'pisah pdf', 'atur pdf', 'pdf serbaguna'],
     description: `
-      <p>Pdf Multi Tool free online with our powerful browser-based tool. Whether you need to pdf multi tool for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf multi tool no registration required, with no watermarks added. How to pdf multi tool for free? Use our online tool—no software needed.</p>
-            <p>Pdf Multi Tool has never been easier. Get started now with the best free pdf multi tool tool online.</p>
+      <p>Alat PDF Multi-Fungsi adalah solusi komprehensif untuk semua tugas manajemen halaman PDF Anda. Alat serbaguna yang tangguh ini menggabungkan berbagai operasi PDF ke dalam satu antarmuka yang intuitif, sehingga menghemat waktu dan tenaga Anda.</p>
+      <p>Baik Anda perlu menggabungkan beberapa dokumen, memisahkan PDF besar menjadi file yang lebih kecil, mengatur ulang halaman, menghapus konten yang tidak diinginkan, memutar halaman, atau mengekstrak bagian tertentu, alat ini menangani semuanya tanpa perlu berpindah aplikasi.</p>
+      <p>Semua pemrosesan terjadi langsung di browser Anda, memastikan dokumen Anda tetap privat dan aman. Tidak ada file yang diunggah ke server mana pun.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf multi tool no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf multi tool tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda ke area unggahan, atau klik untuk menelusuri dan memilih file dari perangkat Anda.' },
+      { step: 2, title: 'Pilih Operasi Anda', description: 'Pilih dari operasi yang tersedia: gabung, pisah, atur, hapus halaman, putar, tambah halaman kosong, atau ekstrak halaman.' },
+      { step: 3, title: 'Konfigurasi Opsi', description: 'Sesuaikan pengaturan khusus untuk operasi pilihan Anda, seperti rentang halaman, sudut rotasi, atau urutan penggabungan.' },
+      { step: 4, title: 'Proses dan Unduh', description: 'Klik tombol proses dan unduh PDF Anda yang telah dimodifikasi setelah operasi selesai.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf multi tool for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf multi tool for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf multi tool for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Persiapan Dokumen', description: 'Siapkan dokumen untuk dikirim dengan menghapus halaman yang tidak perlu, mengatur ulang konten, dan menggabungkan beberapa file.', icon: 'file-check' },
+      { title: 'Penyusunan Laporan', description: 'Gabungkan beberapa bagian laporan, tambahkan halaman sampul, dan atur bab-bab ke dalam satu dokumen profesional.', icon: 'book-open' },
+      { title: 'Manajemen Arsip', description: 'Pisahkan file arsip berukuran besar menjadi bagian-bagian yang lebih mudah dikelola, ekstrak halaman yang relevan, dan atur ulang dokumen historis.', icon: 'archive' },
     ],
     faq: [
-      { question: 'Is it really free to pdf multi tool online?', answer: 'Yes, our pdf multi tool tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf multi tool as many times as you need.' },
-      { question: 'Is it safe to pdf multi tool online?', answer: 'Absolutely. All pdf multi tool processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf multi tool?', answer: 'No software installation is required. Our pdf multi tool tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Berapa banyak PDF yang dapat saya proses sekaligus?', answer: 'Anda dapat mengunggah dan memproses hingga 10 file PDF secara bersamaan, dengan ukuran gabungan maksimum 500MB.' },
+      { question: 'Apakah markah (bookmark) saya akan dipertahankan?', answer: 'Ya, saat menggabungkan PDF, alat ini mempertahankan markah yang ada dan secara opsional dapat menggabungkannya ke dalam struktur markah yang terpadu.' },
+      { question: 'Apakah ada batasan halaman?', answer: 'Tidak ada batasan halaman yang ketat. Alat ini dapat menangani dokumen dengan ratusan halaman, meskipun file yang sangat besar mungkin memerlukan waktu proses yang lebih lama.' },
     ],
   },
+
   'merge-pdf': {
     title: 'Gabungkan PDF',
-    metaDescription: 'Merge Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untuk',
-    keywords: [
-      'merge pdf free online',
-      'merge pdf no registration',
-      'merge pdf no sign up',
-      'merge pdf no watermark',
-      'merge pdf browser based',
-      'merge pdf for work',
-      'merge pdf for students',
-      'best merge pdf tool',
-      'how to merge pdf',
-      'merge pdf online free',
-      'merge pdf without software',
-      'merge pdf privacy focused',
-      'merge pdf secure',
-      'merge pdf fast',
-      'free merge pdf tool',
-      'online merge pdf free',
-      'merge pdf tool online',
-      'merge pdf for free',
-      'merge pdf no download',
-      'merge pdf web based',
-      'merge pdf open source',
-      'merge pdf wasm',
-      'merge pdf client side',
-      'merge pdf no upload',
-      'merge pdf instant',
-      'merge pdf high quality',
-      'merge pdf no limit',
-      'merge pdf 2025',
-      'merge pdf guide',
-      'merge pdf tutorial',
-    ],
+    metaDescription: 'Gabungkan beberapa file PDF menjadi satu dokumen. Penggabung PDF online gratis dengan fitur tarik-dan-lepas untuk menyusun ulang.',
+    keywords: ['gabung pdf', 'kombinasi pdf', 'satukan pdf', 'penggabung pdf'],
     description: `
-      <p>Merge Pdf free online with our powerful PDF merger tool. Combine multiple PDF documents into a single file quickly and securely. Perfect for office workers, students, and anyone who needs to merge PDF files.</p>
-            <p>Simply upload your PDF files, arrange them in your desired order using our intuitive drag-and-drop interface, and merge them into one professional document. You can merge PDF files no registration required.</p>
-            <p>All processing happens locally in your browser using WebAssembly technology, ensuring complete privacy. No files are uploaded to any server. How to merge PDF files for free? Simply use our online PDF merger.</p>
-            <p>Try our free merge PDF online tool now. Whether you need to merge PDF for work or study, our tool delivers high-quality results every time.</p>
+      <p>Gabungkan PDF memungkinkan Anda menggabungkan beberapa dokumen PDF menjadi satu file dengan cepat dan mudah. Baik Anda sedang mengonsolidasikan laporan, menggabungkan dokumen pindaian, atau merakit presentasi, alat ini membuat prosesnya menjadi mulus.</p>
+      <p>Cukup unggah file Anda, susun sesuai urutan yang Anda inginkan menggunakan fitur tarik-dan-lepas (drag-and-drop), lalu gabungkan menjadi satu dokumen yang kohesif. Alat ini mempertahankan kualitas file asli Anda dan dapat secara opsional mempertahankan markah dari setiap dokumen sumber.</p>
+      <p>Semua penggabungan terjadi secara lokal di browser Anda, memastikan privasi penuh untuk dokumen sensitif Anda.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can merge pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free merge pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah File PDF', description: 'Tarik dan lepas beberapa file PDF ke area unggahan, atau klik untuk memilih file dari perangkat Anda.' },
+      { step: 2, title: 'Susun Urutan', description: 'Tarik dan lepas gambar mini file untuk menyusunnya dalam urutan yang Anda inginkan.' },
+      { step: 3, title: 'Gabungkan dan Unduh', description: 'Klik tombol Gabungkan untuk menyatukan semua file, lalu unduh PDF gabungan Anda.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to merge pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to merge pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to merge pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Gabungkan Laporan', description: 'Gabungkan laporan bulanan atau kuartalan menjadi satu dokumen tahunan untuk memudahkan distribusi dan pengarsipan.', icon: 'file-text' },
+      { title: 'Rakit Portofolio', description: 'Kombinasikan beberapa dokumen proyek, sertifikat, atau sampel pekerjaan menjadi portofolio profesional.', icon: 'briefcase' },
+      { title: 'Konsolidasi Faktur', description: 'Gabungkan beberapa faktur atau tanda terima menjadi satu dokumen untuk keperluan akuntansi dan pembukuan.', icon: 'receipt' },
     ],
     faq: [
-      { question: 'Is it really free to merge pdf online?', answer: 'Yes, our merge pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can merge pdf as many times as you need.' },
-      { question: 'Is it safe to merge pdf online?', answer: 'Absolutely. All merge pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to merge pdf?', answer: 'No software installation is required. Our merge pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Berapa banyak PDF yang dapat saya gabungkan?', answer: 'Anda dapat menggabungkan hingga 100 file PDF sekaligus, dengan total ukuran gabungan hingga 500MB.' },
+      { question: 'Apakah PDF yang digabungkan akan mempertahankan kualitas aslinya?', answer: 'Ya, proses penggabungan mempertahankan kualitas asli semua dokumen tanpa kompresi atau penurunan kualitas.' },
+      { question: 'Bisakah saya menggabungkan PDF yang dilindungi kata sandi?', answer: 'PDF yang dilindungi kata sandi harus didekripsi terlebih dahulu. Gunakan alat Dekripsi PDF kami untuk menghapus kata sandi sebelum menggabungkan.' },
     ],
   },
+
+  'rotate-custom': {
+    title: 'Putar dengan Derajat Kustom',
+    metaDescription: 'Putar halaman PDF dengan sudut berapa pun. Rotasi kustom yang presisi untuk meluruskan dokumen hasil pindaian.',
+    keywords: ['putar pdf sudut kustom', 'luruskan pdf', 'deskew pdf', 'rotasi pdf kustom'],
+    description: `
+      <p>Putar dengan Derajat Kustom memberi Anda kendali presisi atas orientasi halaman PDF Anda. Tidak seperti alat rotasi standar yang hanya mendukung kelipatan 90 derajat, alat ini memungkinkan Anda memutar halaman pada sudut tertentu.</p>
+      <p>Sangat cocok untuk meluruskan dokumen hasil pindaian yang dimasukkan agak miring, atau menyesuaikan diagram dan bagan ke orientasi yang benar. Anda dapat mengoreksi halaman satu per satu atau menerapkan rotasi yang sama ke seluruh dokumen.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat sekaligus mendapatkan perataan yang sempurna.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF', description: 'Unggah file PDF yang berisi halaman yang perlu Anda putar.' },
+      { step: 2, title: 'Atur Sudut Rotasi', description: 'Masukkan derajat rotasi yang tepat untuk setiap halaman, atau atur sudut massal untuk semua halaman.' },
+      { step: 3, title: 'Pratinjau dan Sesuaikan', description: 'Gunakan pratinjau waktu-nyata untuk memastikan halaman sejajar sempurna.' },
+      { step: 4, title: 'Terapkan dan Unduh', description: 'Klik Putar untuk menerapkan perubahan dan unduh PDF Anda yang telah diluruskan.' },
+    ],
+    useCases: [
+      { title: 'Dokumen Pindaian', description: 'Luruskan halaman pindaian yang dimasukkan ke dalam pemindai pada posisi miring.', icon: 'scan' },
+      { title: 'Gambar Teknis', description: 'Sesuaikan orientasi diagram dan denah teknis dengan presisi tinggi.', icon: 'ruler' },
+      { title: 'Tata Letak Kreatif', description: 'Buat tata letak unik dengan memutar halaman ke sudut artistik tertentu.', icon: 'pen-tool' },
+    ],
+    faq: [
+      { question: 'Bisakah saya memutar dengan desimal, mis. 45,5 derajat?', answer: 'Saat ini alat ini mendukung derajat bilangan bulat, tetapi kami sedang berupaya mengaktifkan presisi desimal.' },
+      { question: 'Apakah ini memengaruhi konten halaman?', answer: 'Konten diputar secara visual. Ukuran halaman disesuaikan secara otomatis agar sesuai dengan konten yang diputar.' },
+      { question: 'Bisakah saya memutar satu halaman saja?', answer: 'Ya, Anda dapat mengatur sudut rotasi kustom untuk setiap halaman satu per satu sementara halaman lainnya tidak berubah.' },
+    ],
+  },
+
+  'grid-combine': {
+    title: 'Kombinasi Kisi PDF',
+    metaDescription: 'Kombinasikan beberapa file PDF ke dalam satu halaman dengan tata letak kisi yang fleksibel. Susun 2, 4, 6, 9 atau lebih PDF per halaman dengan bingkai dan jarak.',
+    keywords: ['kombinasi kisi', 'gabung pdf kisi', 'kolase pdf', 'beberapa pdf satu halaman', 'pdf n-up', 'gabung pdf grid'],
+    description: `
+      <p>Alat Kombinasi Kisi menawarkan cara unik untuk menggabungkan beberapa file PDF terpisah ke dalam satu halaman. Tidak seperti alat "Gabungkan PDF" standar yang hanya menambahkan halaman, atau alat "N-Up" yang menyusun ulang halaman dari satu dokumen, Kombinasi Kisi mengambil beberapa file masukan dan menyusunnya berdampingan dalam tata letak kisi (grid) yang dapat disesuaikan.</p>
+      <p>Anda dapat memilih berbagai konfigurasi kisi seperti 2x1, 2x2, 3x3, dll. Ini sempurna untuk membandingkan beberapa dokumen, membuat selebaran dari berbagai sumber, atau mencetak versi ringkas dari beberapa file.</p>
+      <p>Sesuaikan hasil akhir dengan kontrol atas ukuran halaman, orientasi, margin, jarak, dan bingkai. Semua pemrosesan terjadi secara lokal di browser Anda untuk privasi maksimal.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File PDF', description: 'Unggah dua atau lebih file PDF yang ingin Anda kombinasikan. Anda dapat mengatur ulang file sesuai urutan yang Anda inginkan.' },
+      { step: 2, title: 'Pilih Tata Letak Kisi', description: 'Pilih tata letak kisi yang Anda inginkan (misalnya, 2x2 untuk 4 file per halaman, 3x3 untuk 9 file per halaman).' },
+      { step: 3, title: 'Sesuaikan Penampilan', description: 'Sesuaikan pengaturan seperti ukuran halaman (A4, Letter), orientasi, jarak antar item, dan bingkai.' },
+      { step: 4, title: 'Kombinasikan dan Unduh', description: 'Klik "Kombinasikan PDF" untuk menghasilkan dokumen tata letak kisi baru Anda dan unduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Perbandingan Visual', description: 'Tempatkan berbagai versi desain atau dokumen berdampingan pada satu halaman untuk memudahkan perbandingan.', icon: 'layout-grid' },
+      { title: 'Mencetak Selebaran', description: 'Gabungkan beberapa dokumen atau slide pendek ke dalam satu lembar kertas untuk menghemat biaya pencetakan.', icon: 'printer' },
+      { title: 'Pembuatan Portofolio', description: 'Tampilkan beberapa file proyek dalam tinjauan kisi yang bersih dan teratur.', icon: 'image' },
+    ],
+    faq: [
+      { question: 'Apa bedanya alat ini dengan N-Up?', answer: 'N-Up mengambil halaman dari SATU PDF dan meletakkannya dalam satu lembar. Kombinasi Kisi mengambil BEBERAPA file PDF BERBEDA dan meletakkannya dalam satu lembar.' },
+      { question: 'Berapa banyak file yang dapat saya kombinasikan?', answer: 'Anda dapat mengombinasikan hingga 100 file tergantung pada memori browser Anda, tetapi tata letak seperti 4x4 dapat menampung hingga 16 file per halaman.' },
+      { question: 'Bisakah saya menambahkan bingkai?', answer: 'Ya, Anda dapat menambahkan bingkai di sekitar setiap file PDF dan menyesuaikan warna bingkai tersebut.' },
+    ],
+  },
+
   'split-pdf': {
     title: 'Pisahkan PDF',
-    metaDescription: 'Split Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untuk',
-    keywords: [
-      'split pdf free online',
-      'split pdf no registration',
-      'split pdf no sign up',
-      'split pdf no watermark',
-      'split pdf browser based',
-      'split pdf for work',
-      'split pdf for students',
-      'best split pdf tool',
-      'how to split pdf',
-      'split pdf online free',
-      'split pdf without software',
-      'split pdf privacy focused',
-      'split pdf secure',
-      'split pdf fast',
-      'free split pdf tool',
-      'online split pdf free',
-      'split pdf tool online',
-      'split pdf for free',
-      'split pdf no download',
-      'split pdf web based',
-      'split pdf open source',
-      'split pdf wasm',
-      'split pdf client side',
-      'split pdf no upload',
-      'split pdf instant',
-      'split pdf high quality',
-      'split pdf no limit',
-      'split pdf 2025',
-      'split pdf guide',
-      'split pdf tutorial',
-    ],
+    metaDescription: 'Pisahkan file PDF menjadi beberapa dokumen. Ekstrak halaman tertentu atau bagi berdasarkan rentang halaman.',
+    keywords: ['pisah pdf', 'bagi pdf', 'pisahkan pdf', 'ekstrak halaman', 'pemisah pdf'],
     description: `
-      <p>Split Pdf free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
-            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
-            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
-            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+      <p>Pisahkan PDF memungkinkan Anda membagi satu dokumen PDF menjadi beberapa file yang lebih kecil. Ini sangat cocok untuk mengekstrak bab-bab tertentu, memisahkan dokumen yang digabungkan, atau membuat file individual dari PDF multi-halaman.</p>
+      <p>Anda dapat memisahkan berdasarkan rentang halaman tertentu, mengekstrak halaman satu per satu, atau membagi dokumen pada interval yang teratur. Alat ini memberikan pratinjau visual dari halaman Anda, membuatnya mudah untuk memilih apa yang Anda butuhkan secara tepat.</p>
+      <p>Semua pemrosesan dilakukan secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can split pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free split pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk menelusuri dan memilih file yang ingin Anda pisahkan.' },
+      { step: 2, title: 'Pilih Metode Pemisahan', description: 'Pilih cara memisahkan: berdasarkan rentang halaman, ekstrak halaman tertentu, atau pisahkan secara berkala.' },
+      { step: 3, title: 'Tentukan Rentang Halaman', description: 'Masukkan nomor halaman atau rentang yang ingin Anda ekstrak (misalnya, 1-5, 8, 10-15).' },
+      { step: 4, title: 'Pisahkan dan Unduh', description: 'Klik Pisahkan untuk membuat file PDF baru Anda dan unduh satu per satu atau sebagai arsip ZIP.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to split pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to split pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to split pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Ekstrak Bab', description: 'Pisahkan buku atau manual menjadi bab-bab tersendiri agar lebih mudah dibaca atau didistribusikan.', icon: 'book' },
+      { title: 'Pisahkan Hasil Pindaian Gabungan', description: 'Bagi dokumen pindaian massal menjadi file individual untuk setiap dokumen asli.', icon: 'copy' },
+      { title: 'Buat Selebaran', description: 'Ekstrak slide atau halaman tertentu dari presentasi untuk membuat selebaran terfokus.', icon: 'presentation' },
     ],
     faq: [
-      { question: 'Is it really free to split pdf online?', answer: 'Yes, our split pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can split pdf as many times as you need.' },
-      { question: 'Is it safe to split pdf online?', answer: 'Absolutely. All split pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to split pdf?', answer: 'No software installation is required. Our split pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya memisahkan PDF menjadi file halaman individual?', answer: 'Ya, Anda dapat memisahkan PDF menjadi file satu halaman masing-masing dengan memilih opsi "Pisahkan setiap halaman".' },
+      { question: 'Apa yang terjadi pada markah (bookmark) saat memisahkan?', answer: 'Markah yang berada dalam rentang halaman yang diekstrak akan tetap dipertahankan pada file PDF yang dihasilkan.' },
+      { question: 'Bisakah saya memisahkan PDF yang dilindungi kata sandi?', answer: 'Anda perlu mendekripsi PDF terlebih dahulu menggunakan alat Dekripsi PDF kami sebelum memisahkannya.' },
     ],
   },
+
   'compress-pdf': {
     title: 'Kompres PDF',
-    metaDescription: 'Compress Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'compress pdf free online',
-      'compress pdf no registration',
-      'compress pdf no sign up',
-      'compress pdf no watermark',
-      'compress pdf browser based',
-      'compress pdf for work',
-      'compress pdf for students',
-      'best compress pdf tool',
-      'how to compress pdf',
-      'compress pdf online free',
-      'compress pdf without software',
-      'compress pdf privacy focused',
-      'compress pdf secure',
-      'compress pdf fast',
-      'free compress pdf tool',
-      'online compress pdf free',
-      'compress pdf tool online',
-      'compress pdf for free',
-      'compress pdf no download',
-      'compress pdf web based',
-      'compress pdf open source',
-      'compress pdf wasm',
-      'compress pdf client side',
-      'compress pdf no upload',
-      'compress pdf instant',
-      'compress pdf high quality',
-      'compress pdf no limit',
-      'compress pdf 2025',
-      'compress pdf guide',
-      'compress pdf tutorial',
-    ],
+    metaDescription: 'Kurangi ukuran file PDF dengan tetap mempertahankan kualitasnya. Kompresor PDF online gratis untuk file yang lebih kecil.',
+    keywords: ['kompres pdf', 'kurangi ukuran pdf', 'kompresor pdf', 'perkecil pdf', 'optimalkan pdf'],
     description: `
-      <p>Compress Pdf free online with our advanced PDF compression tool. Reduce file size without significant quality loss. Perfect for email attachments and web optimization.</p>
-            <p>Upload your PDF file and choose compression level. You can compress PDF no registration required. The compressed PDF maintains original formatting.</p>
-            <p>All compression happens locally in your browser. How to compress PDF for free? Use our online PDF compressor.</p>
-            <p>Try our free compress PDF online tool now. The fastest and most secure way to reduce PDF file size online.</p>
+      <p>Kompres PDF mengurangi ukuran file dokumen PDF Anda dengan tetap mempertahankan kualitas yang dapat diterima. Ini sangat penting untuk lampiran email, unggahan web, atau menghemat ruang penyimpanan.</p>
+      <p>Alat ini menawarkan beberapa tingkat kompresi untuk menyeimbangkan antara pengurangan ukuran file dan pelestarian kualitas. Anda dapat memilih kompresi agresif untuk pengurangan ukuran maksimal atau kompresi ringan untuk mempertahankan kualitas yang lebih tinggi.</p>
+      <p>Semua kompresi terjadi di browser Anda, memastikan dokumen Anda tidak pernah meninggalkan perangkat Anda.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can compress pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free compress pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang ingin Anda kompres.' },
+      { step: 2, title: 'Pilih Tingkat Kompresi', description: 'Pilih tingkat kompresi pilihan Anda: Rendah (kualitas terbaik), Sedang (seimbang), atau Tinggi (ukuran terkecil).' },
+      { step: 3, title: 'Kompres dan Unduh', description: 'Klik Kompres untuk mengurangi ukuran file, lalu unduh PDF yang telah dioptimalkan.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to compress pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to compress pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to compress pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Lampiran Email', description: 'Kurangi ukuran PDF untuk memenuhi batas lampiran email dan memastikan pengiriman yang lebih cepat.', icon: 'mail' },
+      { title: 'Publikasi Web', description: 'Optimalkan PDF untuk unduhan web guna meningkatkan waktu muat halaman dan pengalaman pengguna.', icon: 'globe' },
+      { title: 'Optimasi Penyimpanan', description: 'Kompres dokumen yang diarsipkan untuk menghemat ruang disk namun tetap dapat diakses.', icon: 'hard-drive' },
     ],
     faq: [
-      { question: 'Is it really free to compress pdf online?', answer: 'Yes, our compress pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can compress pdf as many times as you need.' },
-      { question: 'Is it safe to compress pdf online?', answer: 'Absolutely. All compress pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to compress pdf?', answer: 'No software installation is required. Our compress pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Seberapa besar saya dapat mengurangi ukuran file?', answer: 'Hasil kompresi bervariasi berdasarkan konten PDF. PDF yang banyak berisi gambar sering kali dapat dikurangi sebesar 50-80%, sementara PDF yang hanya berisi teks mungkin mengalami pengurangan yang lebih kecil.' },
+      { question: 'Apakah kompresi akan memengaruhi kualitas teks?', answer: 'Teks tetap tajam dan dapat dibaca di semua tingkat kompresi. Hanya gambar dan grafik yang terpengaruh oleh kompresi.' },
+      { question: 'Bisakah saya mengompres beberapa PDF sekaligus?', answer: 'Ya, Anda dapat mengunggah dan mengompres hingga 10 file PDF secara bersamaan.' },
     ],
   },
-  'pdf-to-word': {
-    title: 'Pdf To Word',
-    metaDescription: 'Pdf To Word gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'pdf to word free online',
-      'pdf to word no registration',
-      'pdf to word no sign up',
-      'pdf to word no watermark',
-      'pdf to word browser based',
-      'pdf to word for work',
-      'pdf to word for students',
-      'best pdf to word tool',
-      'how to pdf to word',
-      'pdf to word online free',
-      'pdf to word without software',
-      'pdf to word privacy focused',
-      'pdf to word secure',
-      'pdf to word fast',
-      'free pdf to word tool',
-      'online pdf to word free',
-      'pdf to word tool online',
-      'pdf to word for free',
-      'pdf to word no download',
-      'pdf to word web based',
-      'pdf to word open source',
-      'pdf to word wasm',
-      'pdf to word client side',
-      'pdf to word no upload',
-      'pdf to word instant',
-      'pdf to word high quality',
-      'pdf to word no limit',
-      'pdf to word 2025',
-      'pdf to word guide',
-      'pdf to word tutorial',
-    ],
+
+  'edit-pdf': {
+    title: 'Edit PDF',
+    metaDescription: 'Edit file PDF secara online. Tambahkan teks, gambar, anotasi, sorotan, dan bentuk ke dokumen Anda.',
+    keywords: ['edit pdf', 'editor pdf', 'anotasi pdf', 'tambah teks ke pdf', 'markup pdf'],
     description: `
-      <p>Pdf To Word free online with our powerful browser-based tool. Whether you need to pdf to word for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to word no registration required, with no watermarks added. How to pdf to word for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Word has never been easier. Get started now with the best free pdf to word tool online.</p>
+      <p>Edit PDF menyediakan serangkaian alat komprehensif untuk memodifikasi dan menganotasi dokumen PDF Anda. Tambahkan teks, gambar, bentuk, sorotan, komentar, dan lainnya tanpa memerlukan perangkat lunak desktop yang mahal.</p>
+      <p>Antarmuka editor yang intuitif memudahkan markup dokumen untuk ditinjau, menambahkan catatan untuk kolaborasi, meredaksi informasi sensitif, atau menyempurnakan dokumen dengan konten tambahan.</p>
+      <p>Semua pengeditan terjadi secara lokal di browser Anda, memastikan privasi penuh untuk dokumen sensitif Anda.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to word no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to word tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang ingin Anda edit.' },
+      { step: 2, title: 'Pilih Alat Edit', description: 'Pilih dari bilah alat: teks, sorotan, bentuk, gambar, komentar, atau alat redaksi.' },
+      { step: 3, title: 'Lakukan Pengeditan', description: 'Klik pada dokumen untuk menambahkan anotasi, tarik untuk memposisikan elemen, dan gunakan panel properti untuk menyesuaikannya.' },
+      { step: 4, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menerapkan perubahan Anda dan mengunduh PDF yang telah diedit.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to word for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to word for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to word for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Tinjauan Dokumen', description: 'Tambahkan komentar, sorotan, dan markup ke dokumen untuk proses peninjauan kolaboratif.', icon: 'message-square' },
+      { title: 'Penyelesaian Formulir', description: 'Isi bidang teks, tambahkan tanda tangan, dan lengkapi formulir PDF tanpa mencetak.', icon: 'edit-3' },
+      { title: 'Redaksi Konten', description: 'Hapus informasi sensitif secara permanen dari dokumen sebelum dibagikan.', icon: 'eye-off' },
     ],
     faq: [
-      { question: 'Is it really free to pdf to word online?', answer: 'Yes, our pdf to word tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to word as many times as you need.' },
-      { question: 'Is it safe to pdf to word online?', answer: 'Absolutely. All pdf to word processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to word?', answer: 'No software installation is required. Our pdf to word tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya mengedit teks asli di PDF?', answer: 'Alat ini berfokus pada penambahan anotasi dan konten baru. Untuk mengedit teks yang ada, Anda mungkin perlu menggunakan dokumen sumber aslinya.' },
+      { question: 'Apakah hasil edit saya permanen?', answer: 'Anotasi dapat diratakan (flattened) untuk menjadikannya permanen, atau disimpan sebagai lapisan yang dapat diedit tergantung pada preferensi Anda.' },
+      { question: 'Bisakah saya mengurungkan (undo) perubahan saya?', answer: 'Ya, editor ini mendukung fungsi urungkan/ulangi (undo/redo). Anda juga dapat mengatur ulang (reset) ke dokumen asli kapan saja sebelum menyimpan.' },
     ],
   },
-  'pdf-to-jpg': {
-    title: 'PDF ke JPG',
-    metaDescription: 'Pdf Ke Jpg online gratis - tanpa registrasi, tanpa registrasi.  Gunakan alat online gratis kami untuk pdf to jpg dengan cepat dan aman. Tidak perlu re',
-    keywords: [
-      'pdf to jpg free online',
-      'pdf to jpg no registration',
-      'pdf to jpg no sign up',
-      'pdf to jpg no watermark',
-      'pdf to jpg browser based',
-      'pdf to jpg for work',
-      'pdf to jpg for students',
-      'best pdf to jpg tool',
-      'how to pdf to jpg',
-      'pdf to jpg online free',
-      'pdf to jpg without software',
-      'pdf to jpg privacy focused',
-      'pdf to jpg secure',
-      'pdf to jpg fast',
-      'free pdf to jpg tool',
-      'online pdf to jpg free',
-      'pdf to jpg tool online',
-      'pdf to jpg for free',
-      'pdf to jpg no download',
-      'pdf to jpg web based',
-      'pdf to jpg open source',
-      'pdf to jpg wasm',
-      'pdf to jpg client side',
-      'pdf to jpg no upload',
-      'pdf to jpg instant',
-      'pdf to jpg high quality',
-      'pdf to jpg no limit',
-      'pdf to jpg 2025',
-      'pdf to jpg guide',
-      'pdf to jpg tutorial',
-    ],
-    description: `
-      <p>Pdf To Jpg free online with our powerful browser-based tool. Whether you need to pdf to jpg for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to jpg no registration required, with no watermarks added. How to pdf to jpg for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Jpg has never been easier. Get started now with the best free pdf to jpg tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to jpg no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to jpg tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to jpg for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to jpg for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to jpg for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to jpg online?', answer: 'Yes, our pdf to jpg tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to jpg as many times as you need.' },
-      { question: 'Is it safe to pdf to jpg online?', answer: 'Absolutely. All pdf to jpg processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to jpg?', answer: 'No software installation is required. Our pdf to jpg tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-excel': {
-    title: 'PDF ke Excel',
-    metaDescription: 'Pdf Ke Excel online gratis - tanpa registrasi, tanpa mendaftar.  Gunakan alat online gratis kami untuk pdf to excel dengan cepat dan aman. Tidak perlu',
-    keywords: [
-      'pdf to excel free online',
-      'pdf to excel no registration',
-      'pdf to excel no sign up',
-      'pdf to excel no watermark',
-      'pdf to excel browser based',
-      'pdf to excel for work',
-      'pdf to excel for students',
-      'best pdf to excel tool',
-      'how to pdf to excel',
-      'pdf to excel online free',
-      'pdf to excel without software',
-      'pdf to excel privacy focused',
-      'pdf to excel secure',
-      'pdf to excel fast',
-      'free pdf to excel tool',
-      'online pdf to excel free',
-      'pdf to excel tool online',
-      'pdf to excel for free',
-      'pdf to excel no download',
-      'pdf to excel web based',
-      'pdf to excel open source',
-      'pdf to excel wasm',
-      'pdf to excel client side',
-      'pdf to excel no upload',
-      'pdf to excel instant',
-      'pdf to excel high quality',
-      'pdf to excel no limit',
-      'pdf to excel 2025',
-      'pdf to excel guide',
-      'pdf to excel tutorial',
-    ],
-    description: `
-      <p>Pdf To Excel free online with our powerful browser-based tool. Whether you need to pdf to excel for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to excel no registration required, with no watermarks added. How to pdf to excel for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Excel has never been easier. Get started now with the best free pdf to excel tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to excel no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to excel tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to excel for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to excel for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to excel for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to excel online?', answer: 'Yes, our pdf to excel tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to excel as many times as you need.' },
-      { question: 'Is it safe to pdf to excel online?', answer: 'Absolutely. All pdf to excel processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to excel?', answer: 'No software installation is required. Our pdf to excel tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-powerpoint': {
-    title: 'Pdf To Powerpoint',
-    metaDescription: 'Pdf To Powerpoint gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'pdf to powerpoint free online',
-      'pdf to powerpoint no registration',
-      'pdf to powerpoint no sign up',
-      'pdf to powerpoint no watermark',
-      'pdf to powerpoint browser based',
-      'pdf to powerpoint for work',
-      'pdf to powerpoint for students',
-      'best pdf to powerpoint tool',
-      'how to pdf to powerpoint',
-      'pdf to powerpoint online free',
-      'pdf to powerpoint without software',
-      'pdf to powerpoint privacy focused',
-      'pdf to powerpoint secure',
-      'pdf to powerpoint fast',
-      'free pdf to powerpoint tool',
-      'online pdf to powerpoint free',
-      'pdf to powerpoint tool online',
-      'pdf to powerpoint for free',
-      'pdf to powerpoint no download',
-      'pdf to powerpoint web based',
-      'pdf to powerpoint open source',
-      'pdf to powerpoint wasm',
-      'pdf to powerpoint client side',
-      'pdf to powerpoint no upload',
-      'pdf to powerpoint instant',
-      'pdf to powerpoint high quality',
-      'pdf to powerpoint no limit',
-      'pdf to powerpoint 2025',
-      'pdf to powerpoint guide',
-      'pdf to powerpoint tutorial',
-    ],
-    description: `
-      <p>Pdf To Powerpoint free online with our powerful browser-based tool. Whether you need to pdf to powerpoint for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to powerpoint no registration required, with no watermarks added. How to pdf to powerpoint for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Powerpoint has never been easier. Get started now with the best free pdf to powerpoint tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to powerpoint no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to powerpoint tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to powerpoint for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to powerpoint for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to powerpoint for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to powerpoint online?', answer: 'Yes, our pdf to powerpoint tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to powerpoint as many times as you need.' },
-      { question: 'Is it safe to pdf to powerpoint online?', answer: 'Absolutely. All pdf to powerpoint processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to powerpoint?', answer: 'No software installation is required. Our pdf to powerpoint tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-text': {
-    title: 'Pdf To Text',
-    metaDescription: 'Pdf To Text gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'pdf to text free online',
-      'pdf to text no registration',
-      'pdf to text no sign up',
-      'pdf to text no watermark',
-      'pdf to text browser based',
-      'pdf to text for work',
-      'pdf to text for students',
-      'best pdf to text tool',
-      'how to pdf to text',
-      'pdf to text online free',
-      'pdf to text without software',
-      'pdf to text privacy focused',
-      'pdf to text secure',
-      'pdf to text fast',
-      'free pdf to text tool',
-      'online pdf to text free',
-      'pdf to text tool online',
-      'pdf to text for free',
-      'pdf to text no download',
-      'pdf to text web based',
-      'pdf to text open source',
-      'pdf to text wasm',
-      'pdf to text client side',
-      'pdf to text no upload',
-      'pdf to text instant',
-      'pdf to text high quality',
-      'pdf to text no limit',
-      'pdf to text 2025',
-      'pdf to text guide',
-      'pdf to text tutorial',
-    ],
-    description: `
-      <p>Pdf To Text free online with our powerful browser-based tool. Whether you need to pdf to text for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to text no registration required, with no watermarks added. How to pdf to text for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Text has never been easier. Get started now with the best free pdf to text tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to text no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to text tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to text for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to text for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to text for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to text online?', answer: 'Yes, our pdf to text tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to text as many times as you need.' },
-      { question: 'Is it safe to pdf to text online?', answer: 'Absolutely. All pdf to text processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to text?', answer: 'No software installation is required. Our pdf to text tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'word-to-pdf': {
-    title: 'Word ke PDF',
-    metaDescription: 'Word To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'word to pdf free online',
-      'word to pdf no registration',
-      'word to pdf no sign up',
-      'word to pdf no watermark',
-      'word to pdf browser based',
-      'word to pdf for work',
-      'word to pdf for students',
-      'best word to pdf tool',
-      'how to word to pdf',
-      'word to pdf online free',
-      'word to pdf without software',
-      'word to pdf privacy focused',
-      'word to pdf secure',
-      'word to pdf fast',
-      'free word to pdf tool',
-      'online word to pdf free',
-      'word to pdf tool online',
-      'word to pdf for free',
-      'word to pdf no download',
-      'word to pdf web based',
-      'word to pdf open source',
-      'word to pdf wasm',
-      'word to pdf client side',
-      'word to pdf no upload',
-      'word to pdf instant',
-      'word to pdf high quality',
-      'word to pdf no limit',
-      'word to pdf 2025',
-      'word to pdf guide',
-      'word to pdf tutorial',
-    ],
-    description: `
-      <p>Word To Pdf free online with our powerful browser-based tool. Whether you need to word to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can word to pdf no registration required, with no watermarks added. How to word to pdf for free? Use our online tool—no software needed.</p>
-            <p>Word To Pdf has never been easier. Get started now with the best free word to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can word to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free word to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to word to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to word to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to word to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to word to pdf online?', answer: 'Yes, our word to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can word to pdf as many times as you need.' },
-      { question: 'Is it safe to word to pdf online?', answer: 'Absolutely. All word to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to word to pdf?', answer: 'No software installation is required. Our word to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
+
   'jpg-to-pdf': {
     title: 'JPG ke PDF',
-    metaDescription: 'Jpg To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'jpg to pdf free online',
-      'jpg to pdf no registration',
-      'jpg to pdf no sign up',
-      'jpg to pdf no watermark',
-      'jpg to pdf browser based',
-      'jpg to pdf for work',
-      'jpg to pdf for students',
-      'best jpg to pdf tool',
-      'how to jpg to pdf',
-      'jpg to pdf online free',
-      'jpg to pdf without software',
-      'jpg to pdf privacy focused',
-      'jpg to pdf secure',
-      'jpg to pdf fast',
-      'free jpg to pdf tool',
-      'online jpg to pdf free',
-      'jpg to pdf tool online',
-      'jpg to pdf for free',
-      'jpg to pdf no download',
-      'jpg to pdf web based',
-      'jpg to pdf open source',
-      'jpg to pdf wasm',
-      'jpg to pdf client side',
-      'jpg to pdf no upload',
-      'jpg to pdf instant',
-      'jpg to pdf high quality',
-      'jpg to pdf no limit',
-      'jpg to pdf 2025',
-      'jpg to pdf guide',
-      'jpg to pdf tutorial',
-    ],
+    metaDescription: 'Konversi gambar JPG ke PDF. Gabungkan beberapa file JPG menjadi satu dokumen PDF.',
+    keywords: ['jpg ke pdf', 'jpeg ke pdf', 'konversi jpg', 'gambar ke pdf', 'foto ke pdf'],
     description: `
-      <p>Jpg To Pdf free online with our powerful browser-based tool. Whether you need to jpg to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can jpg to pdf no registration required, with no watermarks added. How to jpg to pdf for free? Use our online tool—no software needed.</p>
-            <p>Jpg To Pdf has never been easier. Get started now with the best free jpg to pdf tool online.</p>
+      <p>JPG ke PDF mengonversi gambar JPEG Anda menjadi dokumen PDF dengan cepat dan mudah. Baik Anda memiliki satu foto atau beberapa gambar, alat ini dapat membuat file PDF yang tampak profesional.</p>
+      <p>Anda dapat menggabungkan beberapa file JPG menjadi satu PDF, menyusunnya dalam urutan apa pun, dan menyesuaikan ukuran serta orientasi halaman. Konversi ini mempertahankan kualitas gambar sekaligus membuat file PDF yang ringkas dan mudah dibagikan.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan foto Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can jpg to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free jpg to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah Gambar JPG', description: 'Tarik dan lepas file JPG Anda atau klik untuk memilih gambar dari perangkat Anda.' },
+      { step: 2, title: 'Susun dan Konfigurasi', description: 'Urutkan ulang gambar dengan menariknya, dan pilih opsi ukuran serta orientasi halaman.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda dan unduh hasilnya.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to jpg to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to jpg to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to jpg to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Album Foto', description: 'Buat album foto PDF dari gambar liburan atau foto acara agar mudah dibagikan.', icon: 'image' },
+      { title: 'Pemindaian Dokumen', description: 'Konversi foto dokumen dari kamera ponsel menjadi file PDF yang tepat.', icon: 'camera' },
+      { title: 'Pembuatan Portofolio', description: 'Kumpulkan karya fotografi atau sampel desain ke dalam portofolio PDF profesional.', icon: 'folder' },
     ],
     faq: [
-      { question: 'Is it really free to jpg to pdf online?', answer: 'Yes, our jpg to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can jpg to pdf as many times as you need.' },
-      { question: 'Is it safe to jpg to pdf online?', answer: 'Absolutely. All jpg to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to jpg to pdf?', answer: 'No software installation is required. Our jpg to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Berapa banyak gambar yang dapat saya konversi?', answer: 'Anda dapat mengonversi hingga 100 gambar JPG menjadi satu dokumen PDF.' },
+      { question: 'Apakah kualitas gambar akan dipertahankan?', answer: 'Ya, gambar disematkan pada kualitas aslinya. Anda dapat secara opsional mengompresnya untuk mengurangi ukuran file.' },
+      { question: 'Bisakah saya mengatur ukuran halaman yang berbeda untuk gambar yang berbeda?', answer: 'Alat ini menerapkan ukuran halaman yang seragam untuk semua halaman. Setiap gambar diskalakan agar sesuai dengan ukuran halaman yang dipilih dengan tetap mempertahankan rasio aspek.' },
     ],
   },
-  'excel-to-pdf': {
-    title: 'Excel ke PDF',
-    metaDescription: 'Excel To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'excel to pdf free online',
-      'excel to pdf no registration',
-      'excel to pdf no sign up',
-      'excel to pdf no watermark',
-      'excel to pdf browser based',
-      'excel to pdf for work',
-      'excel to pdf for students',
-      'best excel to pdf tool',
-      'how to excel to pdf',
-      'excel to pdf online free',
-      'excel to pdf without software',
-      'excel to pdf privacy focused',
-      'excel to pdf secure',
-      'excel to pdf fast',
-      'free excel to pdf tool',
-      'online excel to pdf free',
-      'excel to pdf tool online',
-      'excel to pdf for free',
-      'excel to pdf no download',
-      'excel to pdf web based',
-      'excel to pdf open source',
-      'excel to pdf wasm',
-      'excel to pdf client side',
-      'excel to pdf no upload',
-      'excel to pdf instant',
-      'excel to pdf high quality',
-      'excel to pdf no limit',
-      'excel to pdf 2025',
-      'excel to pdf guide',
-      'excel to pdf tutorial',
-    ],
-    description: `
-      <p>Excel To Pdf free online with our powerful browser-based tool. Whether you need to excel to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can excel to pdf no registration required, with no watermarks added. How to excel to pdf for free? Use our online tool—no software needed.</p>
-            <p>Excel To Pdf has never been easier. Get started now with the best free excel to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can excel to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free excel to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to excel to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to excel to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to excel to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to excel to pdf online?', answer: 'Yes, our excel to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can excel to pdf as many times as you need.' },
-      { question: 'Is it safe to excel to pdf online?', answer: 'Absolutely. All excel to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to excel to pdf?', answer: 'No software installation is required. Our excel to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'powerpoint-to-pdf': {
-    title: 'Powerpoint To Pdf',
-    metaDescription: 'Powerpoint To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'powerpoint to pdf free online',
-      'powerpoint to pdf no registration',
-      'powerpoint to pdf no sign up',
-      'powerpoint to pdf no watermark',
-      'powerpoint to pdf browser based',
-      'powerpoint to pdf for work',
-      'powerpoint to pdf for students',
-      'best powerpoint to pdf tool',
-      'how to powerpoint to pdf',
-      'powerpoint to pdf online free',
-      'powerpoint to pdf without software',
-      'powerpoint to pdf privacy focused',
-      'powerpoint to pdf secure',
-      'powerpoint to pdf fast',
-      'free powerpoint to pdf tool',
-      'online powerpoint to pdf free',
-      'powerpoint to pdf tool online',
-      'powerpoint to pdf for free',
-      'powerpoint to pdf no download',
-      'powerpoint to pdf web based',
-      'powerpoint to pdf open source',
-      'powerpoint to pdf wasm',
-      'powerpoint to pdf client side',
-      'powerpoint to pdf no upload',
-      'powerpoint to pdf instant',
-      'powerpoint to pdf high quality',
-      'powerpoint to pdf no limit',
-      'powerpoint to pdf 2025',
-      'powerpoint to pdf guide',
-      'powerpoint to pdf tutorial',
-    ],
-    description: `
-      <p>Powerpoint To Pdf free online with our powerful browser-based tool. Whether you need to powerpoint to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can powerpoint to pdf no registration required, with no watermarks added. How to powerpoint to pdf for free? Use our online tool—no software needed.</p>
-            <p>Powerpoint To Pdf has never been easier. Get started now with the best free powerpoint to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can powerpoint to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free powerpoint to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to powerpoint to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to powerpoint to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to powerpoint to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to powerpoint to pdf online?', answer: 'Yes, our powerpoint to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can powerpoint to pdf as many times as you need.' },
-      { question: 'Is it safe to powerpoint to pdf online?', answer: 'Absolutely. All powerpoint to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to powerpoint to pdf?', answer: 'No software installation is required. Our powerpoint to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'text-to-pdf': {
-    title: 'Text To Pdf',
-    metaDescription: 'Text To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'text to pdf free online',
-      'text to pdf no registration',
-      'text to pdf no sign up',
-      'text to pdf no watermark',
-      'text to pdf browser based',
-      'text to pdf for work',
-      'text to pdf for students',
-      'best text to pdf tool',
-      'how to text to pdf',
-      'text to pdf online free',
-      'text to pdf without software',
-      'text to pdf privacy focused',
-      'text to pdf secure',
-      'text to pdf fast',
-      'free text to pdf tool',
-      'online text to pdf free',
-      'text to pdf tool online',
-      'text to pdf for free',
-      'text to pdf no download',
-      'text to pdf web based',
-      'text to pdf open source',
-      'text to pdf wasm',
-      'text to pdf client side',
-      'text to pdf no upload',
-      'text to pdf instant',
-      'text to pdf high quality',
-      'text to pdf no limit',
-      'text to pdf 2025',
-      'text to pdf guide',
-      'text to pdf tutorial',
-    ],
-    description: `
-      <p>Text To Pdf free online with our powerful browser-based tool. Whether you need to text to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can text to pdf no registration required, with no watermarks added. How to text to pdf for free? Use our online tool—no software needed.</p>
-            <p>Text To Pdf has never been easier. Get started now with the best free text to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can text to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free text to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to text to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to text to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to text to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to text to pdf online?', answer: 'Yes, our text to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can text to pdf as many times as you need.' },
-      { question: 'Is it safe to text to pdf online?', answer: 'Absolutely. All text to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to text to pdf?', answer: 'No software installation is required. Our text to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'html-to-pdf': {
-    title: 'Html To Pdf',
-    metaDescription: 'Html To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'html to pdf free online',
-      'html to pdf no registration',
-      'html to pdf no sign up',
-      'html to pdf no watermark',
-      'html to pdf browser based',
-      'html to pdf for work',
-      'html to pdf for students',
-      'best html to pdf tool',
-      'how to html to pdf',
-      'html to pdf online free',
-      'html to pdf without software',
-      'html to pdf privacy focused',
-      'html to pdf secure',
-      'html to pdf fast',
-      'free html to pdf tool',
-      'online html to pdf free',
-      'html to pdf tool online',
-      'html to pdf for free',
-      'html to pdf no download',
-      'html to pdf web based',
-      'html to pdf open source',
-      'html to pdf wasm',
-      'html to pdf client side',
-      'html to pdf no upload',
-      'html to pdf instant',
-      'html to pdf high quality',
-      'html to pdf no limit',
-      'html to pdf 2025',
-      'html to pdf guide',
-      'html to pdf tutorial',
-    ],
-    description: `
-      <p>Html To Pdf free online with our powerful browser-based tool. Whether you need to html to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can html to pdf no registration required, with no watermarks added. How to html to pdf for free? Use our online tool—no software needed.</p>
-            <p>Html To Pdf has never been easier. Get started now with the best free html to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can html to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free html to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to html to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to html to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to html to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to html to pdf online?', answer: 'Yes, our html to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can html to pdf as many times as you need.' },
-      { question: 'Is it safe to html to pdf online?', answer: 'Absolutely. All html to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to html to pdf?', answer: 'No software installation is required. Our html to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'rotate-pdf': {
-    title: 'Putar PDF',
-    metaDescription: 'Rotate Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'rotate pdf free online',
-      'rotate pdf no registration',
-      'rotate pdf no sign up',
-      'rotate pdf no watermark',
-      'rotate pdf browser based',
-      'rotate pdf for work',
-      'rotate pdf for students',
-      'best rotate pdf tool',
-      'how to rotate pdf',
-      'rotate pdf online free',
-      'rotate pdf without software',
-      'rotate pdf privacy focused',
-      'rotate pdf secure',
-      'rotate pdf fast',
-      'free rotate pdf tool',
-      'online rotate pdf free',
-      'rotate pdf tool online',
-      'rotate pdf for free',
-      'rotate pdf no download',
-      'rotate pdf web based',
-      'rotate pdf open source',
-      'rotate pdf wasm',
-      'rotate pdf client side',
-      'rotate pdf no upload',
-      'rotate pdf instant',
-      'rotate pdf high quality',
-      'rotate pdf no limit',
-      'rotate pdf 2025',
-      'rotate pdf guide',
-      'rotate pdf tutorial',
-    ],
-    description: `
-      <p>Rotate Pdf free online with our powerful browser-based tool. Whether you need to rotate pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can rotate pdf no registration required, with no watermarks added. How to rotate pdf for free? Use our online tool—no software needed.</p>
-            <p>Rotate Pdf has never been easier. Get started now with the best free rotate pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can rotate pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free rotate pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to rotate pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to rotate pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to rotate pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to rotate pdf online?', answer: 'Yes, our rotate pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can rotate pdf as many times as you need.' },
-      { question: 'Is it safe to rotate pdf online?', answer: 'Absolutely. All rotate pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to rotate pdf?', answer: 'No software installation is required. Our rotate pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'unlock-pdf': {
-    title: 'Unlock Pdf',
-    metaDescription: 'Unlock Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'unlock pdf free online',
-      'unlock pdf no registration',
-      'unlock pdf no sign up',
-      'unlock pdf no watermark',
-      'unlock pdf browser based',
-      'unlock pdf for work',
-      'unlock pdf for students',
-      'best unlock pdf tool',
-      'how to unlock pdf',
-      'unlock pdf online free',
-      'unlock pdf without software',
-      'unlock pdf privacy focused',
-      'unlock pdf secure',
-      'unlock pdf fast',
-      'free unlock pdf tool',
-      'online unlock pdf free',
-      'unlock pdf tool online',
-      'unlock pdf for free',
-      'unlock pdf no download',
-      'unlock pdf web based',
-      'unlock pdf open source',
-      'unlock pdf wasm',
-      'unlock pdf client side',
-      'unlock pdf no upload',
-      'unlock pdf instant',
-      'unlock pdf high quality',
-      'unlock pdf no limit',
-      'unlock pdf 2025',
-      'unlock pdf guide',
-      'unlock pdf tutorial',
-    ],
-    description: `
-      <p>Unlock Pdf free online with our powerful browser-based tool. Whether you need to unlock pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can unlock pdf no registration required, with no watermarks added. How to unlock pdf for free? Use our online tool—no software needed.</p>
-            <p>Unlock Pdf has never been easier. Get started now with the best free unlock pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can unlock pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free unlock pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to unlock pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to unlock pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to unlock pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to unlock pdf online?', answer: 'Yes, our unlock pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can unlock pdf as many times as you need.' },
-      { question: 'Is it safe to unlock pdf online?', answer: 'Absolutely. All unlock pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to unlock pdf?', answer: 'No software installation is required. Our unlock pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'protect-pdf': {
-    title: 'Protect Pdf',
-    metaDescription: 'Protect Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'protect pdf free online',
-      'protect pdf no registration',
-      'protect pdf no sign up',
-      'protect pdf no watermark',
-      'protect pdf browser based',
-      'protect pdf for work',
-      'protect pdf for students',
-      'best protect pdf tool',
-      'how to protect pdf',
-      'protect pdf online free',
-      'protect pdf without software',
-      'protect pdf privacy focused',
-      'protect pdf secure',
-      'protect pdf fast',
-      'free protect pdf tool',
-      'online protect pdf free',
-      'protect pdf tool online',
-      'protect pdf for free',
-      'protect pdf no download',
-      'protect pdf web based',
-      'protect pdf open source',
-      'protect pdf wasm',
-      'protect pdf client side',
-      'protect pdf no upload',
-      'protect pdf instant',
-      'protect pdf high quality',
-      'protect pdf no limit',
-      'protect pdf 2025',
-      'protect pdf guide',
-      'protect pdf tutorial',
-    ],
-    description: `
-      <p>Protect Pdf free online with our powerful browser-based tool. Whether you need to protect pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can protect pdf no registration required, with no watermarks added. How to protect pdf for free? Use our online tool—no software needed.</p>
-            <p>Protect Pdf has never been easier. Get started now with the best free protect pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can protect pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free protect pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to protect pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to protect pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to protect pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to protect pdf online?', answer: 'Yes, our protect pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can protect pdf as many times as you need.' },
-      { question: 'Is it safe to protect pdf online?', answer: 'Absolutely. All protect pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to protect pdf?', answer: 'No software installation is required. Our protect pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'add-watermark': {
-    title: 'Tambahkan Tanda Air (Watermark)',
-    metaDescription: 'Add Watermark gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami u',
-    keywords: [
-      'add watermark free online',
-      'add watermark no registration',
-      'add watermark no sign up',
-      'add watermark no watermark',
-      'add watermark browser based',
-      'add watermark for work',
-      'add watermark for students',
-      'best add watermark tool',
-      'how to add watermark',
-      'add watermark online free',
-      'add watermark without software',
-      'add watermark privacy focused',
-      'add watermark secure',
-      'add watermark fast',
-      'free add watermark tool',
-      'online add watermark free',
-      'add watermark tool online',
-      'add watermark for free',
-      'add watermark no download',
-      'add watermark web based',
-      'add watermark open source',
-      'add watermark wasm',
-      'add watermark client side',
-      'add watermark no upload',
-      'add watermark instant',
-      'add watermark high quality',
-      'add watermark no limit',
-      'add watermark 2025',
-      'add watermark guide',
-      'add watermark tutorial',
-    ],
-    description: `
-      <p>Add Watermark free online with our powerful browser-based tool. Whether you need to add watermark for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can add watermark no registration required, with no watermarks added. How to add watermark for free? Use our online tool—no software needed.</p>
-            <p>Add Watermark has never been easier. Get started now with the best free add watermark tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can add watermark no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free add watermark tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to add watermark for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to add watermark for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to add watermark for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to add watermark online?', answer: 'Yes, our add watermark tool is completely free to use. No registration, no sign-up, no credit card required. You can add watermark as many times as you need.' },
-      { question: 'Is it safe to add watermark online?', answer: 'Absolutely. All add watermark processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to add watermark?', answer: 'No software installation is required. Our add watermark tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'remove-watermark': {
-    title: 'Remove Watermark',
-    metaDescription: 'Remove Watermark gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kam',
-    keywords: [
-      'remove watermark free online',
-      'remove watermark no registration',
-      'remove watermark no sign up',
-      'remove watermark no watermark',
-      'remove watermark browser based',
-      'remove watermark for work',
-      'remove watermark for students',
-      'best remove watermark tool',
-      'how to remove watermark',
-      'remove watermark online free',
-      'remove watermark without software',
-      'remove watermark privacy focused',
-      'remove watermark secure',
-      'remove watermark fast',
-      'free remove watermark tool',
-      'online remove watermark free',
-      'remove watermark tool online',
-      'remove watermark for free',
-      'remove watermark no download',
-      'remove watermark web based',
-      'remove watermark open source',
-      'remove watermark wasm',
-      'remove watermark client side',
-      'remove watermark no upload',
-      'remove watermark instant',
-      'remove watermark high quality',
-      'remove watermark no limit',
-      'remove watermark 2025',
-      'remove watermark guide',
-      'remove watermark tutorial',
-    ],
-    description: `
-      <p>Remove Watermark free online with our powerful browser-based tool. Whether you need to remove watermark for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can remove watermark no registration required, with no watermarks added. How to remove watermark for free? Use our online tool—no software needed.</p>
-            <p>Remove Watermark has never been easier. Get started now with the best free remove watermark tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can remove watermark no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free remove watermark tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to remove watermark for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to remove watermark for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to remove watermark for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to remove watermark online?', answer: 'Yes, our remove watermark tool is completely free to use. No registration, no sign-up, no credit card required. You can remove watermark as many times as you need.' },
-      { question: 'Is it safe to remove watermark online?', answer: 'Absolutely. All remove watermark processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to remove watermark?', answer: 'No software installation is required. Our remove watermark tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'add-page-numbers': {
-    title: 'Add Page Numbers',
-    metaDescription: 'Add Page Numbers gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kam',
-    keywords: [
-      'add page numbers free online',
-      'add page numbers no registration',
-      'add page numbers no sign up',
-      'add page numbers no watermark',
-      'add page numbers browser based',
-      'add page numbers for work',
-      'add page numbers for students',
-      'best add page numbers tool',
-      'how to add page numbers',
-      'add page numbers online free',
-      'add page numbers without software',
-      'add page numbers privacy focused',
-      'add page numbers secure',
-      'add page numbers fast',
-      'free add page numbers tool',
-      'online add page numbers free',
-      'add page numbers tool online',
-      'add page numbers for free',
-      'add page numbers no download',
-      'add page numbers web based',
-      'add page numbers open source',
-      'add page numbers wasm',
-      'add page numbers client side',
-      'add page numbers no upload',
-      'add page numbers instant',
-      'add page numbers high quality',
-      'add page numbers no limit',
-      'add page numbers 2025',
-      'add page numbers guide',
-      'add page numbers tutorial',
-    ],
-    description: `
-      <p>Add Page Numbers free online with our powerful browser-based tool. Whether you need to add page numbers for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can add page numbers no registration required, with no watermarks added. How to add page numbers for free? Use our online tool—no software needed.</p>
-            <p>Add Page Numbers has never been easier. Get started now with the best free add page numbers tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can add page numbers no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free add page numbers tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to add page numbers for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to add page numbers for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to add page numbers for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to add page numbers online?', answer: 'Yes, our add page numbers tool is completely free to use. No registration, no sign-up, no credit card required. You can add page numbers as many times as you need.' },
-      { question: 'Is it safe to add page numbers online?', answer: 'Absolutely. All add page numbers processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to add page numbers?', answer: 'No software installation is required. Our add page numbers tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'remove-pages': {
-    title: 'Remove Pages',
-    metaDescription: 'Remove Pages gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'remove pages free online',
-      'remove pages no registration',
-      'remove pages no sign up',
-      'remove pages no watermark',
-      'remove pages browser based',
-      'remove pages for work',
-      'remove pages for students',
-      'best remove pages tool',
-      'how to remove pages',
-      'remove pages online free',
-      'remove pages without software',
-      'remove pages privacy focused',
-      'remove pages secure',
-      'remove pages fast',
-      'free remove pages tool',
-      'online remove pages free',
-      'remove pages tool online',
-      'remove pages for free',
-      'remove pages no download',
-      'remove pages web based',
-      'remove pages open source',
-      'remove pages wasm',
-      'remove pages client side',
-      'remove pages no upload',
-      'remove pages instant',
-      'remove pages high quality',
-      'remove pages no limit',
-      'remove pages 2025',
-      'remove pages guide',
-      'remove pages tutorial',
-    ],
-    description: `
-      <p>Remove Pages free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
-            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
-            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
-            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can remove pages no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free remove pages tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to remove pages for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to remove pages for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to remove pages for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to remove pages online?', answer: 'Yes, our remove pages tool is completely free to use. No registration, no sign-up, no credit card required. You can remove pages as many times as you need.' },
-      { question: 'Is it safe to remove pages online?', answer: 'Absolutely. All remove pages processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to remove pages?', answer: 'No software installation is required. Our remove pages tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'extract-pages': {
-    title: 'Ekstrak Halaman',
-    metaDescription: 'Extract Pages gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami u',
-    keywords: [
-      'extract pages free online',
-      'extract pages no registration',
-      'extract pages no sign up',
-      'extract pages no watermark',
-      'extract pages browser based',
-      'extract pages for work',
-      'extract pages for students',
-      'best extract pages tool',
-      'how to extract pages',
-      'extract pages online free',
-      'extract pages without software',
-      'extract pages privacy focused',
-      'extract pages secure',
-      'extract pages fast',
-      'free extract pages tool',
-      'online extract pages free',
-      'extract pages tool online',
-      'extract pages for free',
-      'extract pages no download',
-      'extract pages web based',
-      'extract pages open source',
-      'extract pages wasm',
-      'extract pages client side',
-      'extract pages no upload',
-      'extract pages instant',
-      'extract pages high quality',
-      'extract pages no limit',
-      'extract pages 2025',
-      'extract pages guide',
-      'extract pages tutorial',
-    ],
-    description: `
-      <p>Extract Pages free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
-            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
-            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
-            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can extract pages no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free extract pages tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to extract pages for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to extract pages for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to extract pages for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to extract pages online?', answer: 'Yes, our extract pages tool is completely free to use. No registration, no sign-up, no credit card required. You can extract pages as many times as you need.' },
-      { question: 'Is it safe to extract pages online?', answer: 'Absolutely. All extract pages processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to extract pages?', answer: 'No software installation is required. Our extract pages tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'reorganize-pdf': {
-    title: 'Reorganize Pdf',
-    metaDescription: 'Reorganize Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami ',
-    keywords: [
-      'reorganize pdf free online',
-      'reorganize pdf no registration',
-      'reorganize pdf no sign up',
-      'reorganize pdf no watermark',
-      'reorganize pdf browser based',
-      'reorganize pdf for work',
-      'reorganize pdf for students',
-      'best reorganize pdf tool',
-      'how to reorganize pdf',
-      'reorganize pdf online free',
-      'reorganize pdf without software',
-      'reorganize pdf privacy focused',
-      'reorganize pdf secure',
-      'reorganize pdf fast',
-      'free reorganize pdf tool',
-      'online reorganize pdf free',
-      'reorganize pdf tool online',
-      'reorganize pdf for free',
-      'reorganize pdf no download',
-      'reorganize pdf web based',
-      'reorganize pdf open source',
-      'reorganize pdf wasm',
-      'reorganize pdf client side',
-      'reorganize pdf no upload',
-      'reorganize pdf instant',
-      'reorganize pdf high quality',
-      'reorganize pdf no limit',
-      'reorganize pdf 2025',
-      'reorganize pdf guide',
-      'reorganize pdf tutorial',
-    ],
-    description: `
-      <p>Reorganize Pdf free online with our powerful browser-based tool. Whether you need to reorganize pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can reorganize pdf no registration required, with no watermarks added. How to reorganize pdf for free? Use our online tool—no software needed.</p>
-            <p>Reorganize Pdf has never been easier. Get started now with the best free reorganize pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can reorganize pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free reorganize pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to reorganize pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to reorganize pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to reorganize pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to reorganize pdf online?', answer: 'Yes, our reorganize pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can reorganize pdf as many times as you need.' },
-      { question: 'Is it safe to reorganize pdf online?', answer: 'Absolutely. All reorganize pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to reorganize pdf?', answer: 'No software installation is required. Our reorganize pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'insert-pdf': {
-    title: 'Insert Pdf',
-    metaDescription: 'Insert Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'insert pdf free online',
-      'insert pdf no registration',
-      'insert pdf no sign up',
-      'insert pdf no watermark',
-      'insert pdf browser based',
-      'insert pdf for work',
-      'insert pdf for students',
-      'best insert pdf tool',
-      'how to insert pdf',
-      'insert pdf online free',
-      'insert pdf without software',
-      'insert pdf privacy focused',
-      'insert pdf secure',
-      'insert pdf fast',
-      'free insert pdf tool',
-      'online insert pdf free',
-      'insert pdf tool online',
-      'insert pdf for free',
-      'insert pdf no download',
-      'insert pdf web based',
-      'insert pdf open source',
-      'insert pdf wasm',
-      'insert pdf client side',
-      'insert pdf no upload',
-      'insert pdf instant',
-      'insert pdf high quality',
-      'insert pdf no limit',
-      'insert pdf 2025',
-      'insert pdf guide',
-      'insert pdf tutorial',
-    ],
-    description: `
-      <p>Insert Pdf free online with our powerful browser-based tool. Whether you need to insert pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can insert pdf no registration required, with no watermarks added. How to insert pdf for free? Use our online tool—no software needed.</p>
-            <p>Insert Pdf has never been easier. Get started now with the best free insert pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can insert pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free insert pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to insert pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to insert pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to insert pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to insert pdf online?', answer: 'Yes, our insert pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can insert pdf as many times as you need.' },
-      { question: 'Is it safe to insert pdf online?', answer: 'Absolutely. All insert pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to insert pdf?', answer: 'No software installation is required. Our insert pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'replace-pdf': {
-    title: 'Replace Pdf',
-    metaDescription: 'Replace Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'replace pdf free online',
-      'replace pdf no registration',
-      'replace pdf no sign up',
-      'replace pdf no watermark',
-      'replace pdf browser based',
-      'replace pdf for work',
-      'replace pdf for students',
-      'best replace pdf tool',
-      'how to replace pdf',
-      'replace pdf online free',
-      'replace pdf without software',
-      'replace pdf privacy focused',
-      'replace pdf secure',
-      'replace pdf fast',
-      'free replace pdf tool',
-      'online replace pdf free',
-      'replace pdf tool online',
-      'replace pdf for free',
-      'replace pdf no download',
-      'replace pdf web based',
-      'replace pdf open source',
-      'replace pdf wasm',
-      'replace pdf client side',
-      'replace pdf no upload',
-      'replace pdf instant',
-      'replace pdf high quality',
-      'replace pdf no limit',
-      'replace pdf 2025',
-      'replace pdf guide',
-      'replace pdf tutorial',
-    ],
-    description: `
-      <p>Replace Pdf free online with our powerful browser-based tool. Whether you need to replace pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can replace pdf no registration required, with no watermarks added. How to replace pdf for free? Use our online tool—no software needed.</p>
-            <p>Replace Pdf has never been easier. Get started now with the best free replace pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can replace pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free replace pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to replace pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to replace pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to replace pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to replace pdf online?', answer: 'Yes, our replace pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can replace pdf as many times as you need.' },
-      { question: 'Is it safe to replace pdf online?', answer: 'Absolutely. All replace pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to replace pdf?', answer: 'No software installation is required. Our replace pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'crop-pdf': {
-    title: 'Potong PDF',
-    metaDescription: 'Crop Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untuk ',
-    keywords: [
-      'crop pdf free online',
-      'crop pdf no registration',
-      'crop pdf no sign up',
-      'crop pdf no watermark',
-      'crop pdf browser based',
-      'crop pdf for work',
-      'crop pdf for students',
-      'best crop pdf tool',
-      'how to crop pdf',
-      'crop pdf online free',
-      'crop pdf without software',
-      'crop pdf privacy focused',
-      'crop pdf secure',
-      'crop pdf fast',
-      'free crop pdf tool',
-      'online crop pdf free',
-      'crop pdf tool online',
-      'crop pdf for free',
-      'crop pdf no download',
-      'crop pdf web based',
-      'crop pdf open source',
-      'crop pdf wasm',
-      'crop pdf client side',
-      'crop pdf no upload',
-      'crop pdf instant',
-      'crop pdf high quality',
-      'crop pdf no limit',
-      'crop pdf 2025',
-      'crop pdf guide',
-      'crop pdf tutorial',
-    ],
-    description: `
-      <p>Crop Pdf free online with our powerful browser-based tool. Whether you need to crop pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can crop pdf no registration required, with no watermarks added. How to crop pdf for free? Use our online tool—no software needed.</p>
-            <p>Crop Pdf has never been easier. Get started now with the best free crop pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can crop pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free crop pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to crop pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to crop pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to crop pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to crop pdf online?', answer: 'Yes, our crop pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can crop pdf as many times as you need.' },
-      { question: 'Is it safe to crop pdf online?', answer: 'Absolutely. All crop pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to crop pdf?', answer: 'No software installation is required. Our crop pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'resize-pdf': {
-    title: 'Resize Pdf',
-    metaDescription: 'Resize Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'resize pdf free online',
-      'resize pdf no registration',
-      'resize pdf no sign up',
-      'resize pdf no watermark',
-      'resize pdf browser based',
-      'resize pdf for work',
-      'resize pdf for students',
-      'best resize pdf tool',
-      'how to resize pdf',
-      'resize pdf online free',
-      'resize pdf without software',
-      'resize pdf privacy focused',
-      'resize pdf secure',
-      'resize pdf fast',
-      'free resize pdf tool',
-      'online resize pdf free',
-      'resize pdf tool online',
-      'resize pdf for free',
-      'resize pdf no download',
-      'resize pdf web based',
-      'resize pdf open source',
-      'resize pdf wasm',
-      'resize pdf client side',
-      'resize pdf no upload',
-      'resize pdf instant',
-      'resize pdf high quality',
-      'resize pdf no limit',
-      'resize pdf 2025',
-      'resize pdf guide',
-      'resize pdf tutorial',
-    ],
-    description: `
-      <p>Resize Pdf free online with our powerful browser-based tool. Whether you need to resize pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can resize pdf no registration required, with no watermarks added. How to resize pdf for free? Use our online tool—no software needed.</p>
-            <p>Resize Pdf has never been easier. Get started now with the best free resize pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can resize pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free resize pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to resize pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to resize pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to resize pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to resize pdf online?', answer: 'Yes, our resize pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can resize pdf as many times as you need.' },
-      { question: 'Is it safe to resize pdf online?', answer: 'Absolutely. All resize pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to resize pdf?', answer: 'No software installation is required. Our resize pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-svg': {
-    title: 'PDF ke SVG',
-    metaDescription: 'Pdf To Svg gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'pdf to svg free online',
-      'pdf to svg no registration',
-      'pdf to svg no sign up',
-      'pdf to svg no watermark',
-      'pdf to svg browser based',
-      'pdf to svg for work',
-      'pdf to svg for students',
-      'best pdf to svg tool',
-      'how to pdf to svg',
-      'pdf to svg online free',
-      'pdf to svg without software',
-      'pdf to svg privacy focused',
-      'pdf to svg secure',
-      'pdf to svg fast',
-      'free pdf to svg tool',
-      'online pdf to svg free',
-      'pdf to svg tool online',
-      'pdf to svg for free',
-      'pdf to svg no download',
-      'pdf to svg web based',
-      'pdf to svg open source',
-      'pdf to svg wasm',
-      'pdf to svg client side',
-      'pdf to svg no upload',
-      'pdf to svg instant',
-      'pdf to svg high quality',
-      'pdf to svg no limit',
-      'pdf to svg 2025',
-      'pdf to svg guide',
-      'pdf to svg tutorial',
-    ],
-    description: `
-      <p>Pdf To Svg free online with our powerful browser-based tool. Whether you need to pdf to svg for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to svg no registration required, with no watermarks added. How to pdf to svg for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Svg has never been easier. Get started now with the best free pdf to svg tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to svg no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to svg tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to svg for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to svg for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to svg for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to svg online?', answer: 'Yes, our pdf to svg tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to svg as many times as you need.' },
-      { question: 'Is it safe to pdf to svg online?', answer: 'Absolutely. All pdf to svg processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to svg?', answer: 'No software installation is required. Our pdf to svg tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-png': {
-    title: 'PDF ke PNG',
-    metaDescription: 'Pdf To Png gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'pdf to png free online',
-      'pdf to png no registration',
-      'pdf to png no sign up',
-      'pdf to png no watermark',
-      'pdf to png browser based',
-      'pdf to png for work',
-      'pdf to png for students',
-      'best pdf to png tool',
-      'how to pdf to png',
-      'pdf to png online free',
-      'pdf to png without software',
-      'pdf to png privacy focused',
-      'pdf to png secure',
-      'pdf to png fast',
-      'free pdf to png tool',
-      'online pdf to png free',
-      'pdf to png tool online',
-      'pdf to png for free',
-      'pdf to png no download',
-      'pdf to png web based',
-      'pdf to png open source',
-      'pdf to png wasm',
-      'pdf to png client side',
-      'pdf to png no upload',
-      'pdf to png instant',
-      'pdf to png high quality',
-      'pdf to png no limit',
-      'pdf to png 2025',
-      'pdf to png guide',
-      'pdf to png tutorial',
-    ],
-    description: `
-      <p>Pdf To Png free online with our powerful browser-based tool. Whether you need to pdf to png for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to png no registration required, with no watermarks added. How to pdf to png for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Png has never been easier. Get started now with the best free pdf to png tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to png no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to png tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to png for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to png for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to png for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to png online?', answer: 'Yes, our pdf to png tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to png as many times as you need.' },
-      { question: 'Is it safe to pdf to png online?', answer: 'Absolutely. All pdf to png processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to png?', answer: 'No software installation is required. Our pdf to png tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-webp': {
-    title: 'PDF ke WebP',
-    metaDescription: 'Pdf To Webp gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'pdf to webp free online',
-      'pdf to webp no registration',
-      'pdf to webp no sign up',
-      'pdf to webp no watermark',
-      'pdf to webp browser based',
-      'pdf to webp for work',
-      'pdf to webp for students',
-      'best pdf to webp tool',
-      'how to pdf to webp',
-      'pdf to webp online free',
-      'pdf to webp without software',
-      'pdf to webp privacy focused',
-      'pdf to webp secure',
-      'pdf to webp fast',
-      'free pdf to webp tool',
-      'online pdf to webp free',
-      'pdf to webp tool online',
-      'pdf to webp for free',
-      'pdf to webp no download',
-      'pdf to webp web based',
-      'pdf to webp open source',
-      'pdf to webp wasm',
-      'pdf to webp client side',
-      'pdf to webp no upload',
-      'pdf to webp instant',
-      'pdf to webp high quality',
-      'pdf to webp no limit',
-      'pdf to webp 2025',
-      'pdf to webp guide',
-      'pdf to webp tutorial',
-    ],
-    description: `
-      <p>Pdf To Webp free online with our powerful browser-based tool. Whether you need to pdf to webp for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to webp no registration required, with no watermarks added. How to pdf to webp for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Webp has never been easier. Get started now with the best free pdf to webp tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to webp no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to webp tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to webp for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to webp for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to webp for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to webp online?', answer: 'Yes, our pdf to webp tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to webp as many times as you need.' },
-      { question: 'Is it safe to pdf to webp online?', answer: 'Absolutely. All pdf to webp processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to webp?', answer: 'No software installation is required. Our pdf to webp tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'heic-to-pdf': {
-    title: 'HEIC ke PDF',
-    metaDescription: 'Heic To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'heic to pdf free online',
-      'heic to pdf no registration',
-      'heic to pdf no sign up',
-      'heic to pdf no watermark',
-      'heic to pdf browser based',
-      'heic to pdf for work',
-      'heic to pdf for students',
-      'best heic to pdf tool',
-      'how to heic to pdf',
-      'heic to pdf online free',
-      'heic to pdf without software',
-      'heic to pdf privacy focused',
-      'heic to pdf secure',
-      'heic to pdf fast',
-      'free heic to pdf tool',
-      'online heic to pdf free',
-      'heic to pdf tool online',
-      'heic to pdf for free',
-      'heic to pdf no download',
-      'heic to pdf web based',
-      'heic to pdf open source',
-      'heic to pdf wasm',
-      'heic to pdf client side',
-      'heic to pdf no upload',
-      'heic to pdf instant',
-      'heic to pdf high quality',
-      'heic to pdf no limit',
-      'heic to pdf 2025',
-      'heic to pdf guide',
-      'heic to pdf tutorial',
-    ],
-    description: `
-      <p>Heic To Pdf free online with our powerful browser-based tool. Whether you need to heic to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can heic to pdf no registration required, with no watermarks added. How to heic to pdf for free? Use our online tool—no software needed.</p>
-            <p>Heic To Pdf has never been easier. Get started now with the best free heic to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can heic to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free heic to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to heic to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to heic to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to heic to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to heic to pdf online?', answer: 'Yes, our heic to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can heic to pdf as many times as you need.' },
-      { question: 'Is it safe to heic to pdf online?', answer: 'Absolutely. All heic to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to heic to pdf?', answer: 'No software installation is required. Our heic to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'raw-to-pdf': {
-    title: 'Raw To Pdf',
-    metaDescription: 'Raw To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'raw to pdf free online',
-      'raw to pdf no registration',
-      'raw to pdf no sign up',
-      'raw to pdf no watermark',
-      'raw to pdf browser based',
-      'raw to pdf for work',
-      'raw to pdf for students',
-      'best raw to pdf tool',
-      'how to raw to pdf',
-      'raw to pdf online free',
-      'raw to pdf without software',
-      'raw to pdf privacy focused',
-      'raw to pdf secure',
-      'raw to pdf fast',
-      'free raw to pdf tool',
-      'online raw to pdf free',
-      'raw to pdf tool online',
-      'raw to pdf for free',
-      'raw to pdf no download',
-      'raw to pdf web based',
-      'raw to pdf open source',
-      'raw to pdf wasm',
-      'raw to pdf client side',
-      'raw to pdf no upload',
-      'raw to pdf instant',
-      'raw to pdf high quality',
-      'raw to pdf no limit',
-      'raw to pdf 2025',
-      'raw to pdf guide',
-      'raw to pdf tutorial',
-    ],
-    description: `
-      <p>Raw To Pdf free online with our powerful browser-based tool. Whether you need to raw to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can raw to pdf no registration required, with no watermarks added. How to raw to pdf for free? Use our online tool—no software needed.</p>
-            <p>Raw To Pdf has never been easier. Get started now with the best free raw to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can raw to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free raw to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to raw to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to raw to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to raw to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to raw to pdf online?', answer: 'Yes, our raw to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can raw to pdf as many times as you need.' },
-      { question: 'Is it safe to raw to pdf online?', answer: 'Absolutely. All raw to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to raw to pdf?', answer: 'No software installation is required. Our raw to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'tiff-to-pdf': {
-    title: 'TIFF ke PDF',
-    metaDescription: 'Tiff To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'tiff to pdf free online',
-      'tiff to pdf no registration',
-      'tiff to pdf no sign up',
-      'tiff to pdf no watermark',
-      'tiff to pdf browser based',
-      'tiff to pdf for work',
-      'tiff to pdf for students',
-      'best tiff to pdf tool',
-      'how to tiff to pdf',
-      'tiff to pdf online free',
-      'tiff to pdf without software',
-      'tiff to pdf privacy focused',
-      'tiff to pdf secure',
-      'tiff to pdf fast',
-      'free tiff to pdf tool',
-      'online tiff to pdf free',
-      'tiff to pdf tool online',
-      'tiff to pdf for free',
-      'tiff to pdf no download',
-      'tiff to pdf web based',
-      'tiff to pdf open source',
-      'tiff to pdf wasm',
-      'tiff to pdf client side',
-      'tiff to pdf no upload',
-      'tiff to pdf instant',
-      'tiff to pdf high quality',
-      'tiff to pdf no limit',
-      'tiff to pdf 2025',
-      'tiff to pdf guide',
-      'tiff to pdf tutorial',
-    ],
-    description: `
-      <p>Tiff To Pdf free online with our powerful browser-based tool. Whether you need to tiff to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can tiff to pdf no registration required, with no watermarks added. How to tiff to pdf for free? Use our online tool—no software needed.</p>
-            <p>Tiff To Pdf has never been easier. Get started now with the best free tiff to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can tiff to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free tiff to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to tiff to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to tiff to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to tiff to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to tiff to pdf online?', answer: 'Yes, our tiff to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can tiff to pdf as many times as you need.' },
-      { question: 'Is it safe to tiff to pdf online?', answer: 'Absolutely. All tiff to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to tiff to pdf?', answer: 'No software installation is required. Our tiff to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'svg-to-pdf': {
-    title: 'SVG ke PDF',
-    metaDescription: 'Svg To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'svg to pdf free online',
-      'svg to pdf no registration',
-      'svg to pdf no sign up',
-      'svg to pdf no watermark',
-      'svg to pdf browser based',
-      'svg to pdf for work',
-      'svg to pdf for students',
-      'best svg to pdf tool',
-      'how to svg to pdf',
-      'svg to pdf online free',
-      'svg to pdf without software',
-      'svg to pdf privacy focused',
-      'svg to pdf secure',
-      'svg to pdf fast',
-      'free svg to pdf tool',
-      'online svg to pdf free',
-      'svg to pdf tool online',
-      'svg to pdf for free',
-      'svg to pdf no download',
-      'svg to pdf web based',
-      'svg to pdf open source',
-      'svg to pdf wasm',
-      'svg to pdf client side',
-      'svg to pdf no upload',
-      'svg to pdf instant',
-      'svg to pdf high quality',
-      'svg to pdf no limit',
-      'svg to pdf 2025',
-      'svg to pdf guide',
-      'svg to pdf tutorial',
-    ],
-    description: `
-      <p>Svg To Pdf free online with our powerful browser-based tool. Whether you need to svg to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can svg to pdf no registration required, with no watermarks added. How to svg to pdf for free? Use our online tool—no software needed.</p>
-            <p>Svg To Pdf has never been easier. Get started now with the best free svg to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can svg to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free svg to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to svg to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to svg to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to svg to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to svg to pdf online?', answer: 'Yes, our svg to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can svg to pdf as many times as you need.' },
-      { question: 'Is it safe to svg to pdf online?', answer: 'Absolutely. All svg to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to svg to pdf?', answer: 'No software installation is required. Our svg to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'png-to-pdf': {
-    title: 'PNG ke PDF',
-    metaDescription: 'Png To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'png to pdf free online',
-      'png to pdf no registration',
-      'png to pdf no sign up',
-      'png to pdf no watermark',
-      'png to pdf browser based',
-      'png to pdf for work',
-      'png to pdf for students',
-      'best png to pdf tool',
-      'how to png to pdf',
-      'png to pdf online free',
-      'png to pdf without software',
-      'png to pdf privacy focused',
-      'png to pdf secure',
-      'png to pdf fast',
-      'free png to pdf tool',
-      'online png to pdf free',
-      'png to pdf tool online',
-      'png to pdf for free',
-      'png to pdf no download',
-      'png to pdf web based',
-      'png to pdf open source',
-      'png to pdf wasm',
-      'png to pdf client side',
-      'png to pdf no upload',
-      'png to pdf instant',
-      'png to pdf high quality',
-      'png to pdf no limit',
-      'png to pdf 2025',
-      'png to pdf guide',
-      'png to pdf tutorial',
-    ],
-    description: `
-      <p>Png To Pdf free online with our powerful browser-based tool. Whether you need to png to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can png to pdf no registration required, with no watermarks added. How to png to pdf for free? Use our online tool—no software needed.</p>
-            <p>Png To Pdf has never been easier. Get started now with the best free png to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can png to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free png to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to png to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to png to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to png to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to png to pdf online?', answer: 'Yes, our png to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can png to pdf as many times as you need.' },
-      { question: 'Is it safe to png to pdf online?', answer: 'Absolutely. All png to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to png to pdf?', answer: 'No software installation is required. Our png to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'webp-to-pdf': {
-    title: 'WebP ke PDF',
-    metaDescription: 'Webp To Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'webp to pdf free online',
-      'webp to pdf no registration',
-      'webp to pdf no sign up',
-      'webp to pdf no watermark',
-      'webp to pdf browser based',
-      'webp to pdf for work',
-      'webp to pdf for students',
-      'best webp to pdf tool',
-      'how to webp to pdf',
-      'webp to pdf online free',
-      'webp to pdf without software',
-      'webp to pdf privacy focused',
-      'webp to pdf secure',
-      'webp to pdf fast',
-      'free webp to pdf tool',
-      'online webp to pdf free',
-      'webp to pdf tool online',
-      'webp to pdf for free',
-      'webp to pdf no download',
-      'webp to pdf web based',
-      'webp to pdf open source',
-      'webp to pdf wasm',
-      'webp to pdf client side',
-      'webp to pdf no upload',
-      'webp to pdf instant',
-      'webp to pdf high quality',
-      'webp to pdf no limit',
-      'webp to pdf 2025',
-      'webp to pdf guide',
-      'webp to pdf tutorial',
-    ],
-    description: `
-      <p>Webp To Pdf free online with our powerful browser-based tool. Whether you need to webp to pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can webp to pdf no registration required, with no watermarks added. How to webp to pdf for free? Use our online tool—no software needed.</p>
-            <p>Webp To Pdf has never been easier. Get started now with the best free webp to pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can webp to pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free webp to pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to webp to pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to webp to pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to webp to pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to webp to pdf online?', answer: 'Yes, our webp to pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can webp to pdf as many times as you need.' },
-      { question: 'Is it safe to webp to pdf online?', answer: 'Absolutely. All webp to pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to webp to pdf?', answer: 'No software installation is required. Our webp to pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'repair-pdf': {
-    title: 'Perbaiki PDF',
-    metaDescription: 'Repair Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'repair pdf free online',
-      'repair pdf no registration',
-      'repair pdf no sign up',
-      'repair pdf no watermark',
-      'repair pdf browser based',
-      'repair pdf for work',
-      'repair pdf for students',
-      'best repair pdf tool',
-      'how to repair pdf',
-      'repair pdf online free',
-      'repair pdf without software',
-      'repair pdf privacy focused',
-      'repair pdf secure',
-      'repair pdf fast',
-      'free repair pdf tool',
-      'online repair pdf free',
-      'repair pdf tool online',
-      'repair pdf for free',
-      'repair pdf no download',
-      'repair pdf web based',
-      'repair pdf open source',
-      'repair pdf wasm',
-      'repair pdf client side',
-      'repair pdf no upload',
-      'repair pdf instant',
-      'repair pdf high quality',
-      'repair pdf no limit',
-      'repair pdf 2025',
-      'repair pdf guide',
-      'repair pdf tutorial',
-    ],
-    description: `
-      <p>Repair Pdf free online with our powerful browser-based tool. Whether you need to repair pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can repair pdf no registration required, with no watermarks added. How to repair pdf for free? Use our online tool—no software needed.</p>
-            <p>Repair Pdf has never been easier. Get started now with the best free repair pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can repair pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free repair pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to repair pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to repair pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to repair pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to repair pdf online?', answer: 'Yes, our repair pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can repair pdf as many times as you need.' },
-      { question: 'Is it safe to repair pdf online?', answer: 'Absolutely. All repair pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to repair pdf?', answer: 'No software installation is required. Our repair pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'ocr-pdf': {
-    title: 'OCR PDF',
-    metaDescription: 'Ocr Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untuk o',
-    keywords: [
-      'ocr pdf free online',
-      'ocr pdf no registration',
-      'ocr pdf no sign up',
-      'ocr pdf no watermark',
-      'ocr pdf browser based',
-      'ocr pdf for work',
-      'ocr pdf for students',
-      'best ocr pdf tool',
-      'how to ocr pdf',
-      'ocr pdf online free',
-      'ocr pdf without software',
-      'ocr pdf privacy focused',
-      'ocr pdf secure',
-      'ocr pdf fast',
-      'free ocr pdf tool',
-      'online ocr pdf free',
-      'ocr pdf tool online',
-      'ocr pdf for free',
-      'ocr pdf no download',
-      'ocr pdf web based',
-      'ocr pdf open source',
-      'ocr pdf wasm',
-      'ocr pdf client side',
-      'ocr pdf no upload',
-      'ocr pdf instant',
-      'ocr pdf high quality',
-      'ocr pdf no limit',
-      'ocr pdf 2025',
-      'ocr pdf guide',
-      'ocr pdf tutorial',
-    ],
-    description: `
-      <p>Ocr Pdf free online with our powerful browser-based tool. Whether you need to ocr pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can ocr pdf no registration required, with no watermarks added. How to ocr pdf for free? Use our online tool—no software needed.</p>
-            <p>Ocr Pdf has never been easier. Get started now with the best free ocr pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can ocr pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free ocr pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to ocr pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to ocr pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to ocr pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to ocr pdf online?', answer: 'Yes, our ocr pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can ocr pdf as many times as you need.' },
-      { question: 'Is it safe to ocr pdf online?', answer: 'Absolutely. All ocr pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to ocr pdf?', answer: 'No software installation is required. Our ocr pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'flaten-pdf': {
-    title: 'Flaten Pdf',
-    metaDescription: 'Flaten Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'flaten pdf free online',
-      'flaten pdf no registration',
-      'flaten pdf no sign up',
-      'flaten pdf no watermark',
-      'flaten pdf browser based',
-      'flaten pdf for work',
-      'flaten pdf for students',
-      'best flaten pdf tool',
-      'how to flaten pdf',
-      'flaten pdf online free',
-      'flaten pdf without software',
-      'flaten pdf privacy focused',
-      'flaten pdf secure',
-      'flaten pdf fast',
-      'free flaten pdf tool',
-      'online flaten pdf free',
-      'flaten pdf tool online',
-      'flaten pdf for free',
-      'flaten pdf no download',
-      'flaten pdf web based',
-      'flaten pdf open source',
-      'flaten pdf wasm',
-      'flaten pdf client side',
-      'flaten pdf no upload',
-      'flaten pdf instant',
-      'flaten pdf high quality',
-      'flaten pdf no limit',
-      'flaten pdf 2025',
-      'flaten pdf guide',
-      'flaten pdf tutorial',
-    ],
-    description: `
-      <p>Flaten Pdf free online with our powerful browser-based tool. Whether you need to flaten pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can flaten pdf no registration required, with no watermarks added. How to flaten pdf for free? Use our online tool—no software needed.</p>
-            <p>Flaten Pdf has never been easier. Get started now with the best free flaten pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can flaten pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free flaten pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to flaten pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to flaten pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to flaten pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to flaten pdf online?', answer: 'Yes, our flaten pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can flaten pdf as many times as you need.' },
-      { question: 'Is it safe to flaten pdf online?', answer: 'Absolutely. All flaten pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to flaten pdf?', answer: 'No software installation is required. Our flaten pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-pdfa': {
-    title: 'PDF ke PDF/A',
-    metaDescription: 'Pdf To Pdfa gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'pdf to pdfa free online',
-      'pdf to pdfa no registration',
-      'pdf to pdfa no sign up',
-      'pdf to pdfa no watermark',
-      'pdf to pdfa browser based',
-      'pdf to pdfa for work',
-      'pdf to pdfa for students',
-      'best pdf to pdfa tool',
-      'how to pdf to pdfa',
-      'pdf to pdfa online free',
-      'pdf to pdfa without software',
-      'pdf to pdfa privacy focused',
-      'pdf to pdfa secure',
-      'pdf to pdfa fast',
-      'free pdf to pdfa tool',
-      'online pdf to pdfa free',
-      'pdf to pdfa tool online',
-      'pdf to pdfa for free',
-      'pdf to pdfa no download',
-      'pdf to pdfa web based',
-      'pdf to pdfa open source',
-      'pdf to pdfa wasm',
-      'pdf to pdfa client side',
-      'pdf to pdfa no upload',
-      'pdf to pdfa instant',
-      'pdf to pdfa high quality',
-      'pdf to pdfa no limit',
-      'pdf to pdfa 2025',
-      'pdf to pdfa guide',
-      'pdf to pdfa tutorial',
-    ],
-    description: `
-      <p>Pdf To Pdfa free online with our powerful browser-based tool. Whether you need to pdf to pdfa for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to pdfa no registration required, with no watermarks added. How to pdf to pdfa for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Pdfa has never been easier. Get started now with the best free pdf to pdfa tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to pdfa no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to pdfa tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to pdfa for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to pdfa for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to pdfa for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to pdfa online?', answer: 'Yes, our pdf to pdfa tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to pdfa as many times as you need.' },
-      { question: 'Is it safe to pdf to pdfa online?', answer: 'Absolutely. All pdf to pdfa processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to pdfa?', answer: 'No software installation is required. Our pdf to pdfa tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
+
   'sign-pdf': {
     title: 'Tanda Tangani PDF',
-    metaDescription: 'Sign Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untuk ',
-    keywords: [
-      'sign pdf free online',
-      'sign pdf no registration',
-      'sign pdf no sign up',
-      'sign pdf no watermark',
-      'sign pdf browser based',
-      'sign pdf for work',
-      'sign pdf for students',
-      'best sign pdf tool',
-      'how to sign pdf',
-      'sign pdf online free',
-      'sign pdf without software',
-      'sign pdf privacy focused',
-      'sign pdf secure',
-      'sign pdf fast',
-      'free sign pdf tool',
-      'online sign pdf free',
-      'sign pdf tool online',
-      'sign pdf for free',
-      'sign pdf no download',
-      'sign pdf web based',
-      'sign pdf open source',
-      'sign pdf wasm',
-      'sign pdf client side',
-      'sign pdf no upload',
-      'sign pdf instant',
-      'sign pdf high quality',
-      'sign pdf no limit',
-      'sign pdf 2025',
-      'sign pdf guide',
-      'sign pdf tutorial',
-    ],
+    metaDescription: 'Tambahkan tanda tangan elektronik ke dokumen PDF. Gambar, ketik, atau unggah tanda tangan Anda.',
+    keywords: ['tanda tangani pdf', 'tanda tangan elektronik', 'e-signature', 'tanda tangan pdf', 'tanda tangan digital'],
     description: `
-      <p>Sign Pdf free online with our powerful browser-based tool. Whether you need to sign pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can sign pdf no registration required, with no watermarks added. How to sign pdf for free? Use our online tool—no software needed.</p>
-            <p>Sign Pdf has never been easier. Get started now with the best free sign pdf tool online.</p>
+      <p>Tanda Tangani PDF memungkinkan Anda menambahkan tanda tangan elektronik ke dokumen PDF Anda dengan cepat dan aman. Buat tanda tangan Anda dengan menggambar, mengetik, atau mengunggah gambar, lalu tempatkan di mana saja pada dokumen Anda.</p>
+      <p>Anda dapat menambahkan beberapa tanda tangan ke satu dokumen, mengubah ukuran dan memposisikannya dengan tepat, serta menyimpan tanda tangan Anda untuk penggunaan di masa mendatang. Alat ini sempurna untuk kontrak, perjanjian, formulir, dan dokumen apa pun yang memerlukan tanda tangan Anda.</p>
+      <p>Semua proses penandatanganan terjadi secara lokal di browser Anda, memastikan dokumen dan tanda tangan Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can sign pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free sign pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang perlu Anda tanda tangani.' },
+      { step: 2, title: 'Buat Tanda Tangan Anda', description: 'Gambar tanda tangan Anda dengan mouse atau sentuhan, ketik nama Anda untuk menghasilkan tanda tangan, atau unggah gambar tanda tangan.' },
+      { step: 3, title: 'Tempatkan dan Sesuaikan', description: 'Klik pada dokumen untuk menempatkan tanda tangan Anda, lalu tarik untuk memposisikan dan mengubah ukuran sesuai kebutuhan.' },
+      { step: 4, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menerapkan tanda tangan Anda dan mengunduh PDF yang telah ditandatangani.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to sign pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to sign pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to sign pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Penandatanganan Kontrak', description: 'Tanda tangani kontrak dan perjanjian secara elektronik tanpa perlu mencetak dan memindai.', icon: 'file-signature' },
+      { title: 'Penyelesaian Formulir', description: 'Tambahkan tanda tangan Anda ke formulir aplikasi, formulir persetujuan, dan dokumen resmi.', icon: 'clipboard' },
+      { title: 'Alur Kerja Persetujuan', description: 'Tanda tangani dokumen sebagai bagian dari proses peninjauan dan persetujuan.', icon: 'check-circle' },
     ],
     faq: [
-      { question: 'Is it really free to sign pdf online?', answer: 'Yes, our sign pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can sign pdf as many times as you need.' },
-      { question: 'Is it safe to sign pdf online?', answer: 'Absolutely. All sign pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to sign pdf?', answer: 'No software installation is required. Our sign pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Apakah tanda tangan elektronik mengikat secara hukum?', answer: 'Tanda tangan elektronik diakui secara hukum di sebagian besar negara. Namun, beberapa dokumen mungkin memerlukan jenis tanda tangan digital tertentu. Periksa peraturan setempat Anda.' },
+      { question: 'Bisakah saya menyimpan tanda tangan saya untuk penggunaan di masa mendatang?', answer: 'Ya, Anda dapat menyimpan tanda tangan Anda ke penyimpanan lokal browser Anda untuk akses cepat saat menandatangani dokumen di masa mendatang.' },
+      { question: 'Bisakah saya menambahkan beberapa tanda tangan ke satu dokumen?', answer: 'Ya, Anda dapat menambahkan tanda tangan sebanyak yang diperlukan, memposisikan masing-masing secara independen di halaman mana pun.' },
     ],
   },
-  'annotate-pdf': {
-    title: 'Annotate Pdf',
-    metaDescription: 'Annotate Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'annotate pdf free online',
-      'annotate pdf no registration',
-      'annotate pdf no sign up',
-      'annotate pdf no watermark',
-      'annotate pdf browser based',
-      'annotate pdf for work',
-      'annotate pdf for students',
-      'best annotate pdf tool',
-      'how to annotate pdf',
-      'annotate pdf online free',
-      'annotate pdf without software',
-      'annotate pdf privacy focused',
-      'annotate pdf secure',
-      'annotate pdf fast',
-      'free annotate pdf tool',
-      'online annotate pdf free',
-      'annotate pdf tool online',
-      'annotate pdf for free',
-      'annotate pdf no download',
-      'annotate pdf web based',
-      'annotate pdf open source',
-      'annotate pdf wasm',
-      'annotate pdf client side',
-      'annotate pdf no upload',
-      'annotate pdf instant',
-      'annotate pdf high quality',
-      'annotate pdf no limit',
-      'annotate pdf 2025',
-      'annotate pdf guide',
-      'annotate pdf tutorial',
-    ],
+
+  'crop-pdf': {
+    title: 'Potong PDF',
+    metaDescription: 'Potong halaman PDF untuk menghapus margin dan area yang tidak diinginkan. Pangkas dokumen PDF dengan presisi.',
+    keywords: ['potong pdf', 'pangkas pdf', 'potong margin pdf', 'ubah ukuran halaman pdf', 'pemotong pdf'],
     description: `
-      <p>Annotate Pdf free online with our powerful browser-based tool. Whether you need to annotate pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can annotate pdf no registration required, with no watermarks added. How to annotate pdf for free? Use our online tool—no software needed.</p>
-            <p>Annotate Pdf has never been easier. Get started now with the best free annotate pdf tool online.</p>
+      <p>Potong PDF memungkinkan Anda memangkas margin dan menghapus area yang tidak diinginkan dari halaman PDF Anda. Ini berguna untuk menghilangkan ruang putih berlebih, berfokus pada area konten tertentu, atau menstandardisasi dimensi halaman.</p>
+      <p>Anda dapat memotong semua halaman secara seragam atau menyesuaikan setiap halaman satu per satu. Antarmuka visual menunjukkan dengan tepat apa yang akan dipertahankan, sehingga mudah untuk mencapai hasil yang presisi.</p>
+      <p>Semua pemotongan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can annotate pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free annotate pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang ingin Anda potong.' },
+      { step: 2, title: 'Tentukan Area Potong', description: 'Tarik gagang potong (crop handles) untuk menentukan area yang ingin Anda simpan, atau masukkan ukuran pastinya.' },
+      { step: 3, title: 'Terapkan ke Halaman', description: 'Pilih untuk menerapkan potongan ke semua halaman atau pilih halaman tertentu untuk dipotong.' },
+      { step: 4, title: 'Potong dan Unduh', description: 'Klik Potong untuk menerapkan perubahan dan mengunduh PDF Anda yang telah dipotong.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to annotate pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to annotate pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to annotate pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Hapus Margin', description: 'Pangkas margin berlebih dari dokumen pindaian atau PDF dengan batas yang besar.', icon: 'maximize-2' },
+      { title: 'Fokuskan Konten', description: 'Potong untuk menyorot area konten tertentu, menghapus header, footer, atau bilah sisi.', icon: 'target' },
+      { title: 'Standardisasi Halaman', description: 'Jadikan semua halaman berukuran sama dengan memotongnya ke dimensi yang seragam.', icon: 'square' },
     ],
     faq: [
-      { question: 'Is it really free to annotate pdf online?', answer: 'Yes, our annotate pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can annotate pdf as many times as you need.' },
-      { question: 'Is it safe to annotate pdf online?', answer: 'Absolutely. All annotate pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to annotate pdf?', answer: 'No software installation is required. Our annotate pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Apakah memotong menghapus konten secara permanen?', answer: 'Ya, memotong akan menghapus konten di luar area potongan. Pastikan untuk menyimpan cadangan file asli Anda.' },
+      { question: 'Bisakah saya memotong halaman yang berbeda secara berbeda?', answer: 'Ya, Anda dapat menerapkan pengaturan potongan yang berbeda untuk setiap halaman individu atau sekelompok halaman.' },
+      { question: 'Apakah memotong akan memengaruhi kualitas teks?', answer: 'Tidak, memotong hanya menghapus area di luar batas potongan. Konten yang tersisa mempertahankan kualitas aslinya.' },
     ],
   },
-  'redact-pdf': {
-    title: 'Redact Pdf',
-    metaDescription: 'Redact Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'redact pdf free online',
-      'redact pdf no registration',
-      'redact pdf no sign up',
-      'redact pdf no watermark',
-      'redact pdf browser based',
-      'redact pdf for work',
-      'redact pdf for students',
-      'best redact pdf tool',
-      'how to redact pdf',
-      'redact pdf online free',
-      'redact pdf without software',
-      'redact pdf privacy focused',
-      'redact pdf secure',
-      'redact pdf fast',
-      'free redact pdf tool',
-      'online redact pdf free',
-      'redact pdf tool online',
-      'redact pdf for free',
-      'redact pdf no download',
-      'redact pdf web based',
-      'redact pdf open source',
-      'redact pdf wasm',
-      'redact pdf client side',
-      'redact pdf no upload',
-      'redact pdf instant',
-      'redact pdf high quality',
-      'redact pdf no limit',
-      'redact pdf 2025',
-      'redact pdf guide',
-      'redact pdf tutorial',
-    ],
+
+  'extract-pages': {
+    title: 'Ekstrak Halaman',
+    metaDescription: 'Ekstrak halaman tertentu dari file PDF. Pilih dan simpan halaman individual sebagai dokumen baru.',
+    keywords: ['ekstrak halaman pdf', 'simpan halaman pdf', 'salin halaman pdf', 'pengekstrak halaman pdf'],
     description: `
-      <p>Redact Pdf free online with our powerful browser-based tool. Whether you need to redact pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can redact pdf no registration required, with no watermarks added. How to redact pdf for free? Use our online tool—no software needed.</p>
-            <p>Redact Pdf has never been easier. Get started now with the best free redact pdf tool online.</p>
+      <p>Ekstrak Halaman memungkinkan Anda memilih dan menyimpan halaman tertentu dari dokumen PDF sebagai file baru. Ini sempurna untuk menarik keluar bagian yang relevan, membuat kutipan, atau memisahkan dokumen yang digabungkan.</p>
+      <p>Anda dapat mengekstrak halaman individual, rentang halaman, atau beberapa halaman yang tidak berurutan. Pratinjau halaman visual memudahkan untuk mengidentifikasi dan memilih halaman yang Anda butuhkan secara tepat.</p>
+      <p>Semua ekstraksi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can redact pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free redact pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen dari mana Anda ingin mengekstrak halamannya.' },
+      { step: 2, title: 'Pilih Halaman', description: 'Klik pada gambar mini halaman untuk memilihnya, atau masukkan nomor halaman dan rentangnya di bidang input.' },
+      { step: 3, title: 'Ekstrak dan Unduh', description: 'Klik Ekstrak untuk membuat PDF baru dengan halaman yang Anda pilih dan unduh file tersebut.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to redact pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to redact pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to redact pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Buat Kutipan', description: 'Ekstrak halaman yang relevan dari laporan atau buku untuk membuat dokumen referensi yang terfokus.', icon: 'file-minus' },
+      { title: 'Bagikan Konten Tertentu', description: 'Tarik halaman tertentu untuk dibagikan tanpa harus mengirim seluruh dokumen.', icon: 'share-2' },
+      { title: 'Arsipkan Halaman Penting', description: 'Ekstrak dan simpan halaman utama dari dokumen untuk pengarsipan jangka panjang.', icon: 'archive' },
     ],
     faq: [
-      { question: 'Is it really free to redact pdf online?', answer: 'Yes, our redact pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can redact pdf as many times as you need.' },
-      { question: 'Is it safe to redact pdf online?', answer: 'Absolutely. All redact pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to redact pdf?', answer: 'No software installation is required. Our redact pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya mengekstrak halaman yang tidak berurutan?', answer: 'Ya, Anda dapat memilih kombinasi halaman mana pun, baik berurutan atau tersebar di seluruh dokumen.' },
+      { question: 'Apakah markah (bookmark) akan dipertahankan?', answer: 'Markah yang menunjuk ke halaman yang diekstrak akan dipertahankan di dokumen baru.' },
+      { question: 'Bisakah saya mengekstrak halaman dari beberapa PDF?', answer: 'Alat ini bekerja dengan satu PDF dalam satu waktu. Untuk menggabungkan halaman dari beberapa PDF, gunakan alat Gabungkan PDF.' },
     ],
   },
-  'compare-pdf': {
-    title: 'Compare Pdf',
-    metaDescription: 'Compare Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'compare pdf free online',
-      'compare pdf no registration',
-      'compare pdf no sign up',
-      'compare pdf no watermark',
-      'compare pdf browser based',
-      'compare pdf for work',
-      'compare pdf for students',
-      'best compare pdf tool',
-      'how to compare pdf',
-      'compare pdf online free',
-      'compare pdf without software',
-      'compare pdf privacy focused',
-      'compare pdf secure',
-      'compare pdf fast',
-      'free compare pdf tool',
-      'online compare pdf free',
-      'compare pdf tool online',
-      'compare pdf for free',
-      'compare pdf no download',
-      'compare pdf web based',
-      'compare pdf open source',
-      'compare pdf wasm',
-      'compare pdf client side',
-      'compare pdf no upload',
-      'compare pdf instant',
-      'compare pdf high quality',
-      'compare pdf no limit',
-      'compare pdf 2025',
-      'compare pdf guide',
-      'compare pdf tutorial',
-    ],
+
+  'organize-pdf': {
+    title: 'Atur PDF',
+    metaDescription: 'Atur ulang, gandakan, dan hapus halaman PDF. Tarik dan lepas untuk mengatur ulang dokumen Anda.',
+    keywords: ['atur pdf', 'atur ulang halaman pdf', 'susun ulang pdf', 'pengatur halaman pdf'],
     description: `
-      <p>Compare Pdf free online with our powerful browser-based tool. Whether you need to compare pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can compare pdf no registration required, with no watermarks added. How to compare pdf for free? Use our online tool—no software needed.</p>
-            <p>Compare Pdf has never been easier. Get started now with the best free compare pdf tool online.</p>
+      <p>Atur PDF menyediakan antarmuka tarik-dan-lepas (drag-and-drop) yang intuitif untuk mengatur ulang halaman dalam dokumen PDF Anda. Urutkan kembali halaman, gandakan bagian yang penting, atau hapus halaman yang tidak diinginkan dengan mudah.</p>
+      <p>Gambar mini (thumbnail) halaman visual memudahkan untuk mengidentifikasi konten dan menyusun halaman persis seperti yang Anda butuhkan. Sempurna untuk merestrukturisasi dokumen, membuat urutan halaman kustom, atau membersihkan file pindaian.</p>
+      <p>Semua pengorganisasian terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can compare pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free compare pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang ingin Anda atur.' },
+      { step: 2, title: 'Susun Ulang Halaman', description: 'Tarik gambar mini halaman untuk mengurutkannya kembali. Klik tombol gandakan atau hapus pada setiap halaman sesuai kebutuhan.' },
+      { step: 3, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menerapkan perubahan Anda dan mengunduh PDF yang telah diatur ulang.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to compare pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to compare pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to compare pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Perbaiki Urutan Halaman', description: 'Koreksi urutan halaman yang dipindai atau digabungkan secara tidak benar.', icon: 'arrow-up-down' },
+      { title: 'Buat Urutan Kustom', description: 'Susun halaman dalam urutan tertentu untuk presentasi atau laporan.', icon: 'list' },
+      { title: 'Hapus Halaman Tidak Diinginkan', description: 'Hapus halaman kosong, duplikat, atau konten yang tidak relevan dari dokumen.', icon: 'trash-2' },
     ],
     faq: [
-      { question: 'Is it really free to compare pdf online?', answer: 'Yes, our compare pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can compare pdf as many times as you need.' },
-      { question: 'Is it safe to compare pdf online?', answer: 'Absolutely. All compare pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to compare pdf?', answer: 'No software installation is required. Our compare pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya menggandakan halaman?', answer: 'Ya, Anda dapat menggandakan halaman mana pun dan menempatkan salinannya di mana saja di dalam dokumen.' },
+      { question: 'Apakah ada fungsi urungkan (undo)?', answer: 'Ya, Anda dapat mengurungkan dan mengulangi perubahan. Anda juga dapat mengatur ulang ke urutan asli kapan saja.' },
+      { question: 'Bisakah saya mengatur beberapa PDF sekaligus?', answer: 'Alat ini bekerja dengan satu PDF dalam satu waktu. Untuk menggabungkan dan mengatur beberapa PDF, gabungkan terlebih dahulu menggunakan alat Gabungkan PDF.' },
     ],
   },
-  'bookmark-pdf': {
-    title: 'Bookmark Pdf',
-    metaDescription: 'Bookmark Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'bookmark pdf free online',
-      'bookmark pdf no registration',
-      'bookmark pdf no sign up',
-      'bookmark pdf no watermark',
-      'bookmark pdf browser based',
-      'bookmark pdf for work',
-      'bookmark pdf for students',
-      'best bookmark pdf tool',
-      'how to bookmark pdf',
-      'bookmark pdf online free',
-      'bookmark pdf without software',
-      'bookmark pdf privacy focused',
-      'bookmark pdf secure',
-      'bookmark pdf fast',
-      'free bookmark pdf tool',
-      'online bookmark pdf free',
-      'bookmark pdf tool online',
-      'bookmark pdf for free',
-      'bookmark pdf no download',
-      'bookmark pdf web based',
-      'bookmark pdf open source',
-      'bookmark pdf wasm',
-      'bookmark pdf client side',
-      'bookmark pdf no upload',
-      'bookmark pdf instant',
-      'bookmark pdf high quality',
-      'bookmark pdf no limit',
-      'bookmark pdf 2025',
-      'bookmark pdf guide',
-      'bookmark pdf tutorial',
-    ],
+
+  'delete-pages': {
+    title: 'Hapus Halaman',
+    metaDescription: 'Hapus halaman yang tidak diinginkan dari file PDF. Pilih dan hapus halaman tertentu dengan mudah.',
+    keywords: ['hapus halaman pdf', 'hilangkan halaman pdf', 'penghapus halaman pdf', 'hapus halaman dari pdf'],
     description: `
-      <p>Bookmark Pdf free online with our powerful browser-based tool. Whether you need to bookmark pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can bookmark pdf no registration required, with no watermarks added. How to bookmark pdf for free? Use our online tool—no software needed.</p>
-            <p>Bookmark Pdf has never been easier. Get started now with the best free bookmark pdf tool online.</p>
+      <p>Hapus Halaman memungkinkan Anda membuang halaman yang tidak diinginkan dari dokumen PDF Anda dengan cepat dan mudah. Baik Anda perlu menghapus halaman kosong, konten kedaluwarsa, atau informasi sensitif, alat ini membuatnya menjadi sederhana.</p>
+      <p>Gambar mini halaman visual membantu Anda mengidentifikasi dengan tepat halaman mana yang harus dihapus. Anda dapat menghapus halaman satu per satu atau beberapa halaman sekaligus.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can bookmark pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free bookmark pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen dari mana Anda ingin menghapus halamannya.' },
+      { step: 2, title: 'Pilih Halaman untuk Dihapus', description: 'Klik pada gambar mini halaman untuk menandainya agar dihapus, atau masukkan nomor halaman di bidang input.' },
+      { step: 3, title: 'Hapus dan Unduh', description: 'Klik Hapus untuk membuang halaman yang dipilih dan mengunduh PDF Anda yang telah diperbarui.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to bookmark pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to bookmark pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to bookmark pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Hapus Halaman Kosong', description: 'Bersihkan dokumen dengan menghapus halaman kosong yang tidak sengaja disertakan.', icon: 'file-x' },
+      { title: 'Hapus Konten Sensitif', description: 'Hapus halaman yang berisi informasi rahasia sebelum membagikan dokumen.', icon: 'shield' },
+      { title: 'Sederhanakan Dokumen', description: 'Hapus halaman yang kedaluwarsa atau tidak relevan untuk membuat dokumen yang lebih terfokus.', icon: 'filter' },
     ],
     faq: [
-      { question: 'Is it really free to bookmark pdf online?', answer: 'Yes, our bookmark pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can bookmark pdf as many times as you need.' },
-      { question: 'Is it safe to bookmark pdf online?', answer: 'Absolutely. All bookmark pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to bookmark pdf?', answer: 'No software installation is required. Our bookmark pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya memulihkan halaman yang dihapus?', answer: 'Penghapusan bersifat permanen di file output. Simpan cadangan dokumen asli Anda jika Anda mungkin memerlukan halaman tersebut nanti.' },
+      { question: 'Bisakah saya menghapus beberapa halaman sekaligus?', answer: 'Ya, Anda dapat memilih dan menghapus beberapa halaman secara bersamaan.' },
+      { question: 'Apakah menghapus halaman akan memengaruhi markah?', answer: 'Markah (bookmark) yang menunjuk ke halaman yang dihapus akan dihilangkan. Markah ke halaman yang tersisa akan tetap dipertahankan.' },
     ],
   },
-  'header-footer-pdf': {
-    title: 'Header Footer Pdf',
-    metaDescription: 'Header Footer Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'header footer pdf free online',
-      'header footer pdf no registration',
-      'header footer pdf no sign up',
-      'header footer pdf no watermark',
-      'header footer pdf browser based',
-      'header footer pdf for work',
-      'header footer pdf for students',
-      'best header footer pdf tool',
-      'how to header footer pdf',
-      'header footer pdf online free',
-      'header footer pdf without software',
-      'header footer pdf privacy focused',
-      'header footer pdf secure',
-      'header footer pdf fast',
-      'free header footer pdf tool',
-      'online header footer pdf free',
-      'header footer pdf tool online',
-      'header footer pdf for free',
-      'header footer pdf no download',
-      'header footer pdf web based',
-      'header footer pdf open source',
-      'header footer pdf wasm',
-      'header footer pdf client side',
-      'header footer pdf no upload',
-      'header footer pdf instant',
-      'header footer pdf high quality',
-      'header footer pdf no limit',
-      'header footer pdf 2025',
-      'header footer pdf guide',
-      'header footer pdf tutorial',
-    ],
+  // ==================== EDIT & ANNOTATE ====================
+  'bookmark': {
+    title: 'Edit Markah (Bookmark)',
+    metaDescription: 'Tambah, edit, dan kelola markah PDF. Buat struktur navigasi untuk dokumen Anda.',
+    keywords: ['markah pdf', 'edit markah', 'tambah markah', 'navigasi pdf', 'daftar isi'],
     description: `
-      <p>Header Footer Pdf free online with our powerful browser-based tool. Whether you need to header footer pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can header footer pdf no registration required, with no watermarks added. How to header footer pdf for free? Use our online tool—no software needed.</p>
-            <p>Header Footer Pdf has never been easier. Get started now with the best free header footer pdf tool online.</p>
+      <p>Edit Markah memungkinkan Anda membuat, memodifikasi, dan mengatur markah di dokumen PDF Anda. Markah memberikan navigasi cepat ke bagian tertentu, sehingga dokumen panjang lebih mudah digunakan.</p>
+      <p>Anda dapat menambahkan markah baru, mengedit yang sudah ada, mengatur ulang hierarki markah, atau mengimpor markah dari sumber eksternal. Alat ini penting untuk membuat dokumen yang profesional dan mudah dinavigasi.</p>
+      <p>Semua pengeditan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can header footer pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free header footer pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang ingin Anda edit.' },
+      { step: 2, title: 'Kelola Markah', description: 'Tambahkan markah baru, edit yang sudah ada, atau tarik untuk mengatur ulang hierarkinya.' },
+      { step: 3, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menerapkan perubahan Anda dan mengunduh PDF dengan markah yang telah diperbarui.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to header footer pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to header footer pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to header footer pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Buat Navigasi', description: 'Tambahkan markah ke dokumen panjang untuk membantu pembaca menavigasi ke bagian tertentu dengan cepat.', icon: 'navigation' },
+      { title: 'Atur Bab', description: 'Buat struktur markah hierarkis yang mencerminkan organisasi bab dokumen Anda.', icon: 'book-open' },
+      { title: 'Tingkatkan Aksesibilitas', description: 'Tambahkan markah untuk membuat dokumen lebih mudah diakses dan ramah pengguna.', icon: 'accessibility' },
     ],
     faq: [
-      { question: 'Is it really free to header footer pdf online?', answer: 'Yes, our header footer pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can header footer pdf as many times as you need.' },
-      { question: 'Is it safe to header footer pdf online?', answer: 'Absolutely. All header footer pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to header footer pdf?', answer: 'No software installation is required. Our header footer pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya membuat markah bersarang (nested)?', answer: 'Ya, Anda dapat membuat struktur hierarkis dengan markah induk (parent) dan turunan (child).' },
+      { question: 'Bisakah saya mengimpor markah dari sebuah file?', answer: 'Ya, Anda dapat mengimpor struktur markah dari file JSON atau teks.' },
+      { question: 'Apakah markah akan berfungsi di semua pembaca PDF?', answer: 'Ya, markah adalah fitur PDF standar yang didukung oleh semua pembaca PDF utama.' },
     ],
   },
-  'background-pdf': {
-    title: 'Background Pdf',
-    metaDescription: 'Background Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami ',
-    keywords: [
-      'background pdf free online',
-      'background pdf no registration',
-      'background pdf no sign up',
-      'background pdf no watermark',
-      'background pdf browser based',
-      'background pdf for work',
-      'background pdf for students',
-      'best background pdf tool',
-      'how to background pdf',
-      'background pdf online free',
-      'background pdf without software',
-      'background pdf privacy focused',
-      'background pdf secure',
-      'background pdf fast',
-      'free background pdf tool',
-      'online background pdf free',
-      'background pdf tool online',
-      'background pdf for free',
-      'background pdf no download',
-      'background pdf web based',
-      'background pdf open source',
-      'background pdf wasm',
-      'background pdf client side',
-      'background pdf no upload',
-      'background pdf instant',
-      'background pdf high quality',
-      'background pdf no limit',
-      'background pdf 2025',
-      'background pdf guide',
-      'background pdf tutorial',
-    ],
+
+  'table-of-contents': {
+    title: 'Daftar Isi',
+    metaDescription: 'Buat daftar isi untuk PDF Anda. Buat navigasi yang dapat diklik dari markah.',
+    keywords: ['daftar isi pdf', 'pembuat daftar isi', 'indeks pdf', 'navigasi dokumen'],
     description: `
-      <p>Background Pdf free online with our powerful browser-based tool. Whether you need to background pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can background pdf no registration required, with no watermarks added. How to background pdf for free? Use our online tool—no software needed.</p>
-            <p>Background Pdf has never been easier. Get started now with the best free background pdf tool online.</p>
+      <p>Daftar Isi menghasilkan halaman daftar isi yang dapat dinavigasi untuk dokumen PDF Anda. Daftar isi dapat dibuat dari markah yang ada atau entri kustom, memberikan ikhtisar dan navigasi cepat kepada pembaca.</p>
+      <p>Sesuaikan tampilan dengan berbagai gaya, font, dan tata letak. Daftar isi yang dihasilkan mencakup tautan yang dapat diklik yang langsung melompat ke halaman yang dirujuk.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can background pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free background pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Konfigurasi Daftar Isi', description: 'Pilih untuk membuat dari markah atau buat entri kustom. Pilih gaya dan opsi penempatan.' },
+      { step: 3, title: 'Buat dan Unduh', description: 'Klik Buat untuk menghasilkan daftar isi dan mengunduh PDF Anda yang telah diperbarui.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to background pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to background pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to background pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Makalah Akademik', description: 'Tambahkan daftar isi profesional ke tesis, disertasi, dan makalah penelitian.', icon: 'graduation-cap' },
+      { title: 'Laporan Bisnis', description: 'Buat laporan yang dapat dinavigasi dengan daftar bagian yang jelas bagi pemangku kepentingan.', icon: 'bar-chart' },
+      { title: 'Panduan Pengguna', description: 'Hasilkan daftar isi yang komprehensif untuk dokumentasi teknis dan panduan pengguna.', icon: 'book' },
     ],
     faq: [
-      { question: 'Is it really free to background pdf online?', answer: 'Yes, our background pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can background pdf as many times as you need.' },
-      { question: 'Is it safe to background pdf online?', answer: 'Absolutely. All background pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to background pdf?', answer: 'No software installation is required. Our background pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya menyesuaikan tampilan Daftar Isi?', answer: 'Ya, Anda dapat memilih dari berbagai gaya, font, dan tata letak untuk daftar isi Anda.' },
+      { question: 'Di mana Daftar Isi disisipkan?', answer: 'Secara bawaan, Daftar Isi disisipkan di awal dokumen, tetapi Anda dapat memilih lokasi yang berbeda.' },
+      { question: 'Apakah entri Daftar Isi dapat diklik?', answer: 'Ya, setiap entri adalah tautan yang dapat diklik untuk bernavigasi ke halaman yang sesuai.' },
     ],
   },
-  'bates-numbering': {
-    title: 'Bates Numbering',
-    metaDescription: 'Bates Numbering gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami',
-    keywords: [
-      'bates numbering free online',
-      'bates numbering no registration',
-      'bates numbering no sign up',
-      'bates numbering no watermark',
-      'bates numbering browser based',
-      'bates numbering for work',
-      'bates numbering for students',
-      'best bates numbering tool',
-      'how to bates numbering',
-      'bates numbering online free',
-      'bates numbering without software',
-      'bates numbering privacy focused',
-      'bates numbering secure',
-      'bates numbering fast',
-      'free bates numbering tool',
-      'online bates numbering free',
-      'bates numbering tool online',
-      'bates numbering for free',
-      'bates numbering no download',
-      'bates numbering web based',
-      'bates numbering open source',
-      'bates numbering wasm',
-      'bates numbering client side',
-      'bates numbering no upload',
-      'bates numbering instant',
-      'bates numbering high quality',
-      'bates numbering no limit',
-      'bates numbering 2025',
-      'bates numbering guide',
-      'bates numbering tutorial',
-    ],
+
+  'page-numbers': {
+    title: 'Nomor Halaman',
+    metaDescription: 'Tambahkan nomor halaman ke dokumen PDF. Sesuaikan posisi, format, dan nomor awal.',
+    keywords: ['tambah nomor halaman', 'nomor halaman pdf', 'penomoran halaman pdf', 'paginasi pdf'],
     description: `
-      <p>Bates Numbering free online with our powerful browser-based tool. Whether you need to bates numbering for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can bates numbering no registration required, with no watermarks added. How to bates numbering for free? Use our online tool—no software needed.</p>
-            <p>Bates Numbering has never been easier. Get started now with the best free bates numbering tool online.</p>
+      <p>Nomor Halaman menambahkan penomoran halaman yang dapat disesuaikan ke dokumen PDF Anda. Pilih dari berbagai format, posisi, dan gaya yang sesuai dengan desain dokumen Anda.</p>
+      <p>Anda dapat mengatur nomor awal, melewati halaman tertentu, dan menggunakan format penomoran yang berbeda (1, 2, 3 atau i, ii, iii). Sempurna untuk membuat dokumen profesional dengan paginasi yang tepat.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can bates numbering no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free bates numbering tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Konfigurasi Penomoran', description: 'Pilih posisi, format, nomor awal, dan halaman mana yang akan diberi nomor.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Klik Terapkan untuk menambahkan nomor halaman dan mengunduh PDF Anda yang telah diperbarui.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to bates numbering for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to bates numbering for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to bates numbering for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Dokumen Profesional', description: 'Tambahkan nomor halaman ke laporan, proposal, dan dokumen bisnis.', icon: 'file-text' },
+      { title: 'Makalah Akademik', description: 'Beri nomor halaman sesuai dengan persyaratan format akademik.', icon: 'graduation-cap' },
+      { title: 'Dokumen Hukum', description: 'Tambahkan paginasi yang tepat ke kontrak dan pengajuan hukum.', icon: 'scale' },
     ],
     faq: [
-      { question: 'Is it really free to bates numbering online?', answer: 'Yes, our bates numbering tool is completely free to use. No registration, no sign-up, no credit card required. You can bates numbering as many times as you need.' },
-      { question: 'Is it safe to bates numbering online?', answer: 'Absolutely. All bates numbering processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to bates numbering?', answer: 'No software installation is required. Our bates numbering tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya melewati halaman pertama?', answer: 'Ya, Anda dapat menentukan halaman mana yang diberi nomor dan mana yang dilewati, seperti halaman judul atau sampul.' },
+      { question: 'Format angka apa saja yang tersedia?', answer: 'Anda dapat menggunakan angka Arab (1, 2, 3), angka Romawi (i, ii, iii atau I, II, III), atau huruf (a, b, c).' },
+      { question: 'Bisakah saya menambahkan format "Halaman X dari Y"?', answer: 'Ya, Anda dapat menyertakan total jumlah halaman dalam format penomoran Anda.' },
     ],
   },
-  'pdf-to-grayscale': {
-    title: 'Pdf To Grayscale',
-    metaDescription: 'Pdf To Grayscale gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kam',
-    keywords: [
-      'pdf to grayscale free online',
-      'pdf to grayscale no registration',
-      'pdf to grayscale no sign up',
-      'pdf to grayscale no watermark',
-      'pdf to grayscale browser based',
-      'pdf to grayscale for work',
-      'pdf to grayscale for students',
-      'best pdf to grayscale tool',
-      'how to pdf to grayscale',
-      'pdf to grayscale online free',
-      'pdf to grayscale without software',
-      'pdf to grayscale privacy focused',
-      'pdf to grayscale secure',
-      'pdf to grayscale fast',
-      'free pdf to grayscale tool',
-      'online pdf to grayscale free',
-      'pdf to grayscale tool online',
-      'pdf to grayscale for free',
-      'pdf to grayscale no download',
-      'pdf to grayscale web based',
-      'pdf to grayscale open source',
-      'pdf to grayscale wasm',
-      'pdf to grayscale client side',
-      'pdf to grayscale no upload',
-      'pdf to grayscale instant',
-      'pdf to grayscale high quality',
-      'pdf to grayscale no limit',
-      'pdf to grayscale 2025',
-      'pdf to grayscale guide',
-      'pdf to grayscale tutorial',
-    ],
+
+  'add-watermark': {
+    title: 'Tambahkan Tanda Air (Watermark)',
+    metaDescription: 'Tambahkan tanda air berupa teks atau gambar ke file PDF. Lindungi dan beri merek pada dokumen Anda.',
+    keywords: ['tambah tanda air', 'tanda air pdf', 'stempel pdf', 'merek pdf', 'lindungi pdf', 'watermark pdf'],
     description: `
-      <p>Pdf To Grayscale free online with our powerful browser-based tool. Whether you need to pdf to grayscale for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to grayscale no registration required, with no watermarks added. How to pdf to grayscale for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Grayscale has never been easier. Get started now with the best free pdf to grayscale tool online.</p>
+      <p>Tambahkan Tanda Air memungkinkan Anda menempatkan tanda air teks atau gambar pada dokumen PDF Anda. Tanda air dapat menunjukkan status dokumen (Draf, Rahasia), menambahkan merek, atau mencegah penyalinan tanpa izin.</p>
+      <p>Sesuaikan posisi, ukuran, opasitas, rotasi, dan warna tanda air. Terapkan ke semua halaman atau pilih halaman tertentu. Alat ini mendukung tanda air teks maupun gambar.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to grayscale no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to grayscale tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Buat Tanda Air', description: 'Masukkan teks atau unggah gambar untuk tanda air Anda. Sesuaikan posisi, ukuran, opasitas, dan rotasi.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Klik Terapkan untuk menambahkan tanda air dan mengunduh PDF Anda yang telah diperbarui.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to grayscale for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to grayscale for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to grayscale for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Perlindungan Dokumen', description: 'Tambahkan tanda air "Rahasia" atau "Draf" untuk menunjukkan status dokumen.', icon: 'shield' },
+      { title: 'Dokumen Merek', description: 'Tambahkan logo atau nama perusahaan ke dokumen resmi.', icon: 'award' },
+      { title: 'Pemberitahuan Hak Cipta', description: 'Tambahkan informasi hak cipta untuk melindungi kekayaan intelektual.', icon: 'copyright' },
     ],
     faq: [
-      { question: 'Is it really free to pdf to grayscale online?', answer: 'Yes, our pdf to grayscale tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to grayscale as many times as you need.' },
-      { question: 'Is it safe to pdf to grayscale online?', answer: 'Absolutely. All pdf to grayscale processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to grayscale?', answer: 'No software installation is required. Our pdf to grayscale tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya menggunakan gambar sebagai tanda air?', answer: 'Ya, Anda dapat mengunggah gambar PNG, JPG, atau SVG untuk digunakan sebagai tanda air.' },
+      { question: 'Bisakah saya membuat tanda air menjadi semi-transparan?', answer: 'Ya, Anda dapat menyesuaikan opasitas dari sepenuhnya transparan hingga sepenuhnya pekat.' },
+      { question: 'Bisakah saya menerapkan tanda air yang berbeda ke halaman yang berbeda?', answer: 'Alat ini menerapkan tanda air yang sama ke halaman yang dipilih. Untuk tanda air yang berbeda, proses dokumen tersebut beberapa kali.' },
     ],
   },
-  'optimize-pdf': {
-    title: 'Optimize Pdf',
-    metaDescription: 'Optimize Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'optimize pdf free online',
-      'optimize pdf no registration',
-      'optimize pdf no sign up',
-      'optimize pdf no watermark',
-      'optimize pdf browser based',
-      'optimize pdf for work',
-      'optimize pdf for students',
-      'best optimize pdf tool',
-      'how to optimize pdf',
-      'optimize pdf online free',
-      'optimize pdf without software',
-      'optimize pdf privacy focused',
-      'optimize pdf secure',
-      'optimize pdf fast',
-      'free optimize pdf tool',
-      'online optimize pdf free',
-      'optimize pdf tool online',
-      'optimize pdf for free',
-      'optimize pdf no download',
-      'optimize pdf web based',
-      'optimize pdf open source',
-      'optimize pdf wasm',
-      'optimize pdf client side',
-      'optimize pdf no upload',
-      'optimize pdf instant',
-      'optimize pdf high quality',
-      'optimize pdf no limit',
-      'optimize pdf 2025',
-      'optimize pdf guide',
-      'optimize pdf tutorial',
-    ],
+
+  'header-footer': {
+    title: 'Header & Footer',
+    metaDescription: 'Tambahkan header dan footer ke dokumen PDF. Sertakan nomor halaman, tanggal, dan teks kustom.',
+    keywords: ['header pdf', 'footer pdf', 'tambah header footer', 'kop surat pdf'],
     description: `
-      <p>Optimize Pdf free online with our advanced PDF compression tool. Reduce file size without significant quality loss. Perfect for email attachments and web optimization.</p>
-            <p>Upload your PDF file and choose compression level. You can compress PDF no registration required. The compressed PDF maintains original formatting.</p>
-            <p>All compression happens locally in your browser. How to compress PDF for free? Use our online PDF compressor.</p>
-            <p>Try our free compress PDF online tool now. The fastest and most secure way to reduce PDF file size online.</p>
+      <p>Header & Footer menambahkan header dan footer yang dapat disesuaikan ke dokumen PDF Anda. Sertakan nomor halaman, tanggal, judul dokumen, atau teks kustom apa pun di area header atau footer.</p>
+      <p>Posisikan konten di kiri, tengah, atau kanan header/footer. Gunakan konten yang berbeda untuk halaman ganjil dan genap jika diperlukan. Sempurna untuk membuat dokumen profesional dengan format yang konsisten.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can optimize pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free optimize pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Konfigurasi Header/Footer', description: 'Masukkan teks untuk area header dan footer. Tambahkan nomor halaman, tanggal, atau teks kustom.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Klik Terapkan untuk menambahkan header/footer dan mengunduh PDF Anda yang telah diperbarui.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to optimize pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to optimize pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to optimize pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Dokumen Bisnis', description: 'Tambahkan nama perusahaan dan nomor halaman ke dokumen profesional.', icon: 'briefcase' },
+      { title: 'Dokumen Hukum', description: 'Sertakan nomor kasus, tanggal, dan referensi halaman dalam pengajuan hukum.', icon: 'scale' },
+      { title: 'Makalah Akademik', description: 'Tambahkan header berjalan (running header) dengan judul makalah dan nama penulis.', icon: 'graduation-cap' },
     ],
     faq: [
-      { question: 'Is it really free to optimize pdf online?', answer: 'Yes, our optimize pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can optimize pdf as many times as you need.' },
-      { question: 'Is it safe to optimize pdf online?', answer: 'Absolutely. All optimize pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to optimize pdf?', answer: 'No software installation is required. Our optimize pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya menggunakan header yang berbeda pada halaman ganjil dan genap?', answer: 'Ya, Anda dapat mengonfigurasi konten yang berbeda untuk halaman ganjil dan genap.' },
+      { question: 'Bisakah saya menyertakan tanggal saat ini?', answer: 'Ya, Anda dapat menyisipkan kolom tanggal dinamis yang menampilkan tanggal saat ini.' },
+      { question: 'Bisakah saya melewati header/footer pada halaman tertentu?', answer: 'Ya, Anda dapat menentukan halaman mana yang harus memiliki header/footer dan mana yang harus dilewati.' },
     ],
   },
+
+  'invert-colors': {
+    title: 'Balikkan Warna',
+    metaDescription: 'Balikkan warna PDF untuk membaca dalam mode gelap. Ubah dokumen menjadi warna negatif.',
+    keywords: ['balikkan warna pdf', 'pdf mode gelap', 'pdf negatif', 'balik warna'],
+    description: `
+      <p>Balikkan Warna (Invert Colors) membalikkan warna dalam dokumen PDF Anda, menciptakan efek gambar negatif. Hal ini sangat berguna untuk membuat versi dokumen dalam mode gelap agar lebih mudah dibaca dalam kondisi minim cahaya.</p>
+      <p>Alat ini dapat membalikkan semua warna atau secara selektif mempertahankan elemen tertentu seperti gambar. Sempurna untuk mengurangi ketegangan mata saat membaca dokumen di malam hari.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Pilih apakah akan membalikkan semua konten atau mempertahankan gambar.' },
+      { step: 3, title: 'Balikkan dan Unduh', description: 'Klik Balikkan untuk memproses dokumen dan mengunduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Membaca di Malam Hari', description: 'Buat versi mode gelap dari dokumen agar nyaman dibaca di malam hari.', icon: 'moon' },
+      { title: 'Kurangi Ketegangan Mata', description: 'Balikkan dokumen yang terang untuk mengurangi kelelahan mata saat membaca terlalu lama.', icon: 'eye' },
+      { title: 'Penghematan Cetak', description: 'Balikkan dokumen untuk mengurangi penggunaan tinta saat mencetak draf.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apakah gambar juga akan dibalikkan?', answer: 'Secara bawaan, ya. Anda dapat memilih untuk mempertahankan gambar aslinya sekaligus membalikkan teks dan latar belakangnya.' },
+      { question: 'Bisakah saya membalikkan halaman tertentu saja?', answer: 'Ya, Anda dapat memilih halaman mana yang akan dibalikkan warnanya.' },
+      { question: 'Apakah pembalikan warna ini dapat diubah kembali (reversible)?', answer: 'Anda dapat membalikkan dokumen itu lagi untuk mengembalikannya ke warna yang kurang lebih sama dengan aslinya.' },
+    ],
+  },
+
+  'background-color': {
+    title: 'Warna Latar Belakang',
+    metaDescription: 'Ubah warna latar belakang PDF. Tambahkan latar belakang berwarna ke halaman dokumen.',
+    keywords: ['warna latar belakang pdf', 'ubah latar belakang pdf', 'pdf berwarna', 'warna halaman pdf'],
+    description: `
+      <p>Warna Latar Belakang memungkinkan Anda mengubah atau menambahkan warna latar belakang ke halaman PDF Anda. Hal ini dapat meningkatkan keterbacaan, menambah daya tarik visual, atau mencocokkan dengan kebutuhan merek Anda.</p>
+      <p>Pilih warna apa pun untuk latar belakang dan terapkan ke semua halaman atau halaman tertentu saja. Alat ini mempertahankan semua konten yang ada sambil menambahkan lapisan latar belakang.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Pilih Warna', description: 'Pilih warna latar belakang menggunakan pemilih warna atau masukkan kode hex.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Klik Terapkan untuk menambahkan latar belakang dan mengunduh PDF Anda yang telah diperbarui.' },
+    ],
+    useCases: [
+      { title: 'Tingkatkan Keterbacaan', description: 'Tambahkan latar belakang warna krem muda atau sepia untuk mengurangi ketegangan mata.', icon: 'eye' },
+      { title: 'Dokumen Merek', description: 'Gunakan warna merek sebagai latar belakang untuk materi pemasaran.', icon: 'palette' },
+      { title: 'Sorot Bagian', description: 'Gunakan warna latar belakang yang berbeda untuk membedakan bagian-bagian dokumen.', icon: 'layers' },
+    ],
+    faq: [
+      { question: 'Apakah latar belakang akan menutupi konten yang ada?', answer: 'Tidak, latar belakang ditambahkan di belakang konten yang ada, sehingga semua teks dan gambar tetap terjaga.' },
+      { question: 'Bisakah saya menggunakan warna yang berbeda untuk halaman yang berbeda?', answer: 'Anda perlu memproses dokumen tersebut beberapa kali untuk memberikan warna yang berbeda pada halaman yang berbeda.' },
+      { question: 'Bisakah saya menghapus latar belakang yang sudah ada?', answer: 'Alat ini berfungsi untuk menambahkan latar belakang. Untuk menghapus latar belakang, Anda mungkin perlu menggunakan alat Edit PDF.' },
+    ],
+  },
+
+  'text-color': {
+    title: 'Ubah Warna Teks',
+    metaDescription: 'Ubah warna teks di dalam dokumen PDF. Ubah warna seluruh konten teks.',
+    keywords: ['ubah warna teks pdf', 'warna teks pdf', 'modifikasi warna teks', 'warnai ulang teks pdf'],
+    description: `
+      <p>Ubah Warna Teks memungkinkan Anda mengubah warna teks di dalam dokumen PDF Anda. Ini berguna untuk meningkatkan kontras, mencocokkan warna merek, atau membuat variasi visual pada dokumen.</p>
+      <p>Pilih warna baru dan terapkan ke seluruh teks di dalam dokumen. Alat ini memproses elemen teks sambil mempertahankan gambar dan konten lainnya.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Pilih Warna', description: 'Pilih warna teks baru menggunakan pemilih warna atau masukkan kode hex.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Klik Terapkan untuk mengubah warna teks dan mengunduh PDF Anda yang telah diperbarui.' },
+    ],
+    useCases: [
+      { title: 'Tingkatkan Kontras', description: 'Ubah warna teks untuk meningkatkan keterbacaan terhadap latar belakang.', icon: 'contrast' },
+      { title: 'Konsistensi Merek', description: 'Perbarui warna teks agar sesuai dengan panduan merek (brand guidelines).', icon: 'palette' },
+      { title: 'Aksesibilitas', description: 'Sesuaikan warna teks untuk memenuhi persyaratan kontras aksesibilitas.', icon: 'accessibility' },
+    ],
+    faq: [
+      { question: 'Apakah semua teks akan diubah?', answer: 'Ya, alat ini mengubah warna seluruh elemen teks dalam dokumen.' },
+      { question: 'Bisakah saya hanya mengubah teks tertentu saja?', answer: 'Alat ini mengubah semua teks. Untuk perubahan selektif, gunakan alat Edit PDF.' },
+      { question: 'Apakah teks yang diformat (tebal, miring) akan dipertahankan?', answer: 'Ya, format teks dipertahankan; hanya warnanya saja yang diubah.' },
+    ],
+  },
+
+  'add-stamps': {
+    title: 'Tambahkan Stempel',
+    metaDescription: 'Tambahkan stempel ke dokumen PDF. Gunakan stempel prasetel atau kustom untuk persetujuan, peninjauan, dan lainnya.',
+    keywords: ['stempel pdf', 'tambah stempel', 'stempel persetujuan', 'stempel karet pdf'],
+    description: `
+      <p>Tambahkan Stempel memungkinkan Anda menempatkan gambar stempel di dokumen PDF Anda. Gunakan stempel prasetel (preset) seperti "Disetujui", "Ditolak", "Draf", atau unggah gambar stempel kustom Anda sendiri.</p>
+      <p>Tempatkan stempel di mana saja pada halaman, ubah ukurannya, dan terapkan ke satu atau beberapa halaman. Sempurna untuk alur kerja dokumen, persetujuan, dan indikator status.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Pilih Stempel', description: 'Pilih stempel prasetel atau unggah gambar stempel kustom.' },
+      { step: 3, title: 'Posisikan dan Terapkan', description: 'Klik untuk menempatkan stempel, sesuaikan posisi dan ukuran, lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Persetujuan Dokumen', description: 'Tambahkan stempel "Disetujui" atau "Ditolak" ke dokumen dalam alur kerja peninjauan.', icon: 'check-circle' },
+      { title: 'Indikasi Status', description: 'Tandai dokumen sebagai "Draf", "Final", atau "Rahasia".', icon: 'tag' },
+      { title: 'Kontrol Kualitas', description: 'Tambahkan stempel QC untuk menunjukkan penyelesaian inspeksi atau peninjauan.', icon: 'clipboard-check' },
+    ],
+    faq: [
+      { question: 'Stempel prasetel apa saja yang tersedia?', answer: 'Prasetel yang tersedia antara lain Approved (Disetujui), Rejected (Ditolak), Draft (Draf), Final, Confidential (Rahasia), Copy (Salinan), dan banyak lagi.' },
+      { question: 'Bisakah saya mengunggah stempel kustom?', answer: 'Ya, Anda dapat mengunggah gambar PNG atau JPG untuk digunakan sebagai stempel kustom.' },
+      { question: 'Bisakah saya menambahkan beberapa stempel ke satu dokumen?', answer: 'Ya, Anda dapat menambahkan beberapa stempel dan memposisikan masing-masing secara independen.' },
+    ],
+  },
+
+  'remove-annotations': {
+    title: 'Hapus Anotasi',
+    metaDescription: 'Hapus anotasi dari file PDF. Hapus komentar, sorotan, dan markup.',
+    keywords: ['hapus anotasi pdf', 'hapus komentar', 'hapus sorotan', 'bersihkan pdf'],
+    description: `
+      <p>Hapus Anotasi akan melucuti komentar, sorotan, catatan tempel, dan anotasi lainnya dari dokumen PDF Anda. Hal ini akan menghasilkan versi dokumen yang bersih tanpa ada markup.</p>
+      <p>Anda dapat menghapus semua anotasi atau secara selektif menghapus jenis tertentu. Sempurna untuk membuat versi akhir dari dokumen yang telah ditinjau atau menghapus komentar yang sensitif.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Pilih Jenis Anotasi', description: 'Pilih jenis anotasi apa saja yang akan dihapus: komentar, sorotan, tautan, dll.' },
+      { step: 3, title: 'Hapus dan Unduh', description: 'Klik Hapus untuk melucuti anotasi dan mengunduh PDF yang sudah bersih.' },
+    ],
+    useCases: [
+      { title: 'Selesaikan Dokumen', description: 'Hapus komentar tinjauan dan markup sebelum memublikasikan dokumen akhir.', icon: 'file-check' },
+      { title: 'Perlindungan Privasi', description: 'Hapus komentar yang mungkin berisi informasi sensitif sebelum dibagikan.', icon: 'shield' },
+      { title: 'Distribusi Bersih', description: 'Buat salinan bersih dari dokumen yang dianotasi untuk didistribusikan.', icon: 'copy' },
+    ],
+    faq: [
+      { question: 'Jenis anotasi apa saja yang dapat dihapus?', answer: 'Komentar, sorotan, garis bawah, coretan, catatan tempel, stempel, dan tautan semuanya dapat dihapus.' },
+      { question: 'Bisakah saya mempertahankan beberapa anotasi?', answer: 'Ya, Anda dapat memilih jenis anotasi mana yang akan dihapus dan mana yang akan dipertahankan.' },
+      { question: 'Apakah proses ini dapat dikembalikan (reversible)?', answer: 'Tidak, penghapusan anotasi bersifat permanen. Simpan cadangan file aslinya jika diperlukan.' },
+    ],
+  },
+
   'form-filler': {
     title: 'Pengisi Formulir',
-    metaDescription: 'Form Filler gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'form filler free online',
-      'form filler no registration',
-      'form filler no sign up',
-      'form filler no watermark',
-      'form filler browser based',
-      'form filler for work',
-      'form filler for students',
-      'best form filler tool',
-      'how to form filler',
-      'form filler online free',
-      'form filler without software',
-      'form filler privacy focused',
-      'form filler secure',
-      'form filler fast',
-      'free form filler tool',
-      'online form filler free',
-      'form filler tool online',
-      'form filler for free',
-      'form filler no download',
-      'form filler web based',
-      'form filler open source',
-      'form filler wasm',
-      'form filler client side',
-      'form filler no upload',
-      'form filler instant',
-      'form filler high quality',
-      'form filler no limit',
-      'form filler 2025',
-      'form filler guide',
-      'form filler tutorial',
-    ],
+    metaDescription: 'Isi formulir PDF secara online. Lengkapi formulir PDF interaktif tanpa perlu mencetaknya.',
+    keywords: ['isi formulir pdf', 'pengisi formulir pdf', 'lengkapi formulir pdf', 'pdf interaktif'],
     description: `
-      <p>Form Filler free online with our powerful browser-based tool. Whether you need to form filler for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can form filler no registration required, with no watermarks added. How to form filler for free? Use our online tool—no software needed.</p>
-            <p>Form Filler has never been easier. Get started now with the best free form filler tool online.</p>
+      <p>Pengisi Formulir memungkinkan Anda untuk melengkapi formulir PDF interaktif secara langsung di browser Anda. Isi bidang teks, centang kotak, pilih opsi, dan tambahkan tanda tangan tanpa perlu mencetak dokumen tersebut.</p>
+      <p>Alat ini mendukung formulir PDF standar maupun formulir XFA. Data yang Anda isi dapat disimpan dan formulir dapat diratakan (flattened) untuk mencegah pengeditan lebih lanjut.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan data formulir Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can form filler no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free form filler tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah Formulir PDF Anda', description: 'Tarik dan lepas formulir PDF Anda atau klik untuk memilih file.' },
+      { step: 2, title: 'Isi Formulir', description: 'Klik pada bidang formulir untuk memasukkan teks, mencentang kotak, atau memilih opsi.' },
+      { step: 3, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk mempertahankan entri Anda dan mengunduh formulir yang telah diisi.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to form filler for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to form filler for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to form filler for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Formulir Aplikasi', description: 'Lengkapi aplikasi pekerjaan, permohonan izin, dan formulir pendaftaran.', icon: 'clipboard' },
+      { title: 'Formulir Pajak', description: 'Isi dokumen pajak dan formulir keuangan secara elektronik.', icon: 'file-text' },
+      { title: 'Kontrak', description: 'Lengkapi formulir kontrak dengan informasi Anda sebelum menandatanganinya.', icon: 'file-signature' },
     ],
     faq: [
-      { question: 'Is it really free to form filler online?', answer: 'Yes, our form filler tool is completely free to use. No registration, no sign-up, no credit card required. You can form filler as many times as you need.' },
-      { question: 'Is it safe to form filler online?', answer: 'Absolutely. All form filler processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to form filler?', answer: 'No software installation is required. Our form filler tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bisakah saya menyimpan progres saya?', answer: 'Ya, Anda dapat menyimpan formulir yang diisi sebagian dan melanjutkannya nanti.' },
+      { question: 'Apa yang dimaksud dengan meratakan (flattening) formulir?', answer: 'Meratakan (flattening) mengonversi bidang formulir menjadi konten statis, sehingga mencegah pengeditan lebih lanjut.' },
+      { question: 'Apakah formulir XFA didukung?', answer: 'Ya, alat ini mendukung AcroForms standar dan formulir XFA.' },
     ],
   },
-  'create-pdf': {
-    title: 'Create Pdf',
-    metaDescription: 'Create Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'create pdf free online',
-      'create pdf no registration',
-      'create pdf no sign up',
-      'create pdf no watermark',
-      'create pdf browser based',
-      'create pdf for work',
-      'create pdf for students',
-      'best create pdf tool',
-      'how to create pdf',
-      'create pdf online free',
-      'create pdf without software',
-      'create pdf privacy focused',
-      'create pdf secure',
-      'create pdf fast',
-      'free create pdf tool',
-      'online create pdf free',
-      'create pdf tool online',
-      'create pdf for free',
-      'create pdf no download',
-      'create pdf web based',
-      'create pdf open source',
-      'create pdf wasm',
-      'create pdf client side',
-      'create pdf no upload',
-      'create pdf instant',
-      'create pdf high quality',
-      'create pdf no limit',
-      'create pdf 2025',
-      'create pdf guide',
-      'create pdf tutorial',
-    ],
+
+  'form-creator': {
+    title: 'Pembuat Formulir',
+    metaDescription: 'Buat formulir PDF yang dapat diisi. Tambahkan bidang teks, kotak centang, dan dropdown ke dalam dokumen.',
+    keywords: ['buat formulir pdf', 'pembuat formulir pdf', 'pdf dapat diisi', 'tambah bidang formulir'],
     description: `
-      <p>Create Pdf free online with our powerful browser-based tool. Whether you need to create pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can create pdf no registration required, with no watermarks added. How to create pdf for free? Use our online tool—no software needed.</p>
-            <p>Create Pdf has never been easier. Get started now with the best free create pdf tool online.</p>
+      <p>Pembuat Formulir mengubah dokumen PDF statis menjadi formulir interaktif yang dapat diisi. Tambahkan bidang teks, kotak centang, tombol radio, dropdown, dan lainnya untuk membuat formulir profesional.</p>
+      <p>Tarik dan lepas elemen formulir ke dokumen Anda, konfigurasikan properti bidang, dan buat formulir yang dapat diisi secara elektronik. Sempurna untuk membuat aplikasi, survei, dan formulir pengumpulan data.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can create pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free create pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen yang akan diubah menjadi formulir.' },
+      { step: 2, title: 'Tambahkan Bidang Formulir', description: 'Pilih jenis bidang dari bilah alat dan klik untuk menempatkannya di dokumen.' },
+      { step: 3, title: 'Konfigurasi dan Simpan', description: 'Atur properti bidang, lalu simpan dan unduh formulir PDF yang dapat diisi tersebut.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to create pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to create pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to create pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Formulir Aplikasi', description: 'Buat aplikasi pekerjaan, formulir keanggotaan, dan pendaftaran yang dapat diisi.', icon: 'user-plus' },
+      { title: 'Survei', description: 'Buat survei dan kuesioner interaktif untuk pengumpulan data.', icon: 'clipboard-list' },
+      { title: 'Formulir Pesanan', description: 'Buat formulir pesanan produk dengan bidang kuantitas dan kotak centang.', icon: 'shopping-cart' },
     ],
     faq: [
-      { question: 'Is it really free to create pdf online?', answer: 'Yes, our create pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can create pdf as many times as you need.' },
-      { question: 'Is it safe to create pdf online?', answer: 'Absolutely. All create pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to create pdf?', answer: 'No software installation is required. Our create pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Jenis bidang apa saja yang dapat saya tambahkan?', answer: 'Bidang teks, kotak centang, tombol radio, dropdown, pemilih tanggal, dan bidang tanda tangan.' },
+      { question: 'Bisakah saya membuat bidang yang wajib diisi (required)?', answer: 'Ya, Anda dapat menandai bidang sebagai wajib diisi dan menambahkan aturan validasi.' },
+      { question: 'Bisakah saya menambahkan perhitungan (calculation)?', answer: 'Perhitungan dasar seperti jumlah (sum) dan rata-rata dapat ditambahkan ke bidang numerik.' },
     ],
   },
-  'merge-pdf-template': {
-    title: 'Merge Pdf Template',
-    metaDescription: 'Merge Pdf Template gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'merge pdf template free online',
-      'merge pdf template no registration',
-      'merge pdf template no sign up',
-      'merge pdf template no watermark',
-      'merge pdf template browser based',
-      'merge pdf template for work',
-      'merge pdf template for students',
-      'best merge pdf template tool',
-      'how to merge pdf template',
-      'merge pdf template online free',
-      'merge pdf template without software',
-      'merge pdf template privacy focused',
-      'merge pdf template secure',
-      'merge pdf template fast',
-      'free merge pdf template tool',
-      'online merge pdf template free',
-      'merge pdf template tool online',
-      'merge pdf template for free',
-      'merge pdf template no download',
-      'merge pdf template web based',
-      'merge pdf template open source',
-      'merge pdf template wasm',
-      'merge pdf template client side',
-      'merge pdf template no upload',
-      'merge pdf template instant',
-      'merge pdf template high quality',
-      'merge pdf template no limit',
-      'merge pdf template 2025',
-      'merge pdf template guide',
-      'merge pdf template tutorial',
-    ],
-    description: `
-      <p>Merge Pdf Template free online with our powerful PDF merger tool. Combine multiple PDF documents into a single file quickly and securely. Perfect for office workers, students, and anyone who needs to merge PDF files.</p>
-            <p>Simply upload your PDF files, arrange them in your desired order using our intuitive drag-and-drop interface, and merge them into one professional document. You can merge PDF files no registration required.</p>
-            <p>All processing happens locally in your browser using WebAssembly technology, ensuring complete privacy. No files are uploaded to any server. How to merge PDF files for free? Simply use our online PDF merger.</p>
-            <p>Try our free merge PDF online tool now. Whether you need to merge PDF for work or study, our tool delivers high-quality results every time.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can merge pdf template no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free merge pdf template tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to merge pdf template for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to merge pdf template for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to merge pdf template for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to merge pdf template online?', answer: 'Yes, our merge pdf template tool is completely free to use. No registration, no sign-up, no credit card required. You can merge pdf template as many times as you need.' },
-      { question: 'Is it safe to merge pdf template online?', answer: 'Absolutely. All merge pdf template processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to merge pdf template?', answer: 'No software installation is required. Our merge pdf template tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'split-pdf-template': {
-    title: 'Split Pdf Template',
-    metaDescription: 'Split Pdf Template gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'split pdf template free online',
-      'split pdf template no registration',
-      'split pdf template no sign up',
-      'split pdf template no watermark',
-      'split pdf template browser based',
-      'split pdf template for work',
-      'split pdf template for students',
-      'best split pdf template tool',
-      'how to split pdf template',
-      'split pdf template online free',
-      'split pdf template without software',
-      'split pdf template privacy focused',
-      'split pdf template secure',
-      'split pdf template fast',
-      'free split pdf template tool',
-      'online split pdf template free',
-      'split pdf template tool online',
-      'split pdf template for free',
-      'split pdf template no download',
-      'split pdf template web based',
-      'split pdf template open source',
-      'split pdf template wasm',
-      'split pdf template client side',
-      'split pdf template no upload',
-      'split pdf template instant',
-      'split pdf template high quality',
-      'split pdf template no limit',
-      'split pdf template 2025',
-      'split pdf template guide',
-      'split pdf template tutorial',
-    ],
-    description: `
-      <p>Split Pdf Template free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
-            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
-            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
-            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can split pdf template no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free split pdf template tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to split pdf template for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to split pdf template for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to split pdf template for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to split pdf template online?', answer: 'Yes, our split pdf template tool is completely free to use. No registration, no sign-up, no credit card required. You can split pdf template as many times as you need.' },
-      { question: 'Is it safe to split pdf template online?', answer: 'Absolutely. All split pdf template processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to split pdf template?', answer: 'No software installation is required. Our split pdf template tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'encrypt-pdf': {
-    title: 'Enkripsi PDF',
-    metaDescription: 'Encrypt Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'encrypt pdf free online',
-      'encrypt pdf no registration',
-      'encrypt pdf no sign up',
-      'encrypt pdf no watermark',
-      'encrypt pdf browser based',
-      'encrypt pdf for work',
-      'encrypt pdf for students',
-      'best encrypt pdf tool',
-      'how to encrypt pdf',
-      'encrypt pdf online free',
-      'encrypt pdf without software',
-      'encrypt pdf privacy focused',
-      'encrypt pdf secure',
-      'encrypt pdf fast',
-      'free encrypt pdf tool',
-      'online encrypt pdf free',
-      'encrypt pdf tool online',
-      'encrypt pdf for free',
-      'encrypt pdf no download',
-      'encrypt pdf web based',
-      'encrypt pdf open source',
-      'encrypt pdf wasm',
-      'encrypt pdf client side',
-      'encrypt pdf no upload',
-      'encrypt pdf instant',
-      'encrypt pdf high quality',
-      'encrypt pdf no limit',
-      'encrypt pdf 2025',
-      'encrypt pdf guide',
-      'encrypt pdf tutorial',
-    ],
-    description: `
-      <p>Encrypt Pdf free online with our powerful browser-based tool. Whether you need to encrypt pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can encrypt pdf no registration required, with no watermarks added. How to encrypt pdf for free? Use our online tool—no software needed.</p>
-            <p>Encrypt Pdf has never been easier. Get started now with the best free encrypt pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can encrypt pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free encrypt pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to encrypt pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to encrypt pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to encrypt pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to encrypt pdf online?', answer: 'Yes, our encrypt pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can encrypt pdf as many times as you need.' },
-      { question: 'Is it safe to encrypt pdf online?', answer: 'Absolutely. All encrypt pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to encrypt pdf?', answer: 'No software installation is required. Our encrypt pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'decrypt-pdf': {
-    title: 'Dekripsi PDF',
-    metaDescription: 'Decrypt Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'decrypt pdf free online',
-      'decrypt pdf no registration',
-      'decrypt pdf no sign up',
-      'decrypt pdf no watermark',
-      'decrypt pdf browser based',
-      'decrypt pdf for work',
-      'decrypt pdf for students',
-      'best decrypt pdf tool',
-      'how to decrypt pdf',
-      'decrypt pdf online free',
-      'decrypt pdf without software',
-      'decrypt pdf privacy focused',
-      'decrypt pdf secure',
-      'decrypt pdf fast',
-      'free decrypt pdf tool',
-      'online decrypt pdf free',
-      'decrypt pdf tool online',
-      'decrypt pdf for free',
-      'decrypt pdf no download',
-      'decrypt pdf web based',
-      'decrypt pdf open source',
-      'decrypt pdf wasm',
-      'decrypt pdf client side',
-      'decrypt pdf no upload',
-      'decrypt pdf instant',
-      'decrypt pdf high quality',
-      'decrypt pdf no limit',
-      'decrypt pdf 2025',
-      'decrypt pdf guide',
-      'decrypt pdf tutorial',
-    ],
-    description: `
-      <p>Decrypt Pdf free online with our powerful browser-based tool. Whether you need to decrypt pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can decrypt pdf no registration required, with no watermarks added. How to decrypt pdf for free? Use our online tool—no software needed.</p>
-            <p>Decrypt Pdf has never been easier. Get started now with the best free decrypt pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can decrypt pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free decrypt pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to decrypt pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to decrypt pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to decrypt pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to decrypt pdf online?', answer: 'Yes, our decrypt pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can decrypt pdf as many times as you need.' },
-      { question: 'Is it safe to decrypt pdf online?', answer: 'Absolutely. All decrypt pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to decrypt pdf?', answer: 'No software installation is required. Our decrypt pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'metadata-pdf': {
-    title: 'Metadata Pdf',
-    metaDescription: 'Metadata Pdf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami un',
-    keywords: [
-      'metadata pdf free online',
-      'metadata pdf no registration',
-      'metadata pdf no sign up',
-      'metadata pdf no watermark',
-      'metadata pdf browser based',
-      'metadata pdf for work',
-      'metadata pdf for students',
-      'best metadata pdf tool',
-      'how to metadata pdf',
-      'metadata pdf online free',
-      'metadata pdf without software',
-      'metadata pdf privacy focused',
-      'metadata pdf secure',
-      'metadata pdf fast',
-      'free metadata pdf tool',
-      'online metadata pdf free',
-      'metadata pdf tool online',
-      'metadata pdf for free',
-      'metadata pdf no download',
-      'metadata pdf web based',
-      'metadata pdf open source',
-      'metadata pdf wasm',
-      'metadata pdf client side',
-      'metadata pdf no upload',
-      'metadata pdf instant',
-      'metadata pdf high quality',
-      'metadata pdf no limit',
-      'metadata pdf 2025',
-      'metadata pdf guide',
-      'metadata pdf tutorial',
-    ],
-    description: `
-      <p>Metadata Pdf free online with our powerful browser-based tool. Whether you need to metadata pdf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can metadata pdf no registration required, with no watermarks added. How to metadata pdf for free? Use our online tool—no software needed.</p>
-            <p>Metadata Pdf has never been easier. Get started now with the best free metadata pdf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can metadata pdf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free metadata pdf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to metadata pdf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to metadata pdf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to metadata pdf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to metadata pdf online?', answer: 'Yes, our metadata pdf tool is completely free to use. No registration, no sign-up, no credit card required. You can metadata pdf as many times as you need.' },
-      { question: 'Is it safe to metadata pdf online?', answer: 'Absolutely. All metadata pdf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to metadata pdf?', answer: 'No software installation is required. Our metadata pdf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-viewer': {
-    title: 'Pdf Viewer',
-    metaDescription: 'Pdf Viewer gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'pdf viewer free online',
-      'pdf viewer no registration',
-      'pdf viewer no sign up',
-      'pdf viewer no watermark',
-      'pdf viewer browser based',
-      'pdf viewer for work',
-      'pdf viewer for students',
-      'best pdf viewer tool',
-      'how to pdf viewer',
-      'pdf viewer online free',
-      'pdf viewer without software',
-      'pdf viewer privacy focused',
-      'pdf viewer secure',
-      'pdf viewer fast',
-      'free pdf viewer tool',
-      'online pdf viewer free',
-      'pdf viewer tool online',
-      'pdf viewer for free',
-      'pdf viewer no download',
-      'pdf viewer web based',
-      'pdf viewer open source',
-      'pdf viewer wasm',
-      'pdf viewer client side',
-      'pdf viewer no upload',
-      'pdf viewer instant',
-      'pdf viewer high quality',
-      'pdf viewer no limit',
-      'pdf viewer 2025',
-      'pdf viewer guide',
-      'pdf viewer tutorial',
-    ],
-    description: `
-      <p>Pdf Viewer free online with our powerful browser-based tool. Whether you need to pdf viewer for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf viewer no registration required, with no watermarks added. How to pdf viewer for free? Use our online tool—no software needed.</p>
-            <p>Pdf Viewer has never been easier. Get started now with the best free pdf viewer tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf viewer no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf viewer tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf viewer for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf viewer for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf viewer for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf viewer online?', answer: 'Yes, our pdf viewer tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf viewer as many times as you need.' },
-      { question: 'Is it safe to pdf viewer online?', answer: 'Absolutely. All pdf viewer processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf viewer?', answer: 'No software installation is required. Our pdf viewer tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-html': {
-    title: 'Pdf To Html',
-    metaDescription: 'Pdf To Html gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'pdf to html free online',
-      'pdf to html no registration',
-      'pdf to html no sign up',
-      'pdf to html no watermark',
-      'pdf to html browser based',
-      'pdf to html for work',
-      'pdf to html for students',
-      'best pdf to html tool',
-      'how to pdf to html',
-      'pdf to html online free',
-      'pdf to html without software',
-      'pdf to html privacy focused',
-      'pdf to html secure',
-      'pdf to html fast',
-      'free pdf to html tool',
-      'online pdf to html free',
-      'pdf to html tool online',
-      'pdf to html for free',
-      'pdf to html no download',
-      'pdf to html web based',
-      'pdf to html open source',
-      'pdf to html wasm',
-      'pdf to html client side',
-      'pdf to html no upload',
-      'pdf to html instant',
-      'pdf to html high quality',
-      'pdf to html no limit',
-      'pdf to html 2025',
-      'pdf to html guide',
-      'pdf to html tutorial',
-    ],
-    description: `
-      <p>Pdf To Html free online with our powerful browser-based tool. Whether you need to pdf to html for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to html no registration required, with no watermarks added. How to pdf to html for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Html has never been easier. Get started now with the best free pdf to html tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to html no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to html tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to html for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to html for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to html for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to html online?', answer: 'Yes, our pdf to html tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to html as many times as you need.' },
-      { question: 'Is it safe to pdf to html online?', answer: 'Absolutely. All pdf to html processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to html?', answer: 'No software installation is required. Our pdf to html tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-xml': {
-    title: 'Pdf To Xml',
-    metaDescription: 'Pdf To Xml gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'pdf to xml free online',
-      'pdf to xml no registration',
-      'pdf to xml no sign up',
-      'pdf to xml no watermark',
-      'pdf to xml browser based',
-      'pdf to xml for work',
-      'pdf to xml for students',
-      'best pdf to xml tool',
-      'how to pdf to xml',
-      'pdf to xml online free',
-      'pdf to xml without software',
-      'pdf to xml privacy focused',
-      'pdf to xml secure',
-      'pdf to xml fast',
-      'free pdf to xml tool',
-      'online pdf to xml free',
-      'pdf to xml tool online',
-      'pdf to xml for free',
-      'pdf to xml no download',
-      'pdf to xml web based',
-      'pdf to xml open source',
-      'pdf to xml wasm',
-      'pdf to xml client side',
-      'pdf to xml no upload',
-      'pdf to xml instant',
-      'pdf to xml high quality',
-      'pdf to xml no limit',
-      'pdf to xml 2025',
-      'pdf to xml guide',
-      'pdf to xml tutorial',
-    ],
-    description: `
-      <p>Pdf To Xml free online with our powerful browser-based tool. Whether you need to pdf to xml for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to xml no registration required, with no watermarks added. How to pdf to xml for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Xml has never been easier. Get started now with the best free pdf to xml tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to xml no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to xml tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to xml for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to xml for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to xml for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to xml online?', answer: 'Yes, our pdf to xml tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to xml as many times as you need.' },
-      { question: 'Is it safe to pdf to xml online?', answer: 'Absolutely. All pdf to xml processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to xml?', answer: 'No software installation is required. Our pdf to xml tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-csv': {
-    title: 'Pdf To Csv',
-    metaDescription: 'Pdf To Csv gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'pdf to csv free online',
-      'pdf to csv no registration',
-      'pdf to csv no sign up',
-      'pdf to csv no watermark',
-      'pdf to csv browser based',
-      'pdf to csv for work',
-      'pdf to csv for students',
-      'best pdf to csv tool',
-      'how to pdf to csv',
-      'pdf to csv online free',
-      'pdf to csv without software',
-      'pdf to csv privacy focused',
-      'pdf to csv secure',
-      'pdf to csv fast',
-      'free pdf to csv tool',
-      'online pdf to csv free',
-      'pdf to csv tool online',
-      'pdf to csv for free',
-      'pdf to csv no download',
-      'pdf to csv web based',
-      'pdf to csv open source',
-      'pdf to csv wasm',
-      'pdf to csv client side',
-      'pdf to csv no upload',
-      'pdf to csv instant',
-      'pdf to csv high quality',
-      'pdf to csv no limit',
-      'pdf to csv 2025',
-      'pdf to csv guide',
-      'pdf to csv tutorial',
-    ],
-    description: `
-      <p>Pdf To Csv free online with our powerful browser-based tool. Whether you need to pdf to csv for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to csv no registration required, with no watermarks added. How to pdf to csv for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Csv has never been easier. Get started now with the best free pdf to csv tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to csv no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to csv tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to csv for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to csv for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to csv for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to csv online?', answer: 'Yes, our pdf to csv tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to csv as many times as you need.' },
-      { question: 'Is it safe to pdf to csv online?', answer: 'Absolutely. All pdf to csv processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to csv?', answer: 'No software installation is required. Our pdf to csv tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-rtf': {
-    title: 'Pdf To Rtf',
-    metaDescription: 'Pdf To Rtf gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami untu',
-    keywords: [
-      'pdf to rtf free online',
-      'pdf to rtf no registration',
-      'pdf to rtf no sign up',
-      'pdf to rtf no watermark',
-      'pdf to rtf browser based',
-      'pdf to rtf for work',
-      'pdf to rtf for students',
-      'best pdf to rtf tool',
-      'how to pdf to rtf',
-      'pdf to rtf online free',
-      'pdf to rtf without software',
-      'pdf to rtf privacy focused',
-      'pdf to rtf secure',
-      'pdf to rtf fast',
-      'free pdf to rtf tool',
-      'online pdf to rtf free',
-      'pdf to rtf tool online',
-      'pdf to rtf for free',
-      'pdf to rtf no download',
-      'pdf to rtf web based',
-      'pdf to rtf open source',
-      'pdf to rtf wasm',
-      'pdf to rtf client side',
-      'pdf to rtf no upload',
-      'pdf to rtf instant',
-      'pdf to rtf high quality',
-      'pdf to rtf no limit',
-      'pdf to rtf 2025',
-      'pdf to rtf guide',
-      'pdf to rtf tutorial',
-    ],
-    description: `
-      <p>Pdf To Rtf free online with our powerful browser-based tool. Whether you need to pdf to rtf for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to rtf no registration required, with no watermarks added. How to pdf to rtf for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Rtf has never been easier. Get started now with the best free pdf to rtf tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to rtf no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to rtf tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to rtf for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to rtf for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to rtf for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to rtf online?', answer: 'Yes, our pdf to rtf tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to rtf as many times as you need.' },
-      { question: 'Is it safe to pdf to rtf online?', answer: 'Absolutely. All pdf to rtf processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to rtf?', answer: 'No software installation is required. Our pdf to rtf tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-epub': {
-    title: 'Pdf To Epub',
-    metaDescription: 'Pdf To Epub gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami unt',
-    keywords: [
-      'pdf to epub free online',
-      'pdf to epub no registration',
-      'pdf to epub no sign up',
-      'pdf to epub no watermark',
-      'pdf to epub browser based',
-      'pdf to epub for work',
-      'pdf to epub for students',
-      'best pdf to epub tool',
-      'how to pdf to epub',
-      'pdf to epub online free',
-      'pdf to epub without software',
-      'pdf to epub privacy focused',
-      'pdf to epub secure',
-      'pdf to epub fast',
-      'free pdf to epub tool',
-      'online pdf to epub free',
-      'pdf to epub tool online',
-      'pdf to epub for free',
-      'pdf to epub no download',
-      'pdf to epub web based',
-      'pdf to epub open source',
-      'pdf to epub wasm',
-      'pdf to epub client side',
-      'pdf to epub no upload',
-      'pdf to epub instant',
-      'pdf to epub high quality',
-      'pdf to epub no limit',
-      'pdf to epub 2025',
-      'pdf to epub guide',
-      'pdf to epub tutorial',
-    ],
-    description: `
-      <p>Pdf To Epub free online with our powerful browser-based tool. Whether you need to pdf to epub for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to epub no registration required, with no watermarks added. How to pdf to epub for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Epub has never been easier. Get started now with the best free pdf to epub tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to epub no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to epub tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to epub for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to epub for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to epub for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to epub online?', answer: 'Yes, our pdf to epub tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to epub as many times as you need.' },
-      { question: 'Is it safe to pdf to epub online?', answer: 'Absolutely. All pdf to epub processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to epub?', answer: 'No software installation is required. Our pdf to epub tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-compare-text': {
-    title: 'Pdf Compare Text',
-    metaDescription: 'Pdf Compare Text gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kam',
-    keywords: [
-      'pdf compare text free online',
-      'pdf compare text no registration',
-      'pdf compare text no sign up',
-      'pdf compare text no watermark',
-      'pdf compare text browser based',
-      'pdf compare text for work',
-      'pdf compare text for students',
-      'best pdf compare text tool',
-      'how to pdf compare text',
-      'pdf compare text online free',
-      'pdf compare text without software',
-      'pdf compare text privacy focused',
-      'pdf compare text secure',
-      'pdf compare text fast',
-      'free pdf compare text tool',
-      'online pdf compare text free',
-      'pdf compare text tool online',
-      'pdf compare text for free',
-      'pdf compare text no download',
-      'pdf compare text web based',
-      'pdf compare text open source',
-      'pdf compare text wasm',
-      'pdf compare text client side',
-      'pdf compare text no upload',
-      'pdf compare text instant',
-      'pdf compare text high quality',
-      'pdf compare text no limit',
-      'pdf compare text 2025',
-      'pdf compare text guide',
-      'pdf compare text tutorial',
-    ],
-    description: `
-      <p>Pdf Compare Text free online with our powerful browser-based tool. Whether you need to pdf compare text for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf compare text no registration required, with no watermarks added. How to pdf compare text for free? Use our online tool—no software needed.</p>
-            <p>Pdf Compare Text has never been easier. Get started now with the best free pdf compare text tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf compare text no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf compare text tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf compare text for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf compare text for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf compare text for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf compare text online?', answer: 'Yes, our pdf compare text tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf compare text as many times as you need.' },
-      { question: 'Is it safe to pdf compare text online?', answer: 'Absolutely. All pdf compare text processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf compare text?', answer: 'No software installation is required. Our pdf compare text tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-redact-all': {
-    title: 'Pdf Redact All',
-    metaDescription: 'Pdf Redact All gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami ',
-    keywords: [
-      'pdf redact all free online',
-      'pdf redact all no registration',
-      'pdf redact all no sign up',
-      'pdf redact all no watermark',
-      'pdf redact all browser based',
-      'pdf redact all for work',
-      'pdf redact all for students',
-      'best pdf redact all tool',
-      'how to pdf redact all',
-      'pdf redact all online free',
-      'pdf redact all without software',
-      'pdf redact all privacy focused',
-      'pdf redact all secure',
-      'pdf redact all fast',
-      'free pdf redact all tool',
-      'online pdf redact all free',
-      'pdf redact all tool online',
-      'pdf redact all for free',
-      'pdf redact all no download',
-      'pdf redact all web based',
-      'pdf redact all open source',
-      'pdf redact all wasm',
-      'pdf redact all client side',
-      'pdf redact all no upload',
-      'pdf redact all instant',
-      'pdf redact all high quality',
-      'pdf redact all no limit',
-      'pdf redact all 2025',
-      'pdf redact all guide',
-      'pdf redact all tutorial',
-    ],
-    description: `
-      <p>Pdf Redact All free online with our powerful browser-based tool. Whether you need to pdf redact all for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf redact all no registration required, with no watermarks added. How to pdf redact all for free? Use our online tool—no software needed.</p>
-            <p>Pdf Redact All has never been easier. Get started now with the best free pdf redact all tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf redact all no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf redact all tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf redact all for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf redact all for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf redact all for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf redact all online?', answer: 'Yes, our pdf redact all tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf redact all as many times as you need.' },
-      { question: 'Is it safe to pdf redact all online?', answer: 'Absolutely. All pdf redact all processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf redact all?', answer: 'No software installation is required. Our pdf redact all tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-find-replace': {
-    title: 'Pdf Find Replace',
-    metaDescription: 'Pdf Find Replace gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kam',
-    keywords: [
-      'pdf find replace free online',
-      'pdf find replace no registration',
-      'pdf find replace no sign up',
-      'pdf find replace no watermark',
-      'pdf find replace browser based',
-      'pdf find replace for work',
-      'pdf find replace for students',
-      'best pdf find replace tool',
-      'how to pdf find replace',
-      'pdf find replace online free',
-      'pdf find replace without software',
-      'pdf find replace privacy focused',
-      'pdf find replace secure',
-      'pdf find replace fast',
-      'free pdf find replace tool',
-      'online pdf find replace free',
-      'pdf find replace tool online',
-      'pdf find replace for free',
-      'pdf find replace no download',
-      'pdf find replace web based',
-      'pdf find replace open source',
-      'pdf find replace wasm',
-      'pdf find replace client side',
-      'pdf find replace no upload',
-      'pdf find replace instant',
-      'pdf find replace high quality',
-      'pdf find replace no limit',
-      'pdf find replace 2025',
-      'pdf find replace guide',
-      'pdf find replace tutorial',
-    ],
-    description: `
-      <p>Pdf Find Replace free online with our powerful browser-based tool. Whether you need to pdf find replace for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf find replace no registration required, with no watermarks added. How to pdf find replace for free? Use our online tool—no software needed.</p>
-            <p>Pdf Find Replace has never been easier. Get started now with the best free pdf find replace tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf find replace no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf find replace tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf find replace for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf find replace for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf find replace for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf find replace online?', answer: 'Yes, our pdf find replace tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf find replace as many times as you need.' },
-      { question: 'Is it safe to pdf find replace online?', answer: 'Absolutely. All pdf find replace processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf find replace?', answer: 'No software installation is required. Our pdf find replace tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'pdf-to-images': {
-    title: 'Pdf To Images',
-    metaDescription: 'Pdf To Images gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami u',
-    keywords: [
-      'pdf to images free online',
-      'pdf to images no registration',
-      'pdf to images no sign up',
-      'pdf to images no watermark',
-      'pdf to images browser based',
-      'pdf to images for work',
-      'pdf to images for students',
-      'best pdf to images tool',
-      'how to pdf to images',
-      'pdf to images online free',
-      'pdf to images without software',
-      'pdf to images privacy focused',
-      'pdf to images secure',
-      'pdf to images fast',
-      'free pdf to images tool',
-      'online pdf to images free',
-      'pdf to images tool online',
-      'pdf to images for free',
-      'pdf to images no download',
-      'pdf to images web based',
-      'pdf to images open source',
-      'pdf to images wasm',
-      'pdf to images client side',
-      'pdf to images no upload',
-      'pdf to images instant',
-      'pdf to images high quality',
-      'pdf to images no limit',
-      'pdf to images 2025',
-      'pdf to images guide',
-      'pdf to images tutorial',
-    ],
-    description: `
-      <p>Pdf To Images free online with our powerful browser-based tool. Whether you need to pdf to images for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can pdf to images no registration required, with no watermarks added. How to pdf to images for free? Use our online tool—no software needed.</p>
-            <p>Pdf To Images has never been easier. Get started now with the best free pdf to images tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can pdf to images no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free pdf to images tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to pdf to images for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to pdf to images for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to pdf to images for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to pdf to images online?', answer: 'Yes, our pdf to images tool is completely free to use. No registration, no sign-up, no credit card required. You can pdf to images as many times as you need.' },
-      { question: 'Is it safe to pdf to images online?', answer: 'Absolutely. All pdf to images processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to pdf to images?', answer: 'No software installation is required. Our pdf to images tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'extract-images': {
-    title: 'Ekstrak Gambar dari PDF',
-    metaDescription: 'Extract Images gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami ',
-    keywords: [
-      'extract images free online',
-      'extract images no registration',
-      'extract images no sign up',
-      'extract images no watermark',
-      'extract images browser based',
-      'extract images for work',
-      'extract images for students',
-      'best extract images tool',
-      'how to extract images',
-      'extract images online free',
-      'extract images without software',
-      'extract images privacy focused',
-      'extract images secure',
-      'extract images fast',
-      'free extract images tool',
-      'online extract images free',
-      'extract images tool online',
-      'extract images for free',
-      'extract images no download',
-      'extract images web based',
-      'extract images open source',
-      'extract images wasm',
-      'extract images client side',
-      'extract images no upload',
-      'extract images instant',
-      'extract images high quality',
-      'extract images no limit',
-      'extract images 2025',
-      'extract images guide',
-      'extract images tutorial',
-    ],
-    description: `
-      <p>Extract Images free online with our powerful browser-based tool. Whether you need to extract images for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can extract images no registration required, with no watermarks added. How to extract images for free? Use our online tool—no software needed.</p>
-            <p>Extract Images has never been easier. Get started now with the best free extract images tool online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can extract images no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free extract images tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to extract images for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to extract images for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to extract images for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to extract images online?', answer: 'Yes, our extract images tool is completely free to use. No registration, no sign-up, no credit card required. You can extract images as many times as you need.' },
-      { question: 'Is it safe to extract images online?', answer: 'Absolutely. All extract images processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to extract images?', answer: 'No software installation is required. Our extract images tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
-  'compress-images': {
-    title: 'Compress Images',
-    metaDescription: 'Compress Images gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。 Gunakan alat online gratis kami',
-    keywords: [
-      'compress images free online',
-      'compress images no registration',
-      'compress images no sign up',
-      'compress images no watermark',
-      'compress images browser based',
-      'compress images for work',
-      'compress images for students',
-      'best compress images tool',
-      'how to compress images',
-      'compress images online free',
-      'compress images without software',
-      'compress images privacy focused',
-      'compress images secure',
-      'compress images fast',
-      'free compress images tool',
-      'online compress images free',
-      'compress images tool online',
-      'compress images for free',
-      'compress images no download',
-      'compress images web based',
-      'compress images open source',
-      'compress images wasm',
-      'compress images client side',
-      'compress images no upload',
-      'compress images instant',
-      'compress images high quality',
-      'compress images no limit',
-      'compress images 2025',
-      'compress images guide',
-      'compress images tutorial',
-    ],
-    description: `
-      <p>Compress Images free online with our advanced PDF compression tool. Reduce file size without significant quality loss. Perfect for email attachments and web optimization.</p>
-            <p>Upload your PDF file and choose compression level. You can compress PDF no registration required. The compressed PDF maintains original formatting.</p>
-            <p>All compression happens locally in your browser. How to compress PDF for free? Use our online PDF compressor.</p>
-            <p>Try our free compress PDF online tool now. The fastest and most secure way to reduce PDF file size online.</p>
-    `,
-    howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can compress images no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free compress images tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
-    ],
-    useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to compress images for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to compress images for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to compress images for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
-    ],
-    faq: [
-      { question: 'Is it really free to compress images online?', answer: 'Yes, our compress images tool is completely free to use. No registration, no sign-up, no credit card required. You can compress images as many times as you need.' },
-      { question: 'Is it safe to compress images online?', answer: 'Absolutely. All compress images processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to compress images?', answer: 'No software installation is required. Our compress images tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
-    ],
-  },
+
   'remove-blank-pages': {
     title: 'Hapus Halaman Kosong',
-    metaDescription: 'Remove Blank Pages gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'remove blank pages free online',
-      'remove blank pages no registration',
-      'remove blank pages no sign up',
-      'remove blank pages no watermark',
-      'remove blank pages browser based',
-      'remove blank pages for work',
-      'remove blank pages for students',
-      'best remove blank pages tool',
-      'how to remove blank pages',
-      'remove blank pages online free',
-      'remove blank pages without software',
-      'remove blank pages privacy focused',
-      'remove blank pages secure',
-      'remove blank pages fast',
-      'free remove blank pages tool',
-      'online remove blank pages free',
-      'remove blank pages tool online',
-      'remove blank pages for free',
-      'remove blank pages no download',
-      'remove blank pages web based',
-      'remove blank pages open source',
-      'remove blank pages wasm',
-      'remove blank pages client side',
-      'remove blank pages no upload',
-      'remove blank pages instant',
-      'remove blank pages high quality',
-      'remove blank pages no limit',
-      'remove blank pages 2025',
-      'remove blank pages guide',
-      'remove blank pages tutorial',
-    ],
+    metaDescription: 'Deteksi dan hapus halaman kosong dari dokumen PDF secara otomatis.',
+    keywords: ['hapus halaman kosong', 'hapus halaman kosong pdf', 'bersihkan pdf', 'penghapus halaman kosong pdf'],
     description: `
-      <p>Remove Blank Pages free online with our advanced PDF splitter tool. Extract specific pages, divide by page ranges, or split at every page. Perfect for extracting chapters or creating focused handouts.</p>
-            <p>Upload your PDF file, preview all pages, and choose how you want to split. You can split PDF files no registration required. Our tool can handle documents with hundreds of pages.</p>
-            <p>All splitting happens locally in your browser, ensuring your documents remain private. How to split PDF for free? Use our online PDF splitter.</p>
-            <p>Try our free split PDF online tool now. Split PDF has never been easier or more private.</p>
+      <p>Hapus Halaman Kosong secara otomatis mendeteksi dan menghapus halaman yang kosong dari dokumen PDF Anda. Ini berguna untuk membersihkan dokumen pindaian, menghapus halaman pemisah, atau menghilangkan halaman kosong yang tidak sengaja disertakan.</p>
+      <p>Alat ini menggunakan deteksi cerdas untuk mengidentifikasi halaman yang benar-benar kosong sekaligus mempertahankan halaman dengan konten minimal. Anda dapat menyesuaikan ambang batas (threshold) sensitivitas untuk mengontrol apa yang dianggap sebagai "kosong".</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can remove blank pages no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free remove blank pages tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih dokumen.' },
+      { step: 2, title: 'Sesuaikan Ambang Batas', description: 'Atur ambang batas deteksi kosong jika diperlukan (pengaturan bawaan sudah berfungsi baik untuk sebagian besar dokumen).' },
+      { step: 3, title: 'Hapus dan Unduh', description: 'Klik Hapus untuk membuang halaman kosong dan mengunduh PDF yang sudah bersih.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to remove blank pages for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to remove blank pages for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to remove blank pages for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Bersihkan Dokumen Pindaian', description: 'Hapus halaman kosong dari dokumen yang dipindai secara massal.', icon: 'scan' },
+      { title: 'Hapus Pemisah', description: 'Hapus halaman pemisah kosong dari dokumen yang digabungkan.', icon: 'minus' },
+      { title: 'Kurangi Ukuran File', description: 'Hapus halaman kosong yang tidak perlu untuk mengurangi ukuran dokumen.', icon: 'minimize-2' },
     ],
     faq: [
-      { question: 'Is it really free to remove blank pages online?', answer: 'Yes, our remove blank pages tool is completely free to use. No registration, no sign-up, no credit card required. You can remove blank pages as many times as you need.' },
-      { question: 'Is it safe to remove blank pages online?', answer: 'Absolutely. All remove blank pages processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to remove blank pages?', answer: 'No software installation is required. Our remove blank pages tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Bagaimana cara kerja deteksi halaman kosong?', answer: 'Alat ini menganalisis konten halaman dan menganggap halaman dengan konten visual minimal atau tidak ada sama sekali sebagai halaman kosong.' },
+      { question: 'Bisakah saya meninjau halaman mana saja yang akan dihapus?', answer: 'Ya, halaman kosong yang terdeteksi akan disorot untuk ditinjau sebelum penghapusan dilakukan.' },
+      { question: 'Bagaimana jika sebuah halaman hanya memiliki header/footer?', answer: 'Anda dapat menyesuaikan ambang batas untuk menentukan apakah halaman dengan konten minimal tersebut harus dianggap kosong atau tidak.' },
     ],
   },
-  'detect-pdf-scanners': {
-    title: 'Detect Pdf Scanners',
-    metaDescription: 'Detect Pdf Scanners gratis online - tanpa registrasi, tanpa pendaftaran。Proses file PDF Anda dengan aman di peramban Anda。',
-    keywords: [
-      'detect pdf scanners free online',
-      'detect pdf scanners no registration',
-      'detect pdf scanners no sign up',
-      'detect pdf scanners no watermark',
-      'detect pdf scanners browser based',
-      'detect pdf scanners for work',
-      'detect pdf scanners for students',
-      'best detect pdf scanners tool',
-      'how to detect pdf scanners',
-      'detect pdf scanners online free',
-      'detect pdf scanners without software',
-      'detect pdf scanners privacy focused',
-      'detect pdf scanners secure',
-      'detect pdf scanners fast',
-      'free detect pdf scanners tool',
-      'online detect pdf scanners free',
-      'detect pdf scanners tool online',
-      'detect pdf scanners for free',
-      'detect pdf scanners no download',
-      'detect pdf scanners web based',
-      'detect pdf scanners open source',
-      'detect pdf scanners wasm',
-      'detect pdf scanners client side',
-      'detect pdf scanners no upload',
-      'detect pdf scanners instant',
-      'detect pdf scanners high quality',
-      'detect pdf scanners no limit',
-      'detect pdf scanners 2025',
-      'detect pdf scanners guide',
-      'detect pdf scanners tutorial',
-    ],
+  // ==================== CONVERT TO PDF ====================
+  'image-to-pdf': {
+    title: 'Gambar ke PDF',
+    metaDescription: 'Konversi gambar apa pun menjadi PDF. Mendukung format JPG, PNG, WebP, BMP, TIFF, SVG, dan HEIC.',
+    keywords: ['gambar ke pdf', 'konversi gambar', 'foto ke pdf', 'picture ke pdf'],
     description: `
-      <p>Detect Pdf Scanners free online with our powerful browser-based tool. Whether you need to detect pdf scanners for personal or professional use, our free online tool provides a fast, secure solution.</p>
-            <p>Simply upload your files, adjust the settings, and process your documents in seconds. All processing happens locally in your browser, ensuring complete privacy.</p>
-            <p>You can detect pdf scanners no registration required, with no watermarks added. How to detect pdf scanners for free? Use our online tool—no software needed.</p>
-            <p>Detect Pdf Scanners has never been easier. Get started now with the best free detect pdf scanners tool online.</p>
+      <p>Gambar ke PDF mengonversi gambar format apa pun menjadi dokumen PDF. Dukungan untuk format JPG, PNG, WebP, BMP, TIFF, SVG, dan HEIC menjadikan ini alat konverter gambar yang universal.</p>
+      <p>Gabungkan beberapa gambar menjadi satu PDF, atur dalam urutan apa pun, dan sesuaikan ukuran halaman serta orientasinya. Sempurna untuk membuat album foto, arsip dokumen, atau portofolio.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan gambar Anda tetap privat.</p>
     `,
     howToUse: [
-      { step: 1, title: 'Upload Your Files', description: 'Click the upload area or drag and drop your files. All files are processed locally in your browser, ensuring complete privacy. You can detect pdf scanners no registration, no sign-up needed.' },
-      { step: 2, title: 'Configure Settings', description: 'Adjust the tool settings to match your needs. The interface is intuitive and requires no learning curve. Our free detect pdf scanners tool gives you full control.' },
-      { step: 3, title: 'Process and Download', description: 'Click the process button and wait a few seconds. Once finished, download your processed file instantly. No email required, no watermarks.' },
+      { step: 1, title: 'Unggah Gambar', description: 'Tarik dan lepas gambar dengan format yang didukung atau klik untuk memilih file.' },
+      { step: 2, title: 'Susun dan Konfigurasi', description: 'Atur ulang gambar dan pilih opsi ukuran halaman serta orientasinya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda dan unduh hasilnya.' },
     ],
     useCases: [
-      { title: 'For Office Work', description: 'Professionals use our tool to detect pdf scanners for reports, proposals, and presentations. Browser-based processing ensures sensitive company documents never leave your device.', icon: 'briefcase' },
-      { title: 'For Students', description: 'Students frequently need to detect pdf scanners for assignments and research papers. Our free tool helps without paying for expensive software subscriptions.', icon: 'academic-cap' },
-      { title: 'For Personal Use', description: 'Anyone can use our tool to detect pdf scanners for personal documents. The simple interface makes it accessible to users of all technical levels.', icon: 'user' },
+      { title: 'Koleksi Foto', description: 'Gabungkan foto dari berbagai sumber menjadi satu album PDF.', icon: 'images' },
+      { title: 'Dokumen Beragam Format', description: 'Konversi gambar dari berbagai format menjadi satu PDF yang seragam.', icon: 'file-stack' },
+      { title: 'Pembuatan Arsip', description: 'Buat arsip PDF dari koleksi gambar untuk penyimpanan jangka panjang.', icon: 'archive' },
     ],
     faq: [
-      { question: 'Is it really free to detect pdf scanners online?', answer: 'Yes, our detect pdf scanners tool is completely free to use. No registration, no sign-up, no credit card required. You can detect pdf scanners as many times as you need.' },
-      { question: 'Is it safe to detect pdf scanners online?', answer: 'Absolutely. All detect pdf scanners processing happens locally in your browser. Your files never leave your device and are never uploaded to any server.' },
-      { question: 'Do I need to install software to detect pdf scanners?', answer: 'No software installation is required. Our detect pdf scanners tool runs entirely in your web browser. It works on Windows, Mac, Linux, and mobile devices.' },
-      { question: 'Are there any limits on file size or number of files?', answer: 'Our tool supports processing multiple files with a combined size of up to 500MB. There are no daily usage limits or paywalls.' },
-      { question: 'Will the output quality be affected?', answer: 'Our tool is designed to maintain the highest possible quality. For merging or splitting, the original quality is preserved exactly.' },
+      { question: 'Format gambar apa saja yang didukung?', answer: 'Format JPG, JPEG, PNG, WebP, BMP, TIFF, TIF, SVG, HEIC, dan HEIF semuanya didukung.' },
+      { question: 'Bisakah saya mencampur format gambar yang berbeda?', answer: 'Ya, Anda dapat menggabungkan gambar dari berbagai format ke dalam satu PDF.' },
+      { question: 'Apakah kualitas gambar akan dipertahankan?', answer: 'Ya, gambar disematkan pada kualitas aslinya kecuali jika Anda memilih untuk mengompresnya.' },
     ],
   },
+
+  'png-to-pdf': {
+    title: 'PNG ke PDF',
+    metaDescription: 'Konversi gambar PNG menjadi PDF. Pertahankan transparansi dan gabungkan beberapa file PNG.',
+    keywords: ['png ke pdf', 'konversi png', 'konverter png', 'gambar transparan ke pdf'],
+    description: `
+      <p>PNG ke PDF mengonversi gambar PNG Anda menjadi dokumen PDF dengan tetap mempertahankan transparansinya. Sempurna untuk grafik, logo, tangkapan layar, dan gambar dengan latar belakang transparan.</p>
+      <p>Gabungkan beberapa file PNG menjadi satu PDF, atur dalam urutan apa pun, dan sesuaikan pengaturan halaman. Konversi ini mempertahankan kualitas tinggi dari gambar asli Anda.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan gambar Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File PNG', description: 'Tarik dan lepas gambar PNG Anda atau klik untuk memilih file.' },
+      { step: 2, title: 'Susun dan Konfigurasi', description: 'Atur ulang gambar dan pilih opsi ukuran halaman.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda dan unduh.' },
+    ],
+    useCases: [
+      { title: 'Portofolio Grafik', description: 'Kompilasikan grafik PNG dan desain ke dalam portofolio profesional.', icon: 'palette' },
+      { title: 'Dokumentasi Tangkapan Layar', description: 'Konversi tangkapan layar menjadi dokumentasi PDF.', icon: 'monitor' },
+      { title: 'Koleksi Logo', description: 'Buat katalog PDF yang berisi sekumpulan logo dan aset merek.', icon: 'award' },
+    ],
+    faq: [
+      { question: 'Apakah transparansi dipertahankan?', answer: 'Transparansi PNG dipertahankan dalam hasil output PDF.' },
+      { question: 'Bagaimana dengan animasi PNG?', answer: 'PNG beranimasi dikonversi sebagai gambar statis menggunakan frame pertamanya.' },
+      { question: 'Bisakah saya mengatur warna latar belakang?', answer: 'Ya, Anda dapat memilih warna latar belakang untuk area yang transparan.' },
+    ],
+  },
+
+  'webp-to-pdf': {
+    title: 'WebP ke PDF',
+    metaDescription: 'Konversi gambar WebP ke PDF. Konversi format gambar modern dengan mempertahankan kualitas.',
+    keywords: ['webp ke pdf', 'konversi webp', 'konverter webp', 'gambar web ke pdf'],
+    description: `
+      <p>WebP ke PDF mengonversi gambar WebP modern menjadi dokumen PDF. WebP adalah format gambar web yang populer, dan alat ini memudahkan Anda mengonversi gambar-gambar tersebut untuk dicetak atau diarsipkan.</p>
+      <p>Gabungkan beberapa file WebP menjadi satu PDF dengan pengaturan halaman yang dapat disesuaikan. Konversi ini mempertahankan kualitas gambar sembari menciptakan file PDF yang ringkas.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan gambar Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File WebP', description: 'Tarik dan lepas gambar WebP Anda atau klik untuk memilih file.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Atur ulang gambar dan pilih ukuran halaman serta orientasinya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda.' },
+    ],
+    useCases: [
+      { title: 'Pengarsipan Konten Web', description: 'Konversi gambar web menjadi PDF untuk pengarsipan offline.', icon: 'globe' },
+      { title: 'Persiapan Cetak', description: 'Konversi gambar WebP ke PDF untuk keperluan pencetakan.', icon: 'printer' },
+      { title: 'Standardisasi Format', description: 'Konversi WebP modern menjadi format PDF yang kompatibel secara universal.', icon: 'file-check' },
+    ],
+    faq: [
+      { question: 'Apa itu format WebP?', answer: 'WebP adalah format gambar modern yang dikembangkan oleh Google yang memberikan kompresi superior untuk gambar web.' },
+      { question: 'Apakah kualitasnya dipertahankan?', answer: 'Ya, konversi ini mempertahankan kualitas gambar aslinya.' },
+      { question: 'Bisakah saya mengonversi WebP beranimasi?', answer: 'File WebP beranimasi akan dikonversi sebagai gambar statis.' },
+    ],
+  },
+
+  'svg-to-pdf': {
+    title: 'SVG ke PDF',
+    metaDescription: 'Konversi grafik vektor SVG ke PDF. Pertahankan skalabilitas dan kualitas.',
+    keywords: ['svg ke pdf', 'konversi svg', 'vektor ke pdf', 'grafik yang dapat diskalakan ke pdf'],
+    description: `
+      <p>SVG ke PDF mengonversi grafik vektor yang dapat diskalakan menjadi dokumen PDF sembari mempertahankan kualitas vektornya. File SVG tetap tajam pada ukuran apa pun, dan kualitas ini dipertahankan di dalam output PDF.</p>
+      <p>Sempurna untuk mengonversi logo, ikon, ilustrasi, dan gambar teknis. PDF yang dihasilkan akan mempertahankan skalabilitas grafik vektor aslinya.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan file Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File SVG', description: 'Tarik dan lepas file SVG Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Pengaturan', description: 'Pilih ukuran halaman dan opsi tata letak.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF vektor Anda.' },
+    ],
+    useCases: [
+      { title: 'Konversi Logo', description: 'Konversi logo SVG menjadi PDF untuk materi cetak.', icon: 'award' },
+      { title: 'Gambar Teknis', description: 'Konversi ekspor CAD dan ilustrasi teknis ke PDF.', icon: 'ruler' },
+      { title: 'Koleksi Ikon', description: 'Buat katalog PDF yang berisi kumpulan ikon dan grafik.', icon: 'grid' },
+    ],
+    faq: [
+      { question: 'Apakah kualitas vektor dipertahankan?', answer: 'Ya, kualitas vektor SVG dipertahankan sepenuhnya dalam output PDF.' },
+      { question: 'Bisakah saya mengonversi SVG yang kompleks?', answer: 'Ya, SVG yang kompleks dengan gradasi, filter, dan efek juga didukung.' },
+      { question: 'Bagaimana dengan font yang disematkan?', answer: 'Font yang disematkan di dalam file SVG akan dipertahankan dalam PDF.' },
+    ],
+  },
+
+  'bmp-to-pdf': {
+    title: 'BMP ke PDF',
+    metaDescription: 'Konversi gambar bitmap BMP ke PDF. Dukungan format lama (legacy) dengan pelestarian kualitas.',
+    keywords: ['bmp ke pdf', 'konversi bmp', 'bitmap ke pdf', 'konverter bmp'],
+    description: `
+      <p>BMP ke PDF mengonversi gambar bitmap menjadi dokumen PDF. BMP adalah format gambar lawas yang biasa digunakan di lingkungan Windows, dan alat ini memudahkan Anda mengonversi file-file tersebut ke format PDF modern.</p>
+      <p>Gabungkan beberapa file BMP menjadi satu PDF dengan pengaturan yang dapat disesuaikan. Konversi ini akan mengompres file BMP yang biasanya berukuran besar dengan tetap mempertahankan kualitas gambar.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan gambar Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File BMP', description: 'Tarik dan lepas gambar BMP Anda atau klik untuk memilih file.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Atur ulang gambar dan pilih pengaturan halaman.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda.' },
+    ],
+    useCases: [
+      { title: 'Konversi File Lawas', description: 'Konversi file BMP lama ke format PDF modern.', icon: 'history' },
+      { title: 'Tangkapan Layar Windows', description: 'Konversi tangkapan layar bitmap Windows ke PDF.', icon: 'monitor' },
+      { title: 'Modernisasi Arsip', description: 'Perbarui arsip gambar lawas ke dalam format PDF.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Apakah ukuran file akan berkurang?', answer: 'Ya, file BMP biasanya dikompres secara signifikan ketika dikonversi ke PDF.' },
+      { question: 'Apakah kualitasnya dipertahankan?', answer: 'Ya, kualitas gambar tetap dipertahankan selama konversi.' },
+      { question: 'Kedalaman warna BMP apa saja yang didukung?', answer: 'Semua kedalaman warna BMP standar didukung, termasuk 24-bit dan 32-bit.' },
+    ],
+  },
+
+  'psd-to-pdf': {
+    title: 'PSD ke PDF',
+    metaDescription: 'Konversi file Adobe Photoshop (PSD) ke format PDF. Mendukung beberapa file sekaligus dan mempertahankan kualitas gambar.',
+    keywords: ['psd ke pdf', 'konversi psd', 'photoshop ke pdf', 'konverter psd', 'adobe psd ke pdf'],
+    description: `
+      <p>PSD ke PDF mengonversi file Adobe Photoshop (PSD) menjadi dokumen PDF. Alat ini memungkinkan Anda melihat dan membagikan desain PSD tanpa perlu menginstal program Photoshop.</p>
+      <p>Anda dapat mengonversi beberapa file PSD sekaligus dan menggabungkannya menjadi satu dokumen PDF. Alat ini memproses setiap file PSD, merender lapisan (layer) yang terlihat ke dalam halaman PDF berkualitas tinggi.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan desain Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File PSD', description: 'Tarik dan lepas file PSD atau PSB Anda, atau klik untuk memilihnya dari perangkat Anda.' },
+      { step: 2, title: 'Susun Urutan', description: 'Tarik dan lepas gambar mini file untuk menyusunnya sesuai urutan yang Anda inginkan.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk merender file PSD dan unduh dokumen PDF Anda.' },
+    ],
+    useCases: [
+      { title: 'Bagikan Desain', description: 'Bagikan desain Photoshop dengan klien atau kolega yang tidak memiliki program Photoshop.', icon: 'share-2' },
+      { title: 'Pembuatan Portofolio', description: 'Kompilasikan karya desain Anda ke dalam portofolio PDF yang profesional.', icon: 'layout' },
+      { title: 'Persiapan Cetak', description: 'Konversi desain ke dalam bentuk PDF untuk keperluan pencetakan.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apakah saya perlu menginstal Photoshop?', answer: 'Tidak, alat ini berfungsi sepenuhnya di browser Anda tanpa memerlukan Adobe Photoshop.' },
+      { question: 'Apakah lapisan (layer) dipertahankan?', answer: 'Alat ini merender file PSD berdasarkan status tampilannya saat ini (gambar komposit). Lapisan (layer) individu akan diratakan (flattened) di dalam PDF.' },
+      { question: 'Berapa ukuran file maksimum?', answer: 'Anda dapat mengunggah file hingga 100MB per file. File PSD berukuran besar mungkin memerlukan waktu lebih lama untuk diproses.' },
+    ],
+  },
+
+  'heic-to-pdf': {
+    title: 'HEIC ke PDF',
+    metaDescription: 'Konversi foto iPhone HEIC menjadi PDF. Konversi format gambar Apple jadi lebih mudah.',
+    keywords: ['heic ke pdf', 'konversi heic', 'foto iphone ke pdf', 'gambar apple ke pdf'],
+    description: `
+      <p>HEIC ke PDF mengonversi foto High Efficiency Image Format milik Apple menjadi dokumen PDF. HEIC adalah format foto bawaan di iPhone dan iPad, dan alat ini akan mempermudah Anda untuk membagikan foto-foto tersebut.</p>
+      <p>Gabungkan beberapa foto HEIC menjadi satu PDF, sangat cocok untuk membuat album foto atau arsip dokumen yang berasal dari foto iPhone Anda.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan foto Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File HEIC', description: 'Tarik dan lepas foto HEIC Anda atau klik untuk memilih file.' },
+      { step: 2, title: 'Susun Foto', description: 'Atur ulang urutan foto dan pilih pengaturan halamannya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda.' },
+    ],
+    useCases: [
+      { title: 'Album Foto iPhone', description: 'Buat album PDF dari foto iPhone untuk dibagikan.', icon: 'smartphone' },
+      { title: 'Pemindaian Dokumen', description: 'Konversi hasil pindai dokumen di iPhone menjadi format PDF.', icon: 'scan' },
+      { title: 'Berbagi Lintas Platform', description: 'Konversi HEIC ke PDF untuk kompatibilitas yang lebih universal.', icon: 'share-2' },
+    ],
+    faq: [
+      { question: 'Apa itu format HEIC?', answer: 'HEIC (High Efficiency Image Container) adalah format gambar buatan Apple yang memberikan kompresi yang lebih baik dibandingkan JPEG.' },
+      { question: 'Apakah Live Photos didukung?', answer: 'Live Photos akan dikonversi menjadi gambar statis menggunakan bingkai utamanya (key frame).' },
+      { question: 'Apakah data EXIF dipertahankan?', answer: 'Metadata foto dapat secara opsional dipertahankan atau dihapus selama konversi berlangsung.' },
+    ],
+  },
+
+  'tiff-to-pdf': {
+    title: 'TIFF ke PDF',
+    metaDescription: 'Konversi gambar TIFF menjadi PDF. Mendukung file TIFF multi-halaman dan konversi berkualitas tinggi.',
+    keywords: ['tiff ke pdf', 'konversi tiff', 'tif ke pdf', 'tiff multi-halaman'],
+    description: `
+      <p>TIFF ke PDF mengonversi gambar TIFF, termasuk file TIFF multi-halaman, menjadi dokumen PDF. TIFF umumnya digunakan untuk pindaian berkualitas tinggi dan grafik profesional.</p>
+      <p>File TIFF multi-halaman secara otomatis akan dikonversi menjadi PDF multi-halaman. Konversi ini mempertahankan kualitas tinggi dari gambar asli Anda.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan file Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File TIFF', description: 'Tarik dan lepas file TIFF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Pilih pengaturan halaman dan opsi kompresi.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF Anda.' },
+    ],
+    useCases: [
+      { title: 'Dokumen Pindaian', description: 'Konversi pindaian berkualitas tinggi dari TIFF ke PDF.', icon: 'scan' },
+      { title: 'Grafik Profesional', description: 'Konversi grafik TIFF profesional untuk didistribusikan.', icon: 'image' },
+      { title: 'Konversi Arsip', description: 'Konversi arsip TIFF ke format PDF yang lebih mudah diakses.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Apakah TIFF multi-halaman didukung?', answer: 'Ya, file TIFF multi-halaman akan dikonversi secara otomatis menjadi PDF multi-halaman.' },
+      { question: 'Apakah kualitasnya dipertahankan?', answer: 'Ya, kualitas TIFF dipertahankan sepenuhnya di dalam hasil PDF.' },
+      { question: 'Kompresi apa yang digunakan?', answer: 'Anda dapat memilih antara opsi kompresi lossless dan lossy.' },
+    ],
+  },
+
+  'txt-to-pdf': {
+    title: 'Teks ke PDF',
+    metaDescription: 'Konversi file teks biasa ke PDF. Sesuaikan font, margin, dan tata letak halaman.',
+    keywords: ['txt ke pdf', 'teks ke pdf', 'konversi file teks', 'teks biasa ke pdf'],
+    description: `
+      <p>Teks ke PDF mengonversi file teks biasa menjadi dokumen PDF yang berformat. Sesuaikan font, ukuran, margin, dan tata letak halaman untuk membuat dokumen yang terlihat profesional dari teks biasa.</p>
+      <p>Sangat cocok untuk mengonversi file kode, log, catatan, atau konten teks biasa apa pun ke dalam format PDF yang mudah dibagikan.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan file Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File Teks', description: 'Tarik dan lepas file .txt Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Sesuaikan Format', description: 'Pilih font, ukuran, margin, dan pengaturan halaman.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF berformat Anda.' },
+    ],
+    useCases: [
+      { title: 'Dokumentasi Kode', description: 'Konversi file kode sumber menjadi PDF untuk dokumentasi.', icon: 'code' },
+      { title: 'Arsip Log', description: 'Konversi file log menjadi PDF untuk tujuan pengarsipan.', icon: 'file-text' },
+      { title: 'Konversi Catatan', description: 'Konversi catatan teks biasa menjadi dokumen PDF berformat.', icon: 'sticky-note' },
+    ],
+    faq: [
+      { question: 'Font apa saja yang tersedia?', answer: 'Tersedia berbagai pilihan font, termasuk font monospace (spasi tunggal) untuk kode.' },
+      { question: 'Apakah barisnya dibungkus (wrap) secara otomatis?', answer: 'Ya, baris yang terlalu panjang akan dibungkus secara otomatis agar muat di halaman.' },
+      { question: 'Bisakah saya mempertahankan format aslinya?', answer: 'Ruang kosong (whitespace) dan indentasi dari teks aslinya akan dipertahankan.' },
+    ],
+  },
+
+  'json-to-pdf': {
+    title: 'JSON ke PDF',
+    metaDescription: 'Konversi file JSON menjadi PDF berformat. Dengan penyorotan sintaks dan output terstruktur.',
+    keywords: ['json ke pdf', 'konversi json', 'penampil json', 'pemformat json'],
+    description: `
+      <p>JSON ke PDF mengonversi file data JSON menjadi dokumen PDF yang mudah dibaca dan berformat rapi. Hasil output mencakup penyorotan sintaks (syntax highlighting) dan indentasi yang tepat untuk memudahkan proses membaca.</p>
+      <p>Sangat cocok untuk mendokumentasikan respons API, file konfigurasi, atau data JSON apa pun yang perlu dibagikan atau diarsipkan dalam format yang rapi.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan data Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File JSON', description: 'Tarik dan lepas file .json Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Tampilan', description: 'Pilih opsi pemformatan dan penyorotan sintaks.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF berformat Anda.' },
+    ],
+    useCases: [
+      { title: 'Dokumentasi API', description: 'Konversi respons API menjadi PDF untuk kebutuhan dokumentasi.', icon: 'code' },
+      { title: 'Arsip Konfigurasi', description: 'Arsipkan file konfigurasi ke dalam format PDF yang mudah dibaca.', icon: 'settings' },
+      { title: 'Laporan Data', description: 'Buat laporan PDF dari ekspor data JSON.', icon: 'bar-chart' },
+    ],
+    faq: [
+      { question: 'Apakah penyorotan sintaks disertakan?', answer: 'Ya, sintaks JSON akan diberi warna yang berbeda untuk kunci (keys), nilai (values), dan tipe datanya.' },
+      { question: 'Bagaimana data bertingkat (nested) ditangani?', answer: 'Objek dan array bertingkat akan diberikan indentasi yang rapi agar lebih mudah dibaca.' },
+      { question: 'Bagaimana jika file JSON sangat besar?', answer: 'File besar akan dibagi-bagi ke dalam beberapa halaman (paginasi) secara otomatis.' },
+    ],
+  },
+
+  'word-to-pdf': {
+    title: 'Word ke PDF',
+    metaDescription: 'Konversi dokumen Word (DOCX) menjadi PDF. Pertahankan format dan tata letak dalam dokumen yang Anda konversi.',
+    keywords: ['word ke pdf', 'docx ke pdf', 'konversi word', 'konverter word', 'microsoft word ke pdf'],
+    description: `
+      <p>Word ke PDF mengonversi dokumen Microsoft Word menjadi format PDF sembari mempertahankan format asli, tata letak, dan struktur kontennya.</p>
+      <p>Unggah file DOCX Anda dan dapatkan output PDF berkualitas tinggi yang siap untuk dibagikan, dicetak, atau diarsipkan. Konversi ini mempertahankan format teks, gaya paragraf, dan struktur dokumen dasar.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah Dokumen Word', description: 'Tarik dan lepas file .docx Anda atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Pemrosesan', description: 'Alat ini akan memuat dokumen dan menyiapkannya untuk dikonversi.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Berbagi Dokumen', description: 'Konversi dokumen Word ke PDF agar dapat dibagikan dan dilihat secara universal.', icon: 'share-2' },
+      { title: 'Persiapan Cetak', description: 'Buat file PDF yang siap cetak dari dokumen Word.', icon: 'printer' },
+      { title: 'Arsip Dokumen', description: 'Arsipkan dokumen Word dalam format PDF yang stabil untuk penyimpanan jangka panjang.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Apakah format .doc didukung?', answer: 'Saat ini hanya format .docx yang didukung. Harap konversi file .doc ke .docx terlebih dahulu menggunakan Microsoft Word atau LibreOffice.' },
+      { question: 'Apakah gambar dipertahankan?', answer: 'Konten teks dan pemformatan dasar dipertahankan. Tata letak yang kompleks dengan banyak gambar mungkin akan dirender secara lebih sederhana.' },
+      { question: 'Apakah konversinya aman?', answer: 'Ya, semua pemrosesan terjadi di dalam browser Anda. Dokumen Anda tidak akan pernah meninggalkan perangkat Anda.' },
+    ],
+  },
+
+  'excel-to-pdf': {
+    title: 'Excel ke PDF',
+    metaDescription: 'Konversi lembar kerja Excel (XLSX) menjadi PDF. Pertahankan tabel dan data di dokumen hasil konversi Anda.',
+    keywords: ['excel ke pdf', 'xlsx ke pdf', 'konversi excel', 'spreadsheet ke pdf', 'microsoft excel ke pdf'],
+    description: `
+      <p>Excel ke PDF mengonversi lembar kerja Microsoft Excel menjadi format PDF sembari mempertahankan struktur tabel dan pengaturan datanya.</p>
+      <p>Unggah file XLSX Anda dan dapatkan output PDF yang rapi dengan tabel yang terformat dengan baik. Setiap lembar di dalam workbook Anda akan menjadi bagian terpisah di dalam PDF.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan data Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File Excel', description: 'Tarik dan lepas file .xlsx Anda atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Pemrosesan', description: 'Alat ini akan memuat spreadsheet Anda dan mengonversi semua lembarnya.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Berbagi Laporan', description: 'Konversi laporan Excel ke PDF untuk dibagikan kepada para pemangku kepentingan.', icon: 'file-text' },
+      { title: 'Pengarsipan Data', description: 'Arsipkan data spreadsheet dalam format PDF yang lebih stabil.', icon: 'archive' },
+      { title: 'Persiapan Cetak', description: 'Buat file PDF siap cetak dari lembar kerja Excel.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apakah multi-lembar (multiple sheets) didukung?', answer: 'Ya, semua lembar di dalam workbook akan dikonversi dan disertakan ke dalam file PDF.' },
+      { question: 'Apakah format .xls didukung?', answer: 'Saat ini hanya format .xlsx yang didukung. Harap simpan file .xls sebagai .xlsx terlebih dahulu.' },
+      { question: 'Apakah formula dipertahankan?', answer: 'PDF akan menampilkan nilai hasil perhitungannya. Formula itu sendiri tidak bisa dieksekusi di dalam format PDF.' },
+    ],
+  },
+
+  'pptx-to-pdf': {
+    title: 'PowerPoint ke PDF',
+    metaDescription: 'Konversi presentasi PowerPoint (PPTX) menjadi PDF. Pertahankan slide dan konten untuk memudahkan berbagi.',
+    keywords: ['powerpoint ke pdf', 'pptx ke pdf', 'konversi pptx', 'presentasi ke pdf', 'slide ke pdf'],
+    description: `
+      <p>PowerPoint ke PDF mengonversi presentasi Microsoft PowerPoint Anda ke dalam format PDF, mempertahankan konten slide dan teks sehingga lebih mudah dibagikan dan dilihat.</p>
+      <p>Setiap slide akan menjadi satu halaman di dalam PDF, menjaga kelancaran alur presentasi. Alat ini sangat sempurna untuk membagikan presentasi kepada mereka yang tidak memiliki program PowerPoint.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan presentasi Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File PowerPoint', description: 'Tarik dan lepas file .pptx Anda atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Pemrosesan', description: 'Alat ini akan mengekstrak konten slide dan membuat file PDF-nya.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Berbagi Presentasi', description: 'Bagikan presentasi kepada siapa saja tanpa mewajibkan mereka memiliki PowerPoint.', icon: 'share-2' },
+      { title: 'Pembuatan Handout', description: 'Buat selebaran PDF dari slide presentasi Anda.', icon: 'file-text' },
+      { title: 'Arsip Presentasi', description: 'Arsipkan presentasi dalam format PDF yang stabil.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Apakah animasi dipertahankan?', answer: 'PDF adalah format statis, sehingga animasi dan transisi tidak akan dipertahankan. Setiap slide menjadi satu halaman statis.' },
+      { question: 'Apakah format .ppt didukung?', answer: 'Saat ini hanya format .pptx yang didukung. Harap konversi file .ppt ke .pptx terlebih dahulu.' },
+      { question: 'Apakah catatan pembicara (speaker notes) disertakan?', answer: 'Saat ini, catatan pembicara tidak disertakan di dalam hasil PDF.' },
+    ],
+  },
+
+  'xps-to-pdf': {
+    title: 'XPS ke PDF',
+    metaDescription: 'Konversi dokumen XPS ke format PDF. Konversi berakurasi tinggi (high-fidelity) yang mempertahankan tata letak dan grafik.',
+    keywords: ['xps ke pdf', 'konversi xps', 'konverter xps', 'microsoft xps ke pdf', 'oxps ke pdf'],
+    description: `
+      <p>XPS ke PDF mengonversi dokumen Microsoft XPS (XML Paper Specification) menjadi format PDF sembari mempertahankan tata letak asli, teks, dan grafik vektornya.</p>
+      <p>XPS adalah format dokumen tetap yang mirip dengan PDF. Alat ini menyediakan konversi dengan akurasi tinggi (high-fidelity) menggunakan parser XPS secara native, sehingga reproduksi dokumen Anda sangat akurat.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File XPS', description: 'Tarik dan lepas file .xps Anda atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Pemrosesan', description: 'Alat ini akan mem-parsing dan mengonversi dokumen XPS.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Konversi Format', description: 'Konversi dokumen XPS menjadi format PDF yang lebih umum didukung.', icon: 'file' },
+      { title: 'Berbagi Dokumen', description: 'Bagikan dokumen XPS kepada pengguna yang tidak memiliki penampil XPS.', icon: 'share-2' },
+      { title: 'Migrasi Arsip', description: 'Migrasikan arsip XPS ke format PDF demi kompatibilitas yang lebih baik.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Apa itu format XPS?', answer: 'XPS (XML Paper Specification) adalah format dokumen berstruktur tetap (fixed-document) milik Microsoft, mirip dengan PDF. Biasanya format ini digunakan untuk pencetakan di Windows.' },
+      { question: 'Apakah konversinya tanpa penurunan kualitas (lossless)?', answer: 'Ya, konversi ini mempertahankan teks, grafik, dan tata letak dengan akurasi yang tinggi (high fidelity).' },
+      { question: 'Apakah file XPS multi-halaman didukung?', answer: 'Ya, semua halaman di dalam dokumen XPS akan dikonversi ke PDF.' },
+    ],
+  },
+
+  'rtf-to-pdf': {
+    title: 'RTF ke PDF',
+    metaDescription: 'Konversi file RTF (Rich Text Format) menjadi PDF. Pertahankan pemformatan teks di dalam dokumen Anda.',
+    keywords: ['rtf ke pdf', 'konversi rtf', 'rich text ke pdf', 'konverter rtf'],
+    description: `
+      <p>RTF ke PDF mengonversi file Rich Text Format menjadi dokumen PDF. RTF adalah format teks yang didukung secara luas dan menyertakan pemformatan dasar seperti font, warna, dan gaya karakter.</p>
+      <p>Unggah file RTF Anda dan dapatkan output PDF yang bersih sambil mempertahankan konten teks dan pemformatan dasar. Sangat cocok untuk mengonversi dokumen lama ke format PDF modern.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File RTF', description: 'Tarik dan lepas file .rtf Anda atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Pemrosesan', description: 'Alat ini akan mem-parsing dan mengonversi konten RTF.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Konversi Dokumen Lawas', description: 'Konversi dokumen RTF lama ke format PDF modern.', icon: 'history' },
+      { title: 'Berbagi Dokumen', description: 'Bagikan dokumen RTF dalam format PDF yang bisa dilihat oleh siapa saja.', icon: 'share-2' },
+      { title: 'Arsip Dokumen', description: 'Arsipkan file RTF dalam format PDF yang stabil untuk penyimpanan jangka panjang.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Pemformatan apa saja yang dipertahankan?', answer: 'Pemformatan teks dasar termasuk font, paragraf, dan gaya (style) akan dikonversi. Fitur RTF yang kompleks mungkin disederhanakan.' },
+      { question: 'Bisakah saya mengonversi beberapa file RTF?', answer: 'Saat ini, Anda hanya bisa mengonversi satu file pada satu waktu. Gunakan fitur Gabungkan PDF untuk menggabungkan file yang sudah dikonversi.' },
+      { question: 'Apakah objek gambar yang disematkan didukung?', answer: 'Fokus utamanya adalah pada konten teks. Objek gambar yang disematkan mungkin tidak akan dirender.' },
+    ],
+  },
+
+  'epub-to-pdf': {
+    title: 'EPUB ke PDF',
+    metaDescription: 'Konversi e-book EPUB menjadi PDF. Pertahankan pemformatan, gambar, dan struktur bab.',
+    keywords: ['epub ke pdf', 'konversi epub', 'ebook ke pdf', 'konverter epub'],
+    description: `
+      <p>EPUB ke PDF mengonversi file buku elektronik (e-book) Anda menjadi dokumen PDF berkualitas tinggi. EPUB adalah format e-book paling populer yang digunakan oleh sebagian besar e-reader dan perpustakaan digital.</p>
+      <p>Alat ini mempertahankan format teks, gambar, dan struktur bab dari e-book Anda. Sangat sempurna untuk dicetak, diarsipkan, atau jika Anda ingin membagikan e-book tersebut dalam format yang bisa dilihat di perangkat apa pun.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda dengan teknologi render tingkat lanjut, memastikan buku Anda tetap privat dan prosesnya berlangsung cepat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File EPUB', description: 'Tarik dan lepas file .epub Anda atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Konversi', description: 'Alat ini akan merender dan mengonversi semua halaman dari e-book Anda.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Cetak E-book', description: 'Konversi e-book ke format PDF untuk keperluan cetak fisik.', icon: 'printer' },
+      { title: 'Arsipkan Buku', description: 'Simpan e-book dalam format PDF yang stabil untuk jangka panjang.', icon: 'archive' },
+      { title: 'Bagikan Dokumen', description: 'Bagikan e-book kepada siapa saja, bahkan kepada mereka yang tidak memiliki e-reader.', icon: 'share-2' },
+    ],
+    faq: [
+      { question: 'Apakah pemformatannya dipertahankan?', answer: 'Ya! Alat ini menggunakan rendering EPUB secara native, sehingga teks, gambar, dan tata letak dipertahankan dengan tingkat akurasi tinggi (high fidelity).' },
+      { question: 'Apakah EPUB yang dilindungi DRM didukung?', answer: 'Tidak, e-book yang dilindungi DRM tidak dapat dikonversi. Hanya file EPUB bebas DRM yang didukung.' },
+      { question: 'Bagaimana ukuran halaman ditentukan?', answer: 'Konten EPUB akan dirender pada ukuran halaman standar A4 agar optimal saat dibaca.' },
+    ],
+  },
+
+  'mobi-to-pdf': {
+    title: 'MOBI ke PDF',
+    metaDescription: 'Konversi e-book MOBI menjadi PDF. Mendukung format Kindle dengan rendering berkualitas tinggi.',
+    keywords: ['mobi ke pdf', 'konversi mobi', 'kindle ke pdf', 'azw ke pdf', 'konverter mobi'],
+    description: `
+      <p>MOBI ke PDF mengonversi file e-book Amazon Kindle Anda menjadi dokumen PDF berkualitas tinggi. Format MOBI (termasuk AZW dan AZW3) adalah format e-book eksklusif milik Amazon yang digunakan di perangkat Kindle.</p>
+      <p>Alat ini mempertahankan pemformatan teks, gambar, dan struktur dari buku Kindle Anda. Sempurna untuk mencetak, mengarsipkan, atau membaca di perangkat yang tidak mendukung format MOBI.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda dengan teknologi render tingkat lanjut, memastikan buku Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File MOBI', description: 'Tarik dan lepas file .mobi, .azw, atau .azw3 Anda, atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Tunggu Konversi', description: 'Alat ini akan merender dan mengonversi semua halaman dari e-book Anda.' },
+      { step: 3, title: 'Unduh PDF', description: 'Klik Unduh untuk menyimpan dokumen PDF hasil konversi Anda.' },
+    ],
+    useCases: [
+      { title: 'Cetak Buku Kindle', description: 'Konversi e-book Kindle ke PDF untuk pencetakan fisik.', icon: 'printer' },
+      { title: 'Arsipkan Buku', description: 'Simpan buku Kindle dalam format PDF yang lebih universal.', icon: 'archive' },
+      { title: 'Membaca Lintas Perangkat', description: 'Baca buku Kindle di perangkat yang hanya mendukung file PDF.', icon: 'tablet-smartphone' },
+    ],
+    faq: [
+      { question: 'Format MOBI apa saja yang didukung?', answer: 'Alat ini mendukung file .mobi, .azw, dan .azw3 (versi bebas DRM).' },
+      { question: 'Apakah buku Kindle yang dilindungi DRM didukung?', answer: 'Tidak, e-book yang dilindungi DRM tidak dapat dikonversi. Hanya file bebas DRM yang didukung.' },
+      { question: 'Apakah pemformatan saya akan dipertahankan?', answer: 'Ya! Alat ini menggunakan rendering MOBI secara native untuk mempertahankan teks, gambar, dan tata letaknya.' },
+    ],
+  },
+
+  'djvu-to-pdf': {
+    title: 'DJVU ke PDF',
+    metaDescription: 'Konversi file dokumen DJVU menjadi PDF. Rendering berkualitas tinggi untuk dokumen pindaian dan buku.',
+    keywords: ['djvu ke pdf', 'konversi djvu', 'konverter djvu', 'djvu pdf', 'djv ke pdf'],
+    description: `
+      <p>DJVU ke PDF mengonversi file dokumen DjVu menjadi dokumen PDF berkualitas tinggi. DjVu adalah format file komputer yang utamanya dirancang untuk menyimpan dokumen hasil pindaian, terutama yang berisi kombinasi antara teks, gambar garis (line drawings), dan foto.</p>
+      <p>Alat ini merender setiap halaman dari file DJVU Anda sesuai dengan ukuran DPI (dots per inch) yang Anda pilih dan menggabungkannya menjadi dokumen PDF yang dapat dicari. Alat ini sangat sempurna untuk mengonversi pindaian buku, manual teknis, dan dokumen arsip.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File DJVU', description: 'Tarik dan lepas file .djvu atau .djv Anda, atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Pilih output DPI (72, 150, atau 300) dan atur kualitas gambar untuk file PDF-nya.' },
+      { step: 3, title: 'Konversi & Unduh', description: 'Klik Konversi ke PDF dan unduh dokumen hasil konversinya.' },
+    ],
+    useCases: [
+      { title: 'Arsip Dokumen', description: 'Konversi arsip DJVU ke dalam format PDF yang universal.', icon: 'archive' },
+      { title: 'Bagikan Buku Pindaian', description: 'Bagikan buku yang dipindai dalam format PDF agar kompatibilitasnya lebih luas.', icon: 'share-2' },
+      { title: 'Cetak Dokumen', description: 'Konversi DJVU menjadi PDF berkualitas tinggi untuk dicetak.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apa itu format DJVU?', answer: 'DjVu adalah format file yang dirancang khusus untuk menyimpan dokumen pindaian, terutama yang mengandung teks, gambar, dan foto. Format ini menawarkan kompresi yang lebih baik ketimbang PDF untuk konten hasil pindaian.' },
+      { question: 'Berapa ukuran DPI yang harus saya pilih?', answer: '72 DPI cocok untuk tampilan web, 150 DPI untuk dokumen standar, dan 300 DPI untuk cetakan berkualitas tinggi.' },
+      { question: 'Apakah teksnya dapat dicari?', answer: 'Teks akan dirender sebagai gambar. Jika Anda memerlukan teks yang bisa dicari, pertimbangkan untuk menggunakan alat OCR PDF kami setelah proses konversi selesai.' },
+    ],
+  },
+
+  'fb2-to-pdf': {
+    title: 'FB2 ke PDF',
+    metaDescription: 'Konversi e-book FictionBook (FB2) menjadi PDF. Mendukung beberapa file sekaligus dengan rendering berkualitas tinggi.',
+    keywords: ['fb2 ke pdf', 'konversi fb2', 'fictionbook ke pdf', 'konverter fb2', 'fb2.zip ke pdf'],
+    description: `
+      <p>FB2 ke PDF mengonversi file e-book FictionBook (FB2) menjadi dokumen PDF berkualitas tinggi. FB2 adalah format e-book berbasis XML yang populer dan banyak digunakan di Rusia serta Eropa Timur.</p>
+      <p>Alat ini mendukung file .fb2 maupun .fb2.zip, serta dapat memproses beberapa file sekaligus. Alat ini akan mempertahankan format teks, gambar, dan struktur bab dari e-book Anda.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda dengan teknologi render tingkat lanjut, memastikan buku Anda tetap privat dan prosesnya berlangsung cepat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File FB2', description: 'Tarik dan lepas satu atau beberapa file .fb2 maupun .fb2.zip, atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Pilih Kualitas', description: 'Pilih kualitas output: Rendah (72 DPI), Sedang (150 DPI), atau Tinggi (300 DPI).' },
+      { step: 3, title: 'Konversi & Unduh', description: 'Klik Konversi ke PDF dan unduh dokumen hasil konversinya.' },
+    ],
+    useCases: [
+      { title: 'Cetak E-book', description: 'Konversi e-book FB2 ke PDF untuk pencetakan fisik.', icon: 'printer' },
+      { title: 'Konversi Massal', description: 'Konversi beberapa file FB2 ke PDF sekaligus secara bersamaan.', icon: 'layers' },
+      { title: 'Format Universal', description: 'Bagikan e-book dalam format PDF yang dapat dibuka di perangkat apa pun.', icon: 'share-2' },
+    ],
+    faq: [
+      { question: 'Bisakah saya mengonversi beberapa file FB2 sekaligus?', answer: 'Ya! Alat ini mendukung konversi massal (batch) hingga 20 file FB2 secara bersamaan.' },
+      { question: 'Apakah file .fb2.zip didukung?', answer: 'Ya, alat ini akan otomatis mengekstrak dan mengonversi file FB2 yang ada di dalam arsip .fb2.zip.' },
+      { question: 'Apakah pemformatannya dipertahankan?', answer: 'Ya! Alat ini menggunakan rendering FB2 secara native, mempertahankan pemformatan teks, gambar, dan struktur bab dengan tingkat akurasi yang tinggi (high fidelity).' },
+    ],
+  },
+  // ==================== CONVERT FROM PDF ====================
+
+  'pdf-to-jpg': {
+    title: 'PDF ke JPG',
+    metaDescription: 'Konversi halaman PDF menjadi gambar JPG. Ekstraksi berkualitas tinggi dengan resolusi yang dapat disesuaikan.',
+    keywords: ['pdf ke jpg', 'pdf ke jpeg', 'konversi pdf ke gambar', 'ekstrak gambar pdf'],
+    description: `
+      <p>PDF ke JPG mengonversi halaman dokumen PDF menjadi gambar JPG berkualitas tinggi. Ekstrak semua halaman atau pilih halaman tertentu untuk dikonversi, dengan resolusi dan kualitas yang dapat disesuaikan.</p>
+      <p>Sempurna untuk mengekstrak gambar dari PDF, membuat gambar mini (thumbnail), atau mengonversi dokumen untuk penggunaan di web.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Halaman dan Kualitas', description: 'Pilih halaman mana yang akan dikonversi dan atur opsi kualitas/DPI.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk mengekstrak gambar dan unduh sebagai arsip ZIP.' },
+    ],
+    useCases: [
+      { title: 'Publikasi Web', description: 'Konversi halaman PDF menjadi gambar untuk penggunaan di situs web.', icon: 'globe' },
+      { title: 'Media Sosial', description: 'Ekstrak halaman sebagai gambar untuk dibagikan di media sosial.', icon: 'share-2' },
+      { title: 'Presentasi', description: 'Konversi slide PDF menjadi gambar untuk keperluan presentasi.', icon: 'presentation' },
+    ],
+    faq: [
+      { question: 'Pengaturan kualitas apa saja yang tersedia?', answer: 'Anda dapat mengatur DPI dari 72 hingga 300 dan kualitas JPEG dari 1-100.' },
+      { question: 'Bisakah saya hanya mengonversi halaman tertentu?', answer: 'Ya, Anda dapat memilih halaman satu per satu atau rentang halaman untuk dikonversi.' },
+      { question: 'Bagaimana penanganan file dengan banyak halaman?', answer: 'Setiap halaman akan menjadi file JPG terpisah, lalu diunduh sebagai arsip ZIP.' },
+    ],
+  },
+
+  'pdf-to-png': {
+    title: 'PDF ke PNG',
+    metaDescription: 'Konversi halaman PDF menjadi gambar PNG. Kualitas tanpa penurunan (lossless) dengan dukungan transparansi.',
+    keywords: ['pdf ke png', 'konversi pdf ke png', 'ekstraksi gambar pdf', 'konversi pdf lossless'],
+    description: `
+      <p>PDF ke PNG mengonversi halaman dokumen PDF menjadi gambar PNG berkualitas tinggi dengan kompresi lossless. Format PNG mempertahankan kualitas gambar dengan sempurna dan mendukung transparansi.</p>
+      <p>Sangat ideal untuk mengekstrak grafik, diagram, atau konten apa pun di mana kualitas adalah hal yang sangat penting.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Pilih halaman dan atur opsi resolusi (DPI).' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk mengekstrak gambar PNG.' },
+    ],
+    useCases: [
+      { title: 'Ekstraksi Grafik', description: 'Ekstrak diagram dan grafik dengan kualitas yang sempurna.', icon: 'image' },
+      { title: 'Aset Desain', description: 'Konversi desain PDF menjadi PNG untuk perangkat lunak pengeditan.', icon: 'palette' },
+      { title: 'Dokumentasi', description: 'Buat gambar berkualitas tinggi untuk dokumentasi teknis.', icon: 'file-text' },
+    ],
+    faq: [
+      { question: 'Mengapa memilih PNG daripada JPG?', answer: 'PNG menawarkan kompresi lossless (tanpa penurunan kualitas) dan dukungan transparansi, ideal untuk grafik dan teks.' },
+      { question: 'Apakah latar belakang transparan didukung?', answer: 'Ya, halaman PDF yang memiliki transparansi akan dipertahankan di dalam output PNG.' },
+      { question: 'Berapa DPI yang harus saya gunakan?', answer: 'Gunakan 150 DPI untuk dilihat di layar, dan 300 DPI untuk keperluan pencetakan.' },
+    ],
+  },
+
+  'pdf-to-webp': {
+    title: 'PDF ke WebP',
+    metaDescription: 'Konversi halaman PDF menjadi gambar WebP. Format modern dengan kompresi yang sangat baik.',
+    keywords: ['pdf ke webp', 'konversi pdf ke webp', 'format gambar modern', 'gambar untuk web'],
+    description: `
+      <p>PDF ke WebP mengonversi halaman dokumen PDF menjadi gambar WebP, format gambar modern dari Google yang menawarkan kompresi sangat baik sekaligus mempertahankan kualitas yang tinggi.</p>
+      <p>Gambar WebP memiliki ukuran yang lebih kecil dari JPG atau PNG dengan kualitas yang sebanding, menjadikannya ideal untuk penggunaan di web.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Atur Opsi Kualitas', description: 'Pilih halaman dan atur pengaturan kualitas/kompresi.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat gambar WebP.' },
+    ],
+    useCases: [
+      { title: 'Optimasi Web', description: 'Buat gambar yang dioptimalkan untuk web dari konten PDF.', icon: 'globe' },
+      { title: 'Penghematan Bandwidth', description: 'Kurangi ukuran file gambar demi pemuatan halaman yang lebih cepat.', icon: 'zap' },
+      { title: 'Situs Web Modern', description: 'Gunakan format gambar modern untuk proyek web masa kini.', icon: 'layout' },
+    ],
+    faq: [
+      { question: 'Apa itu format WebP?', answer: 'WebP adalah format gambar modern buatan Google yang menawarkan kompresi superior.' },
+      { question: 'Apakah WebP didukung secara luas?', answer: 'Ya, semua browser modern telah mendukung format WebP.' },
+      { question: 'Seberapa kecil file WebP?', answer: 'File WebP biasanya berukuran 25-35% lebih kecil dibandingkan file JPG yang setara.' },
+    ],
+  },
+
+  'pdf-to-bmp': {
+    title: 'PDF ke BMP',
+    metaDescription: 'Konversi halaman PDF menjadi gambar bitmap BMP. Format tidak terkompresi untuk kompatibilitas maksimum.',
+    keywords: ['pdf ke bmp', 'konversi pdf ke bitmap', 'gambar tidak terkompresi', 'format lawas'],
+    description: `
+      <p>PDF ke BMP mengonversi halaman dokumen PDF menjadi gambar bitmap BMP. BMP adalah format yang tidak dikompresi yang memastikan kompatibilitas maksimum dengan sistem dan aplikasi lawas.</p>
+      <p>Meskipun file BMP lebih besar daripada format terkompresi, file ini menawarkan kualitas yang sempurna dan kompatibilitas yang universal.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Halaman', description: 'Pilih halaman yang akan dikonversi dan atur ukuran DPI.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat gambar BMP.' },
+    ],
+    useCases: [
+      { title: 'Sistem Lawas', description: 'Buat gambar yang kompatibel dengan perangkat lunak yang lebih lama.', icon: 'history' },
+      { title: 'Aplikasi Windows', description: 'Hasilkan file BMP untuk aplikasi khusus Windows.', icon: 'monitor' },
+      { title: 'Arsip Tidak Terkompresi', description: 'Buat arsip gambar tanpa kompresi dari file PDF.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Mengapa menggunakan format BMP?', answer: 'BMP menawarkan kualitas tanpa kompresi dan kompatibilitas maksimum dengan sistem lawas.' },
+      { question: 'Apakah file BMP berukuran lebih besar?', answer: 'Ya, file BMP tidak dikompresi sehingga ukurannya jauh lebih besar daripada JPG atau PNG.' },
+      { question: 'Kedalaman warna apa saja yang didukung?', answer: 'Kedalaman warna 24-bit dan 32-bit didukung.' },
+    ],
+  },
+
+  'pdf-to-tiff': {
+    title: 'PDF ke TIFF',
+    metaDescription: 'Konversi PDF ke gambar TIFF. Kualitas profesional dengan dukungan multi-halaman.',
+    keywords: ['pdf ke tiff', 'konversi pdf ke tiff', 'gambar profesional', 'tiff multi-halaman'],
+    description: `
+      <p>PDF ke TIFF mengonversi dokumen PDF menjadi gambar TIFF berkualitas tinggi. TIFF adalah format yang sering digunakan untuk pencetakan profesional dan pengarsipan karena menggunakan kompresi lossless.</p>
+      <p>Buat TIFF satu halaman atau gabungkan semua halaman menjadi satu file TIFF multi-halaman. Sempurna untuk keperluan profesional maupun arsip.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Output', description: 'Pilih TIFF satu halaman atau multi-halaman dan atur ukuran DPI.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat gambar TIFF.' },
+    ],
+    useCases: [
+      { title: 'Pencetakan Profesional', description: 'Buat file TIFF siap cetak dari dokumen PDF.', icon: 'printer' },
+      { title: 'Pengarsipan Dokumen', description: 'Arsipkan dokumen dalam format TIFF berkualitas tinggi.', icon: 'archive' },
+      { title: 'Penerbitan', description: 'Konversi PDF ke TIFF untuk alur kerja penerbitan.', icon: 'book' },
+    ],
+    faq: [
+      { question: 'Bisakah saya membuat TIFF multi-halaman?', answer: 'Ya, Anda dapat menggabungkan seluruh halaman PDF ke dalam satu file TIFF multi-halaman.' },
+      { question: 'Opsi kompresi apa saja yang tersedia?', answer: 'Tersedia opsi LZW, ZIP, dan tanpa kompresi.' },
+      { question: 'Berapa DPI yang harus digunakan untuk mencetak?', answer: 'Gunakan 300 DPI atau lebih tinggi untuk kualitas pencetakan profesional.' },
+    ],
+  },
+
+  'pdf-to-svg': {
+    title: 'PDF ke SVG',
+    metaDescription: 'Konversi halaman PDF menjadi grafik vektor SVG. Skalabilitas sempurna di segala ukuran dengan kemampuan ekspor halaman individu.',
+    keywords: ['pdf ke svg', 'konversi pdf ke svg', 'grafik vektor', 'pdf skalabel', 'konverter svg'],
+    description: `
+      <p>PDF ke SVG mengonversi setiap halaman dari dokumen PDF Anda menjadi Scalable Vector Graphic (SVG). SVG adalah format vektor yang mempertahankan kualitas yang sempurna di berbagai tingkat perbesaran (zoom) atau ukuran cetak.</p>
+      <p>Berbeda dengan format raster (JPG, PNG), grafik SVG tidak pernah pecah atau berbintik (pixelated) saat diskalakan. Format ini sangat ideal untuk logo, diagram, gambar teknis, dan konten apa pun yang perlu ditampilkan dalam berbagai ukuran.</p>
+      <p>Pratinjau setiap halaman yang dikonversi dan unduh satu per satu atau sebagai file ZIP. Semua pemrosesan terjadi secara lokal di browser Anda, memastikan privasi penuh untuk dokumen Anda.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk menelusuri dan memilih.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Tetapkan kualitas resolusi dan secara opsional tentukan rentang halamannya.' },
+      { step: 3, title: 'Pratinjau dan Konversi', description: 'Klik Konversi untuk memproses. Pratinjau setiap halaman dengan mengklik gambar mini (thumbnail).' },
+      { step: 4, title: 'Unduh', description: 'Unduh file SVG satu per satu atau semua halaman sebagai arsip ZIP.' },
+    ],
+    useCases: [
+      { title: 'Logo dan Grafik', description: 'Ekstrak logo dan grafik vektor dari PDF untuk digunakan pada perangkat lunak desain.', icon: 'pen-tool' },
+      { title: 'Diagram Teknis', description: 'Konversi gambar dan diagram teknis ke dalam format SVG yang dapat diskalakan.', icon: 'ruler' },
+      { title: 'Pengembangan Web', description: 'Buat file SVG yang siap untuk web dari konten PDF untuk kebutuhan situs web responsif.', icon: 'globe' },
+      { title: 'Cetak di Segala Ukuran', description: 'Hasilkan grafik vektor yang dapat dicetak dengan sempurna dalam berbagai ukuran.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apa itu format SVG?', answer: 'SVG (Scalable Vector Graphics) adalah format gambar vektor yang dapat diskalakan ke ukuran berapa pun tanpa kehilangan kualitas. Format ini banyak digunakan untuk logo, ikon, dan grafik web.' },
+      { question: 'Apakah hasil SVG akan benar-benar berupa vektor?', answer: 'SVG akan berisi rendering halaman PDF beresolusi tinggi. Untuk PDF yang berisi konten vektor, Anda akan mendapatkan output yang tajam pada skala apa pun.' },
+      { question: 'Bisakah saya melihat pratinjau sebelum mengunduh?', answer: 'Ya! Klik pada gambar mini mana saja untuk melihat pratinjau SVG ukuran penuh. Anda dapat mengunduh setiap halamannya satu per satu atau sekaligus.' },
+      { question: 'Resolusi apa yang sebaiknya saya pilih?', answer: 'Resolusi yang lebih tinggi (216 atau 288 DPI) menghasilkan SVG yang lebih besar dan lebih detail. Gunakan pengaturan yang lebih rendah untuk pemrosesan yang lebih cepat dan ukuran file yang lebih kecil.' },
+    ],
+  },
+
+  'pdf-to-greyscale': {
+    title: 'PDF ke Hitam Putih (Greyscale)',
+    metaDescription: 'Konversi PDF berwarna menjadi hitam putih. Kurangi ukuran file dan persiapkan untuk pencetakan hitam-putih.',
+    keywords: ['pdf ke hitam putih', 'pdf grayscale', 'pdf hitam putih', 'hapus warna pdf'],
+    description: `
+      <p>PDF ke Hitam Putih mengonversi dokumen PDF berwarna menjadi skala abu-abu (greyscale). Hal ini akan mengurangi ukuran file dan menyiapkan dokumen untuk dicetak dalam warna hitam-putih.</p>
+      <p>Konversi ini tetap mempertahankan kejernihan teks dan detail gambar sambil menghapus informasi warnanya. Sangat cocok untuk mencetak dokumen draf atau versi dokumen yang ramah mesin cetak.</p>
+      <p>Semua konversi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF berwarna Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pratinjau Konversi', description: 'Lihat pratinjau bagaimana tampilan versi hitam putih nantinya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat PDF hitam putih.' },
+    ],
+    useCases: [
+      { title: 'Penghematan Pencetakan', description: 'Ubah menjadi hitam putih untuk menghemat biaya pencetakan warna.', icon: 'printer' },
+      { title: 'Dokumen Draf', description: 'Buat draf hitam putih untuk keperluan peninjauan.', icon: 'file-text' },
+      { title: 'Pengurangan Ukuran File', description: 'Kurangi ukuran PDF dengan menghapus informasi warnanya.', icon: 'minimize-2' },
+    ],
+    faq: [
+      { question: 'Apakah teksnya akan tetap terbaca?', answer: 'Ya, kejernihan teks dipertahankan selama konversi hitam putih.' },
+      { question: 'Seberapa besar ukuran file akan berkurang?', answer: 'Pengurangan ukuran bervariasi, tetapi bisa mencapai 20-50% untuk dokumen yang penuh dengan warna.' },
+      { question: 'Bisakah saya hanya mengonversi halaman tertentu?', answer: 'Ya, Anda dapat memilih halaman mana yang akan dikonversi menjadi hitam putih.' },
+    ],
+  },
+
+  'pdf-to-json': {
+    title: 'PDF ke JSON',
+    metaDescription: 'Ekstrak konten PDF menjadi format JSON. Dapatkan data terstruktur dari dokumen PDF.',
+    keywords: ['pdf ke json', 'ekstrak data pdf', 'parser pdf', 'data pdf terstruktur'],
+    description: `
+      <p>PDF ke JSON mengekstrak konten dari dokumen PDF ke dalam format JSON yang terstruktur. Ekstrak teks, metadata, info halaman, dan struktur dokumen untuk penggunaan terprogram (programmatic).</p>
+      <p>Sempurna untuk ekstraksi data, analisis dokumen, atau mengintegrasikan konten PDF ke dalam suatu aplikasi maupun alur kerja.</p>
+      <p>Semua ekstraksi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Data untuk Diekstrak', description: 'Pilih konten yang akan diekstrak: teks, metadata, atau strukturnya.' },
+      { step: 3, title: 'Ekstrak dan Unduh', description: 'Klik Ekstrak untuk menghasilkan file JSON lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Ekstraksi Data', description: 'Ekstrak data terstruktur dari dokumen PDF.', icon: 'database' },
+      { title: 'Analisis Dokumen', description: 'Analisis struktur dan konten PDF secara terprogram.', icon: 'search' },
+      { title: 'Integrasi', description: 'Impor konten PDF ke dalam aplikasi melalui JSON.', icon: 'plug' },
+    ],
+    faq: [
+      { question: 'Data apa saja yang diekstrak?', answer: 'Konten teks, metadata, dimensi halaman, font, dan struktur dokumen.' },
+      { question: 'Apakah format JSON-nya terdokumentasi?', answer: 'Ya, skema JSON-nya konsisten dan terdokumentasi dengan baik.' },
+      { question: 'Bisakah saya mengekstrak dari PDF hasil pindaian?', answer: 'PDF hasil pindaian membutuhkan OCR terlebih dahulu. Gunakan alat OCR PDF kami sebelum melakukan ekstraksi.' },
+    ],
+  },
+
+  'pdf-to-pptx': {
+    title: 'PDF ke PowerPoint',
+    metaDescription: 'Konversi PDF menjadi presentasi PowerPoint. Setiap halaman menjadi satu slide berkualitas tinggi.',
+    keywords: ['pdf ke pptx', 'pdf ke powerpoint', 'konversi slide pdf', 'presentasi pdf'],
+    description: `
+      <p>PDF ke PowerPoint mengonversi dokumen PDF Anda menjadi file presentasi PowerPoint yang dapat diedit (PPTX). Setiap halaman PDF akan diubah menjadi satu slide berkualitas tinggi, mempertahankan tata letak visualnya secara sempurna.</p>
+      <p>Alat ini sangat ideal untuk mengonversi laporan, selebaran, atau konten PDF apa pun ke dalam format presentasi. Anda dapat memilih kualitas gambar (DPI) untuk menyeimbangkan antara ukuran file dan kejernihan visualnya.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilihnya dari perangkat Anda.' },
+      { step: 2, title: 'Pilih Pengaturan Kualitas', description: 'Pilih kualitas gambar (DPI) untuk setiap slide. DPI yang lebih tinggi menghasilkan kualitas lebih baik tetapi ukuran filenya menjadi lebih besar.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk membuat presentasi PowerPoint dan unduh file PPTX-nya.' },
+    ],
+    useCases: [
+      { title: 'Pembuatan Presentasi', description: 'Konversi laporan atau dokumen PDF menjadi slide presentasi untuk sebuah rapat.', icon: 'presentation' },
+      { title: 'Materi Pelatihan', description: 'Ubah dokumen pelatihan PDF menjadi presentasi PowerPoint yang interaktif.', icon: 'book-open' },
+      { title: 'Repurposing Konten', description: 'Konversi konten PDF yang sudah ada ke format slide yang dapat diedit untuk kustomisasi lebih lanjut.', icon: 'refresh-cw' },
+    ],
+    faq: [
+      { question: 'Apakah slide-nya bisa diedit?', answer: 'Setiap slide berisi gambar berkualitas tinggi dari halaman PDF Anda. Anda kemudian dapat menambahkan teks, bentuk, atau anotasi di atasnya menggunakan PowerPoint.' },
+      { question: 'Berapa DPI yang harus saya pilih?', answer: 'Gunakan 150 DPI untuk presentasi yang ditampilkan di layar. Gunakan 300 DPI jika ingin mencetak atau memerlukan kualitas tertinggi.' },
+      { question: 'Bisakah saya mengonversi PDF yang berisi banyak halaman?', answer: 'Ya, setiap halaman PDF Anda akan menjadi satu slide tersendiri di dalam presentasi PowerPoint.' },
+    ],
+  },
+
+  'pdf-to-excel': {
+    title: 'PDF ke Excel',
+    metaDescription: 'Konversi PDF menjadi lembar kerja Excel. Ekstrak tabel menjadi format XLSX.',
+    keywords: ['pdf ke excel', 'pdf ke xlsx', 'konversi tabel pdf', 'ekstrak tabel'],
+    description: `
+      <p>PDF ke Excel mengonversi dokumen PDF Anda menjadi lembar kerja Microsoft Excel (XLSX) yang dapat diedit. Alat ini secara otomatis mendeteksi tabel di dalam PDF Anda dan mengekstraknya ke dalam lembaran (sheet) yang terpisah.</p>
+      <p>Alat ini sangat ideal untuk menganalisis laporan keuangan, faktur, atau data apa pun yang disajikan dalam bentuk tabel. Tabel di setiap halaman akan disusun ke dalam sheet untuk memudahkan manipulasi data.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan data Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Proses', description: 'Alat ini akan secara otomatis mengidentifikasi dan mengekstrak tabel di dalamnya.' },
+      { step: 3, title: 'Unduh Excel', description: 'Unduh file Excel Anda yang berisi tabel yang telah diekstrak.' },
+    ],
+    useCases: [
+      { title: 'Analisis Keuangan', description: 'Konversi laporan bank atau faktur ke Excel untuk dianalisis.', icon: 'trending-up' },
+      { title: 'Ekstraksi Data', description: 'Tarik tabel data dari laporan atau makalah penelitian.', icon: 'database' },
+      { title: 'Manajemen Inventaris', description: 'Konversi daftar inventaris dari file PDF ke spreadsheet.', icon: 'clipboard' },
+    ],
+    faq: [
+      { question: 'Bagaimana tabel ini ditangani?', answer: 'Tabel yang terdeteksi di setiap halaman akan diekstrak ke dalam lembar (sheet) yang sesuai di file Excel.' },
+      { question: 'Bagaimana jika tidak ada tabel?', answer: 'Sebuah sheet info akan dibuat dan memberitahukan bahwa tidak ada tabel yang ditemukan.' },
+      { question: 'Apakah format aslinya dipertahankan?', answer: 'Data akan dipertahankan, namun pemformatan visual yang kompleks mungkin akan disederhanakan untuk penggunaan spreadsheet.' },
+    ],
+  },
+
+  // ==================== ORGANIZE & MANAGE ====================
+  'ocr-pdf': {
+    title: 'OCR PDF',
+    metaDescription: 'Jadikan PDF pindaian Anda dapat dicari dengan OCR. Ekstrak teks dari gambar dan dokumen hasil pindaian.',
+    keywords: ['ocr pdf', 'pdf yang dapat dicari', 'pengenalan teks', 'pindai menjadi teks'],
+    description: `
+      <p>OCR PDF menggunakan Pengenalan Karakter Optik (Optical Character Recognition) untuk mengekstrak teks dari dokumen hasil pindaian dan gambar di dalam PDF. Ubah PDF berbasis gambar menjadi dokumen teks yang dapat dicari dan dipilih teksnya.</p>
+      <p>Dukungan untuk berbagai bahasa memastikan pengenalan teks yang akurat tanpa memandang bahasa asli dokumen. Tata letak aslinya juga akan dipertahankan sambil menyisipkan lapisan teks yang dapat dicari.</p>
+      <p>Semua pemrosesan OCR terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Pindaian', description: 'Tarik dan lepas PDF hasil pindaian Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Bahasa', description: 'Pilih bahasa dokumen untuk hasil pengenalan yang lebih akurat.' },
+      { step: 3, title: 'Proses dan Unduh', description: 'Klik Proses untuk menjalankan OCR dan mengunduh PDF yang dapat dicari.' },
+    ],
+    useCases: [
+      { title: 'Digitalisasi Arsip', description: 'Jadikan arsip dokumen pindaian Anda dapat dicari secara otomatis.', icon: 'archive' },
+      { title: 'Pencarian Dokumen', description: 'Aktifkan pencarian teks di dalam dokumen yang dipindai.', icon: 'search' },
+      { title: 'Ekstraksi Teks', description: 'Ekstrak teks dari dokumen pindaian untuk diedit.', icon: 'type' },
+    ],
+    faq: [
+      { question: 'Bahasa apa saja yang didukung?', answer: 'Lebih dari 100 bahasa didukung, termasuk Inggris, Mandarin, Jepang, Korea, dan lainnya.' },
+      { question: 'Apakah tata letak aslinya dipertahankan?', answer: 'Ya, tata letak visual aslinya dipertahankan sembari ditambahkan lapisan teks yang dapat dicari.' },
+      { question: 'Seberapa akurat hasil OCR ini?', answer: 'Akurasi bergantung pada kualitas pindaian tetapi biasanya melampaui 95% untuk dokumen yang jelas.' },
+    ],
+  },
+
+  'alternate-merge': {
+    title: 'Penggabungan Berselang (Alternate Merge)',
+    metaDescription: 'Gabungkan PDF dengan halaman yang berselang-seling. Gabungkan pindaian bagian depan dan belakang ke dalam satu dokumen.',
+    keywords: ['penggabungan berselang', 'interleave pdf', 'gabung pindaian', 'gabung bolak-balik'],
+    description: `
+      <p>Penggabungan Berselang (Alternate Merge) menggabungkan dua buah PDF dengan menyelipkan halamannya secara berselang-seling. Ini sangat cocok untuk menyatukan pindaian halaman depan dan belakang yang terpisah menjadi satu dokumen yang utuh.</p>
+      <p>Unggah dua PDF dan alat ini akan menggabungkannya dengan mengambil satu halaman dari masing-masing file secara bergantian. Anda juga dapat membalikkan urutan salah satu dokumen untuk pindaian dari belakang ke depan (back-to-front).</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah Dua PDF', description: 'Unggah file PDF halaman depan dan file PDF halaman belakang.' },
+      { step: 2, title: 'Konfigurasi Urutan', description: 'Pilih apakah akan membalik urutan dokumen kedua untuk pindaian belakang-ke-depan.' },
+      { step: 3, title: 'Gabungkan dan Unduh', description: 'Klik Gabungkan untuk menyelipkan halamannya secara bergantian lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Pemindaian Dupleks', description: 'Gabungkan hasil pindaian halaman depan dan belakang yang dipisah.', icon: 'copy' },
+      { title: 'Penyusunan Dokumen', description: 'Selipkan halaman secara bergantian dari dua dokumen yang berkaitan.', icon: 'layers' },
+      { title: 'Pemindaian Buku', description: 'Kombinasikan pindaian halaman ganjil dan genap menjadi sebuah buku yang utuh.', icon: 'book' },
+    ],
+    faq: [
+      { question: 'Bagaimana jika halamannya berbeda jumlahnya?', answer: 'Sisa halaman dari dokumen yang lebih panjang akan ditambahkan di bagian paling akhir.' },
+      { question: 'Bisakah saya membalik urutan halaman?', answer: 'Ya, Anda dapat membalikkan urutan salah satu dokumen sebelum digabungkan.' },
+      { question: 'Apakah ini berbeda dengan penggabungan PDF biasa?', answer: 'Ya, penggabungan biasa akan menyambung seluruh dokumen; alat ini akan menyelipkannya (interleave) secara bergantian.' },
+    ],
+  },
+
+  'add-attachments': {
+    title: 'Tambahkan Lampiran',
+    metaDescription: 'Sematkan file ke dalam dokumen PDF. Lampirkan jenis file apa pun ke PDF Anda.',
+    keywords: ['lampiran pdf', 'sematkan file', 'lampirkan ke pdf', 'portofolio pdf'],
+    description: `
+      <p>Tambahkan Lampiran akan menyematkan file jenis apa pun ke dalam dokumen PDF Anda. Lampirkan spreadsheet, gambar, file sumber (source files), atau dokumen lainnya untuk membuat paket PDF yang komprehensif.</p>
+      <p>Lampiran akan disematkan di dalam file PDF dan dapat diekstrak oleh penerima menggunakan penampil PDF (PDF reader) apa saja. Sangat cocok untuk mendistribusikan file-file yang saling berkaitan sekaligus.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan file Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Tambahkan Lampiran', description: 'Pilih file-file yang akan dilampirkan ke dalam PDF.' },
+      { step: 3, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menyematkan lampiran lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Paket Proyek', description: 'Bundel file proyek bersamaan dengan PDF dokumentasinya.', icon: 'package' },
+      { title: 'Distribusi Laporan', description: 'Lampirkan file data sumber (source data) ke file laporan PDF.', icon: 'paperclip' },
+      { title: 'Bundel Kontrak', description: 'Sertakan dokumen pendukung bersama file kontraknya.', icon: 'file-text' },
+    ],
+    faq: [
+      { question: 'Jenis file apa yang bisa dilampirkan?', answer: 'Jenis file apa pun dapat dilampirkan ke dalam sebuah PDF.' },
+      { question: 'Apakah ada batasan ukuran?', answer: 'Total ukuran PDF beserta lampirannya tidak boleh melebihi 500MB.' },
+      { question: 'Bisakah penerima mengekstrak lampirannya?', answer: 'Ya, alat pembaca PDF (PDF reader) apa pun dapat mengekstrak file yang disematkan tersebut.' },
+    ],
+  },
+
+  'extract-attachments': {
+    title: 'Ekstrak Lampiran',
+    metaDescription: 'Ekstrak file yang disematkan di dalam PDF. Unduh semua lampiran dari dokumen PDF.',
+    keywords: ['ekstrak lampiran', 'lampiran pdf', 'unduh file tersemat', 'ekstraksi pdf'],
+    description: `
+      <p>Ekstrak Lampiran mengambil seluruh file yang disematkan di dalam dokumen PDF. Anda dapat mengunduh lampiran tersebut satu per satu atau menyatukannya ke dalam satu arsip ZIP.</p>
+      <p>Sangat ideal untuk mengambil file sumber (source files), data, atau materi pendukung yang disematkan di dalam paket PDF.</p>
+      <p>Semua ekstraksi terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Lihat Lampiran', description: 'Lihat daftar seluruh file yang disematkan di dalam PDF.' },
+      { step: 3, title: 'Ekstrak dan Unduh', description: 'Unduh file secara individual atau unduh semua sebagai format ZIP.' },
+    ],
+    useCases: [
+      { title: 'Akses File Sumber', description: 'Ekstrak data asli dari laporan PDF.', icon: 'download' },
+      { title: 'Pulihkan Lampiran', description: 'Ambil kembali file yang disematkan dari paket PDF.', icon: 'folder-open' },
+      { title: 'Ekstraksi Massal', description: 'Ekstrak lampiran dari beberapa file PDF sekaligus.', icon: 'layers' },
+    ],
+    faq: [
+      { question: 'Bagaimana jika tidak ada lampiran di dalamnya?', answer: 'Alat ini akan memberi tahu Anda jika tidak ditemukan file yang disematkan.' },
+      { question: 'Apakah semua jenis lampiran didukung?', answer: 'Ya, semua jenis file yang disematkan bisa diekstrak.' },
+      { question: 'Bisakah saya mengekstrak dari beberapa PDF sekaligus?', answer: 'Ya, Anda dapat memproses beberapa PDF dan mengunduh seluruh lampirannya.' },
+    ],
+  },
+
+  'extract-images': {
+    title: 'Ekstrak Gambar dari PDF',
+    metaDescription: 'Ekstrak seluruh gambar yang ada di dalam file PDF. Unduh satu per satu atau sebagai arsip ZIP. Filter gambar kecil secara otomatis.',
+    keywords: ['ekstrak gambar pdf', 'ekstraksi gambar pdf', 'ambil gambar dari pdf', 'unduh gambar pdf', 'pdf ke gambar'],
+    description: `
+      <p>Ekstrak Gambar dari PDF akan mengambil seluruh gambar yang tersemat di dalam dokumen PDF Anda. Unduh gambar berkualitas tinggi secara individual atau dalam bentuk arsip ZIP yang praktis.</p>
+      <p>Alat ini secara otomatis akan menyaring (filter) gambar-gambar berukuran kecil seperti ikon maupun dekorasi, berdasarkan batas ukuran yang bisa disesuaikan. Proses beberapa PDF sekaligus untuk ekstraksi massal yang efisien.</p>
+      <p>Semua ekstraksi terjadi di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas satu atau lebih file PDF, atau klik untuk memilih dari perangkat Anda.' },
+      { step: 2, title: 'Atur Opsi Filter', description: 'Sesuaikan lebar, tinggi, dan ukuran file minimum untuk menyaring gambar-gambar kecil yang tidak diinginkan.' },
+      { step: 3, title: 'Ekstrak Gambar', description: 'Klik Ekstrak untuk mencari seluruh gambar yang disematkan di PDF Anda.' },
+      { step: 4, title: 'Unduh', description: 'Unduh gambar satu per satu atau seluruh gambar sekaligus dalam arsip ZIP.' },
+    ],
+    useCases: [
+      { title: 'Pemulihan Foto', description: 'Ekstrak foto dan gambar yang ada dalam dokumen PDF untuk digunakan kembali atau diarsipkan.', icon: 'image' },
+      { title: 'Koleksi Aset', description: 'Kumpulkan semua grafik dan gambar dari PDF laporan, presentasi, atau brosur.', icon: 'folder' },
+      { title: 'Repurposing Konten', description: 'Ekstrak gambar dari PDF untuk digunakan pada dokumen, situs web, atau presentasi lainnya.', icon: 'refresh-cw' },
+    ],
+    faq: [
+      { question: 'Format gambar apa yang diekstrak?', answer: 'Gambar diekstrak dalam format aslinya (JPEG, PNG, dll.) sebisa mungkin, atau diubah menjadi PNG untuk data gambar mentah (raw).' },
+      { question: 'Mengapa ada beberapa gambar yang hilang?', answer: 'Gambar kecil di bawah batas ukuran akan difilter secara otomatis. Sesuaikan pengaturan filter untuk mengekstrak gambar yang lebih kecil.' },
+      { question: 'Bisakah saya mengekstrak dari PDF hasil pindaian?', answer: 'PDF hasil pindaian biasanya memuat pindaian sebagai satu gambar besar per halamannya. Gunakan alat "PDF ke Gambar" sebagai gantinya jika ingin konversi halaman per halaman.' },
+    ],
+  },
+
+  'edit-attachments': {
+    title: 'Edit Lampiran',
+    metaDescription: 'Kelola lampiran file PDF. Lihat, ganti nama, dan hapus file yang disematkan.',
+    keywords: ['edit lampiran', 'kelola file pdf', 'hapus lampiran', 'ganti nama lampiran'],
+    description: `
+      <p>Edit Lampiran memungkinkan Anda mengelola file yang disematkan di dalam dokumen PDF. Anda dapat melihat semua lampiran, mengganti namanya, atau menghapus file yang tidak lagi diinginkan dari PDF.</p>
+      <p>Sempurna untuk membersihkan dokumen paket PDF atau memperbarui informasi lampirannya sebelum disebarluaskan.</p>
+      <p>Semua pengeditan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Kelola Lampiran', description: 'Lihat, ganti nama, atau hapus file yang disematkan di dalam PDF.' },
+      { step: 3, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menerapkan perubahan Anda lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Bersihkan PDF', description: 'Hapus lampiran yang tidak diperlukan dari paket PDF.', icon: 'trash-2' },
+      { title: 'Ganti Nama File', description: 'Perbarui nama file lampiran agar lebih jelas bagi penerima.', icon: 'edit' },
+      { title: 'Tinjau Isi Lampiran', description: 'Audit file-file yang disematkan sebelum disebarluaskan.', icon: 'eye' },
+    ],
+    faq: [
+      { question: 'Bisakah saya menambahkan lampiran baru di sini?', answer: 'Gunakan alat Tambahkan Lampiran untuk menyematkan file baru.' },
+      { question: 'Apakah penghapusan ini bersifat permanen?', answer: 'Ya, lampiran yang dihapus tidak akan dapat dipulihkan dari file output Anda.' },
+      { question: 'Bisakah saya melihat pratinjau lampiran?', answer: 'Anda bisa melihat nama dan ukuran filenya; gunakan alat Ekstrak Lampiran untuk melihat isi filenya.' },
+    ],
+  },
+
+  'divide-pages': {
+    title: 'Bagi Halaman',
+    metaDescription: 'Bagi satu halaman PDF menjadi beberapa bagian. Pisahkan halaman secara horizontal maupun vertikal.',
+    keywords: ['bagi halaman pdf', 'pisahkan halaman', 'potong halaman pdf', 'bagian halaman'],
+    description: `
+      <p>Bagi Halaman memisahkan halaman PDF menjadi beberapa bagian. Anda bisa memotong halaman secara horizontal, vertikal, maupun format kisi (grid) untuk menciptakan beberapa halaman baru dari satu halaman saja.</p>
+      <p>Sangat cocok untuk memecah hasil pindaian dokumen yang berisi beberapa item per halaman, atau untuk memotong halaman berformat besar menjadi ukuran standar.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Atur Pembagian', description: 'Pilih format horizontal, vertikal, atau kisi, dan atur jumlah bagiannya.' },
+      { step: 3, title: 'Bagi dan Unduh', description: 'Klik Bagi Halaman untuk memecah halaman dan mengunduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Bagi Pindaian', description: 'Bagi halaman hasil pindaian yang memuat beberapa dokumen di dalamnya.', icon: 'scissors' },
+      { title: 'Ubah Ukuran Halaman', description: 'Bagi halaman besar menjadi beberapa halaman ukuran kertas standar.', icon: 'maximize-2' },
+      { title: 'Buat Kartu', description: 'Bagi halaman ke dalam beberapa bagian seukuran kartu untuk kebutuhan cetak.', icon: 'grid' },
+    ],
+    faq: [
+      { question: 'Bisakah saya membaginya ke dalam bagian yang tidak sama besar?', answer: 'Saat ini pembagian akan berukuran sama besar. Gunakan alat Potong PDF jika ingin ukuran kustom.' },
+      { question: 'Apa yang terjadi pada konten di garis potong?', answer: 'Konten akan terpotong pada garis pembagian tersebut; pastikan konten penting tidak berada di pas garis potong.' },
+      { question: 'Bisakah saya membagi halaman tertentu saja?', answer: 'Ya, Anda dapat memilih halaman mana saja yang akan dibagi.' },
+    ],
+  },
+
+  'add-blank-page': {
+    title: 'Tambahkan Halaman Kosong',
+    metaDescription: 'Sisipkan halaman kosong ke dalam dokumen PDF. Tambahkan halaman kosong di posisi mana saja.',
+    keywords: ['tambah halaman kosong', 'sisipkan halaman', 'halaman kosong', 'penyisipan halaman pdf'],
+    description: `
+      <p>Tambahkan Halaman Kosong akan menyisipkan halaman kosong ke dalam dokumen PDF Anda di posisi mana saja yang diinginkan. Tambahkan halaman sebelum, sesudah, atau di antara halaman-halaman yang ada, dengan ukuran halaman yang bisa disesuaikan.</p>
+      <p>Sempurna untuk menyediakan ruang catatan, membuat halaman pembatas (divider), atau mempersiapkan dokumen untuk dicetak.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Posisi', description: 'Tentukan di mana halaman kosong akan disisipkan dan berapa jumlah halamannya.' },
+      { step: 3, title: 'Tambahkan dan Unduh', description: 'Klik Tambahkan untuk menyisipkan halaman dan mengunduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Ruang Catatan', description: 'Tambahkan halaman kosong khusus untuk mencatat dengan tulisan tangan.', icon: 'edit-3' },
+      { title: 'Pemisah Bagian', description: 'Sisipkan halaman kosong sebagai pemisah (divider) antar bab dokumen.', icon: 'minus' },
+      { title: 'Persiapan Cetak', description: 'Tambahkan halaman agar posisi halamannya tepat untuk pencetakan dua sisi (dupleks).', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Bisakah saya memilih ukuran halamannya?', answer: 'Ya, halaman kosong dapat menyesuaikan dengan ukuran halaman yang sudah ada atau menggunakan ukuran kustom.' },
+      { question: 'Bisakah saya menambahkan beberapa halaman kosong sekaligus?', answer: 'Ya, Anda bisa menambahkan berapa pun jumlah halaman kosong dalam satu waktu.' },
+      { question: 'Bisakah saya menambahkan halaman berwarna?', answer: 'Gunakan alat Warna Latar Belakang (Background Color) setelah menambahkan halaman kosong untuk memberikan warna.' },
+    ],
+  },
+
+  'reverse-pages': {
+    title: 'Balikkan Halaman',
+    metaDescription: 'Balikkan urutan halaman PDF. Tukar posisi halaman dokumen dari halaman paling akhir menjadi yang pertama.',
+    keywords: ['balikkan pdf', 'balik urutan halaman', 'balikan halaman', 'balikkan dokumen'],
+    description: `
+      <p>Balikkan Halaman (Reverse Pages) akan memutarbalikkan urutan halaman di dalam dokumen PDF Anda, di mana halaman terakhir akan menjadi halaman pertama dan halaman pertama menjadi yang terakhir. Sangat berguna untuk dokumen yang dipindai dengan urutan terbalik, atau untuk kebutuhan cetak tertentu.</p>
+      <p>Alat ini akan memproses keseluruhan dokumen atau hanya pada rentang halaman yang dipilih, tanpa merusak konten atau formatnya.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Halaman', description: 'Pilih apakah ingin membalikkan urutan untuk seluruh halaman atau pada rentang tertentu saja.' },
+      { step: 3, title: 'Balikkan dan Unduh', description: 'Klik Balikkan untuk menukar urutan halamannya lalu unduh file-nya.' },
+    ],
+    useCases: [
+      { title: 'Perbaiki Urutan Pindaian', description: 'Koreksi dokumen yang tidak sengaja dipindai dalam urutan yang terbalik.', icon: 'refresh-cw' },
+      { title: 'Persiapan Cetak', description: 'Balikkan urutan halaman untuk memenuhi kebutuhan pencetakan (printing) tertentu.', icon: 'printer' },
+      { title: 'Penyusunan Ulang Dokumen', description: 'Ubah urutan dokumen dengan cepat dari belakang ke depan untuk ditinjau.', icon: 'arrow-up-down' },
+    ],
+    faq: [
+      { question: 'Apakah daftar markah (bookmarks) akan ikut diperbarui?', answer: 'Ya, markah akan ikut diperbarui dan mengarah pada posisi halaman terbalik yang benar.' },
+      { question: 'Bisakah saya membalikkan beberapa halaman tertentu saja?', answer: 'Ya, Anda dapat memilih rentang halaman (page range) untuk dibalik urutannya.' },
+      { question: 'Apakah fungsinya sama dengan "Putar" (Rotate)?', answer: 'Tidak, Balikkan (Reverse) mengubah "urutan" halaman, sementara Putar (Rotate) mengubah "orientasi" atau posisi halamannya.' },
+    ],
+  },
+
+  'rotate-pdf': {
+    title: 'Putar PDF',
+    metaDescription: 'Putar halaman PDF. Ubah orientasi halaman sebesar 90, 180, atau 270 derajat.',
+    keywords: ['putar pdf', 'balik orientasi halaman pdf', 'rotasi pdf', 'perbaiki orientasi'],
+    description: `
+      <p>Putar PDF mengubah orientasi halaman dalam dokumen Anda sebesar 90, 180, atau 270 derajat. Alat ini sangat praktis untuk memperbaiki dokumen pindaian yang posisinya salah, memutar halaman lanskap, atau sekadar mengubah orientasinya agar lebih mudah dibaca.</p>
+      <p>Putar seluruh halaman secara bersamaan atau pilih halaman tertentu untuk diputar secara individual. Alat ini tidak mengubah kualitas maupun memformat isi dokumen Anda.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Sudut Putaran', description: 'Tentukan sudut putaran (90°, 180°, 270°) dan halaman mana saja yang ingin diputar.' },
+      { step: 3, title: 'Putar dan Unduh', description: 'Klik Putar untuk memproses perubahannya dan unduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Perbaiki Dokumen Pindaian', description: 'Koreksi orientasi atau posisi dokumen yang dipindai terbalik.', icon: 'rotate-cw' },
+      { title: 'Halaman Lanskap', description: 'Putar halaman yang berformat lanskap (horizontal) agar terlihat tegak dan mudah dibaca.', icon: 'monitor' },
+      { title: 'Orientasi Campuran', description: 'Seragamkan seluruh orientasi dokumen yang arahnya berbeda-beda.', icon: 'layout' },
+    ],
+    faq: [
+      { question: 'Bisakah saya memutar setiap halaman dengan derajat yang berbeda?', answer: 'Ya, Anda bisa menerapkan rotasi dengan arah putaran yang berbeda untuk halaman yang berbeda.' },
+      { question: 'Apakah memutar halaman akan mengurangi kualitas pencetakan?', answer: 'Tidak, memutar halaman hanya akan mengubah arah penampilannya, tidak mengurangi kualitas konten.' },
+      { question: 'Bisakah saya memutar halaman dengan sudut bebas (custom)?', answer: 'Untuk alat "Putar PDF" ini, rotasi dibatasi kelipatan 90 derajat (90, 180, 270). Gunakan alat "Putar Kustom" untuk memutar di luar derajat tersebut.' },
+    ],
+  },
+
+  'n-up-pdf': {
+    title: 'N-Up PDF',
+    metaDescription: 'Cetak beberapa halaman PDF dalam satu lembar kertas. Buat tata letak 2-up, 4-up, atau tata letak kisi kustom.',
+    keywords: ['n-up pdf', 'banyak halaman per lembar', 'pencetakan 2-up', 'penyusunan halaman'],
+    description: `
+      <p>N-Up PDF menyusun beberapa halaman dokumen dan menggabungkannya ke dalam satu lembar halaman. Alat ini dapat membuat tata letak jenis 2-up, 4-up, 6-up, 9-up, maupun format kustom. Sangat ideal untuk menghemat kertas saat dicetak atau jika Anda ingin membuat format selebaran (handout).</p>
+      <p>Pilih dari templat yang sudah ada atau buat sendiri pengaturannya. Alat ini akan menyesuaikan skala serta memosisikan halamannya secara otomatis untuk hasil yang optimal.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Tata Letak', description: 'Tentukan opsi 2-up, 4-up, 6-up, 9-up, atau gunakan kisi khusus (custom grid).' },
+      { step: 3, title: 'Buat dan Unduh', description: 'Klik Buat untuk menyusun PDF n-up-nya dan unduh.' },
+    ],
+    useCases: [
+      { title: 'Menghemat Kertas', description: 'Cetak beberapa halaman sekaligus dalam satu lembar kertas.', icon: 'leaf' },
+      { title: 'Membuat Selebaran', description: 'Buat selebaran dari banyak slide presentasi menjadi bentuk yang lebih ringkas.', icon: 'file-text' },
+      { title: 'Meninjau Dokumen', description: 'Cetak dokumen berukuran lebih kecil jika hanya digunakan untuk draft atau ditinjau ulang.', icon: 'eye' },
+    ],
+    faq: [
+      { question: 'Tata letak (layout) apa saja yang didukung?', answer: 'Tata letak berupa 2-up, 4-up, 6-up, 9-up, serta tata letak kisi (grid) yang bisa Anda atur sendiri.' },
+      { question: 'Bisakah saya menambahkan batas pemisah (border) di setiap halamannya?', answer: 'Ya, Anda dapat menambahkan batas pemisah (borders) serta jarak spasi (gutters) antar halaman yang digabung.' },
+      { question: 'Apakah urutan membacanya dipertahankan?', answer: 'Ya, halaman-halaman akan diurutkan secara wajar sesuai urutan membaca (dari kiri ke kanan, lalu atas ke bawah).' },
+    ],
+  },
+
+  'combine-single-page': {
+    title: 'Kombinasikan ke Satu Halaman',
+    metaDescription: 'Rangkai halaman PDF menjadi satu halaman yang tersambung. Buat dokumen satu halaman yang dapat digulir.',
+    keywords: ['kombinasi halaman', 'pdf halaman tunggal', 'rangkai halaman', 'gulir terus menerus'],
+    description: `
+      <p>Kombinasikan ke Satu Halaman (Combine to Single Page) merangkai semua halaman PDF menjadi satu halaman panjang yang utuh dan tersambung. Sangat sempurna jika Anda ingin membuat dokumen yang bisa digulir (scrolling) dengan halus, terutama untuk tampilan web atau bahan bacaan yang tidak ingin terputus-putus.</p>
+      <p>Halaman akan digabungkan secara vertikal lengkap dengan jarak spasi (spacing) yang bisa Anda atur. Hasil akhirnya adalah sebuah halaman panjang yang berisikan semua konten dari dokumen tersebut.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Atur Jarak Spasi', description: 'Tentukan jarak celah (gap) antara setiap halamannya.' },
+      { step: 3, title: 'Kombinasikan dan Unduh', description: 'Klik Kombinasikan untuk merangkai halaman ke dalam bentuk PDF halaman tunggal (single-page).' },
+    ],
+    useCases: [
+      { title: 'Dokumen Khusus Web', description: 'Buat file PDF panjang yang dapat digulir (scrolling) untuk disematkan pada sebuah website.', icon: 'globe' },
+      { title: 'Bahan Bacaan yang Mengalir', description: 'Ubah format halaman terpisah menjadi dokumen yang mengalir agar nyaman dibaca tanpa henti.', icon: 'scroll' },
+      { title: 'Konten Bentuk Panjang', description: 'Gabungkan seluruh halaman demi kelancaran saat membaca tulisan atau laporan yang sangat panjang.', icon: 'file-text' },
+    ],
+    faq: [
+      { question: 'Apakah ada batasan halamannya?', answer: 'Dokumen yang terlalu panjang mungkin saja terbatas oleh alokasi memori browser komputer Anda.' },
+      { question: 'Bisakah saya menyertakan batas/garis pemisah di antara setiap halamannya?', answer: 'Ya, Anda bisa menambahkan garis atau ruang kosong sebagai pembatas antar halaman aslinya.' },
+      { question: 'Apakah hasilnya bagus jika dicetak?', answer: 'Hasilnya jauh lebih optimal untuk dilihat di layar perangkat. Jika ingin dicetak, lebih baik gunakan alat "N-Up PDF".' },
+    ],
+  },
+'view-metadata': {
+    title: 'Lihat Metadata',
+    metaDescription: 'Lihat properti dokumen PDF. Lihat penulis, judul, tanggal, dan metadata lainnya.',
+    keywords: ['metadata pdf', 'properti dokumen', 'info pdf', 'lihat detail pdf'],
+    description: `
+      <p>Lihat Metadata akan menampilkan seluruh properti dokumen dan metadata dari file PDF Anda. Lihat nama penulis, judul, subjek, kata kunci, tanggal pembuatan, tanggal modifikasi, dan masih banyak lagi.</p>
+      <p>Sangat berguna untuk melakukan audit dokumen, memeriksa informasi file, atau memverifikasi keaslian dokumen.</p>
+      <p>Semua peninjauan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Lihat Properti', description: 'Lihat semua metadata yang ditampilkan dalam format yang terorganisir dengan rapi.' },
+      { step: 3, title: 'Ekspor Jika Perlu', description: 'Ekspor metadata sebagai file JSON secara opsional.' },
+    ],
+    useCases: [
+      { title: 'Audit Dokumen', description: 'Tinjau properti dokumen untuk keperluan kepatuhan (compliance).', icon: 'clipboard-check' },
+      { title: 'Verifikasi Keaslian', description: 'Periksa tanggal pembuatan dan informasi penulis.', icon: 'shield' },
+      { title: 'Informasi File', description: 'Dapatkan informasi terperinci mengenai file PDF.', icon: 'info' },
+    ],
+    faq: [
+      { question: 'Metadata apa saja yang ditampilkan?', answer: 'Judul, penulis, subjek, kata kunci, aplikasi pembuat, produsen (producer), tanggal, dan versi PDF.' },
+      { question: 'Bisakah saya mengedit metadatanya di sini?', answer: 'Gunakan alat Edit Metadata untuk mengubah properti dokumen.' },
+      { question: 'Apakah metadata XMP juga disertakan?', answer: 'Ya, baik metadata standar maupun XMP akan ditampilkan.' },
+    ],
+  },
+
+  'edit-metadata': {
+    title: 'Edit Metadata',
+    metaDescription: 'Edit properti dokumen PDF. Ubah judul, penulis, subjek, dan kata kunci.',
+    keywords: ['edit metadata pdf', 'ubah properti pdf', 'penulis pdf', 'info dokumen'],
+    description: `
+      <p>Edit Metadata memungkinkan Anda untuk memodifikasi properti dokumen di dalam file PDF Anda. Ubah judul, nama penulis, subjek, kata kunci, dan berbagai kolom metadata lainnya.</p>
+      <p>Sempurna untuk mengoreksi informasi dokumen, menambahkan atribusi yang tepat, atau mempersiapkan file sebelum disebarluaskan.</p>
+      <p>Semua pengeditan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Edit Properti', description: 'Ubah judul, penulis, subjek, kata kunci, dan kolom lainnya.' },
+      { step: 3, title: 'Simpan dan Unduh', description: 'Klik Simpan untuk menerapkan perubahan lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Tambahkan Atribusi', description: 'Tetapkan informasi penulis dan pembuat yang benar.', icon: 'user' },
+      { title: 'Optimasi SEO', description: 'Tambahkan kata kunci dan deskripsi agar mudah dicari.', icon: 'search' },
+      { title: 'Persiapan Dokumen', description: 'Siapkan dokumen dengan metadata yang tepat sebelum dibagikan.', icon: 'file-check' },
+    ],
+    faq: [
+      { question: 'Kolom apa saja yang bisa diedit?', answer: 'Kolom judul, penulis, subjek, kata kunci, pembuat (creator), dan produsen (producer).' },
+      { question: 'Bisakah saya menghapus semua metadata?', answer: 'Gunakan alat Hapus Metadata untuk melucuti semua properti dokumen sekaligus.' },
+      { question: 'Apakah tanggalnya bisa diedit?', answer: 'Tanggal pembuatan dan modifikasi akan diperbarui secara otomatis.' },
+    ],
+  },
+
+  'pdf-to-zip': {
+    title: 'PDF ke ZIP',
+    metaDescription: 'Kemas beberapa file PDF menjadi satu arsip ZIP. Kompres dan bundel file PDF.',
+    keywords: ['pdf ke zip', 'kompres pdf', 'bundel pdf', 'arsip pdf'],
+    description: `
+      <p>PDF ke ZIP akan mengemas beberapa file PDF menjadi satu buah arsip ZIP. Kompres dan bundel PDF Anda agar lebih mudah dibagikan, disimpan, atau dicadangkan (backup).</p>
+      <p>Alat ini membuat arsip terkompresi yang berisi seluruh file PDF Anda, sehingga mengurangi ukuran total dan menyederhanakan manajemen file.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan file Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF', description: 'Tarik dan lepas beberapa file PDF sekaligus atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Arsip', description: 'Atur nama arsip dan tingkat kompresinya secara opsional.' },
+      { step: 3, title: 'Buat dan Unduh', description: 'Klik Buat untuk menghasilkan arsip ZIP.' },
+    ],
+    useCases: [
+      { title: 'Berbagi File', description: 'Bundel beberapa PDF agar lebih mudah dibagikan sekaligus.', icon: 'share-2' },
+      { title: 'Pembuatan Cadangan', description: 'Buat cadangan yang terkompresi dari koleksi PDF Anda.', icon: 'archive' },
+      { title: 'Lampiran Email', description: 'Kombinasikan PDF ke dalam satu lampiran untuk dikirim melalui email.', icon: 'mail' },
+    ],
+    faq: [
+      { question: 'Berapa besar kompresi yang diterapkan?', answer: 'Kompresi ZIP biasanya mengurangi ukuran total sekitar 10-30%.' },
+      { question: 'Apakah ada batasan jumlah file?', answer: 'Anda dapat memasukkan hingga 100 PDF ke dalam satu arsip.' },
+      { question: 'Bisakah saya menambahkan kata sandi?', answer: 'Pembuatan ZIP yang dilindungi kata sandi saat ini belum didukung.' },
+    ],
+  },
+
+  'compare-pdfs': {
+    title: 'Bandingkan PDF',
+    metaDescription: 'Bandingkan dua dokumen PDF. Sorot perbedaan antara beberapa versi.',
+    keywords: ['bandingkan pdf', 'pdf diff', 'perbandingan dokumen', 'perbandingan versi'],
+    description: `
+      <p>Bandingkan PDF akan menganalisis dua dokumen PDF dan menyorot perbedaan yang ada di antara keduanya. Sempurna untuk meninjau revisi dokumen, memeriksa perubahan kontrak, atau memverifikasi pengeditan.</p>
+      <p>Lihat dokumen secara berdampingan atau dalam mode tumpang tindih (overlay) dengan setiap perbedaannya disorot. Alat ini akan mengidentifikasi perubahan teks, penambahan, maupun penghapusan.</p>
+      <p>Semua perbandingan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah Dua PDF', description: 'Unggah dokumen PDF versi asli dan versi yang dimodifikasi.' },
+      { step: 2, title: 'Bandingkan Dokumen', description: 'Lihat perbedaannya yang disorot dalam mode berdampingan (side-by-side) atau tumpang tindih (overlay).' },
+      { step: 3, title: 'Ekspor Hasil', description: 'Unduh laporan perbandingan atau PDF yang telah dianotasi.' },
+    ],
+    useCases: [
+      { title: 'Tinjauan Kontrak', description: 'Bandingkan berbagai versi kontrak untuk mengidentifikasi perubahan yang ada.', icon: 'file-text' },
+      { title: 'Revisi Dokumen', description: 'Tinjau setiap hasil pengeditan di antara beberapa versi dokumen.', icon: 'git-compare' },
+      { title: 'Jaminan Kualitas', description: 'Pastikan bahwa hanya perubahan yang diinginkan saja yang telah dilakukan.', icon: 'check-circle' },
+    ],
+    faq: [
+      { question: 'Jenis perbedaan apa saja yang dapat dideteksi?', answer: 'Penambahan, penghapusan, modifikasi teks, serta perubahan format.' },
+      { question: 'Bisakah saya membandingkan dokumen hasil pindaian?', answer: 'Dokumen pindaian harus diproses menggunakan OCR terlebih dahulu agar teksnya bisa dibandingkan.' },
+      { question: 'Apakah perbandingan visual (gambar) juga tersedia?', answer: 'Ya, mode overlay (tumpang tindih) akan menunjukkan perbedaan visual antar halamannya.' },
+    ],
+  },
+
+  'posterize-pdf': {
+    title: 'Posterisasi PDF',
+    metaDescription: 'Bagi halaman PDF berukuran besar menjadi potongan yang bisa dicetak. Buat poster dari halaman PDF.',
+    keywords: ['posterisasi pdf', 'potongan pdf', 'cetak format besar', 'poster pdf'],
+    description: `
+      <p>Posterisasi PDF memecah halaman PDF berukuran besar ke dalam potongan-potongan (tiles) kecil yang bisa dicetak pada kertas standar lalu dirangkai menjadi sebuah poster. Sempurna untuk mencetak diagram besar, peta, atau karya seni.</p>
+      <p>Atur ukuran kisi (grid) dan tumpang-tindih (overlap) untuk memudahkan perakitan. Alat ini secara otomatis akan menghitung dimensi setiap potongan untuk menyesuaikan dengan target ukuran output Anda.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas PDF berformat besar milik Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Potongan', description: 'Atur ukuran kisi, overlap (tumpang tindih), dan ukuran kertas cetak (output).' },
+      { step: 3, title: 'Buat dan Unduh', description: 'Klik Buat untuk menghasilkan potongan-potongan yang siap dicetak.' },
+    ],
+    useCases: [
+      { title: 'Pencetakan Poster', description: 'Cetak poster berukuran besar menggunakan kertas standar.', icon: 'maximize-2' },
+      { title: 'Pencetakan Peta', description: 'Cetak peta besar yang terbagi-bagi untuk dirangkai nantinya.', icon: 'map' },
+      { title: 'Reproduksi Karya Seni', description: 'Buat cetakan berukuran besar dari karya seni PDF.', icon: 'image' },
+    ],
+    faq: [
+      { question: 'Berapa jarak tumpang tindih (overlap) yang harus saya gunakan?', answer: 'Overlap sebesar 10-20mm sangat disarankan agar lebih mudah disejajarkan saat dirangkai.' },
+      { question: 'Bisakah saya menambahkan tanda potong (crop marks)?', answer: 'Ya, tanda potong dapat ditambahkan untuk membantu pemotongan dan penjajarannya.' },
+      { question: 'Ukuran kertas apa saja yang didukung?', answer: 'A4, Letter, A3, dan ukuran kustom lainnya juga didukung.' },
+    ],
+  },
+
+  // ==================== OPTIMIZE & REPAIR ====================
+  'fix-page-size': {
+    title: 'Perbaiki Ukuran Halaman',
+    metaDescription: 'Standarkan ukuran halaman PDF. Konversi semua halaman menjadi satu ukuran (dimensi) yang seragam.',
+    keywords: ['perbaiki ukuran halaman', 'standarisasi pdf', 'halaman seragam', 'ubah ukuran halaman pdf'],
+    description: `
+      <p>Perbaiki Ukuran Halaman akan menstandardisasi semua halaman di dalam PDF Anda ke dalam dimensi yang seragam. Ubah dokumen dengan ukuran campuran menjadi ukuran halaman yang konsisten untuk presentasi atau pencetakan yang profesional.</p>
+      <p>Pilih ukuran standar (A4, Letter, dll.) atau masukkan dimensi kustom. Konten akan diskalakan (diperbesar/diperkecil) atau diposisikan ke tengah agar pas dengan ukuran halaman yang baru.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Target Ukuran', description: 'Pilih ukuran kertas standar atau masukkan dimensi kustom.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Klik Terapkan untuk menstandardisasi halamannya lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Persiapan Cetak', description: 'Standarkan halaman untuk hasil cetak yang konsisten.', icon: 'printer' },
+      { title: 'Pembersihan Dokumen', description: 'Perbaiki dokumen yang ukuran halamannya tidak rata.', icon: 'file-check' },
+      { title: 'Dokumen Profesional', description: 'Buat dokumen seragam yang siap untuk disebarluaskan.', icon: 'briefcase' },
+    ],
+    faq: [
+      { question: 'Bagaimana penanganan pada kontennya?', answer: 'Konten akan diskalakan agar muat (fit) atau diposisikan ke tengah (center) pada halaman ukuran baru.' },
+      { question: 'Bisakah saya mempertahankan rasio aspeknya?', answer: 'Ya, konten dapat diskalakan secara proporsional agar muat dengan sempurna.' },
+      { question: 'Ukuran standar apa saja yang tersedia?', answer: 'A4, A3, Letter, Legal, serta beberapa ukuran umum lainnya.' },
+    ],
+  },
+
+  'linearize-pdf': {
+    title: 'Linearisasi PDF',
+    metaDescription: 'Optimalkan PDF untuk tampilan web yang cepat. Aktifkan pemuatan secara bertahap (progressive loading).',
+    keywords: ['linearisasi pdf', 'tampilan web cepat', 'optimasi pdf', 'pdf progresif'],
+    description: `
+      <p>Linearisasi PDF mengoptimalkan dokumen Anda demi tampilan web yang lebih cepat. PDF yang telah dilinearisasi dapat mulai ditampilkan bahkan sebelum keseluruhan file selesai diunduh, sehingga meningkatkan pengalaman pengguna (UX).</p>
+      <p>Proses ini, yang juga dikenal sebagai "Tampilan Web Cepat" (Fast Web View), menyusun ulang struktur PDF agar dapat dimuat secara bertahap di web browser.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Linearisasi', description: 'Klik Linearisasi untuk mengoptimalkan tampilannya untuk web.' },
+      { step: 3, title: 'Unduh', description: 'Unduh file PDF Anda yang telah dioptimalkan.' },
+    ],
+    useCases: [
+      { title: 'Penerbitan Web', description: 'Optimalkan PDF agar cepat diunduh dari situs web.', icon: 'globe' },
+      { title: 'Lampiran Email', description: 'Buat file PDF yang lebih cepat dibuka oleh penerimanya.', icon: 'mail' },
+      { title: 'Dokumen Online', description: 'Tingkatkan pengalaman membaca dokumen secara online.', icon: 'cloud' },
+    ],
+    faq: [
+      { question: 'Apa itu linearisasi?', answer: 'Linearisasi mengatur ulang struktur data PDF agar bisa dimuat secara progresif.' },
+      { question: 'Apakah hal ini mengurangi ukuran file?', answer: 'Linearisasi terkadang dapat sedikit memperbesar ukuran file akibat adanya penambahan struktur.' },
+      { question: 'Apakah ini kompatibel dengan semua alat penampil (viewer)?', answer: 'Ya, PDF yang dilinearisasi dapat dibuka di semua alat pembaca PDF (PDF readers).' },
+    ],
+  },
+
+  'page-dimensions': {
+    title: 'Dimensi Halaman',
+    metaDescription: 'Analisis ukuran halaman PDF. Lihat dimensi dari seluruh halaman di dalam dokumen Anda.',
+    keywords: ['ukuran halaman pdf', 'dimensi halaman', 'pengukuran pdf', 'ukuran dokumen'],
+    description: `
+      <p>Dimensi Halaman akan menganalisis dan menampilkan ukuran setiap halaman di dokumen PDF Anda. Lihat dimensinya dalam berbagai satuan (inci, mm, poin) dan identifikasi halaman-halaman yang berukuran tidak standar.</p>
+      <p>Sangat berguna untuk persiapan pencetakan, analisis dokumen, atau mengidentifikasi ukuran halaman yang tidak konsisten.</p>
+      <p>Semua analisis terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Lihat Dimensi', description: 'Lihat ukuran halaman yang ditampilkan untuk seluruh halamannya.' },
+      { step: 3, title: 'Ekspor Laporan', description: 'Ekspor data dimensinya dalam format JSON secara opsional.' },
+    ],
+    useCases: [
+      { title: 'Perencanaan Cetak', description: 'Periksa kembali ukuran halamannya sebelum proses mencetak.', icon: 'printer' },
+      { title: 'Analisis Dokumen', description: 'Identifikasi halaman-halaman dengan dimensi yang tidak lazim.', icon: 'search' },
+      { title: 'Kontrol Kualitas', description: 'Verifikasi apakah ukuran halaman sudah sesuai dengan spesifikasinya.', icon: 'check-circle' },
+    ],
+    faq: [
+      { question: 'Satuan ukuran apa saja yang tersedia?', answer: 'Inci, milimeter, sentimeter, dan poin.' },
+      { question: 'Apakah hal ini juga menunjukkan orientasinya?', answer: 'Ya, indikator orientasi potret (portrait) atau lanskap (landscape) juga ditampilkan.' },
+      { question: 'Bisakah saya memperbaiki ukurannya yang tidak seragam?', answer: 'Gunakan alat Perbaiki Ukuran Halaman untuk menstandardisasi dimensi tersebut.' },
+    ],
+  },
+
+  'remove-restrictions': {
+    title: 'Hapus Batasan',
+    metaDescription: 'Hapus berbagai batasan di dalam PDF. Buka kunci agar dokumen bisa dicetak, disalin, dan diedit.',
+    keywords: ['hapus batasan pdf', 'buka kunci pdf', 'izin pdf', 'bebaskan pdf'],
+    description: `
+      <p>Hapus Batasan akan membuka kunci pada PDF yang dibatasi hak aksesnya sehingga tidak bisa dicetak, disalin, atau diedit. Alat ini menghapus batasan kata sandi pemilik (owner password) namun tetap menjaga isi dokumennya secara utuh.</p>
+      <p>Catatan: Alat ini tidak dapat menghapus kata sandi pengguna (user password) yang mencegah dokumen tersebut untuk dibuka. Gunakan alat Dekripsi PDF untuk file yang dikunci menggunakan kata sandi pengguna.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF yang Dibatasi', description: 'Tarik dan lepas file PDF Anda yang dibatasi hak aksesnya atau klik untuk memilih.' },
+      { step: 2, title: 'Hapus Batasan', description: 'Klik Hapus untuk membuka kunci dokumen tersebut.' },
+      { step: 3, title: 'Unduh', description: 'Unduh file PDF yang batasan aksesnya sudah dibebaskan.' },
+    ],
+    useCases: [
+      { title: 'Bebaskan Pencetakan', description: 'Buka kunci file PDF yang tidak mengizinkan pencetakan (printing).', icon: 'printer' },
+      { title: 'Bebaskan Penyalinan', description: 'Izinkan pemilihan (selection) dan penyalinan teks pada dokumen.', icon: 'copy' },
+      { title: 'Bebaskan Pengeditan', description: 'Hapus batasan yang mencegah pengeditan di dalam dokumen.', icon: 'edit' },
+    ],
+    faq: [
+      { question: 'Apakah ini tindakan yang legal?', answer: 'Menghapus batasan dari dokumen milik Anda sendiri atau yang hak ciptanya Anda miliki pada umumnya merupakan tindakan yang legal.' },
+      { question: 'Bisakah alat ini menghapus kata sandi pembuka (open password)?', answer: 'Tidak, gunakan alat Dekripsi PDF untuk membuka dokumen yang dilindungi kata sandi.' },
+      { question: 'Apakah isinya akan terpengaruh?', answer: 'Tidak, hanya pembatasannya saja yang dihapus; isi dokumennya akan tetap tidak berubah.' },
+    ],
+  },
+
+  'repair-pdf': {
+    title: 'Perbaiki PDF',
+    metaDescription: 'Perbaiki file PDF yang rusak (corrupted). Pulihkan dan perbaiki dokumen yang tidak bisa dibuka.',
+    keywords: ['perbaiki pdf', 'betulkan pdf', 'pulihkan pdf', 'pdf rusak'],
+    description: `
+      <p>Perbaiki PDF berupaya untuk membetulkan file PDF yang rusak (corrupted). Alat ini menganalisis struktur dokumen dan membangunnya kembali (rebuild) untuk memulihkan isi konten sebanyak mungkin.</p>
+      <p>Sangat berguna untuk menyelamatkan file yang tidak mau dibuka, file yang menampilkan pesan kesalahan (error), atau yang kehilangan sebagian konten akibat kerusakan data (corruption).</p>
+      <p>Semua perbaikan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF yang Rusak', description: 'Tarik dan lepas file PDF Anda yang rusak atau klik untuk memilih.' },
+      { step: 2, title: 'Perbaiki Dokumen', description: 'Klik Perbaiki untuk mencoba melakukan pemulihan.' },
+      { step: 3, title: 'Unduh', description: 'Unduh file PDF yang telah berhasil diperbaiki (jika prosesnya berhasil).' },
+    ],
+    useCases: [
+      { title: 'Pemulihan File', description: 'Pulihkan PDF yang tidak bisa dibuka secara normal.', icon: 'refresh-cw' },
+      { title: 'Perbaiki Pesan Error', description: 'Perbaiki file yang terus menerus menampilkan pesan kesalahan.', icon: 'wrench' },
+      { title: 'Kembalikan Konten', description: 'Pulihkan konten dari file yang rusak sebagian.', icon: 'file-check' },
+    ],
+    faq: [
+      { question: 'Bisakah semua PDF diperbaiki?', answer: 'Tingkat keberhasilannya sangat bergantung pada jenis dan seberapa parah kerusakan datanya.' },
+      { question: 'Apakah semua isinya bisa dipulihkan?', answer: 'Alat ini memulihkan sebanyak yang ia bisa; file yang rusaknya parah kemungkinan besar akan mengalami kehilangan beberapa data.' },
+      { question: 'Haruskah saya tetap menyimpan file aslinya?', answer: 'Ya, selalu simpan file aslinya untuk cadangan (backup).' },
+    ],
+  },
+
+  // ==================== SECURE PDF ====================
+  'encrypt-pdf': {
+    title: 'Enkripsi PDF',
+    metaDescription: 'Lindungi file PDF dengan kata sandi. Tambahkan enkripsi dan atur izin akses (permissions).',
+    keywords: ['enkripsi pdf', 'kata sandi pdf', 'amankan pdf', 'pengamanan pdf'],
+    description: `
+      <p>Enkripsi PDF menambahkan perlindungan kata sandi dan enkripsi ke dalam dokumen PDF Anda. Atur kata sandi pengguna untuk mencegah dokumen dibuka, serta kata sandi pemilik untuk membatasi izin (permissions) seperti mencetak dan menyalin dokumen.</p>
+      <p>Pilih dari beberapa tingkat enkripsi (AES 128-bit atau AES 256-bit) yang sesuai dengan berbagai kebutuhan keamanan (security) Anda.</p>
+      <p>Semua enkripsi terjadi di browser Anda, memastikan dokumen maupun kata sandi Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Atur Kata Sandi', description: 'Masukkan kata sandi pengguna dan/atau kata sandi pemilik. Konfigurasikan perizinannya.' },
+      { step: 3, title: 'Enkripsi dan Unduh', description: 'Klik Enkripsi untuk mengamankan file PDF Anda lalu unduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Dokumen Rahasia', description: 'Lindungi berbagai dokumen bisnis yang sensitif.', icon: 'lock' },
+      { title: 'File Pribadi', description: 'Amankan dokumen pribadi seperti file pengembalian pajak.', icon: 'shield' },
+      { title: 'Distribusi Terkendali', description: 'Batasi apa saja yang boleh dilakukan penerima terhadap dokumen tersebut.', icon: 'key' },
+    ],
+    faq: [
+      { question: 'Apa bedanya kata sandi pengguna dan pemilik?', answer: 'Kata sandi pengguna mencegah agar file tidak bisa dibuka; sedangkan kata sandi pemilik mengontrol hak akses / izin (permissions).' },
+      { question: 'Enkripsi apa yang digunakan?', answer: 'Tersedia pilihan enkripsi tingkat lanjut AES 128-bit atau AES 256-bit.' },
+      { question: 'Bisakah saya membatasi izin tanpa perlu kata sandi pengguna?', answer: 'Ya, Anda bisa mengatur kata sandi pemilik saja guna membatasi izinnya tanpa menghalangi orang untuk membukanya.' },
+    ],
+  },
+
+  'sanitize-pdf': {
+    title: 'Bersihkan PDF',
+    metaDescription: 'Hapus data tersembunyi dari PDF. Bersihkan metadata, skrip, dan informasi sensitif.',
+    keywords: ['bersihkan pdf', 'sanitize pdf', 'hapus data tersembunyi', 'privasi pdf'],
+    description: `
+      <p>Bersihkan PDF (Sanitize PDF) akan menghapus data yang tersembunyi serta informasi yang berpotensi sensitif dari dokumen Anda. Alat ini dapat melucuti metadata, skrip tersemat (embedded scripts), lampiran, komentar, dan berbagai konten tersembunyi lainnya.</p>
+      <p>Ini adalah hal yang wajib dilakukan sebelum Anda mempersiapkan sebuah dokumen untuk diedarkan ke publik, atau ketika menjaga privasi adalah sebuah keharusan.</p>
+      <p>Semua pembersihan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Pilih Data yang Akan Dihapus', description: 'Pilih jenis-jenis data tersembunyi yang akan dilucuti.' },
+      { step: 3, title: 'Bersihkan dan Unduh', description: 'Klik Bersihkan untuk membersihkan file PDF lalu unduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Rilis ke Publik', description: 'Siapkan dokumen agar aman untuk diedarkan kepada khalayak umum.', icon: 'globe' },
+      { title: 'Perlindungan Privasi', description: 'Hapus informasi personal sebelum dokumen dibagikan.', icon: 'shield' },
+      { title: 'Kepatuhan Keamanan', description: 'Penuhi segala persyaratan keamanan untuk penanganan dokumen.', icon: 'check-circle' },
+    ],
+    faq: [
+      { question: 'Data tersembunyi apa saja yang dihapus?', answer: 'Metadata, skrip, lampiran, komentar, data formulir, serta lapisan (layer) yang tersembunyi.' },
+      { question: 'Apakah konten yang terlihat (tampak) juga akan terpengaruh?', answer: 'Tidak, hanya data yang tersembunyi saja yang akan dihapus; konten yang terlihat akan tetap utuh.' },
+      { question: 'Apakah proses ini bisa dibatalkan?', answer: 'Tidak, data yang telah dihapus tidak dapat dipulihkan. Pastikan Anda memiliki cadangan aslinya.' },
+    ],
+  },
+
+  'find-and-redact': {
+    title: 'Cari dan Redaksi',
+    metaDescription: 'Cari dan redaksi teks di seluruh halaman PDF. Lakukan redaksi massal pada informasi sensitif seperti nomor rekening, nama, dan lain-lain.',
+    keywords: ['redaksi pdf', 'cari dan redaksi', 'redaksi massal', 'hapus teks', 'sensor pdf', 'sembunyikan data sensitif'],
+    description: `
+      <p>Cari dan Redaksi memungkinkan Anda mencari teks, angka, atau pola tertentu di seluruh halaman PDF Anda dan meredaksi (menyensor/menghapus) semua kecocokannya secara sekaligus. Sangat sempurna untuk menyembunyikan informasi sensitif seperti nomor rekening, nama, alamat, maupun data rahasia lainnya.</p>
+      <p>Pratinjau semua kecocokan (matches) sebelum redaksinya diterapkan, lalu pilih secara selektif mana saja yang benar-benar ingin Anda redaksi. Alat ini mendukung pencarian case-sensitive, kecocokan kata secara utuh (whole word), dan regular expressions (regex) untuk pencarian pola tingkat lanjut.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Cari Teks', description: 'Masukkan teks, angka, atau pola regex yang ingin Anda temukan dan redaksi.' },
+      { step: 3, title: 'Tinjau dan Pilih', description: 'Pratinjau semua kecocokan yang ditemukan dan tentukan mana yang ingin disensor (redact).' },
+      { step: 4, title: 'Terapkan Redaksi', description: 'Sesuaikan tampilan redaksinya lalu terapkan ke kecocokan teks yang Anda pilih.' },
+    ],
+    useCases: [
+      { title: 'Kepatuhan Privasi', description: 'Redaksi informasi personal demi memenuhi standar regulasi seperti GDPR, HIPAA, dll.', icon: 'shield' },
+      { title: 'Dokumen Hukum', description: 'Hapus data rahasia dari berbagai dokumen legal sebelum membagikannya.', icon: 'scale' },
+      { title: 'Catatan Keuangan', description: 'Redaksi nomor rekening, NIK (SSN), atau data finansial dari rekening koran.', icon: 'credit-card' },
+    ],
+    faq: [
+      { question: 'Apakah redaksinya bersifat permanen?', answer: 'Ya, redaksi (redaction) menghapus teks yang mendasarinya secara permanen. Konten aslinya tidak akan dapat dipulihkan. Selalu simpan file cadangannya.' },
+      { question: 'Bisakah saya meredaksi gambar atau teks hasil pindaian (scan)?', answer: 'Alat ini bekerja pada PDF berbasis teks. Untuk dokumen hasil scan, Anda memerlukan alat redaksi manual berbasis area gambar.' },
+      { question: 'Bisakah saya menyesuaikan tampilan kotak redaksinya?', answer: 'Ya, Anda dapat mengatur warnanya, menambahkan bingkai, serta menambahkan teks pengganti seperti "[DIREDAKSI]".' },
+      { question: 'Bagaimana cara kerja pencarian regex?', answer: 'Aktifkan "Gunakan Regular Expression" untuk melakukan pencarian berpola regex. Contohnya, menggunakan \\d{4}-\\d{4}-\\d{4}-\\d{4} untuk mencari kumpulan nomor kartu kredit.' },
+    ],
+  },
+
+  'decrypt-pdf': {
+    title: 'Dekripsi PDF',
+    metaDescription: 'Hapus kata sandi dari file PDF. Buka kunci (unlock) dokumen yang dilindungi kata sandi.',
+    keywords: ['dekripsi pdf', 'hapus kata sandi pdf', 'buka kunci pdf', 'penghapus kata sandi pdf'],
+    description: `
+      <p>Dekripsi PDF akan menghapus perlindungan kata sandi dari dokumen PDF. Cukup masukkan kata sandi yang valid saat ini untuk membuka kunci file tersebut, dan buatlah salinan file baru yang tidak lagi diproteksi.</p>
+      <p>Alat ini mensyaratkan Anda harus mengetahui kata sandi saat ini. Alat ini tidak dapat meretas (crack) atau melewati kata sandi yang tidak diketahui.</p>
+      <p>Semua dekripsi terjadi di browser Anda, memastikan kata sandi maupun dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF yang Dilindungi', description: 'Tarik dan lepas file PDF Anda yang dilindungi kata sandi.' },
+      { step: 2, title: 'Masukkan Kata Sandi', description: 'Ketikkan kata sandi yang berlaku saat ini pada dokumen tersebut.' },
+      { step: 3, title: 'Dekripsi dan Unduh', description: 'Klik Dekripsi untuk menghapus perlindungannya dan unduh file PDF barunya.' },
+    ],
+    useCases: [
+      { title: 'Hapus Sandi Lama', description: 'Buka kunci dokumen ketika perlindungan kata sandi tidak lagi diperlukan.', icon: 'unlock' },
+      { title: 'Permudah Akses', description: 'Buat salinan file tanpa kunci agar lebih mudah dibagikan kepada rekan.', icon: 'share-2' },
+      { title: 'Pengarsipan Dokumen', description: 'Hapus seluruh kata sandi sebelum dokumen masuk tahap penyimpanan/pengarsipan jangka panjang.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Bisakah alat ini meretas (crack) kata sandi yang tidak saya ketahui?', answer: 'Tidak, Anda wajib mengetahui kata sandi saat ini untuk melakukan dekripsi.' },
+      { question: 'Apakah file aslinya akan dimodifikasi?', answer: 'Tidak, alat ini akan membuat salinan dokumen baru yang tidak terproteksi.' },
+      { question: 'Bagaimana jika saya lupa kata sandinya?', answer: 'Sayangnya, kami tidak dapat memulihkan kata sandi yang terlupa.' },
+    ],
+  },
+
+  'flatten-pdf': {
+    title: 'Ratakan PDF (Flatten)',
+    metaDescription: 'Ratakan (flatten) form dan anotasi pada PDF. Jadikan isinya bersifat statis dan tidak bisa diedit lagi.',
+    keywords: ['ratakan pdf', 'flatten pdf', 'ratakan form', 'ratakan anotasi', 'pdf tidak bisa diedit'],
+    description: `
+      <p>Ratakan PDF (Flatten PDF) akan mengubah berbagai elemen interaktif—seperti kolom formulir (form fields) dan anotasi—menjadi konten statis. File PDF yang diratakan secara visual akan terlihat sama, namun elemen-elemen tersebut tidak bisa diedit lagi.</p>
+      <p>Sangat cocok untuk menyelesaikan (finalisasi) pengisian formulir, mempertahankan anotasi secara permanen, atau membuat dokumen dengan versi akhir yang tidak dapat diubah-ubah.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda yang memiliki kolom form atau anotasi.' },
+      { step: 2, title: 'Pilih yang Akan Diratakan', description: 'Pilih apakah ingin meratakan kolom form, anotasi, atau keduanya.' },
+      { step: 3, title: 'Ratakan dan Unduh', description: 'Klik Ratakan untuk membuat versi PDF yang statis.' },
+    ],
+    useCases: [
+      { title: 'Finalisasi Formulir', description: 'Kunci data isian formulir untuk mencegah diubah oleh orang lain.', icon: 'lock' },
+      { title: 'Pertahankan Anotasi', description: 'Jadikan anotasi dan komentar melekat permanen di dalam dokumen.', icon: 'check-circle' },
+      { title: 'Pengarsipan Dokumen', description: 'Buat dokumen versi statis (non-editable) untuk tujuan pengarsipan.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Apakah proses "meratakan" ini bisa di-undo?', answer: 'Tidak, meratakan (flattening) bersifat permanen. Selalu simpan file cadangannya.' },
+      { question: 'Apakah tampilannya akan berubah?', answer: 'Tidak, dokumen akan tampak sama persis, tetapi kehilangan fitur interaktifnya (tidak bisa diklik/diedit).' },
+      { question: 'Apakah ukuran filenya akan berkurang?', answer: 'Terkadang ya, karena struktur elemen interaktifnya dikonversi menjadi elemen statis yang lebih sederhana.' },
+    ],
+  },
+
+  'remove-metadata': {
+    title: 'Hapus Metadata',
+    metaDescription: 'Lucuti metadata dari file PDF. Hapus penulis, tanggal, dan berbagai properti dokumen.',
+    keywords: ['hapus metadata pdf', 'lucuti metadata', 'privasi pdf', 'pdf anonim'],
+    description: `
+      <p>Hapus Metadata (Remove Metadata) akan melucuti semua properti dan metadata dokumen dari file PDF Anda. Hapus nama penulis, tanggal pembuatan, info perangkat lunak (software), serta berbagai data pengidentifikasi (identifying data) lainnya.</p>
+      <p>Hal ini sangat krusial untuk menjaga privasi saat Anda ingin membagikan dokumen ke pihak luar, atau saat metadata tersebut dapat mengungkap sebuah informasi sensitif.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Hapus Metadata', description: 'Klik Hapus untuk melucuti semua metadatanya.' },
+      { step: 3, title: 'Unduh', description: 'Unduh file PDF Anda yang telah bersih dari metadata.' },
+    ],
+    useCases: [
+      { title: 'Perlindungan Privasi', description: 'Hapus semua informasi personal sebelum membagikan dokumen ke pihak luar.', icon: 'shield' },
+      { title: 'Dokumen Anonim', description: 'Buat file dokumen tanpa menyebutkan atribusi nama penulis aslinya.', icon: 'user-x' },
+      { title: 'Distribusi Bersih', description: 'Edarkan dokumen tanpa membawa jejak metadata bawaan dari perangkat Anda.', icon: 'send' },
+    ],
+    faq: [
+      { question: 'Metadata apa saja yang akan dihapus?', answer: 'Penulis, judul, subjek, kata kunci, daftar penanggalan, alat pembuat, hingga informasi alat produsennya.' },
+      { question: 'Apakah metadata XMP juga akan dihapus?', answer: 'Ya, baik metadata standar maupun metadata berformat XMP akan dilucuti semua.' },
+      { question: 'Apakah isi (konten) dokumennya juga akan terpengaruh?', answer: 'Tidak, alat ini hanya melucuti metadatanya; isi dokumen tetap sama seperti aslinya.' },
+    ],
+  },
+
+  'change-permissions': {
+    title: 'Ubah Izin (Permissions)',
+    metaDescription: 'Ubah kontrol izin dokumen PDF. Atur hak akses untuk pencetakan, penyalinan, serta pengeditan.',
+    keywords: ['izin pdf', 'ubah akses pdf', 'batasi pdf', 'keamanan pdf'],
+    description: `
+      <p>Ubah Izin (Change Permissions) akan mengubah kontrol akses (access controls) di dalam dokumen PDF Anda. Aktifkan atau nonaktifkan fitur untuk mencetak, menyalin isi, mengedit, serta menambah anotasi (permissions).</p>
+      <p>Tetapkan kata sandi pemilik (owner password) agar batasan-batasan tersebut berlaku secara teguh. Penerima (recipient) tetap bisa melihat dokumennya tetapi memiliki batasan terhadap apa yang boleh mereka lakukan pada file tersebut.</p>
+      <p>Semua pemrosesan terjadi di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Atur Perizinan', description: 'Centang atau hilangkan centang untuk opsi pencetakan, penyalinan, pengeditan, serta anotasi.' },
+      { step: 3, title: 'Terapkan dan Unduh', description: 'Tetapkan kata sandi pemilik lalu unduh PDF yang sudah Anda batasi hak aksesnya.' },
+    ],
+    useCases: [
+      { title: 'Cegah Penyalinan', description: 'Nonaktifkan fitur pemilihan (selection) dan salin teks demi melindungi konten berhak cipta.', icon: 'copy' },
+      { title: 'Kontrol Pencetakan', description: 'Izinkan atau blokir kemampuan dokumen tersebut untuk dicetak.', icon: 'printer' },
+      { title: 'Batasi Pengeditan', description: 'Blokir kemampuan penerima untuk mengubah atau memodifikasi file dokumen Anda.', icon: 'edit-3' },
+    ],
+    faq: [
+      { question: 'Apakah saya membutuhkan sebuah kata sandi?', answer: 'Sebuah kata sandi pemilik (owner password) diwajibkan untuk menerapkan batasan-batasan ini secara efektif.' },
+      { question: 'Bisakah batasan/izin tersebut dihilangkan kelak?', answer: 'Ya, dengan memasukkan kata sandi pemilik yang benar, atau dengan menggunakan alat Hapus Batasan.' },
+      { question: 'Apakah batasan tersebut dapat terbaca (kompatibel) di semua alat pembaca PDF?', answer: 'Sebagian besar PDF reader profesional akan menghormati batasan yang diatur ini, tetapi ada juga beberapa penampil sederhana yang mungkin tidak memberlakukannya.' },
+    ],
+  },
+  'pdf-to-docx': {
+    title: 'PDF ke Word',
+    metaDescription: 'Konversi PDF menjadi dokumen Word (DOCX) yang dapat diedit. Pertahankan pemformatan dan tata letak.',
+    keywords: ['pdf ke word', 'konversi pdf ke docx', 'pdf ke doc', 'pdf dapat diedit'],
+    description: `
+      <p>PDF ke Word mengonversi dokumen PDF Anda menjadi file Microsoft Word (DOCX) yang dapat diedit. Alat ini mempertahankan tata letak asli, pemformatan, gambar, dan alur teksnya.</p>
+      <p>Edit konten PDF Anda dengan mudah di Word tanpa perlu mengetik ulang. Sangat sempurna untuk kontrak, laporan, dan resume (CV).</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda menggunakan teknologi WebAssembly, memastikan dokumen Anda tidak pernah meninggalkan perangkat Anda.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konversi', description: 'Tunggu proses konversinya hingga selesai.' },
+      { step: 3, title: 'Unduh Dokumen Word', description: 'Unduh file DOCX Anda yang sudah bisa diedit sepenuhnya.' },
+    ],
+    useCases: [
+      { title: 'Edit Kontrak', description: 'Konversi kontrak PDF ke Word untuk proses pengeditan dan revisi.', icon: 'file-text' },
+      { title: 'Pembaruan Resume', description: 'Perbarui resume PDF lama Anda dengan mengonversinya ke Word.', icon: 'user' },
+      { title: 'Repurposing Konten', description: 'Ekstrak teks dari laporan PDF untuk digunakan pada dokumen lain.', icon: 'copy' },
+    ],
+    faq: [
+      { question: 'Apakah format aslinya dipertahankan?', answer: 'Ya, alat ini berupaya mempertahankan tata letak, font, dan gambar semirip mungkin dengan aslinya.' },
+      { question: 'Bisakah saya mengonversi PDF hasil pindaian (scan)?', answer: 'PDF pindaian akan dikonversi sebagai gambar di dalam Word, kecuali jika Anda menggunakan alat OCR terlebih dahulu.' },
+      { question: 'Apakah hasilnya kompatibel dengan Word?', answer: 'Ya, outputnya adalah file .docx standar yang sepenuhnya kompatibel dengan Microsoft Word dan Google Docs.' },
+    ],
+  },
+
+  'pdf-to-markdown': {
+    title: 'PDF ke Markdown',
+    metaDescription: 'Konversi PDF ke format Markdown. Ekstrak teks dan pertahankan pemformatan seperti judul (heading) dan daftar (list).',
+    keywords: ['pdf ke markdown', 'konversi pdf ke md', 'ekstraksi teks pdf', 'konverter markdown', 'pdf ke teks'],
+    description: `
+      <p>PDF ke Markdown mengonversi dokumen PDF Anda menjadi file Markdown yang bersih dan terstruktur dengan baik. Alat ini mengekstrak konten teks secara cerdas dan berupaya mempertahankan format seperti judul (headings), daftar (lists), dan paragraf.</p>
+      <p>Sempurna untuk mengonversi dokumen PDF ke format yang dapat diedit untuk kebutuhan dokumentasi, pencatatan, atau sistem manajemen konten (CMS) yang mendukung Markdown.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Atur rentang halaman, pilih untuk menyertakan nomor halaman, dan atur pemisah baris (line breaks).' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Klik Konversi untuk menghasilkan file Markdown Anda lalu unduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Dokumentasi', description: 'Konversi panduan dan manual PDF ke Markdown untuk dokumentasi yang terkontrol versinya (version-controlled).', icon: 'file-text' },
+      { title: 'Pencatatan (Note Taking)', description: 'Ekstrak konten dari artikel atau buku PDF untuk sistem pencatatan Anda.', icon: 'edit-3' },
+      { title: 'Migrasi Konten', description: 'Migrasikan konten PDF ke platform CMS yang mendukung format Markdown.', icon: 'copy' },
+    ],
+    faq: [
+      { question: 'Apakah formatnya dipertahankan?', answer: 'Alat ini berusaha mendeteksi judul berdasarkan ukuran font dan mendeteksi daftar berpoin/bernomor. Tata letak yang sangat kompleks mungkin memerlukan sedikit penyesuaian manual.' },
+      { question: 'Bisakah saya mengonversi halaman tertentu saja?', answer: 'Ya, Anda dapat menentukan rentang halaman (misal: "1-3, 5, 7") untuk mengonversi halaman-halaman tersebut saja.' },
+      { question: 'Apakah ini berfungsi untuk PDF pindaian?', answer: 'PDF pindaian hanya berisi gambar, bukan teks. Gunakan alat OCR kami terlebih dahulu untuk mengekstrak teksnya sebelum dikonversi ke Markdown.' },
+    ],
+  },
+
+  // ==================== NEW TOOLS ====================
+  'deskew-pdf': {
+    title: 'Luruskan PDF (Deskew)',
+    metaDescription: 'Luruskan halaman PDF pindaian atau halaman yang miring secara otomatis. Perbaiki dokumen miring dengan deteksi sudut presisi.',
+    keywords: ['luruskan pdf', 'deskew pdf', 'perbaiki pindaian miring', 'putar pdf otomatis', 'koreksi sudut pdf'],
+    description: `
+      <p>Luruskan PDF (Deskew PDF) secara otomatis mendeteksi dan mengoreksi halaman yang miring atau tidak rata pada dokumen PDF Anda menggunakan analisis varian profil proyeksi yang canggih. Ini sangat penting untuk dokumen pindaian yang posisinya tidak lurus saat masuk ke mesin pemindai.</p>
+      <p>Alat ini menganalisis teks dan perataan konten pada berbagai sudut untuk menemukan tingkat rotasi yang paling optimal, lalu menerapkan koreksinya. Anda bisa menyesuaikan ambang batas sensitivitas (1-30) dan pengaturan DPI (72-300) untuk hasil yang lebih baik.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda menggunakan teknologi WebAssembly, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF pindaian Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Pengaturan', description: 'Sesuaikan sensitivitas ambang batas dan DPI jika diperlukan untuk deteksi yang lebih baik.' },
+      { step: 3, title: 'Proses dan Unduh', description: 'Klik Luruskan untuk mengoreksi posisi halaman lalu unduh PDF yang telah diperbaiki.' },
+    ],
+    useCases: [
+      { title: 'Dokumen Pindaian', description: 'Perbaiki halaman yang dipindai dalam keadaan miring dari mesin scanner.', icon: 'scan' },
+      { title: 'Pindaian Ponsel', description: 'Koreksi foto dokumen yang miring saat difoto menggunakan ponsel pintar.', icon: 'smartphone' },
+      { title: 'Restorasi Arsip', description: 'Luruskan kembali arsip pindaian lawas agar lebih rapi dan mudah dibaca.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Seberapa akurat deteksi sudutnya?', answer: 'Alat ini menggunakan analisis varian profil proyeksi untuk mendeteksi sudut kemiringan hingga ±10 derajat dengan akurasi tinggi. Alat ini otomatis melewati halaman dengan kemiringan kurang dari 0,3 derajat.' },
+      { question: 'Apakah kualitas teks akan terpengaruh?', answer: 'Untuk rotasi dengan kelipatan 90 derajat, tidak akan ada penurunan kualitas. Untuk sudut lainnya, alat ini akan membulatkannya ke derajat terdekat dan mempertahankan kualitas sebaik mungkin.' },
+      { question: 'Bisakah saya meluruskan halaman tertentu saja?', answer: 'Alat ini akan menganalisis semua halaman, tetapi hanya memperbaiki halaman dengan kemiringan di atas ambang batas (threshold). Halaman yang hanya sedikit miring akan dibiarkan apa adanya.' },
+      { question: 'Apa itu sensitivitas ambang batas (threshold)?', answer: 'Nilai 1-10 mengoreksi kemiringan yang sangat jelas, 11-20 untuk kemiringan sedang, dan 21-30 mendeteksi kemiringan yang sangat halus. Nilai bawaannya adalah 10 agar lebih seimbang.' },
+      { question: 'Berapa lama prosesnya berlangsung?', answer: 'Waktu pemrosesan bergantung pada ukuran file dan DPI. 150 DPI (bawaan) memberikan keseimbangan antara kecepatan dan akurasi. DPI yang lebih tinggi akan lebih akurat namun sedikit lebih lambat.' },
+    ],
+  },
+
+  'pdf-booklet': {
+    title: 'Pembuat Buklet PDF',
+    metaDescription: 'Buat tata letak buklet dari PDF untuk dicetak. Susun halaman untuk penjilidan jahitan kawat (saddle-stitch) dengan berbagai opsi kisi.',
+    keywords: ['buklet pdf', 'pembuat buklet', 'cetak buklet', 'saddle stitch', 'imposisi'],
+    description: `
+      <p>Pembuat Buklet PDF (PDF Booklet Creator) menyusun halaman PDF Anda menjadi format tata letak buklet yang siap untuk langsung dicetak dan dilipat. Sangat sempurna untuk membuat brosur, zine, buku kecil, dan publikasi dengan jahitan kawat di tengah (saddle-stitched).</p>
+      <p>Pilih dari berbagai mode kisi (1x2, 2x2, 2x4, 4x4), ukuran kertas, dan opsi orientasi. Alat ini otomatis menangani imposisi halamannya agar urutan lipatannya tepat.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Unggah dokumen PDF yang ingin Anda ubah menjadi sebuah buklet.' },
+      { step: 2, title: 'Pilih Tata Letak', description: 'Pilih mode kisi, ukuran kertas, orientasi, dan opsi putaran (rotasi).' },
+      { step: 3, title: 'Buat dan Unduh', description: 'Hasilkan tata letak buklet dan unduh untuk dicetak.' },
+    ],
+    useCases: [
+      { title: 'Brosur', description: 'Buat brosur yang siap dilipat dari dokumen PDF standar Anda.', icon: 'book-open' },
+      { title: 'Zine', description: 'Produksi zine buatan sendiri dengan susunan halaman (imposisi) yang tepat.', icon: 'book' },
+      { title: 'Program Acara', description: 'Buat buklet acara yang profesional untuk berbagai kegiatan.', icon: 'calendar' },
+    ],
+    faq: [
+      { question: 'Apa itu penjilidan saddle-stitch?', answer: 'Saddle-stitch adalah metode penjilidan di mana beberapa lembar kertas ditumpuk menjadi satu lalu distaples tepat di garis lipatan tengahnya.' },
+      { question: 'Mode kisi apa yang sebaiknya saya gunakan?', answer: '1x2 adalah ukuran standar untuk buklet. Gunakan 2x2 atau lebih besar untuk pencetakan multi-up demi menghemat kertas.' },
+      { question: 'Bisakah saya melihat pratinjau tata letaknya?', answer: 'Ya, alat ini menyediakan pratinjau visual sebelum Anda membuat (generate) buklet akhirnya.' },
+    ],
+  },
+
+  'rasterize-pdf': {
+    title: 'Rasterisasi PDF',
+    metaDescription: 'Konversi halaman PDF menjadi gambar berkualitas tinggi. Ekspor sebagai PNG, JPEG, atau WebP dengan pengaturan DPI khusus.',
+    keywords: ['rasterisasi pdf', 'pdf ke gambar', 'pdf ke png', 'pdf ke jpeg', 'konversi halaman pdf'],
+    description: `
+      <p>Rasterisasi PDF mengonversi halaman PDF Anda menjadi gambar raster berkualitas tinggi. Pilih format output antara PNG, JPEG, atau WebP dengan kontrol penuh atas pengaturan DPI dan kualitas.</p>
+      <p>Sempurna untuk membuat gambar mini (thumbnail), grafik media sosial, atau mengarsipkan konten PDF sebagai gambar. Alat ini mendukung pemilihan rentang halaman (page range) serta pemrosesan massal (batch).</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Tarik dan lepas file PDF Anda atau klik untuk memilih.' },
+      { step: 2, title: 'Konfigurasi Output', description: 'Pilih DPI, format output (PNG/JPEG/WebP), kualitas, dan rentang halamannya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Proses halamannya dan unduh gambarnya satu per satu atau sebagai arsip ZIP.' },
+    ],
+    useCases: [
+      { title: 'Media Sosial', description: 'Konversi slide presentasi PDF menjadi gambar untuk diposting di media sosial.', icon: 'share-2' },
+      { title: 'Gambar Mini (Thumbnails)', description: 'Hasilkan gambar pratinjau mini (thumbnail) untuk dokumen PDF.', icon: 'image' },
+      { title: 'Penerbitan Web', description: 'Konversi konten PDF ke format gambar yang ramah digunakan di web.', icon: 'globe' },
+    ],
+    faq: [
+      { question: 'Berapa DPI yang harus saya gunakan?', answer: '72 DPI untuk tampilan di layar, 150 DPI untuk penggunaan umum, 300 DPI untuk kualitas cetak resolusi tinggi.' },
+      { question: 'Format mana yang paling baik?', answer: 'PNG untuk kualitas/transparansi, JPEG untuk ukuran file yang lebih kecil, WebP untuk penggunaan web modern yang ringan.' },
+      { question: 'Bisakah saya mengonversi halaman tertentu saja?', answer: 'Ya, tentukan rentang halaman seperti "1-5, 8, 10-15" untuk mengonversi halaman-halaman tersebut saja.' },
+    ],
+  },
+
+  'markdown-to-pdf': {
+    title: 'Markdown ke PDF',
+    metaDescription: 'Konversi file Markdown menjadi dokumen PDF dengan format yang cantik. Mendukung GitHub Flavored Markdown dan penyorotan sintaks.',
+    keywords: ['markdown ke pdf', 'md ke pdf', 'konversi markdown', 'gfm ke pdf', 'konverter markdown'],
+    description: `
+      <p>Markdown ke PDF mengonversi file Markdown Anda menjadi dokumen PDF dengan gaya yang profesional. Alat ini mendukung format CommonMark serta GitHub Flavored Markdown (GFM) termasuk pembuatan tabel, daftar tugas (task lists), dan blok kode (code blocks).</p>
+      <p>Pilih dari berbagai tema (terang, gelap, GitHub) dan sesuaikan ukuran halaman serta marginnya. Blok kode di dalamnya juga dilengkapi dengan penyorotan sintaks (syntax highlighting) agar mudah dibaca.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan konten Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File Markdown', description: 'Unggah file .md atau .markdown Anda.' },
+      { step: 2, title: 'Pilih Tema', description: 'Pilih tema visual (theme) dan konfigurasi pengaturan halamannya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Hasilkan file PDF yang sudah tertata gayanya lalu unduh.' },
+    ],
+    useCases: [
+      { title: 'Dokumentasi', description: 'Konversi file README dan dokumentasi lain ke format PDF agar mudah dibagikan.', icon: 'file-text' },
+      { title: 'Ekspor Catatan', description: 'Ekspor catatan format Markdown ke PDF untuk dicetak atau dibagikan.', icon: 'edit-3' },
+      { title: 'Pembuatan Laporan', description: 'Buat laporan tertulis dari Markdown dengan sentuhan gaya profesional.', icon: 'bar-chart' },
+    ],
+    faq: [
+      { question: 'Apakah GitHub Flavored Markdown didukung?', answer: 'Ya, elemen seperti tabel, daftar tugas, coretan (strikethrough), dan fitur GFM lainnya sepenuhnya didukung.' },
+      { question: 'Bisakah saya menyesuaikan gayanya?', answer: 'Pilih dari berbagai tema yang sudah tersedia, atau tambahkan CSS kustom (custom CSS) untuk kendali penuh.' },
+      { question: 'Apakah blok kode (code blocks) akan disorot warnanya?', answer: 'Ya, blok kode memuat fitur penyorotan sintaks otomatis untuk berbagai bahasa pemrograman umum.' },
+    ],
+  },
+
+  'email-to-pdf': {
+    title: 'Email ke PDF',
+    metaDescription: 'Konversi file email (.eml, .msg) menjadi dokumen PDF. Pertahankan pemformatan, gambar sebaris, tautan, dan sematkan lampirannya.',
+    keywords: ['email ke pdf', 'eml ke pdf', 'msg ke pdf', 'konversi email', 'konverter email', 'simpan email sebagai pdf', 'outlook ke pdf'],
+    description: `
+      <p>Email ke PDF mengonversi file email (format .eml dan .msg) menjadi dokumen PDF yang rapi. Alat ini mempertahankan informasi header, isi pesan, gambar sebaris (inline) dengan penggantian CID, tautan yang bisa diklik, serta turut menyematkan lampirannya langsung ke dalam PDF.</p>
+      <p>Sesuaikan opsi output termasuk ukuran halaman (A4, Letter, Legal), pemformatan tanggal dengan dukungan zona waktu, dan apakah Anda ingin menyertakan informasi CC/BCC serta daftar lampirannya.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan email Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File Email', description: 'Unggah file email .eml atau .msg Anda.' },
+      { step: 2, title: 'Konfigurasi Opsi', description: 'Atur ukuran halaman, format tanggal, zona waktu, dan pilih kolom apa saja yang disertakan.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Konversi menjadi PDF (lengkap dengan lampirannya yang disematkan) lalu unduh hasilnya.' },
+    ],
+    useCases: [
+      { title: 'Catatan Hukum', description: 'Arsipkan pesan email penting ke bentuk PDF (berserta lampirannya) untuk kebutuhan dokumentasi hukum.', icon: 'scale' },
+      { title: 'Arsip Bisnis', description: 'Konversi korespondensi bisnis ke dalam PDF untuk penyimpanan catatan jangka panjang.', icon: 'briefcase' },
+      { title: 'Pemeliharaan Bukti', description: 'Simpan bukti email beserta gambar sebaris dan lampirannya ke dalam format PDF yang tidak bisa diedit.', icon: 'shield' },
+    ],
+    faq: [
+      { question: 'Format email apa saja yang didukung?', answer: 'File .eml (RFC 822) dan file .msg (Microsoft Outlook) didukung sepenuhnya.' },
+      { question: 'Apakah lampiran ikut disertakan?', answer: 'Ya! Lampiran akan disematkan langsung di dalam file PDF. Anda dapat mengekstraknya dari PDF tersebut menggunakan aplikasi pembaca PDF (PDF reader) yang kompatibel.' },
+      { question: 'Apakah gambar di dalam isi email (inline images) juga ditampilkan?', answer: 'Ya, gambar sebaris (inline) yang direferensikan melalui CID (Content-ID) akan diubah otomatis menjadi data URI base64 dan langsung ditampilkan pada PDF.' },
+      { question: 'Apakah tautannya bisa diklik?', answer: 'Ya, seluruh tautan HTML (tag <a>) serta URL yang berbentuk teks biasa di email akan diubah menjadi tautan yang bisa diklik di dalam PDF.' },
+      { question: 'Apakah pemformatan aslinya tetap terjaga?', answer: 'Ya, email berformat HTML akan dipertahankan gaya tampilannya semirip mungkin, termasuk style, gambar, maupun tautannya.' },
+    ],
+  },
+
+  'cbz-to-pdf': {
+    title: 'CBZ ke PDF',
+    metaDescription: 'Konversi arsip buku komik (CBZ) menjadi PDF. Pertahankan urutan gambar dan kualitas untuk komik digital.',
+    keywords: ['cbz ke pdf', 'komik ke pdf', 'konversi cbz', 'konverter buku komik', 'konverter cbz'],
+    description: `
+      <p>CBZ ke PDF mengonversi file Arsip Buku Komik menjadi dokumen PDF. Alat ini mengekstrak semua gambar dari dalam arsip CBZ dan menggabungkannya ke dalam sebuah PDF sembari menjaga urutan membaca yang tepat.</p>
+      <p>Pilih dari berbagai opsi ukuran halaman termasuk dimensi asli dari gambarnya atau ukuran standar buku komik. Sangat sempurna untuk membaca komik di perangkat yang mendukung format PDF tapi tidak mengenali format CBZ.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan file komik Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File CBZ', description: 'Unggah file arsip komik .cbz milik Anda.' },
+      { step: 2, title: 'Pilih Opsi', description: 'Pilih ukuran halaman dan pengaturan kualitas gambarnya.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Konversi menjadi PDF lalu unduh file komik Anda.' },
+    ],
+    useCases: [
+      { title: 'Kompatibilitas E-Reader', description: 'Konversi file CBZ ke PDF untuk e-reader yang hanya mendukung format PDF.', icon: 'book' },
+      { title: 'Arsip Komik', description: 'Buat arsip PDF khusus dari koleksi komik digital Anda.', icon: 'archive' },
+      { title: 'Persiapan Cetak', description: 'Konversi komik digital Anda menjadi PDF untuk keperluan pencetakan.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apa itu format CBZ?', answer: 'CBZ adalah arsip ZIP yang memuat halaman-halaman buku komik berupa file gambar, yang kemudian diubah ekstensinya menjadi .cbz.' },
+      { question: 'Apakah kualitas gambar dipertahankan?', answer: 'Ya, gambar disematkan pada kualitas aslinya di dalam PDF.' },
+      { question: 'Apakah folder bertingkat (nested folders) juga didukung?', answer: 'Ya, seluruh gambar yang ada di semua folder di dalam arsip akan diekstrak dan diurutkan.' },
+    ],
+  },
+
+  'pdf-to-pdfa': {
+    title: 'PDF ke PDF/A',
+    metaDescription: 'Konversi PDF ke format arsip PDF/A. Pastikan preservasi dokumen jangka panjang sesuai standar ISO.',
+    keywords: ['pdf ke pdfa', 'konverter pdfa', 'arsip pdf', 'pengarsipan pdf', 'preservasi jangka panjang'],
+    description: `
+      <p>PDF ke PDF/A mengonversi dokumen PDF Anda ke format PDF/A, yakni standar ISO yang digunakan khusus untuk pengarsipan dokumen jangka panjang. Format PDF/A menjamin bahwa dokumen tersebut akan tetap bisa dilihat dan direproduksi persis seperti aslinya selama beberapa dekade mendatang.</p>
+      <p>Pilih dari standar PDF/A-1b (kesesuaian dasar), PDF/A-2b (paling direkomendasikan, mendukung transparansi), atau PDF/A-3b (mengizinkan file yang disematkan). Alat ini akan menyematkan font dan meratakan efek transparan sesuai kebutuhan standar tersebut.</p>
+      <p>Semua konversi terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Unggah PDF yang ingin Anda konversi ke format PDF/A.' },
+      { step: 2, title: 'Pilih Level PDF/A', description: 'Pilih level kesesuaian antara PDF/A-1b, PDF/A-2b, atau PDF/A-3b.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Lakukan konversi ke PDF/A lalu unduh dokumen arsip tersebut.' },
+    ],
+    useCases: [
+      { title: 'Arsip Hukum', description: 'Konversi dokumen hukum ke PDF/A sebagai format penyimpanan jangka panjang yang diakui pengadilan.', icon: 'scale' },
+      { title: 'Catatan Pemerintah', description: 'Penuhi persyaratan standar pengarsipan pemerintah menggunakan format PDF/A.', icon: 'building' },
+      { title: 'Arsip Bisnis', description: 'Lindungi dokumen-dokumen bisnis penting agar selalu bisa diakses dan tidak berubah di masa depan.', icon: 'archive' },
+    ],
+    faq: [
+      { question: 'Level PDF/A mana yang sebaiknya saya pilih?', answer: 'PDF/A-2b sangat direkomendasikan untuk sebagian besar keperluan. Gunakan 1b untuk kompatibilitas yang sangat lawas, atau 3b jika Anda perlu menyematkan (embed) file lain di dalamnya.' },
+      { question: 'Apa yang membedakan format PDF/A dengan PDF biasa?', answer: 'PDF/A menyematkan (embed) semua font secara langsung, menonaktifkan fitur enkripsi, dan memastikan seluruh elemennya mandiri (self-contained) agar tetap sama saat dibuka bertahun-tahun kemudian.' },
+      { question: 'Bisakah saya mengonversinya kembali dari PDF/A?', answer: 'File PDF/A pada dasarnya tetaplah file PDF standar yang dapat dibuka secara normal. Fitur PDF/A hanya menambahkan regulasi tertentu pada struktur filenya, bukan merusak isinya.' },
+    ],
+  },
+
+  'font-to-outline': {
+    title: 'Font ke Garis Besar (Outline)',
+    metaDescription: 'Hapus ketergantungan font dari dokumen PDF dengan mengonversi halamannya menjadi gambar berkualitas tinggi. Menjamin kompatibilitas di semua sistem komputer.',
+    keywords: ['font ke garis besar', 'font outline', 'hapus font', 'kompatibilitas font', 'meratakan font pdf', 'penghapusan font pdf'],
+    description: `
+      <p>Font ke Garis Besar (Font to Outline) akan menghilangkan semua bentuk ketergantungan font di dalam file PDF dengan mengubah setiap halamannya menjadi konten raster (gambar) berkualitas tinggi. Hal ini akan memastikan dokumen Anda tetap terlihat sama persis di komputer atau sistem apa pun, sekalipun font aslinya tidak terinstal.</p>
+      <p>Alat ini akan merender setiap halaman berdasarkan besaran DPI yang Anda pilih (150-600), lalu menghapus font yang disematkan sembari menjaga tampilan visualnya. Sebagai opsional, Anda bisa menambahkan lapisan teks transparan (invisible) agar file tersebut tetap dapat dicari teksnya.</p>
+      <p>Alat ini sangat penting untuk persiapan pencetakan, masalah kompatibilitas antar platform (OS), dan juga untuk menghindari masalah lisensi font ketika mendistribusikan dokumen. Semua pemrosesan terjadi secara lokal di browser Anda.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Unggah PDF yang memuat font yang ingin Anda hapus ketergantungannya.' },
+      { step: 2, title: 'Konfigurasi Kualitas', description: 'Pilih besaran DPI (sangat dianjurkan 300 untuk dicetak, atau 150 untuk dilihat di layar). Aktifkan teks pencarian jika perlu.' },
+      { step: 3, title: 'Konversi dan Unduh', description: 'Proses file-nya dan unduh hasil PDF yang tidak lagi bergantung pada font eksternal tersebut.' },
+    ],
+    useCases: [
+      { title: 'Persiapan Cetak', description: 'Eliminasi masalah rendering font di mesin percetakan komersial dengan membuang semua ketergantungan font.', icon: 'printer' },
+      { title: 'Berbagi Lintas Platform', description: 'Bagikan dokumen yang terlihat sama persis di perangkat apa saja, tidak peduli apakah font-nya ada di perangkat tersebut atau tidak.', icon: 'share-2' },
+      { title: 'Lisensi Font', description: 'Hapus font yang disematkan (embedded) untuk mencegah potensi pelanggaran lisensi hak cipta font saat mendistribusikannya.', icon: 'shield' },
+    ],
+    faq: [
+      { question: 'Bagaimana cara kerja alat ini?', answer: 'Alat ini merender setiap halaman ke dalam gambar beresolusi tinggi (sesuai DPI pilihan Anda) dan membuat ulang PDF-nya dari gambar tersebut, sehingga semua data font aslinya dibuang tanpa mengubah tampilannya.' },
+      { question: 'Apakah saya masih bisa menyorot (select) teks setelah proses konversi?', answer: 'Secara bawaan, tidak. Teks telah menyatu menjadi bagian dari gambar. Namun, Anda dapat mengaktifkan fitur "Pertahankan teks pencarian" untuk membuat lapisan teks tersembunyi agar teksnya tetap bisa di-copy atau dicari.' },
+      { question: 'Berapa DPI yang sebaiknya saya pilih?', answer: '300 DPI adalah standar yang direkomendasikan untuk output siap cetak. 150 DPI cukup memadai jika hanya dilihat di layar dan membuat ukuran filenya kecil. Sedangkan 600 DPI ditujukan untuk kualitas presisi terbaik namun menghasilkan file yang sangat besar.' },
+      { question: 'Apakah ukuran filenya akan membengkak?', answer: 'Ukuran file akan sangat bergantung pada pilihan DPI dan jenis kontennya. 150 DPI biasanya cukup kecil, 300 DPI mungkin akan memperbesar ukuran file aslinya, dan 600 DPI akan membuatnya sangat besar. Kompresi otomatis selalu diterapkan.' },
+      { question: 'Apakah proses ini bisa dibatalkan?', answer: 'Tidak, data font aslinya akan dihilangkan secara permanen. Simpan cadangan (backup) file asli Anda jika kelak butuh untuk diedit teksnya kembali.' },
+      { question: 'Lalu bagaimana nasib grafik vektor yang ada?', answer: 'Grafik vektor (berbagai bentuk shape atau garis) di dalam PDF asli akan diubah seluruhnya menjadi format raster bersama dengan teksnya. Kualitas tampilannya dipertahankan sesuai DPI yang dipilih.' },
+    ],
+  },
+
+  'extract-tables': {
+    title: 'Ekstrak Tabel dari PDF',
+    metaDescription: 'Deteksi dan ekstrak tabel dari dokumen PDF. Ekspor menjadi format JSON, Markdown, atau CSV.',
+    keywords: ['ekstrak tabel', 'ekstraksi tabel pdf', 'pdf ke csv', 'pdf ke excel', 'deteksi tabel'],
+    description: `
+      <p>Ekstrak Tabel dari PDF akan mendeteksi data berbentuk tabel di dalam dokumen PDF Anda dan mengekspornya ke dalam format yang terstruktur. Pilih JSON untuk keperluan integrasi data, Markdown untuk dokumentasi, atau CSV untuk diolah kembali sebagai spreadsheet.</p>
+      <p>Alat ini menggunakan algoritma deteksi cerdas yang mampu mengidentifikasi struktur tabel meskipun format dokumennya tergolong rumit. Tentukan rentang halaman serta sesuaikan parameter deteksinya guna memperoleh hasil yang optimal.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Unggah PDF yang memuat tabel yang ingin Anda ekstrak.' },
+      { step: 2, title: 'Konfigurasi Deteksi', description: 'Atur batas rentang halamannya beserta jumlah ambang minimum untuk kolom/baris yang ingin dideteksi.' },
+      { step: 3, title: 'Ekspor dan Unduh', description: 'Pilih format outputnya (JSON/Markdown/CSV) lalu unduh file tersebut.' },
+    ],
+    useCases: [
+      { title: 'Analisis Data', description: 'Ekstrak tabel data untuk mempermudah proses analisis di spreadsheet maupun database.', icon: 'bar-chart' },
+      { title: 'Pemrosesan Laporan', description: 'Tarik tabel dari dalam laporan PDF untuk diolah lebih lanjut.', icon: 'file-text' },
+      { title: 'Dokumentasi', description: 'Ubah tabel PDF ke dalam format Markdown untuk diintegrasikan pada dokumentasi teknis.', icon: 'book' },
+    ],
+    faq: [
+      { question: 'Apakah alat ini mampu mendeteksi tabel yang sangat kompleks?', answer: 'Alat ini bekerja sangat optimal pada tabel grid yang sederhana. Jika ada banyak sel yang di-merger (merged cells) yang kompleks, kemungkinan besar dibutuhkan sedikit penyesuaian manual nantinya.' },
+      { question: 'Bagaimana jika alat ini gagal menemukan satu tabel pun?', answer: 'Coba turunkan ambang batas minimum (minimum threshold) kolom/baris di menu pengaturannya, atau pastikan ulang apakah struktur tabel PDF tersebut secara internal memang dikenali sebagai tabel atau hanyalah bentuk teks yang kebetulan terlihat seperti tabel.' },
+      { question: 'Bisakah saya mengekstrak pada halaman tertentu saja?', answer: 'Ya, masukkan rentang halaman spesifik agar alat ini hanya mendeteksi tabel pada halaman-halaman tersebut.' },
+    ],
+  },
+
+  'ocg-manager': {
+    title: 'Pengelola Lapisan PDF (OCG)',
+    metaDescription: 'Kelola lapisan PDF (Optional Content Groups). Lihat, nyalakan/matikan, tambahkan, hapus, dan ganti nama layer dokumen PDF Anda.',
+    keywords: ['layer pdf', 'lapisan pdf', 'ocg manager', 'optional content groups', 'visibilitas layer pdf', 'kelola lapisan pdf'],
+    description: `
+      <p>Pengelola Lapisan PDF memungkinkan Anda untuk melihat serta mengelola Optional Content Groups (OCG) pada dokumen PDF Anda. Layer OCG umumnya digunakan dalam bidang gambar arsitektur/teknis (CAD), peta, maupun dokumen kompleks lainnya untuk mengatur konten ke dalam berbagai layer yang bisa ditampilkan atau disembunyikan secara terpisah (toggleable).</p>
+      <p>Anda bisa meninjau semua layer di dalam PDF, menyalakan atau mematikan status visibilitasnya (visibility), menambahkan layer baru, menghapus layer yang tidak diperlukan, atau mengganti nama pada layer yang sudah ada. Alat ini amat berguna saat harus berurusan dengan PDF arsitektur, hasil ekspor CAD, maupun desain yang sudah siap untuk masuk ke tahap percetakan.</p>
+      <p>Semua pemrosesan terjadi secara lokal di browser Anda, memastikan dokumen Anda tetap privat dan aman.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah PDF Anda', description: 'Unggah file PDF yang telah memuat layer (OCG) atau file yang ingin Anda tambahkan layer barunya.' },
+      { step: 2, title: 'Lihat Layer', description: 'Alat ini secara otomatis akan mendata seluruh layer yang terdapat pada dokumen beserta dengan status visibilitas asalnya.' },
+      { step: 3, title: 'Kelola Layer', description: 'Anda bebas untuk menampilkan (show)/menyembunyikan (hide) layer, merubah nama, menambahkan layer baru, atau membuang layer yang tidak dipakai.' },
+      { step: 4, title: 'Simpan dan Unduh', description: 'Unduh file PDF Anda yang telah dimodifikasi pengaturannya.' },
+    ],
+    useCases: [
+      { title: 'Gambar Teknis (CAD)', description: 'Kelola pengaturan layer pada hasil output CAD agar bisa menyembunyikan/memunculkan keterangan dimensi, catatan teks, atau tampilan arsitektur tertentu.', icon: 'ruler' },
+      { title: 'Pengeditan Peta', description: 'Nyalakan atau matikan layer spesifik (seperti layer topografi, jalan, maupun penamaan jalan) untuk mendapatkan hasil peta kustom yang berbeda saat dicetak.', icon: 'map' },
+      { title: 'Persiapan Cetak', description: 'Siapkan file cetak yang berlapis-lapis (layered) dengan mengatur layer mana saja yang akan dimunculkan ke mesin pencetak untuk tipe edisi (versi) yang berbeda-beda.', icon: 'printer' },
+    ],
+    faq: [
+      { question: 'Apa itu layer PDF (OCG)?', answer: 'Optional Content Groups (OCG) merupakan sekumpulan layer di dalam dokumen PDF yang dapat diatur untuk "Tampil" atau "Sembunyi". Fitur ini amat identik dan lumrah dipakai di aplikasi CAD, pemetaan (GIS), hingga alat pengolah desain berlayer.' },
+      { question: 'Mengapa file PDF saya tidak mendeteksi adanya layer satu pun?', answer: 'Tidak semua file PDF dirancang menggunakan pengaturan layer. Layer tersebut lazimnya terbentuk (di-generate) sejak proses awal saat file PDF diciptakan dari perangkat lunak pengedit desain arsitektur maupun aplikasi pembuat CAD.' },
+      { question: 'Apakah memodifikasi status layer akan memengaruhi struktur konten aslinya?', answer: 'Mengubah status "Tampil" atau "Sembunyi" dari sebuah layer semata-mata hanya memengaruhi apakah gambar tersebut diperlihatkan di layar (dan sewaktu dicetak) atau tidak. Seluruh datanya aslinya tetaplah terjaga dan terbawa utuh di dalam dokumen file PDF.' },
+    ],
+  },
+
+  'pdf-reader': {
+    title: 'Pembaca PDF',
+    metaDescription: 'Pembaca PDF online gratis. Lihat, navigasi, perbesar, putar, dan cetak dokumen PDF langsung di dalam web browser Anda.',
+    keywords: ['pembaca pdf', 'pdf reader', 'penampil pdf', 'lihat pdf online', 'baca pdf', 'browser pdf viewer'],
+    description: `
+      <p>Pembaca PDF adalah sebuah alat penampil PDF berfitur lengkap yang memudahkan Anda untuk membaca dan melakukan navigasi pada dokumen PDF langsung dari dalam web browser. Tanpa perlu menginstal perangkat lunak pihak ketiga, cukup unggah PDF Anda dan Anda sudah bisa langsung membacanya.</p>
+      <p>Navigasi di antara halamannya dengan lincah, atur tingkat perbesaran (zoom), putar arah tampilan (rotate), atau gunakan fitur layar penuh (fullscreen) agar nyaman dibaca bebas dari berbagai gangguan antarmuka. Anda bahkan dapat mencetak dokumennya langsung atau mengunduhnya kembali untuk akses secara offline.</p>
+      <p>Seluruh proses peninjauan ini berjalan murni di lokal perangkat/browser komputer Anda. File dokumen PDF Anda sama sekali tidak pernah diunggah menuju server di internet, memastikannya privasi dan keamanannya 100% mutlak.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Buka PDF Anda', description: 'Klik tautan untuk mengunggah atau langsung tarik dan lepas file PDF-nya untuk menampilkannya di jendela pembaca (reader) ini.' },
+      { step: 2, title: 'Navigasi Halaman', description: 'Manfaatkan fitur kontrol pada menu pembaca untuk berpindah ke halaman berikut/sebelumnya secara teratur, atau langsung melompat masuk ke angka halaman tertentu dengan seketika.' },
+      { step: 3, title: 'Sesuaikan Tampilan', description: 'Gunakan fitur perbesar (zoom in), perkecil (zoom out), atau bahkan ubah rotasi arah pandang teksnya untuk posisi posisi yang nyaman, hingga opsi mode layar penuh (fullscreen).' },
+      { step: 4, title: 'Cetak atau Unduh Kembali', description: 'Lakukan proses mencetak (print) secara presisi, maupun unduh file-nya kembali guna diakses saat status perangkat tanpa jaringan (offline).' },
+    ],
+    useCases: [
+      { title: 'Meninjau Dokumen', description: 'Meninjau cepat sebuah dokumen atau berkas file PDF dengan instan tanpa harus menginstal software tambahan apa pun ke perangkat PC/HP.', icon: 'book-open' },
+      { title: 'Membaca di Ponsel/HP', description: 'Baca file dokumen dalam format PDF di bermacam-macam tipe perangkat yang setidaknya telah mendukung fitur web browser secara standar.', icon: 'smartphone' },
+      { title: 'Pratinjau Instan', description: 'Lakukan pratinjau secara kilat (quick preview) terlebih dahulu dengan cermat di aplikasi ini sebelum kemudian Anda setujui keputusannya untuk mencetaknya di printer.', icon: 'eye' },
+    ],
+    faq: [
+      { question: 'Apakah file dokumen privat saya terjamin aman?', answer: 'Ya, seluruh isi dokumen PDF Anda hanya akan diproses murni di perangkat (browser) Anda, sama sekali tidak akan dikirimkan ke server kami atau pihak ke-3 manapun.' },
+      { question: 'Apakah bisa digunakan untuk menambah corat-coret atau mengedit filenya?', answer: 'Alat "Pembaca PDF" yang satu ini hanya difungsikan khusus sebagai "alat baca (viewing)". Untuk melakukan pengeditan teks dan memberi corat-coret silakan memakai alat utama "Edit PDF", sedangkan untuk menandatangani pakailah alat "Tanda Tangan Digital".' },
+      { question: 'Apakah tampilan aplikasi ini berfungsi di perangkat ponsel pintar (HP) atau layar tablet?', answer: 'Sangat berfungsi dengan baik, Pembaca PDF kami dirancang khusus agar berjalan optimal dalam platform lintas gadget dan ukuran layar apa pun yang telah memuat kapabilitas browser web pada umumnya.' },
+    ],
+  },
+
+  'digital-sign-pdf': {
+    title: 'Tanda Tangan Digital',
+    metaDescription: 'Tambahkan tanda tangan digital standar X.509 ke dokumen PDF. Tanda tangani PDF dengan sertifikat berformat PFX, P12, atau PEM guna menjamin keabsahan di mata hukum.',
+    keywords: ['tanda tangan digital pdf', 'sertifikat x509', 'pfx pdf sign', 'p12 sign pdf', 'pem sign pdf', 'tanda tangan pdf legal'],
+    description: `
+      <p>Tanda Tangan Digital ini memampukan Anda menorehkan stempel tanda tangan kriptografis digital berstandar (X.509) pada berbagai dokumen file PDF. Tidak seperti alat penandatangan gambar corat-coret sederhana, penandatanganan versi digital ini bisa tervalidasi secara mengikat untuk keabsahan berstandar legalitas hukum serta sebagai validasi integritas struktur filenya agar dapat terlindungi secara nyata.</p>
+      <p>Prosedurnya cukup mudah, cukup unggah file kunci sertifikat (berupa format PFX, P12, atau PEM) Anda, input kata sandi yang digunakan, dan laksanakan penandatanganan PDF tersebut dengan sekejap. Anda pun berhak memutuskan apakah sekadar membuat tanda tangan yang tak terlihat (invisible, untuk validitas tersembunyi), atau malah menorehkannya secara nampak (visible) yang telah disertai kustom teks grafis/gambar maupun atur tata letaknya.</p>
+      <p>Semua penandatanganan kriptografis berlangsung hanya di lingkungan ruang lokal web browser Anda; data kata sandi, kode rahasia sertifikat maupun dokumen Anda pun tidak dibagikan atau dipindah tangankan ke sebuah fasilitas web hosting (server) apa pun itu demi kepastian privasi mutlak.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah File PDF', description: 'Pilih lalu unggah dokumen file PDF-nya yang perlu untuk diterapkan tanda tangan sah digital tersebut.' },
+      { step: 2, title: 'Muat Otoritas Sertifikat', description: 'Unggah file identitas digital berbasis standar X.509 (.pfx, .p12, atau .pem), lantas isikan sebuah kata sandinya.' },
+      { step: 3, title: 'Atur Pengaturan Parameter', description: 'Sebagai fitur tambahan, berikan sedikit keterangan tentang maksud dan tujuan penandatanganannya, posisinya dan juga tambahkan parameter visual gambar atau tulisan yang muncul (visible).' },
+      { step: 4, title: 'Tanda Tangani dan Unduh Hasil', description: 'Aktivasi tombol Tanda Tangani PDF agar aplikasi secara otomatif mencap validasi berkasnya, setelahnya akan mengunduh dokumen file tersebut.' },
+    ],
+    useCases: [
+      { title: 'Tujuan Dokumen Hukum (Legal)', description: 'Otentikasi seluruh formulir dokumen kontrak secara legal (mengikat secara absah di hukum) maupun berkas nota pengajuan menggunakan metode standarisasi validasi identitas digital tingkat institusi/firma.', icon: 'scale' },
+      { title: 'Persetujuan Keuangan / Bisnis', description: 'Sahkah semua arus faktur belanja perusahaan, bukti kwitansi order dari pelanggan (purchase orders), serta berbagai lampiran berkas guna mematikan siklus rute kelengkapan audit pembukuan yang kuat.', icon: 'briefcase' },
+      { title: 'Mengunci Validitas Dokumen', description: 'Pertahankan dan awasi kredibilitas dokumen ini secara pasti dengan memblokir celah resiko perubahan dan mengukuhkan validasinya jika diubah usai tanda tangannya sah.', icon: 'shield-check' },
+    ],
+    faq: [
+      { question: 'Format validasi setifikat seperti apa yang secara teknis dapat dibaca (support)?', answer: 'Hanya diizinkan masuk jenis data format PKCS#12 (.p12), data .pfx, dan format pengenal rahasia standar Privacy-Enhanced Mail yakni format PEM (.pem).' },
+      { question: 'Apakah format cap ini akan mengikat di sistem regulasi (sah)?', answer: 'Sebagian besar, validasi tanda tangan model X.509 merupakan wujud jaminan sah pada standar banyak negara dan yurisdiksi. Syaratnya; dokumen dan identitas pembuat (sertifikat rootnya) telah sah, diakui dan tercatat tanpa kedaluwarsa secara universal.' },
+      { question: 'Apakah cap stempel validasinya akan kelihatan secara bentuk visual juga?', answer: 'Tentu saja, jika parameter (opsi "Tambahkan tanda tangan yang nampak") difungsikan dan pengguna mengisi kustom posisinya maupun gambar atau baris kalimat di kolom yang ada.' },
+    ],
+  },
+
+  'validate-signature': {
+    title: 'Validasi Tanda Tangan',
+    metaDescription: 'Lakukan verifikasi integritas atas tanda tangan digital dari berbagai dokumen berformat PDF. Konfirmasi legalitas status kebenaran otoritas dan rekam detil integritas sertifikat identitasnya.',
+    keywords: ['validasi tanda tangan pdf', 'verifikasi keabsahan digital', 'cek sertifikat pdf', 'pemeriksaan otoritas dokumen'],
+    description: `
+      <p>Fitur Alat Validasi Tanda Tangan ini akan menjamin peninjauan keaslian dari setiap jenis data dokumen PDF bersertifikasi stempel elektronik yang pernah Anda miliki atau yang telah diserahkan dari suatu badan berwenang. Melacak silang untuk mengetahui apakah cap tersebut secara legal masuk klasifikasi valid, menampilkan identifikasi info rinci yang berwenang menorehkan sertifikatnya (signer profile), serta mengetahui langsung bila ada modifikasi manipulatif dalam data sesudahnya (integrity confirmation).</p>
+      <p>Cukup hanya meletakkan sebuah file yang diyakini sudah disegel (signed) ke dalam fitur ini agar kemudian diurai secara gamblang akan eksistensinya dan memperlihatkan keseluruhan cap sertifikasi stempel mana yang sah maupun tidak, waktu pembuatan stempel tersebut pada saat disegel, plus menunjukan rekam jejaknya apakah telah terjamah pihak tak berotoritas lainnya lagi.</p>
+      <p>Seluruh tahap validasinya berlangsung murni tanpa henti pada area sesi (session) browser perangkat lokal komputer/ponsel ini. Kerahasiaannya tentu amat privasi; data sensitif tersebut tidak sama sekali keluar diproses maupun disuplai ulang menuju portal eksternal penyedia layanan hosting pihak ketiga.</p>
+    `,
+    howToUse: [
+      { step: 1, title: 'Unggah Dokumen PDF Bersertifikasi', description: 'Unggah file PDF yang telah tercatat status legalnya (yang sebelumnya dirasa memiliki rekam jejak cap tanda tangan/sertifikasi digital).' },
+      { step: 2, title: 'Pantau Panel Hasil Evaluasi', description: 'Sebuah rekam panel layar akan segera ditampilkan membeberkan apa saja rentetan stempel rahasia sertifikasinya yang bisa ditemukan di dalamnya.' },
+      { step: 3, title: 'Audit Perincian Data Otoritasnya', description: 'Klik menu rinci di setiap panelnya jika berniat mau mencari tahu keabsahannya meliputi data sang pemilik yang membubuhi tanda tangannya (signer) dan durasi masa aktif status otoritas digitalnya secara legal.' },
+      { step: 4, title: 'Buat Dokumen Salinan Berupa Laporan', description: 'Apabila dibutuhkan untuk laporan secara faktual, Anda secara khusus juga mengunduhnya (export) data output kesimpulannya tadi dalam versi berkas file berektensi .json ke disk lokal PC / smartphone Anda.' },
+    ],
+    useCases: [
+      { title: 'Melacak Legitimasi / Validasi Surat', description: 'Yakinkan dengan pasti apakah status dokumen berkas PDF yang tercap itu murni tulen keabsahannya sehingga menguatkan asumsi dasar bahwa tidak terdapat praktek mengelabui secara manipulasi / menyunting di dokumen bersangkutan ini sejak penandatanganan awal.', icon: 'shield-check' },
+      { title: 'Persiapan Audit dan Hukum Kepatuhan', description: 'Aplikasi alat periksa instan dalam skenario reguler pada lembaga pengatur kepatuhan untuk merumuskan secepatnya akreditasi kelengkapan dari syarat sah-nya file persetujuan.', icon: 'clipboard-check' },
+      { title: 'Tinjau Rincian Profil Otoritas Stempel', description: 'Melongok sekilas terkait umur kedaluwarsanya di rekam data jejak dan riwayat spesifik sertifikat si pemilik otoritas asli pembuat tanda tangannya untuk sebuah kebutuhan konfirmasi rincian sertifikasinya secara spesifik.', icon: 'award' },
+    ],
+    faq: [
+      { question: 'Apa tafsir spesifik dari makna "valid"?', answer: 'Kata sah/valid memiliki arti gamblang bahwa pasca cap (signature) dibubuhkan secara kriptografi, file aslinya tak diendus/dirubah sama sekali isinya, sekaligus sang penerbit (Certificate Authority root) dari sertifikat digital bersangkutan dipercaya serta kondisinya masih berada dalam masa waktu tak kadaluwarsa (active lifecycle) atau sah dirunut berantai (intact).' },
+      { question: 'Bisakah alat ini menjalankan fitur mengecek validasi bagi dokumen lebih dari 10 atau masal (banyak)?', answer: 'Tentu. Tarik dan lepas (Drag and Drop) semua koleksi dokumen tersebut pada antarmukanya sekalian. Ia secara otomatis mengekseskusi peninjauan semua rentetan datanya sekaligus dengan tipe pengerjaan secara banyak (batch method).' },
+      { question: 'Apakah hal-hal standar yang menjadi faktor kegagalan tanda tangannya untuk mendapatkan titel divalidasi sah?', answer: 'Penyebab kegagalan yang banyak mencolok seperti; isi datanya terbukti dimodifikasi (diedit), waktu kadaluwarsa (expired) durasi stempel otoritas asli si penandatangannya telah lama usai, hingga parahnya jika file rantai otentikasi kunci otorisasi pembuatnya (Trust CA certs)-nya tersebut ternyata bersifat meragukan dan tidak dimasukkan ke dalam daftar terpercaya global di lingkup public/private standard.' },
+    ],
+  },
+  'form-logic-designer': {
+    "title": "Desain Logika Formulir",
+    "metaDescription": "Rancang perilaku dinamis menggunakan kanvas simpul glassmorphism dan injeksikan logika interaktif AcroJS ke dalam formulir PDF.",
+    "keywords": [
+        "logika formulir PDF",
+        "injeksi AcroJS",
+        "alur simpul",
+        "PDF interaktif",
+        "dependensi bidang"
+    ],
+    "description": "\n        <p>Desainer Logika Formulir Interaktif adalah alat pelopor yang mengisi celah besar dalam kemampuan PDF: membuat bidang aktif dan responsif, bukan formulir yang datar dan statis.</p>\n        <p>Melalui kanvas visual kami yang menampilkan \"simpul glassmorphism menyala\" (dibangun di atas React Flow), bidang formulir direpresentasikan sebagai modul yang terhubung. Anda dapat menyeret tautan untuk menentukan hubungan: misal, saat kotak centang dicentang ➜ aktifkan input teks ➜ hitung nilai secara otomatis dan perbarui bidang total.</p>\n        <p>Setelah dirancang, mesin AcroJS menyusun logika tersebut ke dalam Acrobat JavaScript resmi dan menginjeksikannya ke dalam kamus '/AA' (Tindakan Tambahan) dari AcroForm. Perilaku interaktif tersebut kemudian dijalankan secara asli di dalam pembaca PDF standar apa pun.</p>\n      ",
+    "howToUse": [
+        {
+            "step": 1,
+            "title": "Unggah PDF Interaktif",
+            "description": "Sediakan file PDF yang sudah memiliki bidang formulir aktif (AcroForm)."
+        },
+        {
+            "step": 2,
+            "title": "Petakan Logika di Kanvas",
+            "description": "Hubungkan bidang sebagai simpul. Tautkan peristiwa output (ubah, blur) ke tindakan target (tampilkan, sembunyikan, hitung, nonaktifkan)."
+        },
+        {
+            "step": 3,
+            "title": "Kompilasi dan Injeksikan",
+            "description": "Injeksikan logika JavaScript yang dikompilasi ke dalam kamus PDF dan simpan dokumen pintar terakhir."
+        }
+    ],
+    "useCases": [
+        {
+            "title": "Kontrak Bisnis Pintar",
+            "description": "Tampilkan atau sembunyikan bidang input tambahan secara dinamis berdasarkan ketentuan yang dipilih klien.",
+            "icon": "file-signature"
+        },
+        {
+            "title": "Formulir Pengeluaran Otomatis",
+            "description": "Jumlahkan beberapa baris pengeluaran dan hitung pajak secara dinamis tanpa penghitungan manual.",
+            "icon": "calculator"
+        },
+        {
+            "title": "Kuesioner Interaktif",
+            "description": "Lewati pertanyaan yang tidak relevan berdasarkan jawaban sebelumnya, memberikan pengalaman pengisian seluler yang lebih bersih.",
+            "icon": "form-input"
+        }
+    ],
+    "faq": [
+        {
+            "question": "Apakah saya memerlukan PDF dengan bidang yang sudah ada sebelumnya?",
+            "answer": "Ya. Alat ini dirancang untuk mengikat aturan logika ke bidang yang ada. Jika PDF Anda tidak memiliki bidang interaktif, gunakan alat Pembuat Formulir kami terlebih dahulu untuk menambahkan input dan kotak centang."
+        },
+        {
+            "question": "Apakah logika ini akan berjalan di semua pembaca PDF?",
+            "answer": "Ini berjalan pada semua pembaca PDF yang mematuhi standar Adobe PDF dan mendukung Acrobat JavaScript (seperti Adobe Acrobat Reader, Foxit Reader, dan peramban web utama). Pembaca seluler minimalis mungkin hanya mendukung tindakan dasar."
+        },
+        {
+            "question": "Apakah ini memengaruhi pencetakan kertas?",
+            "answer": "Sama sekali tidak. Skrip yang diinjeksikan hanya berjalan di layar selama pengisian formulir. Saat mencetak, status bidang saat ini dicetak secara statis tanpa visualisasi simpul."
+        }
+    ]
+},
+
+  'global-invoice-parser': {
+    "title": "Terjemah & Konversi Faktur",
+    "metaDescription": "Ekstrak total mata uang dari faktur multi-nasional, jalankan perhitungan, dan cetak stempel buku besar nilai tukar glassmorphism interaktif.",
+    "keywords": [
+        "terjemahkan faktur",
+        "konverter mata uang faktur",
+        "kalkulator nilai tukar pdf",
+        "stempel mata uang lokal",
+        "alat faktur global"
+    ],
+    "description": "\n        <p>Penerjemah Faktur Global memberikan kejelasan maksimal bagi tim keuangan internasional dan pembeli global.</p>\n        <p>Menangani faktur dalam berbagai mata uang ($, €, ¥) sering kali melibatkan perhitungan manual yang menjemukan. Alat ini memungkinkan <strong>terjemahan label di tempat dan konversi nilai tukar waktu nyata</strong>.</p>\n        <p>Ini memindai dokumen untuk total harga, menjalankan perhitungan berdasarkan tolok ukur mata uang, dan secara fisik mencetak stempel \"Exchange Rate ledger\" glassmorphism semi-transparan yang elegan di margin halaman. Ini merender dengan efek visual numerik mesin slot berputar yang menawan, membawa kontrol mutlak pada penagihan global.</p>\n      ",
+    "howToUse": [
+        {
+            "step": 1,
+            "title": "Unggah Faktur PDF",
+            "description": "Impor faktur apa pun yang ditagih dalam mata uang asing (misalnya USD, EUR, JPY)."
+        },
+        {
+            "step": 2,
+            "title": "Pilih Mata Uang Lokal",
+            "description": "Pilih mata uang lokal Anda (misalnya IDR) dan tentukan nilai tukar kustom atau waktu nyata."
+        },
+        {
+            "step": 3,
+            "title": "Terapkan Stempel Buku Besar",
+            "description": "Klik jalankan untuk melapisi stempel buku besar nilai tukar yang siap untuk akuntansi."
+        }
+    ],
+    "useCases": [
+        {
+            "title": "Reimbursement Perjalanan Bisnis Asing",
+            "description": "Konversikan tagihan perjalanan ke mata uang lokal dan cetak stempel detail konversi, memudahkan alur kerja akuntansi.",
+            "icon": "plane"
+        },
+        {
+            "title": "Audit Belanja Lintas Batas",
+            "description": "Terjemahkan kolom faktur dan isolasi biaya sebenarnya dari barang-barang e-commerce.",
+            "icon": "credit-card"
+        },
+        {
+            "title": "Pembukuan Bisnis Internasional",
+            "description": "Cetak stempel buku besar konversi yang konsisten pada faktur perusahaan untuk merampingkan audit akhir tahun.",
+            "icon": "folder-open"
+        }
+    ],
+    "faq": [
+        {
+            "question": "Bagaimana cara mendeteksi jumlah faktur?",
+            "answer": "Ini memindai aliran karakter untuk simbol mata uang dan menganalisis tajuk semantik seperti \"Total\" atau \"Jatuh Tempo\" untuk menemukan jumlah akhir faktur."
+        },
+        {
+            "question": "Apakah nilai tukar diambil secara waktu nyata?",
+            "answer": "Ya. Secara default, ini mengambil kurs dasar dari API keuangan standar. Anda juga dapat menentukan kurs kustom untuk audit internal."
+        },
+        {
+            "question": "Apakah stempel tersebut akan menutupi detail faktur yang penting?",
+            "answer": "Mesin memindai margin halaman untuk menemukan posisi optimal. Stempel tersebut semi-transparan, sejajar dengan elegan dengan tata letak Anda."
+        }
+    ]
+},
+
+  'pdf-to-cbz': {
+    title: 'PDF ke CBZ',
+    metaDescription: 'Konversi file PDF ke arsip komik CBZ. Mempertahankan urutan dan kualitas gambar.',
+    keywords: ["pdf ke cbz","konversi komik","konverter cbz"],
+    description: toolContentEn['pdf-to-cbz'].description,
+    howToUse: toolContentEn['pdf-to-cbz'].howToUse,
+    useCases: toolContentEn['pdf-to-cbz'].useCases,
+    faq: toolContentEn['pdf-to-cbz'].faq,
+  },
+
+  'overlay-pdf': {
+    title: 'Hamparan PDF',
+    metaDescription: 'Tumpuk dua halaman PDF menjadi satu halaman. Sempurna untuk menyematkan stempel, latar belakang, dan tanda air.',
+    keywords: ["hamparan pdf","pdf overlay","stempel pdf"],
+    description: toolContentEn['overlay-pdf'].description,
+    howToUse: toolContentEn['overlay-pdf'].howToUse,
+    useCases: toolContentEn['overlay-pdf'].useCases,
+    faq: toolContentEn['overlay-pdf'].faq,
+  },
+
+  'timestamp-pdf': {
+    title: 'Stempel Waktu PDF',
+    metaDescription: 'Sematkan stempel waktu aman RFC 3161 pada dokumen PDF untuk membuktikan waktu pembuatan dan integritas data.',
+    keywords: ["stempel waktu pdf","rfc 3161","bukti waktu digital"],
+    description: toolContentEn['timestamp-pdf'].description,
+    howToUse: toolContentEn['timestamp-pdf'].howToUse,
+    useCases: toolContentEn['timestamp-pdf'].useCases,
+    faq: toolContentEn['timestamp-pdf'].faq,
+  },
+
+  'add-page-labels': {
+    title: 'Tambah Label Halaman',
+    metaDescription: 'Atur label halaman kustom (misal, I, II untuk kata pengantar, 1, 2 untuk isi). Meningkatkan navigasi pembaca.',
+    keywords: ["label halaman","nomor halaman logis","navigasi pdf"],
+    description: toolContentEn['add-page-labels'].description,
+    howToUse: toolContentEn['add-page-labels'].howToUse,
+    useCases: toolContentEn['add-page-labels'].useCases,
+    faq: toolContentEn['add-page-labels'].faq,
+  },
+
+  'ai-pdf-reflower': {
+    title: 'Aliran Ulang PDF AI',
+    metaDescription: 'Tata ulang dokumen PDF menjadi tata letak responsif untuk seluler. Mendukung ekspor ke Markdown dan EPUB.',
+    keywords: ["aliran ulang pdf","pdf responsif","pdf ke markdown","ekspor epub"],
+    description: toolContentEn['ai-pdf-reflower'].description,
+    howToUse: toolContentEn['ai-pdf-reflower'].howToUse,
+    useCases: toolContentEn['ai-pdf-reflower'].useCases,
+    faq: toolContentEn['ai-pdf-reflower'].faq,
+  },
+
+  'citation-linker': {
+    title: 'Aktivator Tautan Sitasi',
+    metaDescription: 'Pindai dan aktifkan tanda kutipan dalam PDF menjadi tautan DOI eksternal atau lompatan halaman internal.',
+    keywords: ["tautan sitasi","hiperlink pdf","pencocokan doi","pdf akademis"],
+    description: toolContentEn['citation-linker'].description,
+    howToUse: toolContentEn['citation-linker'].howToUse,
+    useCases: toolContentEn['citation-linker'].useCases,
+    faq: toolContentEn['citation-linker'].faq,
+  },
+
+  'vector-extractor': {
+    title: 'Ekstraktor Vektor PDF',
+    metaDescription: 'Konversi PDF ke SVG presisi tinggi. Pilih dan ekstrak jalur vektor, diagram, dan logo secara mulus.',
+    keywords: ["ekstrak vektor pdf","ekspor svg","ekstrak logo","grafis vektor"],
+    description: toolContentEn['vector-extractor'].description,
+    howToUse: toolContentEn['vector-extractor'].howToUse,
+    useCases: toolContentEn['vector-extractor'].useCases,
+    faq: toolContentEn['vector-extractor'].faq,
+  },
+
+  'deep-sanitize': {
+    title: 'Pembersihan Metadata Mendalam',
+    metaDescription: 'Hapus total info pembuat, riwayat edit, lapisan tersembunyi, dan objek tidak terpakai pada file PDF untuk keamanan.',
+    keywords: ["pembersihan metadata","anonymize pdf","keamanan berkas","hapus jejak pdf"],
+    description: toolContentEn['deep-sanitize'].description,
+    howToUse: toolContentEn['deep-sanitize'].howToUse,
+    useCases: toolContentEn['deep-sanitize'].useCases,
+    faq: toolContentEn['deep-sanitize'].faq,
+  },
+
+  'booklet-folding-simulator': {
+    title: 'Simulator Lipat Buku 3D',
+    metaDescription: 'Atur imposisi halaman PDF ke lembar besar dan simulasikan proses melipat serta menjilid kawat dalam visual 3D.',
+    keywords: ["imposisi 3d","lipat kertas","jilid kawat","layout percetakan"],
+    description: toolContentEn['booklet-folding-simulator'].description,
+    howToUse: toolContentEn['booklet-folding-simulator'].howToUse,
+    useCases: toolContentEn['booklet-folding-simulator'].useCases,
+    faq: toolContentEn['booklet-folding-simulator'].faq,
+  },
+
+  'pdf-to-slide': {
+    title: 'PDF ke Slide',
+    metaDescription: 'Analisis garis besar PDF untuk mengekstrak teks penting serta diagram vektor ke dokumen presentasi PPTX yang dapat diedit.',
+    keywords: ["pdf ke ppt","rekonstruksi slide","ekstrak diagram","file pptx"],
+    description: toolContentEn['pdf-to-slide'].description,
+    howToUse: toolContentEn['pdf-to-slide'].howToUse,
+    useCases: toolContentEn['pdf-to-slide'].useCases,
+    faq: toolContentEn['pdf-to-slide'].faq,
+  },
+
+  'eink-optimizer': {
+    title: 'Pengoptimal Pembaca e-Ink',
+    metaDescription: 'Optimalkan PDF untuk layar tinta elektronik melalui pembersihan latar belakang, binarisasi Otsu, dan penebalan goresan teks.',
+    keywords: ["optimasi eink","binarisasi otsu","tebalkan tulisan","baca e-reader"],
+    description: toolContentEn['eink-optimizer'].description,
+    howToUse: toolContentEn['eink-optimizer'].howToUse,
+    useCases: toolContentEn['eink-optimizer'].useCases,
+    faq: toolContentEn['eink-optimizer'].faq,
+  },
+
+  'cert-cryptor': {
+    title: 'Enkripsi Sertifikat',
+    metaDescription: 'Enkripsi PDF dengan sertifikat kunci publik, tanda tangan PKCS#7, serta cetakan segel lilin fisik 3D emas mewah.',
+    keywords: ["enkripsi sertifikat","segel lilin 3d","tanda tangan digital","pkcs7"],
+    description: toolContentEn['cert-cryptor'].description,
+    howToUse: toolContentEn['cert-cryptor'].howToUse,
+    useCases: toolContentEn['cert-cryptor'].useCases,
+    faq: toolContentEn['cert-cryptor'].faq,
+  },
+
+  'passport-id-composer': {
+    title: 'Salin ID Dua Sisi',
+    metaDescription: 'Gabungkan sisi depan dan belakang KTP/Paspor secara presisi pada satu halaman A4 dengan tanda air pengaman.',
+    keywords: ["salinan ktp","ktp bolak balik a4","salinan paspor","watermark ktp"],
+    description: toolContentEn['passport-id-composer'].description,
+    howToUse: toolContentEn['passport-id-composer'].howToUse,
+    useCases: toolContentEn['passport-id-composer'].useCases,
+    faq: toolContentEn['passport-id-composer'].faq,
+  },
+
+  'annotation-exporter': {
+    title: 'Ekspor Catatan',
+    metaDescription: 'Ekstrak coretan stabilo, catatan kaki, dan komentar dari dokumen PDF Anda ke catatan ringkas berformat Markdown.',
+    keywords: ["ekstrak anotasi pdf","ekspor highlight","catatan bacaan","file markdown"],
+    description: toolContentEn['annotation-exporter'].description,
+    howToUse: toolContentEn['annotation-exporter'].howToUse,
+    useCases: toolContentEn['annotation-exporter'].useCases,
+    faq: toolContentEn['annotation-exporter'].faq,
+  },
+
+  'batch-watermark-remover': {
+    title: 'Hapus Tanda Air',
+    metaDescription: 'Analisis aliran instruksi PDF untuk menghapus tanda air berupa teks atau gambar (XObject) tanpa merusak tata letak tulisan.',
+    keywords: ["hapus watermark pdf","bersihkan logo halaman","pengeditan dokumen"],
+    description: toolContentEn['batch-watermark-remover'].description,
+    howToUse: toolContentEn['batch-watermark-remover'].howToUse,
+    useCases: toolContentEn['batch-watermark-remover'].useCases,
+    faq: toolContentEn['batch-watermark-remover'].faq,
+  },
+
+  'smart-data-redactor': {
+    title: 'Redaksi Data Sensitif',
+    metaDescription: 'Deteksi otomatis email, nomor telepon, dan nomor kartu identitas lalu tutup dengan kotak hitam permanen dan hapus teksnya.',
+    keywords: ["redaksi data pdf","masking data sensitif","keamanan informasi"],
+    description: toolContentEn['smart-data-redactor'].description,
+    howToUse: toolContentEn['smart-data-redactor'].howToUse,
+    useCases: toolContentEn['smart-data-redactor'].useCases,
+    faq: toolContentEn['smart-data-redactor'].faq,
+  },
+
+  'bookmarks-auto-generator': {
+    title: 'Buat Buku Petunjuk',
+    metaDescription: 'Analisis ukuran font dan tingkat hierarki tulisan untuk menyusun pohon navigasi buku petunjuk (bookmark) secara otomatis.',
+    keywords: ["bookmark otomatis pdf","pohon navigasi","struktur dokumen"],
+    description: toolContentEn['bookmarks-auto-generator'].description,
+    howToUse: toolContentEn['bookmarks-auto-generator'].howToUse,
+    useCases: toolContentEn['bookmarks-auto-generator'].useCases,
+    faq: toolContentEn['bookmarks-auto-generator'].faq,
+  },
+
+  'batch-barcode-injector': {
+    title: 'Suntik Barcode Massal',
+    metaDescription: 'Masukkan QR Code atau Barcode (Code128) pada koordinat spesifik di seluruh halaman file PDF secara massal.',
+    keywords: ["suntik qr pdf","barcode massal","penomoran dokumen"],
+    description: toolContentEn['batch-barcode-injector'].description,
+    howToUse: toolContentEn['batch-barcode-injector'].howToUse,
+    useCases: toolContentEn['batch-barcode-injector'].useCases,
+    faq: toolContentEn['batch-barcode-injector'].faq,
+  },
+
+  'signature-ink-optimizer': {
+    title: 'Ekstrak Tanda Tangan',
+    metaDescription: 'Ekstrak tanda tangan dan cap stempel dari dokumen scan, hilangkan latar kertas menjadi gambar PNG transparan bersih.',
+    keywords: ["ekstrak tanda tangan","stempel transparan","bersihkan coretan kertas"],
+    description: toolContentEn['signature-ink-optimizer'].description,
+    howToUse: toolContentEn['signature-ink-optimizer'].howToUse,
+    useCases: toolContentEn['signature-ink-optimizer'].useCases,
+    faq: toolContentEn['signature-ink-optimizer'].faq,
+  },
+
+  'dead-link-debugger': {
+    title: 'Perbaiki Tautan Rusak',
+    metaDescription: 'Pindai dokumen PDF untuk memeriksa tautan eksternal (/URI) yang mati dan perbaiki alamat URL-nya secara instan.',
+    keywords: ["tautan rusak pdf","perbaiki link pdf","edit url dokumen"],
+    description: toolContentEn['dead-link-debugger'].description,
+    howToUse: toolContentEn['dead-link-debugger'].howToUse,
+    useCases: toolContentEn['dead-link-debugger'].useCases,
+    faq: toolContentEn['dead-link-debugger'].faq,
+  },
+
+  'interactive-toc-generator': {
+    title: 'Daftar Isi Interaktif',
+    metaDescription: 'Sisipkan halaman daftar isi interaktif yang dapat diklik ke bab tujuan, lengkap dengan tombol kembali (↩) di setiap halaman.',
+    keywords: ["daftar isi interaktif","toc generator","kembali ke daftar isi"],
+    description: toolContentEn['interactive-toc-generator'].description,
+    howToUse: toolContentEn['interactive-toc-generator'].howToUse,
+    useCases: toolContentEn['interactive-toc-generator'].useCases,
+    faq: toolContentEn['interactive-toc-generator'].faq,
+  },
+
+  'pdf-deskew-aligner': {
+    title: 'Koreksi Kemiringan Scan',
+    metaDescription: 'Deteksi otomatis sudut kemiringan pada PDF hasil scan atau foto dan luruskan halamannya ke posisi horizontal sempurna.',
+    keywords: ["luruskan scan pdf","koreksi miring dokumen","deskew otomatis"],
+    description: toolContentEn['pdf-deskew-aligner'].description,
+    howToUse: toolContentEn['pdf-deskew-aligner'].howToUse,
+    useCases: toolContentEn['pdf-deskew-aligner'].useCases,
+    faq: toolContentEn['pdf-deskew-aligner'].faq,
+  },
+
+  'pdf-two-column-reflower': {
+    title: 'Aliran Ulang Dua Kolom',
+    metaDescription: 'Ubah tata letak artikel dua kolom menjadi aliran satu kolom yang nyaman dibaca dengan membagi batas halaman secara presisi.',
+    keywords: ["makalah dua kolom","pdf satu kolom","split cropbox halaman"],
+    description: toolContentEn['pdf-two-column-reflower'].description,
+    howToUse: toolContentEn['pdf-two-column-reflower'].howToUse,
+    useCases: toolContentEn['pdf-two-column-reflower'].useCases,
+    faq: toolContentEn['pdf-two-column-reflower'].faq,
+  },
+
+  'pdf-page-resizer-uniform': {
+    title: 'Seragamkan Ukuran Halaman',
+    metaDescription: 'Skala halaman PDF yang memiliki ukuran berbeda-beda (misal A3 & A4) agar seragam di atas ukuran target tertentu.',
+    keywords: ["seragamkan ukuran pdf","skala halaman a4","pusatkan isi halaman"],
+    description: toolContentEn['pdf-page-resizer-uniform'].description,
+    howToUse: toolContentEn['pdf-page-resizer-uniform'].howToUse,
+    useCases: toolContentEn['pdf-page-resizer-uniform'].useCases,
+    faq: toolContentEn['pdf-page-resizer-uniform'].faq,
+  },
+
+  'handwriting-ink-contrast-booster': {
+    title: 'Tingkatkan Kontras Tulisan',
+    metaDescription: 'Bersihkan noda kuning dan bayangan kertas, buat tulisan pena biru/hitam dan cap merah menjadi sangat tajam.',
+    keywords: ["pertajam tanda tangan","hilangkan bayangan kertas","peningkat kontras tinta"],
+    description: toolContentEn['handwriting-ink-contrast-booster'].description,
+    howToUse: toolContentEn['handwriting-ink-contrast-booster'].howToUse,
+    useCases: toolContentEn['handwriting-ink-contrast-booster'].useCases,
+    faq: toolContentEn['handwriting-ink-contrast-booster'].faq,
+  },
+
+  'pdf-spine-bookbinder': {
+    title: 'Hitung Lebar Punggung Buku',
+    metaDescription: 'Hitung tebal punggung (spine) buku dalam milimeter berdasarkan jumlah halaman dan berat kertas (GSM) untuk cetak cover.',
+    keywords: ["hitung punggung buku","desain cover buku","ketebalan jilid lem"],
+    description: toolContentEn['pdf-spine-bookbinder'].description,
+    howToUse: toolContentEn['pdf-spine-bookbinder'].howToUse,
+    useCases: toolContentEn['pdf-spine-bookbinder'].useCases,
+    faq: toolContentEn['pdf-spine-bookbinder'].faq,
+  },
+
+  'pdf-signature-anchor-helper': {
+    title: 'Panduan Posisi Tanda Tangan',
+    metaDescription: 'Suntikkan ikon petunjuk pena dan tautan navigasi langsung di tempat-tempat yang membutuhkan tanda tangan.',
+    keywords: ["jangkar tanda tangan","petunjuk tanda tangan","link tanda tangan"],
+    description: toolContentEn['pdf-signature-anchor-helper'].description,
+    howToUse: toolContentEn['pdf-signature-anchor-helper'].howToUse,
+    useCases: toolContentEn['pdf-signature-anchor-helper'].useCases,
+    faq: toolContentEn['pdf-signature-anchor-helper'].faq,
+  },
+
+  'pdf-lossless-slicer': {
+    title: 'Potong Gambar Tanpa Rusak',
+    metaDescription: 'Potong bagian gambar proyek atau peta besar dengan memodifikasi MediaBox & CropBox tanpa merusak data vektor.',
+    keywords: ["potong gambar pdf","crop gambar cetak","vektor crop tanpa rusak"],
+    description: toolContentEn['pdf-lossless-slicer'].description,
+    howToUse: toolContentEn['pdf-lossless-slicer'].howToUse,
+    useCases: toolContentEn['pdf-lossless-slicer'].useCases,
+    faq: toolContentEn['pdf-lossless-slicer'].faq,
+  },
+
+  'pdf-scratchpad-canvas': {
+    title: 'Kanvas Kertas Buram',
+    metaDescription: 'Perlebar dimensi halaman PDF dan sambungkan area coretan kertas bergaris atau kotak-kotak di bagian samping berkas.',
+    keywords: ["kertas buram pdf","tambah catatan samping","halaman kotak kotak"],
+    description: toolContentEn['pdf-scratchpad-canvas'].description,
+    howToUse: toolContentEn['pdf-scratchpad-canvas'].howToUse,
+    useCases: toolContentEn['pdf-scratchpad-canvas'].useCases,
+    faq: toolContentEn['pdf-scratchpad-canvas'].faq,
+  },
+
+  'photo-tiling-prepress': {
+    title: 'Cetak Pas Foto Mandiri',
+    metaDescription: 'Susun pas foto tunggal ke dalam matriks cetak ukuran kertas foto 5 atau 6 inci, lengkap dengan batas potong.',
+    keywords: ["cetak pas foto","layout kertas foto","batas gunting foto"],
+    description: toolContentEn['photo-tiling-prepress'].description,
+    howToUse: toolContentEn['photo-tiling-prepress'].howToUse,
+    useCases: toolContentEn['photo-tiling-prepress'].useCases,
+    faq: toolContentEn['photo-tiling-prepress'].faq,
+  },
+
 };

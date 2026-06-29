@@ -631,7 +631,10 @@
       "fillColorLabel": "Activer la couleur de remplissage :",
       "defaultAuthor": "Annotation (Utilisateur invité)",
       "undoBtn": "Annuler",
-      "redoBtn": "Rétablir"
+      "redoBtn": "Rétablir",
+      "unnamedUser": "Utilisateur invité",
+      "undo": "Annuler",
+      "redo": "Rétablir"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Décalage d'Otsu)",

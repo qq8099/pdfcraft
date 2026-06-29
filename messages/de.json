@@ -631,7 +631,10 @@
       "fillColorLabel": "Füllfarbe aktivieren:",
       "defaultAuthor": "Kommentar (Gastbenutzer)",
       "undoBtn": "Rückgängig",
-      "redoBtn": "Wiederholen"
+      "redoBtn": "Wiederholen",
+      "unnamedUser": "Gastbenutzer",
+      "undo": "Rückgängig",
+      "redo": "Wiederholen"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Otsu-Offset)",

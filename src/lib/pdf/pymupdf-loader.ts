@@ -1205,8 +1205,10 @@ import base64
 doc = pymupdf.open("${inputPath}")
 new_doc = pymupdf.open()
 
-# Insert specific pages. insert_pdf is very efficient and preserves resources.
-new_doc.insert_pdf(doc, from_page=0, to_page=len(doc)-1, select=${JSON.stringify(pageIndices)})
+# Insert the selected pages one-by-one. Some PyMuPDF WASM builds do not
+# support the newer insert_pdf(select=...) keyword.
+for page_index in ${JSON.stringify(pageIndices)}:
+    new_doc.insert_pdf(doc, from_page=page_index, to_page=page_index)
 
 pdf_bytes = new_doc.tobytes(garbage=4, deflate=True)
 doc.close()
@@ -1252,7 +1254,8 @@ new_doc = pymupdf.open()
 
 # select pages for this range
 page_indices = list(range(${range.start - 1}, ${range.end}))
-new_doc.insert_pdf(doc, from_page=0, to_page=len(doc)-1, select=page_indices)
+for page_index in page_indices:
+    new_doc.insert_pdf(doc, from_page=page_index, to_page=page_index)
 
 pdf_bytes = new_doc.tobytes(garbage=4, deflate=True)
 doc.close()

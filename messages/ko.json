@@ -631,7 +631,10 @@
       "fillColorLabel": "채우기 색상 활성화:",
       "defaultAuthor": "주석 (게스트 사용자)",
       "undoBtn": "실행 취소",
-      "redoBtn": "다시 실행"
+      "redoBtn": "다시 실행",
+      "unnamedUser": "게스트 사용자",
+      "undo": "실행 취소",
+      "redo": "다시 실행"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (오츠 임계값 오프셋)",

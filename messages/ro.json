@@ -631,7 +631,10 @@
       "fillColorLabel": "Activare culoare umplere:",
       "defaultAuthor": "Adnotare (Utilizator invitat)",
       "undoBtn": "Anulează",
-      "redoBtn": "Refă"
+      "redoBtn": "Refă",
+      "unnamedUser": "Utilizator invitat",
+      "undo": "Anulează",
+      "redo": "Refă"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Offset Otsu)",

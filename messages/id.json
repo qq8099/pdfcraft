@@ -631,7 +631,10 @@
       "fillColorLabel": "Aktifkan Warna Isian:",
       "defaultAuthor": "Anotasi (Pengguna Tamu)",
       "undoBtn": "Batal",
-      "redoBtn": "Ulangi"
+      "redoBtn": "Ulangi",
+      "unnamedUser": "Pengguna tamu",
+      "undo": "Batal",
+      "redo": "Ulangi"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Offset Otsu)",

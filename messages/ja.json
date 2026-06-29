@@ -631,7 +631,10 @@
       "fillColorLabel": "塗りつぶし色を有効化:",
       "defaultAuthor": "注釈 (ゲストユーザー)",
       "undoBtn": "元に戻す",
-      "redoBtn": "やり直す"
+      "redoBtn": "やり直す",
+      "unnamedUser": "ゲストユーザー",
+      "undo": "元に戻す",
+      "redo": "やり直す"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (大津しきい値オフセット)",

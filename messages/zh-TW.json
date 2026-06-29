@@ -631,7 +631,10 @@
       "fillColorLabel": "啟用填充顏色:",
       "defaultAuthor": "標注 (不具名用户)",
       "undoBtn": "撤銷",
-      "redoBtn": "重做"
+      "redoBtn": "重做",
+      "unnamedUser": "不具名使用者",
+      "undo": "撤銷",
+      "redo": "重做"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Otsu 閾值偏移)",
@@ -1233,7 +1236,8 @@
     "metaTitle": "PDF 工作流程編輯器 - PDFCraft",
     "metaDescription": "透過視覺化連接工具建立自訂 PDF 處理管道。建構、儲存和重複使用您的工作流程。",
     "toolbox": "工具箱",
-    "dragToAdd": "拖曳工具新增到工作流程",
+    "dragToAdd": "拖曳或雙擊工具以新增到工作流程",
+    "addToWorkflowHint": "拖曳或雙擊新增到工作流程",
     "searchTools": "搜尋工具...",
     "toolsAvailable": "個可用工具",
     "templates": "範本",

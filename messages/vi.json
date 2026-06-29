@@ -631,7 +631,10 @@
       "fillColorLabel": "Bật màu tô:",
       "defaultAuthor": "Chú thích (Người dùng khách)",
       "undoBtn": "Hoàn tác",
-      "redoBtn": "Làm lại"
+      "redoBtn": "Làm lại",
+      "unnamedUser": "Người dùng khách",
+      "undo": "Hoàn tác",
+      "redo": "Làm lại"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Độ lệch Otsu)",

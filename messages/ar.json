@@ -631,7 +631,10 @@
       "fillColorLabel": "تمكين لون التعبئة:",
       "defaultAuthor": "تعليق توضيحي (مستخدم زائر)",
       "undoBtn": "تراجع",
-      "redoBtn": "إعادة"
+      "redoBtn": "إعادة",
+      "unnamedUser": "مستخدم ضيف",
+      "undo": "تراجع",
+      "redo": "إعادة"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (إزاحة أوتسو)",

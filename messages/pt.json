@@ -631,7 +631,10 @@
       "fillColorLabel": "Habilitar cor de preenchimento:",
       "defaultAuthor": "Anotação (Usuário convidado)",
       "undoBtn": "Desfazer",
-      "redoBtn": "Refazer"
+      "redoBtn": "Refazer",
+      "unnamedUser": "Usuário convidado",
+      "undo": "Desfazer",
+      "redo": "Refazer"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Desvio Otsu)",

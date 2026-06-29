@@ -631,7 +631,10 @@
       "fillColorLabel": "Abilita colore di riempimento:",
       "defaultAuthor": "Annotazione (Utente ospite)",
       "undoBtn": "Annulla",
-      "redoBtn": "Ripristina"
+      "redoBtn": "Ripristina",
+      "unnamedUser": "Utente ospite",
+      "undo": "Annulla",
+      "redo": "Ripristina"
     },
     "einkOptimizer": {
       "otsueThresholdSuffix": " (Offset Otsu)",
