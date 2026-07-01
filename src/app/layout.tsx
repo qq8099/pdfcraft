@@ -36,6 +36,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <script defer src="https://umami.aimei.eu.org/script.js" data-website-id="683cfbbd-270c-45e7-b6dc-18707a685c36"></script>
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
